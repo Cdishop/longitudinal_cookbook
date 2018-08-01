@@ -2,22 +2,173 @@
 output: pdf_document
 ---
 
-Please see questions at bottom after reading.
+Take aways from last time:
 
-# Paper Sections
+* Change hook
 
-* Hook
-* Introduction
-    + Quick bit about the hype of longitudinal and process
-    + Introduce inferences
-* Inference sections with examples
-* End
-    + These were abstracted to form common research questions. There are other aspects that we did not cover because they have not received attention. 
-        + Tiny discussion of these as a teaser
+    + An organizing paper on the inferences and models people make and use with longitudinal data. Not a "this is what true process is" paper. 
+    
+* Change structure
+
+    + Open with Xu and DeShon figure to organize everything
+    
+    + Use generic variables throughout 
+    
+    + Data structures issues at end
+    
+
+Our literature contains many calls for studies to focus on how things happen over time. 
+example
+example
+example
+
+These calls have resulted in an increasing number of longitudinal studies. 
+
+
+Although there are similarities across this literature, such as repeated meausures and phrases that end with "over time," anyone reading it would be confronted by many points of disconnect. Some researchers use hierarchical linear models (HLM), whereas others employ latent growth curves. Some make inferences about change, whereas others are interested in dynamics or growth. All of these authors are investigating patterns in longitudinal data, but it can be inclear how they fit together across the seemingly unrelated hypotheses, models, and inferences they make. 
+
+Our goal is to organize. 
+    
+
+Interested in how things happen over time
+- longer data sets
+- discussions of models with longitudinal data
+- various inferences
+-but
+-ambiguous and disconnected. hard to follow if you are new. we provide an organizing framework. 
+
+
+Interested in inferences with longitudinal data.
+- change, growth
+- longer data sets
+- diverse models
+
+
+all empirical
+-longer data sets
+-models that can handle data over time
+-inferences about things that happen over time
+
+
+- longer data sets
+-
+- various inferences
+-but
+-ambiguous and disconnected. hard to follow if you are new. we provide an organizing framework.
+
+# Hook 
+
+The story I'm trying to tell:
+
+* People want us to do stuff with longitudinal data, but this literature is messy and confusing. We could use some organization.
+
+opening one
+Interested in how things happen over time
+greater emphasis in theory
+greater number of time points among empirical studies
+greater use of models that require longitudinal data
+
+We --organizational researchers-- are increasingly interested in how things happen over time. Emergence, growth, change, dynamics, and process explanations are becoming explicit in organizational theory. Empirical tests of our theories now commonly collect longitudinal data sets with a growing number of time points. New statistical techniques to support inferences with these longitudinal data structures emerge every year. Computational modelers have made their role for refining process knowledge clear and their frequency appears to be growing. Across these developments, however, researchers present seemingly unrelated hypotheses and employ diverse statistical approaches – which impedes any unity about how to demonstrate and support a process inference.
+
+
+
+
+opening two
+there is now a large literature on inferences with longitudinal data.
+greater number of longitudinal studies with growing number of time points
+studies use models that require longitudinal data
+make inferences about patterns that happen over time
+write theory about what happens over time
+
+opening three
+we increasingly interested in how things happen over time. 
+greater role in theory
+explicit calls for research in this area
+
+this results in empirical studies with a growing number of time points
+models that require longitudinal data
+inferences about the observed patterns in longitudianl data
+
+but it is confusing. 
+
+
+opening four
+many calls for greater emphasis on how things happen over time
+
+if a researcher was interested, they would then look to the literature on longitudinal investigations. They would find many. Greater use of longitudianl designs with a growing number of time points
+
+although these studies have similarities, repeated measures and phrases that entail "over time," they use different models, make seeingly unrelated predictions and inferences, etc. etc. etc. What is a researcher to do?
+
+we want to provide some clarity. 
 
 # Hook
 
-We – organizational researchers – are increasingly interested in process inferences. Emergence, growth, change, dynamics, and explanations over time are becoming explicit in organizational theory. Empirical tests of our theories now commonly collect longitudinal data sets with a growing number of time points. New statistical techniques to support inferences with these longitudinal data structures emerge every year. Computational modelers have made their role for refining process knowledge clear and their frequency appears to be growing. Across these developments, however, researchers present seemingly unrelated hypotheses and employ diverse statistical approaches – which impedes any unity about how to demonstrate and support a process inference.
+The story I am trying to tell:
+
+* People want us to do stuff with longitudinal data, to make inferences over time. But this literature is messy and confusing. We could use some organization.
+
+To satisfy these calls, we might want to conduct our own longitudinal investigation and look to the literature for help. 
+
+
+
+
+
+
+Increasingly interested in how things happen over time
+results in a literature where there are many similarities, such as their repeated measures and use of phrases with 'over time.' 
+
+We – organizational researchers – are increasingly interested in how things happen over time. 
+- empirical studies collect more time points
+- greater use of models that require longitudinal data
+- greater focus in theory
+- greater number of inferences
+
+When you look at this literature there are a number of similarities. 
+-stuff about the increasing interest of how things happen over time
+
+
+
+
+Empirical studies, for example, commonly employ longitudinal designs and collect data over a growing number of time points. Two decades ago the typical data structure was..., whereas today we (Or, the last five pubs in JOM & JAP were all longitudinal) ... Moreover, researchers appear to be placing greater emphasis on modeling techniques that can handle longitudinal data. It is now common to use hierarchical linear (or random-coefficient or multi-level) modeling to capture relationships over time, and a growing number of studies now use latent growth curve models (cites). Finally, researchers collect and apply models to these data to ultimately form inferences, such as change or growth, about the patterns they observe.
+
+
+
+Among these developments, researchers present seemingly unrelated hypotheses, diverse statistical models, and tend to focus on one inference, or a set of inferences, related to one dimension at play in longitudinal data (e.g., growth). 
+
+BUT IF YOU WERE TO LOOK AT THESE STUDIES YOU WOULD FIND UNRELATED INFERENCES. RELATIONSHIPS, CHANGE, GROWTH. THESE ARE ALL "OVER TIME," BUT IT IS UNCLEAR HOW THEY ARE ORGANIZED OR RELATED. 
+
+interested in how things happen over time. 
+-longitudinal data sets
+
+Common
+-models
+-over time
+
+Look at these studies, you find common areas -- repeated measures, descriptions that use the phrase "over time" -- but many areas that appear unrelated. Different inferences, different models, different hypotheses. 
+
+either HLM or growth models -- but 
+
+
+
+
+
+using models there appears to be a greater use of staistical models 
+
+researchers using modeling strategies to handle longitudinal data. 
+
+Researchers then apply These data structures then draw greater use of statistical models that are amenable to longitudinal designs. Hiarchical linear modeling (or random-coefficient, multi-level) 
+
+Moreover, we also see greater use of statistical models  researchers apply models that can handle longitudinal data
+
+our statistical literature appears to take interest in emphasizes shows a greater emphasis on 
+
+statistical literature on the models that can be applied to these data sets. 
+
+new models and statistical techniques to apply to these data emerge every year. Some examples include ... Finally, there are a variety of inferences researchers make about the relationships they observe with longitudinal data, inferences 
+
+Empirical studies commonly employ longitudinal designs and collect data over a growing number of time points, new models and statistical techniques to apply to these data emerge every year, and there are a variety of inferences researchers make about the relationships they observe with longitudinald data. 
+
+Emergence, growth, change, dynamics, and process explanations are becoming explicit in organizational theory. Empirical tests of our theories now commonly collect longitudinal data sets with a growing number of time points. New statistical models  and  New statistical techniques to support inferences with these longitudinal data structures emerge every year. Computational modelers have made their role for refining process knowledge clear and their frequency appears to be growing. Across these developments, however, researchers present seemingly unrelated hypotheses and employ diverse statistical approaches – which impedes any unity about how to demonstrate and support a process inference.
 
 Researchers that study process are therefore in a similar state to those that were interested in multilevel phenomena two decades ago. Then, we debated how to measure multilevel constructs, justify aggregation, and analyze multilevel models (Klein & Kozlowski, 2000), and our research advanced only after developing consensus. Now, we conceptualize and model different aspects of process -- such as change, growth, or dynamics -- without a shared understanding of the diverse approaches and pitfalls of each. We need to clearly understand how researchers’ approach and justify the variety of inferences they make about the processes in longitudinal data – and the drawbacks of each – to avoid inferential errors and to develop the process knowledge so many authors call for (zillion cites). 
 
@@ -26,6 +177,10 @@ Our goal is to explain these various approaches and provide a guide for research
 # Intro
 
 Hype process. Introduce inferences.
+
+
+
+![](figures/common_models.png)
 
 # Relationships 
 
