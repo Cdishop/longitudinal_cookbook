@@ -6,7 +6,7 @@ Take aways from last time:
 
 * Change hook
 
-    + Not a "this is what true process is" paper. An organizing paper on the inferences and models people make and use with longitudinal data.
+    + Not a "this is what true process is" paper. An organizing paper on the inferences people make and the models they use with longitudinal data.
     
 * Change structure
 
@@ -18,23 +18,20 @@ Take aways from last time:
     
 # Hook
 
-The story I am trying to tell:
+The story:
 
-* People want us to do stuff with longitudinal data, to make inferences over time. But this literature is messy and confusing. We could use some organization.
+* People want us to do stuff with longitudinal data, to make inferences over time. But this literature can be confusing. We could use some organization.
 
+New researchers are increasingly asked to collect longitudinal data and study how things happen over time. They are advised to because the organizational and psychological processes we study "are not static but instead develop, change, and evolve over time" (Pitariu & Ployhart, p. 405) and "many, if not most, of the psychological phenomena in which we are interested are...sequences of events and event reactions that play out within each person's stream of experience" (Beal, 2015, p. 5). If a researcher can collect longitudinal data, they are then in a better position to understand patterns over time. Bell and Kozlowski (2003), for example, state that "longitudinal designs...will be far more revealing of the team phenomeon under investigation" (p. 59). Similarly -- in their review of emotional labor -- Grandey and Gabriel (2015) suggest that future researchers may be much better equipped to demonstrate emotion regulation patters "with longitudinal methods" (p. 329). Not only do longitudinal data collections help the researcher observe relationships over time, many argue that it helps refine and strengthen our theories. For instance, Pitariu and Ployhart (2010) suggest that collecting longitudinal data, observing change, and testing dynamic models "stimulates greater refinement in our existing theories" (p. 411), and Grandey and Gabriel (2015) urge for greater theoretical development of emotions by studying their "reciprocal and unfolding...processes...through momentary assessments or lagged effects" (p. 322). These quotes reveal our field's emphasis on collecting longitudinal data to sufficiently observe a process and build better theory -- and suggest to newcomers that their designs ought to entail repeated assessments. 
 
-Option 1) interest
+To satisfy these calls, a newcomer might look to our existing literature for examples of how others understand the patterns they observe in longitudinal designs; this literature is not hard to find. Empirical studies commonly employ repeated measures and the number of time points they use appears to be growing. Words such as "dynamic," "change", and "process" are becoming more prevalent in our literature. Event-sampling methods, which collect repeated observations by necessity, are becomming one of the most popular data collection techniques (Beal, 2015). Finally, a quick skim over the latest issues of top organizational journals reveals that many new studies employ longitudinal designs. 
 
+Although our researcher would find some similarities across this literature, she would be confronted by many more areas of disconnect. Some studies use hierarchical linear models (HLM), whereas others employ latent growth curves -- even when the underlying questions that they examine are the same. Some make inferences about change, whereas others are interested in dynamics or growth -- even when the models they apply are identical. Some propose hypotheses with lags, whereas others do not -- even when both collect data across the same number of time points and interval spacing. All of these authors examine patterns in longitudinal data, but it can be unclear how they fit together across their seemingly unrelated hypotheses, models, and inferences. What, then, is a new researcher interested in making inferences with respect to their longitudinal data to do?
 
-New researchers are increasingly asked to collect longitudinal data and study how things happen over time. They are advised to because the organizational and psychological processes we study "are not static but instead develop, change, and evolve over time" (Pitariu & Ployhart, p. 405) and "many, if not most, of the psychological phenomena in which we are interested are...event reactions that play out within each person's stream of experience" (Beal, 2015, p. 5). If a researcher can collect longitudinal data, they are then in a better position to understand patterns over time. Bell and Kozlowski (2003), for example, state that "longitudinal designs...will be far more revealing of the team phenomeon under investigation" (p. 59), and -- in their discussion of emotion regulation patterns -- Grandey and Gabriel (2015) suggest that "future researchers may be able to show this with longitudinal methods" (p. 329). Not only do longitudinal data collections help the researcher observe relationships over time, many argue that it helps refine and strengthen our theories. For instance, Pitariu and Ployhart (2010) suggest that collecting longitudinal data, observing change, and testing dynamic models "stimulates greater refinement in our existing theories" (p. 411), and Grandey and Gabriel (2015) urge for greater theoretical development by "more attention to the reciprocal and unfolding...processes...through momentary assessments or lagged effects" (p. 322). These quotes reveal our field's emphasis on collecting and making inferences with longitudinal data, and suggest to newcomers that their designs ought to entail repeated assessments. 
+Our goal is to organize the common inferences made with longitudinal data so that researchers have a clear sense of what hypotheses they can propose, models they can use, and inferences they can make given their data structure and research question. Our literature is starting to accumulate great examples of the types of inferences we can make with longitudinal data, but their similarities and strengths can sometimes go unnoticed due to the different language used by separate content and statistical modeling areas. Two studies may be interested in the same type of question or inference but apply different models to their data or describe their results with dissimilar variable names. Rather than miss the common ground between these two, we want to provide a framework for seeing how both provide similar types of knowledge. On the other hand, just because two researchers study something over time does not mean they provide the same type of information -- and we want to help researchers avoid misconstrued similarities. Moreover, there are small differences in how we conceptualize and model longitudinal data that result in vastly different inferences. In this paper, therefore, we want to organize the inferences researchers make with longitudinal data.
 
-To satisfy these calls, a newcomer might look to our existing literature for examples of how others understand the patterns they observe in longitudinal designs -- and this literature is not hard to find. Empirical studies commonly employ repeated measures and the number of time points they use appears to be growing. Words such as "dynamic," "change", and "process" are becoming more prevalent in our literature. Event-sampling methods, which collect repeated observations by necessity, are becomming one of the most popular data collection techniques (Beal, 2015). Finally, a quick skim over the latest issues of top organizational journals reveals that many new studies employ longitudinal designs. 
-
-Although our researcher would find some similarities across this literature, she would be confronted by many more areas of disconnect. Some studies use hierarchical linear models (HLM), whereas others employ latent growth curves -- even when the underlying questions that they examined were the same. Some make inferences about change, whereas others are interested in dynamics or growth -- even when the models they apply are identical. Some propose hypotheses with lags, whereas others do not -- even when both collect data across the same number of time points and interval spacing. All of these authors examine patterns in longitudinal data, but it can be unclear how they fit together across their seemingly unrelated hypotheses, models, and inferences. What, then, is a new researcher interested in making inferences with respect to their longitudinal data to do?
-
-Our goal is to organize. 
-
-
+Below, we discuss four common longitudinal research areas: relationships over time, growth, change, and dynamics. These do not represent every possible domain we can explore with longitudinal data, but they do cover a large portion of the techniques currently employed in our literature. We begin by explaining what we mean by longitudinal research. We then unpack a framework proposed by Xu and DeShon that relates the four different research streams. In the core of the paper, we discuss each stream in depth, provide examples from the literature, point researchers to potential models, and acknowledge the pitfall and limitations of each approach. 
+    
 # Intro
 
 **Define longitudinal**
@@ -43,20 +40,18 @@ This paper is exclusively devoted to the inferences we make with repeated observ
 
 **Introduce framework**
 
-To organize the literature we adopt the framework by Xu and DeShon
-These are not all possible inferences, these are the popular ones
-This framework is about organizing our literature, not about "true" process inferences. 
-Relationships
-Change
-Growth
-Dynamics
+Presenting the entire inference and modeling literature that uses longitudinal data structures would be impossible. Instead, we focus on four related streams that we feel can be organized nicely using a framework proposed by Xu and DeShon. Figure one shows each inference we will discuss in this paper: relationships, growth, change, and dynamics. 
 
-generic variables
+![](figures/common_models.png)
+ 
+ 
+**Discuss each briefly**
 
+**Provide generic variable names to use throughout**
 
+**Examples**
 
-
-# Relationships 
+# Relationships (Goran, Mike, Rick do not read past here, this is the same as last time...not updated yet)
 
 ## Inference 1
 

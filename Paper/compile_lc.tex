@@ -131,91 +131,172 @@ Correspondence concerning this article should be addressed to ..., .... E-mail: 
 \begin{document}
 \maketitle
 
-\includegraphics{figures/common_models.png}
-
-Please see questions at bottom after reading.
-
-\hypertarget{paper-sections}{%
-\section{Paper Sections}\label{paper-sections}}
+Take aways from last time:
 
 \begin{itemize}
-\tightlist
 \item
-  Hook
-\item
-  Introduction
+  Change hook
 
   \begin{itemize}
   \tightlist
   \item
-    Quick bit about the hype of longitudinal and process
-  \item
-    Introduce inferences
+    Not a \enquote{this is what true process is} paper. An organizing
+    paper on the inferences people make and the models they use with
+    longitudinal data.
   \end{itemize}
 \item
-  Inference sections with examples
-\item
-  End
+  Change structure
 
   \begin{itemize}
-  \tightlist
   \item
-    These were abstracted to form common research questions. There are
-    other aspects that we did not cover because they have not received
-    attention.
-
-    \begin{itemize}
-    \tightlist
-    \item
-      Tiny discussion of these as a teaser
-    \end{itemize}
+    Start early with Xu and DeShon figure to organize everything
+  \item
+    Use generic variables throughout
+  \item
+    Data structures issues at end
   \end{itemize}
 \end{itemize}
 
 \hypertarget{hook}{%
 \section{Hook}\label{hook}}
 
-We -- organizational researchers -- are increasingly interested in
-process inferences. Emergence, growth, change, dynamics, and
-explanations over time are becoming explicit in organizational theory.
-Empirical tests of our theories now commonly collect longitudinal data
-sets with a growing number of time points. New statistical techniques to
-support inferences with these longitudinal data structures emerge every
-year. Computational modelers have made their role for refining process
-knowledge clear and their frequency appears to be growing. Across these
-developments, however, researchers present seemingly unrelated
-hypotheses and employ diverse statistical approaches -- which impedes
-any unity about how to demonstrate and support a process inference.
+The story:
 
-Researchers that study process are therefore in a similar state to those
-that were interested in multilevel phenomena two decades ago. Then, we
-debated how to measure multilevel constructs, justify aggregation, and
-analyze multilevel models (Klein \& Kozlowski, 2000), and our research
-advanced only after developing consensus. Now, we conceptualize and
-model different aspects of process -- such as change, growth, or
-dynamics -- without a shared understanding of the diverse approaches and
-pitfalls of each. We need to clearly understand how researchers'
-approach and justify the variety of inferences they make about the
-processes in longitudinal data -- and the drawbacks of each -- to avoid
-inferential errors and to develop the process knowledge so many authors
-call for (zillion cites).
+\begin{itemize}
+\tightlist
+\item
+  People want us to do stuff with longitudinal data, to make inferences
+  over time. But this literature can be confusing. We could use some
+  organization.
+\end{itemize}
 
-Our goal is to explain these various approaches and provide a guide for
-researchers who want to study process. Researchers tend to focus on an
-inference, or set of inferences, related to one dimension at play in
-longitudinal data (e.g., growth), and this results in seemingly
-unrelated hypotheses and model applications across research streams. We
-unpack the core inference underlying each, discuss their differences,
-provide examples and direct readers to possible statistical models, and
-show how they can be used to cumulatively understand process.
+New researchers are increasingly asked to collect longitudinal data and
+study how things happen over time. They are advised to because the
+organizational and psychological processes we study \enquote{are not
+static but instead develop, change, and evolve over time} (Pitariu \&
+Ployhart, p.~405) and \enquote{many, if not most, of the psychological
+phenomena in which we are interested are\ldots{}sequences of events and
+event reactions that play out within each person's stream of experience}
+(Beal, 2015, p.~5). If a researcher can collect longitudinal data, they
+are then in a better position to understand patterns over time. Bell and
+Kozlowski (2003), for example, state that \enquote{longitudinal
+designs\ldots{}will be far more revealing of the team phenomeon under
+investigation} (p.~59). Similarly -- in their review of emotional labor
+-- Grandey and Gabriel (2015) suggest that future researchers may be
+much better equipped to demonstrate emotion regulation patters
+\enquote{with longitudinal methods} (p.~329). Not only do longitudinal
+data collections help the researcher observe relationships over time,
+many argue that it helps refine and strengthen our theories. For
+instance, Pitariu and Ployhart (2010) suggest that collecting
+longitudinal data, observing change, and testing dynamic models
+\enquote{stimulates greater refinement in our existing theories}
+(p.~411), and Grandey and Gabriel (2015) urge for greater theoretical
+development of emotions by studying their \enquote{reciprocal and
+unfolding\ldots{}processes\ldots{}through momentary assessments or
+lagged effects} (p.~322). These quotes reveal our field's emphasis on
+collecting longitudinal data to sufficiently observe a process and build
+better theory -- and suggest to newcomers that their designs ought to
+entail repeated assessments.
+
+To satisfy these calls, a newcomer might look to our existing literature
+for examples of how others understand the patterns they observe in
+longitudinal designs; this literature is not hard to find. Empirical
+studies commonly employ repeated measures and the number of time points
+they use appears to be growing. Words such as \enquote{dynamic,}
+\enquote{change}, and \enquote{process} are becoming more prevalent in
+our literature. Event-sampling methods, which collect repeated
+observations by necessity, are becomming one of the most popular data
+collection techniques (Beal, 2015). Finally, a quick skim over the
+latest issues of top organizational journals reveals that many new
+studies employ longitudinal designs.
+
+Although our researcher would find some similarities across this
+literature, she would be confronted by many more areas of disconnect.
+Some studies use hierarchical linear models (HLM), whereas others employ
+latent growth curves -- even when the underlying questions that they
+examine are the same. Some make inferences about change, whereas others
+are interested in dynamics or growth -- even when the models they apply
+are identical. Some propose hypotheses with lags, whereas others do not
+-- even when both collect data across the same number of time points and
+interval spacing. All of these authors examine patterns in longitudinal
+data, but it can be unclear how they fit together across their seemingly
+unrelated hypotheses, models, and inferences. What, then, is a new
+researcher interested in making inferences with respect to their
+longitudinal data to do?
+
+Our goal is to organize the common inferences made with longitudinal
+data so that researchers have a clear sense of what hypotheses they can
+propose, models they can use, and inferences they can make given their
+data structure and research question. Our literature is starting to
+accumulate great examples of the types of inferences we can make with
+longitudinal data, but their similarities and strengths can sometimes go
+unnoticed due to the different language used by separate content and
+statistical modeling areas. Two studies may be interested in the same
+type of question or inference but apply different models to their data
+or describe their results with dissimilar variable names. Rather than
+miss the common ground between these two, we want to provide a framework
+for seeing how both provide similar types of knowledge. On the other
+hand, just because two researchers study something over time does not
+mean they provide the same type of information -- and we want to help
+researchers avoid misconstrued similarities. Moreover, there are small
+differences in how we conceptualize and model longitudinal data that
+result in vastly different inferences. In this paper, therefore, we want
+to organize the inferences researchers make with longitudinal data.
+
+Below, we discuss four common longitudinal research areas: relationships
+over time, growth, change, and dynamics. These do not represent every
+possible domain we can explore with longitudinal data, but they do cover
+a large portion of the techniques currently employed in our literature.
+We begin by explaining what we mean by longitudinal research. We then
+unpack a framework proposed by Xu and DeShon that relates the four
+different research streams. In the core of the paper, we discuss each
+stream in depth, provide examples from the literature, point researchers
+to potential models, and acknowledge the pitfall and limitations of each
+approach.
 
 \hypertarget{intro}{%
 \section{Intro}\label{intro}}
 
-Hype process. Introduce inferences.
+\textbf{Define longitudinal}
 
-\hypertarget{relationships}{%
-\section{Relationships}\label{relationships}}
+This paper is exclusively devoted to the inferences we make with
+repeated observations, so we begin by identifying a few labels and
+definitions. Authors typically identify a \enquote{longitudinal} study
+by making a contrast with respect to either a) research designs or b)
+data structures. Longitudinal \emph{research} is different from
+cross-sectional research because longitudinal designs entail three or
+more repeated observations (Ployhart \& Bliese, Singer \& Willett). We
+therefore emphasize differences on the number of observations when we
+distinguish longitudinal from other types of research. Longitudinal
+\emph{data} are repeated observations on several units (i.e., \(N\) or
+\(i\) \textgreater{} 1), whereas panel data are a collection of
+observations of one unit over time -- a distinction that focuses on the
+amount of people in our study. Most organizational studies collect data
+on more than one unit, therefore our discussion below focuses on
+longitudinal research with longitudinal data, or designs with \(N\)
+\textgreater{} 1, \(t\) \textgreater{}= 3, and the same construct(s)
+measured on each \(i\) at each \(t\).
+
+\textbf{Introduce framework}
+
+Presenting the entire inference and modeling literature that uses
+longitudinal data structures would be impossible. Instead, we focus on
+four related streams that we feel can be organized nicely using a
+framework proposed by Xu and DeShon. Figure one shows each inference we
+will discuss in this paper: relationships, growth, change, and dynamics.
+
+\includegraphics{figures/common_models.png}
+
+\textbf{Discuss each briefly}
+
+\textbf{Provide generic variable names to use throughout}
+
+\textbf{Examples}
+
+\hypertarget{relationships-goran-mike-rick-do-not-read-past-here-this-is-the-same-as-last-timenot-updated-yet}{%
+\section{Relationships (Goran, Mike, Rick do not read past here, this is
+the same as last time\ldots{}not updated
+yet)}\label{relationships-goran-mike-rick-do-not-read-past-here-this-is-the-same-as-last-timenot-updated-yet}}
 
 \hypertarget{inference-1}{%
 \subsection{Inference 1}\label{inference-1}}

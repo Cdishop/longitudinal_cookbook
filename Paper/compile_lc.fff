@@ -1,0 +1,7 @@
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{figures/common_models.png}
+\caption{Figure 1. Common longitudinal research foci.}
+\end{figure*}
