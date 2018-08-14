@@ -43,9 +43,9 @@ output: pdf_document
 
 Organizational researchers are increasingly interested in longitudinal data structures. These data align with the processes we study, which "are not static but instead develop, change, and evolve over time" (Pitariu & Ployhart, p. 405) or are "sequences of events that play out within each person's stream of experience" (Beal, 2015, p. 5). If researchers can collect longitudinal data, they are then in a better position to understand patterns over time. Bell and Kozlowski (2003), for example, state that "longitudinal designs...will be far more revealing of the team phenomeon under investigation" (p. 59). Similarly -- in their review of emotional labor -- Grandey and Gabriel (2015) suggest that future researchers may be much better equipped to demonstrate emotion regulation patters "with longitudinal methods" (p. 329). Not only do longitudinal data collections help researchers observe relationships over time, many argue that doing so helps improve our theories. For instance, Pitariu and Ployhart (2010) suggest that collecting longitudinal data, observing change, and testing dynamic models "stimulates greater refinement in our existing theories" (p. 411), and Grandey and Gabriel (2015) urge for greater theoretical development of emotions by studying their "reciprocal and unfolding...processes...through momentary assessments or lagged effects" (p. 322). These quotes reveal our field's emphasis on collecting longitudinal data to sufficiently observe a process and build better theory.
 
-Longitudinal studies are also increasingly common in our empirical literature. For instance, @jones2016 observed the work attitudes of pregnant women in their second trimester every week until they gave birth. @ritter2016 assessed job satisfaction across three time points that were each separated by six weeks. @matthews2014 studied work-family conflict across several months. @meier2013 examined counterproductive work behavior over five waves. @hardy2018 investigated self-regulation over 20 lab trials. @gabriel2014 measured fit and affect five times per day for 10 consecutive work days. Finally, @johnson2014 observed justice behavior and resource depletion across 10 consecutive workdays.
+A greater emphasis on longitudinal data is also apparent in our empirical literature, where collecting repeated measures is now common. For instance, @jones2016 observed the work attitudes of pregnant women in their second trimester every week until they gave birth. @ritter2016 assessed job satisfaction across three time points that were each separated by six weeks. @matthews2014 studied work-family conflict across several months. @meier2013 examined counterproductive work behavior over five waves. @hardy2018 investigated self-regulation over 20 lab trials. @gabriel2014 measured fit and affect five times per day for 10 consecutive work days. Finally, @johnson2014 observed justice behavior and resource depletion across 10 consecutive workdays.
 
-Armed with repeated observations, these studies then investigate a variety of interesting inferences. @hardy2018 propose and find support for growth trends in self-regulation, metacognition, and performance. @jones2016 conclude that concealing behaviors among pregnant women lead to greater subsequent physical health. @johnson2014 establish that "justice is dynamic: The frequency of actors' justice behaviors varies day to day" (p. 10), and these daily fluctuations predict daily changes in depletion. Finally, @meier2013 suggest that the effects of work stressors on counterproductive work behaviors are not substantially different across different time lags. 
+Armed with repeated observations, these studies then explore a variety of interesting inferences. @hardy2018 propose and find support for growth trends in self-regulation, metacognition, and performance. @jones2016 conclude that concealing behaviors among pregnant women lead to greater subsequent physical health. @johnson2014 establish that "justice is dynamic: The frequency of actors' justice behaviors varies day to day" (p. 10), and these daily fluctuations predict daily changes in depletion. Finally, @meier2013 suggest that the effects of work stressors on counterproductive work behaviors are not substantially different across different time lags. 
 
 Moreover, we find different types of sophisticated modeling strategies throughout. @meier2013 present a sequence of path models that test increasingly longer time lags. @hardy2018 and @jones2016 employ bivariate cross-lagged latent growth curves, an approach similar to the latent change model used by @ritter2016. We also find complex hierarchical linear models in various event-sampling studies [e.g., @koopman2016; @rosen2016].  
 
@@ -53,30 +53,216 @@ In summary, our increasing theoretical emphasis on longitudinal data and its gro
 
 We want to bring attention to this new and exciting literature. Specifically, in this paper we describe some of the common inferences and models researchers employ with longitudinal data, provide examples from our literature, point out the strengths and weaknesses of each approach, and discuss recommendations. Many of these studies appear unrelated due to the different language used among various content or statistical modeling areas -- but we believe our discussion will reveal some of their covert similarities. Our paper is meant for two audiences. First, we believe this summary will help any newcomers who want to make inferences with their longitudinal data but are unaware of what types of inferences and models are available. Second, this paper is meant to show seasoned researchers other possibilities -- other inferences and models that may augment how they currently approach longitudinal data. 
 
-Below, we discuss four common inferences researchers make with longitudinal data: relationships over time, growth, change, and dynamics. These do not represent every possible domain we can explore with longitudinal data, but they do cover a large portion of the techniques currently employed in our literature. We begin by explaining what we mean by longitudinal research. We then unpack a framework proposed by Xu and DeShon that relates the four different research streams. In the core of the paper, we discuss each stream in depth, provide examples from the literature, point researchers to potential models, and acknowledge the pitfall and limitations of each approach. 
+Below, we discuss four common inferences researchers make with longitudinal data: relationships over time, growth, change, and dynamics. These do not represent every possible domain we can explore with longitudinal data, but they do cover a large portion of the techniques currently employed in our literature. We begin by explaining what we mean by longitudinal research. We then unpack a framework proposed by Xu and DeShon that relates the four different research streams. In the core of the paper, we discuss each stream in depth, provide examples from the literature, point researchers to potential models, and acknowledge the pitfalls and limitations of each approach. 
     
 # Intro
 
-**Define longitudinal**
+## Define longitudinal
 
-This paper is exclusively devoted to the inferences we make with repeated observations, so we begin by identifying a few labels and definitions. Authors typically identify a "longitudinal" study by making a contrast with respect to either a) research designs or b) data structures. Longitudinal *research* is different from cross-sectional research because longitudinal designs entail three or more repeated observations (Ployhart & Bliese, Singer & Willett). We therefore emphasize differences on the number of observations when we distinguish longitudinal from other types of research. Longitudinal *data* are repeated observations on several units (i.e., $N$ or $i$ > 1), whereas panel data are observations of one unit over time -- a distinction that focuses on the amount of people in our study. Most organizational studies collect data on more than one unit, therefore our discussion below focuses on longitudinal research with longitudinal data, or designs with $N$ > 1, $t$ >= 3, and the same construct(s) measured on (potentially) each $i$ at (potentially) each $t$. 
+This paper is exclusively devoted to the inferences we make with repeated observations, so we begin by identifying a few labels and definitions. Authors typically identify a "longitudinal" study by making a contrast with respect to either a) research designs or b) data structures. Longitudinal *research* is different from cross-sectional research because longitudinal designs entail three or more repeated observations (Ployhart & Bliese, Singer & Willett). We therefore emphasize differences on the number of observations when we distinguish longitudinal from other types of research. Longitudinal *data* are repeated observations on several units (i.e., $N$ or $i$ > 1), whereas panel data are observations of one unit over time -- a distinction that focuses on the amount of people in our study (given repeated measures). Most organizational studies collect data on more than one unit, therefore our discussion below focuses on longitudinal research with longitudinal data, or designs with $N$ > 1, $t$ >= 3, and the same construct(s) measured on (potentially) each $i$ at (potentially) each $t$. 
 
-**Introduce framework**
+## Introduce framework
 
-Presenting the entire inference and modeling literature that uses longitudinal data structures would be impossible. Instead, we focus on four related streams that we feel can be organized nicely using a framework proposed by Xu and DeShon. Figure one shows each inference we will discuss in this paper: relationships, growth, change, and dynamics. 
+Presenting the entire inference and modeling literature that uses longitudinal data would be impossible. Instead, we focus on four related streams that we feel can be organized nicely using a framework proposed by Xu and DeShon. Figure one shows each inference we will discuss in this paper: relationships, growth, change, and dynamics. 
 
-In each panel in figure one, time is on the $x$-axis to portray that we are investigating these inferences over time. Each slice contains an observation of $y$, such that at time $t$ we observe $y_{1}$ and at $t + 1$ we observe $y_{2}$. What differentiates the panels -- the inferences -- is the pattern of relationships we investigate -- and we add complexity as we move from $A$ to $D$. For example, researchers do not include lag effects when they are interested in relationships over time (panel $A$), but they do include a lag effect when they study change or dynamics (panels $C$ and $D$). Below, we devote a section to each of the four inferences, and discuss them with respect to two generic variables -- affect ($x$) and performance ($y$) -- to remain consistent throughout. 
-
+In each panel in figure one, time is on the $x$-axis to portray that we are investigating these inferences over time. Each slice contains an observation of $y$, such that at time $t$ we observe $y_{1}$ and at $t + 1$ we observe $y_{2}$. What differentiates the panels -- the inferences -- is the pattern of relationships we investigate -- and we add complexity as we move from $A$ to $D$. For example, researchers do not include lag effects when they are interested in relationships over time (panel $A$), but they do include a lag effect when they study change or dynamics (panels $C$ and $D$). We will devote a section to each of these inferences below, but we first describe some preliminary pieces about code and data that we repeatedly refer to in this paper. 
 
 ![](figures/common_models.png)
- 
+
+## Introduce data sets and generice variables
+
+We will use two generic variables -- affect ($x$) and performance ($y$) -- throughout our discussions. These variables will hopefully provide continuity across the inferences and also provide an illuminating backdrop after we refer to $x$ or $y$ generically. Moreover, we use code examples in each section that refer to data sets that contain measures of affect and performance on 50 simulated subjects across five time points. 
+
+These data are contained in two data sets: `long_df` and `wide_df`. The raw data are the same, but their formatting differs because different estimation techniques require different data structures. Structural equations modeling (SEM) requires wide data, whereas HLM requires long data. The first data set, `long_df` contain the data in long form, 
+
+```{r, echo = F}
+
+long_df <- data.frame(
+  
+  'affect' = c(rnorm(500, 10, 1)),
+  'performance' = c(rnorm(500, 15, 5)),
+  'id' = c(seq(from = 1, to = 50)),
+  'time' = c(rep(1:10, each = 50)))
+
+head(long_df)
+
+library(reshape2)
+
+wide_df <- reshape(long_df, idvar = 'id', timevar = 'time', direction = 'wide')
+
+head(long_df[, -1])
+
+```
+
+\noindent where `id` refers to a person identifier, `time` refers to the observation period, and `affect` and `performance` each contain their own columns. 
+
+The second data set, `wide_df` contain the data in wide form,
+
+```{r, echo = F}
+head(wide_df[, -1])
+```
+
+where `id` is defined above and now `affect` and `performance` are given new columns at each measurement period, such that, as an example, person 1 has different columns for each observation of affect and performance. Again, we will refer to these variables and data sets as we unpack each section, but remember that the values within each data set are the same -- the only difference is their format.
+
+## Introduce Code and Its Use
+
+Finally, we will also present code snippets that estimate models related to each inference below. Code is typically published in methods literature to demonstrate how to estimate models, but it can also be used as a tool -- a language -- to build a greater understanding of the phenomenon (nature of code cite). We would like to use it for both reasons. Our goal is to provide readers with code for estimating models, but also allow them to see the inferences represented in various ways -- words and code -- to help clarify what they represent. The code snippets will take consistent forms throughout. HLM models will be expressed as follows:
+
+```{r, eval = F}
+
+hlm_model <- lme(
+  
+  code
+  more code
+  
+  data = long_df
+  
+)
+
+```
+
+\noindent where `hlm_model` is an object that stores the results of our model, `lme` is a function call to a linear mixed-effects regression (HLM), and within that we specify our effects and reference our data. In the examples below, `code` and `more code` will be replaced by the effects we specify, and `data` will always reference `long_df` because HLM requires long formatted data. Finally, after storing our results in the object `hlm_model` we can actually view them with:
+
+```{r, eval = F}
+
+summary(hlm_model)
+
+```
+
+\noindent Similarly, SEM models will be expressed as:
+
+```{r}
+
+sem_string <- '
+
+    code
+    more code
+
+'
+
+sem_model <- sem(sem_string, 
+                 data = wide_df)
+  
+
+```
+
+\noindent where `sem_model` is an object that stores the results of our SEM model and we refer to the `wide_df` data set because SEM requres wide data. Notice that in the SEM code snippet we first create a string object, `sem_string` to specify our effects. Again, the `code` and `more code` will be replaced by actual effects when we get to our inferences. Just like the HLM code, we then view our SEM results with:
+
+```{r, eval = F}
+
+summary(sem_model)
+
+```
+
+In summary, the style of code snippets just presented will be used throughout each inference section. What will change are the `code` and `more code` pieces, and in those areas we will impute effects specific to each inference. If you wish to run these models on your own computer, you will also need to load their packages in your `r` script with `load(nlme)` for HLM and `load(lavaan)` for SEM.
+
+We now turn to the inferences...
+
 # Relationships
 
-A common inference in our longitudinal literature is the relationship between an outcome ($y$) and one or more predictors ($x_{p}$) over time. As shown in figure one, researchers observe $y$ and one or more predictors at each time point, and are then interested in the immediate effect of the predictors on $y$. Although there are multiple slices in our figure, typically the effect of $x$ on $y$ is treated as stable over time and therefore the analysis returns an estimate of a single parameter (e.g., a single beta weight). This parameter is essentially a summary statement of the immediate effect of $x$ on $y$ at any point in time. In other words, researchers observe $x$ and $y$ at every $t$ from time $t$ to $t + 10$, as an example, and then report a statement of the effect of $x_{t}$ on $y_{t}$, or the expected immediate effect of $x$ on $y$ at any possible moment.
+## Explanation
+
+A common inference in our longitudinal literature is the relationship between an outcome ($y$) and one or more predictors ($x_{p}$) over time. As shown in figure one, researchers observe $y$ and one or more predictors at each time point, and are then interested in the immediate effect of the predictors on $y$. Although there are multiple slices in our figure, typically the effect of $x$ on $y$ is treated as stable over time and therefore the analysis returns an estimate of a single parameter (e.g., a single beta weight). This parameter is essentially a summary statement of the immediate effect of $x$ on $y$ at any point in time. In other words, researchers observe $x$ and $y$ at every $t$ from time $t$ to $t + 5$, as an example, and then report a statement of the effect of $x_{t}$ on $y_{t}$, or the expected immediate effect of $x$ on $y$ at any possible moment.
 
 Although the effect (i.e., the parameter relating $x$ to $y$) is treated as stable over time, the values on $x$ and $y$ -- the raw data -- are typically allowed to vary. When the values of $x$ (potentially) change at each observation, the analysis is referred to as a time-varying covariates analysis -- whereas a time-invariant analysis would be one where the raw data on $x$ does not change at each observation (e.g., gender). 
 
-To clarify, consider this inference with respect to our generic variables: affect $x$ and performance $y$. Researchers would collect performance and affect data on multiple people at each observation over several time points. Affect may vary at each observation -- it may be 5 at time $t$ and 9 at time $t + 1$ -- so this analysis is referred to as a time-varying covariates analysis. Researchers are then interested in the stable, immediate influence of affect on performance. That is, they are interested in the effect of affect$_{t}$ on performance$_{t}$ at any potential time, where, on average, they expect the effect of affect on performance to be close to their parameter value. Keep in mind that a "stable" effect here means that we expect affect to have a similar influence on performance at each moment. A relationships inference, therefore, is concerned with the average influence over time. Or, what we expect the immediate effect of $x$ on $y$ to be at any given moment. 
+To clarify, consider this inference with respect to our generic variables: affect $x$ and performance $y$. Researchers would collect performance and affect data on multiple people at each observation over several time points. Affect may vary at each observation -- it may be 5 at time $t$ and 9 at time $t + 1$ -- so this analysis is referred to as a time-varying covariates analysis. Researchers are then interested in the stable, immediate influence of affect on performance. That is, they are interested in the effect of affect$_{t}$ on performance$_{t}$ at any potential time, where, on average, they expect the effect of affect on performance to be close to their parameter value. 
+
+There is a distinction with how we used the term "stable" that merits more explanation. In a relationships inference, "stable" means that we expect the parameter value relating affect to performance to be the same at each moment. In other words, the relationship between affect and performance will be the same at each $t$ -- high values of affect will result in high values of performance (if the parameter is positive) and low values of affect will result in low values of performance. "Stable" in this inference context does not mean that affect has a lasting impression on performance, or that affect at time $t$ influences performance at some later time. This distinction is a difficult one, but it represents a major difference betweeen making a relationships inference versus some of the others we have yet to explore. A relationships inference, therefore, is concerned with the average influence over time, or what we expect the immediate effect of $x$ on $y$ to be at any given moment. 
+
+## Code
+
+We gain even more clarity on this inference when we consider the code used to estimate models. A typical HLM model would be estimated with something similar to the following code.
+
+```{r, eval = F}
+
+lme(                                   
+  
+  fixed = performance ~ affect,
+  random = ~1|id,
+  data = long_df
+  
+)
+
+```
+
+\noindent We will devote an entire section to the statistical properties of HLM and SEM below, what is important in this code snippet is `performance ~ affect`, which represents our estimate of the parameter relating affect to performance (regressing performance on affect) -- notice that we refer to the long data format as well. 
+
+In SEM, we would estimate an equivalent effect using the following.
+
+```{r, eval = F}
+
+sem_string <- '
+
+      performance.1 ~ b1*affect.1
+      performance.2 ~ b1*affect.2
+      performance.3 ~ b1*affect.3
+      performance.4 ~ b1*affect.4
+      performance.5 ~ b1*affect.5
+
+'
+
+sem(sem_string, data = wide_df)
+
+```
+
+\noindent Again, the important piece 
+
+
+## Hypotheses
+
+
+
+## Example Steps After Collecting Longitudinal Data
+
+### Hypothesis
+
+### Models
+
+HLM
+
+```{r}
+
+
+
+lme(                                   
+  
+  fixed = performance ~ affect,
+  random = ~1|id,
+  data = long_df
+  
+)
+
+```
+
+SEM
+
+```{r}
+
+sem_string <- '
+
+      performance.1 ~ b1*affect.1
+      performance.2 ~ b1*affect.2
+      performance.3 ~ b1*affect.3
+      performance.4 ~ b1*affect.4
+      performance.5 ~ b1*affect.5
+
+'
+
+sem(sem_string, data = wide_df)
+
+```
+
+
+Hypothesis
+
+
+
+
+
+There are many examples in our literature where researchers collect longitudinal data and then 
+
+## 
 
 Despite observing variables over time, this inference is static. Current values on the observed variables are unconstrained by where they were in the past. There are no effects from past values of the predictors or the outcome so the system is memoryless. Although the effect is treated as stable across time, the effect of $x$ on $y$ is assumed to dissapear the moment after it occurs. 
  
@@ -375,4 +561,14 @@ Mediation -- one variable influences an outcome through an intermediate variable
 
 
 
+
+
+# Extra
+
+
+
+This emphasis has translated into a growing number of longitudinal studies in our empirical literature. 
+This interest is apparent not only in reviews and theoretical discussions, but also in the increasing 
+
+Longitudinal studies are also increasingly common in our empirical literature. 
 
