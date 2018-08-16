@@ -41,7 +41,7 @@ output: pdf_document
 
 
 
-Organizational researchers are increasingly interested in longitudinal data structures. These data align with the processes we study, which "are not static but instead develop, change, and evolve over time" (Pitariu & Ployhart, p. 405) or are "sequences of events that play out within each person's stream of experience" (Beal, 2015, p. 5). If researchers can collect longitudinal data, they are then in a better position to understand patterns over time. Bell and Kozlowski (2003), for example, state that "longitudinal designs...will be far more revealing of the team phenomeon under investigation" (p. 59). Similarly -- in their review of emotional labor -- Grandey and Gabriel (2015) suggest that future researchers may be much better equipped to demonstrate emotion regulation patters "with longitudinal methods" (p. 329). Not only do longitudinal data collections help researchers observe relationships over time, many argue that doing so helps improve our theories. For instance, Pitariu and Ployhart (2010) suggest that collecting longitudinal data, observing change, and testing dynamic models "stimulates greater refinement in our existing theories" (p. 411), and Grandey and Gabriel (2015) urge for greater theoretical development of emotions by studying their "reciprocal and unfolding...processes...through momentary assessments or lagged effects" (p. 322). These quotes reveal our field's emphasis on collecting longitudinal data to sufficiently observe a process and build better theory.
+Organizational researchers are increasingly interested in longitudinal data structures. These data align with the processes we study, which "are not static but instead develop, change, and evolve over time" [@pitariu2010, p. 405] or are "sequences of events that play out within each person's stream of experience" [@beal2015, p. 5]. If researchers can collect longitudinal data, they are then in a better position to understand patterns over time. Kozlowski and Bell [-@kozlowski2003], for example, state that "longitudinal designs...will be far more revealing of the team phenomeon under investigation" (p. 59). Similarly -- in their review of emotional labor -- Grandey and Gabriel (2015) suggest that future researchers may be much better equipped to demonstrate emotion regulation patters "with longitudinal methods" (p. 329). Not only do longitudinal data collections help researchers observe relationships over time, many argue that doing so helps improve our theories. For instance, Pitariu and Ployhart (2010) suggest that collecting longitudinal data, observing change, and testing dynamic models "stimulates greater refinement in our existing theories" (p. 411), and Grandey and Gabriel (2015) urge for greater theoretical development of emotions by studying their "reciprocal and unfolding...processes...through momentary assessments or lagged effects" (p. 322). These quotes reveal our field's emphasis on collecting longitudinal data to sufficiently observe a process and build better theory.
 
 A greater emphasis on longitudinal data is also apparent in our empirical literature, where collecting repeated measures is now common. For instance, @jones2016 observed the work attitudes of pregnant women in their second trimester every week until they gave birth. @ritter2016 assessed job satisfaction across three time points that were each separated by six weeks. @matthews2014 studied work-family conflict across several months. @meier2013 examined counterproductive work behavior over five waves. @hardy2018 investigated self-regulation over 20 lab trials. @gabriel2014 measured fit and affect five times per day for 10 consecutive work days. Finally, @johnson2014 observed justice behavior and resource depletion across 10 consecutive workdays.
 
@@ -113,7 +113,7 @@ show_wide_df
 
 ## Introduce Code and Its Use
 
-Finally, we will also present code snippets that estimate models related to each inference. Code is typically published in methods literature to demonstrate how to estimate models, but it can also be used as a tool -- a language -- to build a greater understanding of the phenomenon (nature of code cite). We would like to use it for both reasons. Our goal is to provide readers with code for estimating models, but also allow them to see the inferences represented in various ways -- words and code -- to help clarify what they represent. 
+Finally, we will also present code snippets that estimate models related to each inference. Code is typically published in methods literature to demonstrate how to estimate models, but it can also be used as a tool -- a language -- to build a greater understanding of the phenomenon [@shiffman2012]. We would like to use it for both reasons. Our goal is to provide readers with code for estimating models, but also allow them to see the inferences represented in various ways -- words and code -- to help clarify what they represent. 
 
 The code snippets will take consistent forms throughout. HLM models will be expressed as follows:
 
@@ -183,9 +183,9 @@ To clarify, consider this inference with respect to our generic variables: affec
 
 There is a distinction with how we use the term "stable" that merits more explanation. In a relationships inference, "stable" means that we expect the parameter value relating affect to performance to be the same at each moment. In other words, the relationship between affect and performance will be the same at each $t$ -- high values of affect will result in high values of performance (if the parameter is positive) and low values of affect will result in low values of performance. "Stable" in this inference context does not mean that affect has a lasting impression on performance, or that affect at time $t$ influences performance at some later time. This distinction is a difficult one, but it represents a major difference betweeen making a relationships inference versus some of the others we have yet to explore. A relationships inference, therefore, is concerned with the average influence over time, or what we expect the immediate effect of $x$ on $y$ to be at any given moment. 
 
-## Literature Examples and Hypotheses
+## Example Hypotheses
 
-There are many examples in our literature that are interested in relationships over time. When a researcher is interested in making a relationships inference, they propose a hypothesis of the form: $x$ predicts $y$ (given some direction, positive or negative). Using our generic variables, we would propose:
+Many studies in our literature explore relationships over time. When a researcher is interested in making a relationships inference, they propose a hypothesis of the form: $x$ predicts $y$ (given some direction, positive or negative). Using our generic variables, we would propose:
 
 
 #### Affect positively (or negatively) predicts performance over time.
@@ -240,6 +240,10 @@ We will devote an entire section to the statistical properties of HLM and SEM be
 * Parameters From SEM or HLM:
  
     + beta coefficient relating $x$ to $y$ at each time point.
+    
+* Inference:
+
+    + $x$ immediately predicts $y$ at any moment in time.
 
 # Growth
 
