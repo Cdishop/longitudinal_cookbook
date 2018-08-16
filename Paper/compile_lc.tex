@@ -23,7 +23,7 @@
 }{}
 \usepackage{hyperref}
 \hypersetup{unicode=true,
-            pdftitle={Process Cookbook},
+            pdftitle={Inferences With Longitudinal Data},
             pdfauthor={\ldots{}},
             pdfkeywords={\ldots{}.},
             pdfborder={0 0 0},
@@ -109,11 +109,11 @@
 \def\footnote{\protect\rmarkdownfootnote}
 
 
-  \title{Process Cookbook}
+  \title{Inferences With Longitudinal Data}
     \author{\ldots{}\textsuperscript{1}}
     \date{}
   
-\shorttitle{PROCESS INFERENCES}
+\shorttitle{LONGITUDINAL INFERENCES}
 \affiliation{
 \vspace{0.5cm}
 \textsuperscript{1} ...}
@@ -271,11 +271,11 @@ paper}\label{a-no-argument-but-describing-paper}}
 Organizational researchers are increasingly interested in longitudinal
 data structures. These data align with the processes we study, which
 \enquote{are not static but instead develop, change, and evolve over
-time} (Pitariu \& Ployhart, p.~405) or are \enquote{sequences of events
-that play out within each person's stream of experience} (Beal, 2015,
-p.~5). If researchers can collect longitudinal data, they are then in a
-better position to understand patterns over time. Bell and Kozlowski
-(2003), for example, state that \enquote{longitudinal
+time} (Pitariu \& Ployhart, 2010, p. 405) or are \enquote{sequences of
+events that play out within each person's stream of experience} (Beal,
+2015, p. 5). If researchers can collect longitudinal data, they are then
+in a better position to understand patterns over time. Kozlowski and
+Bell (2003), for example, state that \enquote{longitudinal
 designs\ldots{}will be far more revealing of the team phenomeon under
 investigation} (p.~59). Similarly -- in their review of emotional labor
 -- Grandey and Gabriel (2015) suggest that future researchers may be
@@ -494,11 +494,11 @@ Use}\label{introduce-code-and-its-use}}
 Finally, we will also present code snippets that estimate models related
 to each inference. Code is typically published in methods literature to
 demonstrate how to estimate models, but it can also be used as a tool --
-a language -- to build a greater understanding of the phenomenon (nature
-of code cite). We would like to use it for both reasons. Our goal is to
-provide readers with code for estimating models, but also allow them to
-see the inferences represented in various ways -- words and code -- to
-help clarify what they represent.
+a language -- to build a greater understanding of the phenomenon
+(Shiffman, 2012). We would like to use it for both reasons. Our goal is
+to provide readers with code for estimating models, but also allow them
+to see the inferences represented in various ways -- words and code --
+to help clarify what they represent.
 
 The code snippets will take consistent forms throughout. HLM models will
 be expressed as follows:
@@ -633,15 +633,14 @@ explore. A relationships inference, therefore, is concerned with the
 average influence over time, or what we expect the immediate effect of
 \(x\) on \(y\) to be at any given moment.
 
-\hypertarget{literature-examples-and-hypotheses}{%
-\subsection{Literature Examples and
-Hypotheses}\label{literature-examples-and-hypotheses}}
+\hypertarget{example-hypotheses}{%
+\subsection{Example Hypotheses}\label{example-hypotheses}}
 
-There are many examples in our literature that are interested in
-relationships over time. When a researcher is interested in making a
-relationships inference, they propose a hypothesis of the form: \(x\)
-predicts \(y\) (given some direction, positive or negative). Using our
-generic variables, we would propose:
+Many studies in our literature explore relationships over time. When a
+researcher is interested in making a relationships inference, they
+propose a hypothesis of the form: \(x\) predicts \(y\) (given some
+direction, positive or negative). Using our generic variables, we would
+propose:
 
 \hypertarget{affect-positively-or-negatively-predicts-performance-over-time.}{%
 \paragraph{Affect positively (or negatively) predicts performance over
@@ -735,6 +734,14 @@ Summary}\label{relationships-inference-1-summary}}
   \item
     beta coefficient relating \(x\) to \(y\) at each time point.
   \end{itemize}
+\item
+  Inference:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(x\) immediately predicts \(y\) at any moment in time.
+  \end{itemize}
 \end{itemize}
 
 \hypertarget{growth}{%
@@ -761,6 +768,11 @@ What is the level of a construct at a given point in time?
 Barnes, C. M., Schaubroeck, J., Huth, M., \& Ghumman, S. (2011). Lack of
 sleep and unethical conduct. \emph{Organizational Behavior and Human
 Decision Processes}, \emph{115}(2), 169--180.
+
+\leavevmode\hypertarget{ref-beal2015}{}%
+Beal, D. J. (2015). ESM 2.0: State of the art and future potential of
+experience sampling methods in organizational research. \emph{Annu. Rev.
+Organ. Psychol. Organ. Behav.}, \emph{2}(1), 383--407.
 
 \leavevmode\hypertarget{ref-chi2015}{}%
 Chi, N.-W., Chang, H.-T., \& Huang, H.-L. (2015). Can personality traits
@@ -792,6 +804,10 @@ Jones, K. P., King, E. B., Gilrane, V. L., McCausland, T. C., Cortina,
 J. M., \& Grimm, K. J. (2016). The baby bump: Managing a dynamic stigma
 over time. \emph{Journal of Management}, \emph{42}(6), 1530--1556.
 
+\leavevmode\hypertarget{ref-kozlowski2003}{}%
+Kozlowski, S. W., \& Bell, B. S. (2003). Work groups and teams in
+organizations. \emph{Handbook of Psychology}, 333--375.
+
 \leavevmode\hypertarget{ref-matthews2014}{}%
 Matthews, R. A., Wayne, J. H., \& Ford, M. T. (2014). A work--family
 conflict/subjective well-being process model: A test of competing
@@ -803,10 +819,19 @@ Meier, L. L., \& Spector, P. E. (2013). Reciprocal effects of work
 stressors and counterproductive work behavior: A five-wave longitudinal
 study. \emph{Journal of Applied Psychology}, \emph{98}(3), 529.
 
+\leavevmode\hypertarget{ref-pitariu2010}{}%
+Pitariu, A. H., \& Ployhart, R. E. (2010). Explaining change: Theorizing
+and testing dynamic mediated longitudinal relationships. \emph{Journal
+of Management}, \emph{36}(2), 405--429.
+
 \leavevmode\hypertarget{ref-rosen2016}{}%
 Rosen, C. C., Koopman, J., Gabriel, A. S., \& Johnson, R. E. (2016). Who
 strikes back? A daily investigation of when and why incivility begets
 incivility. \emph{Journal of Applied Psychology}, \emph{101}(11), 1620.
+
+\leavevmode\hypertarget{ref-shiffman2012}{}%
+Shiffman, D. (2012). \emph{The nature of code: Simulating natural
+systems with processing}. Daniel Shiffman.
 
 
 \end{document}
