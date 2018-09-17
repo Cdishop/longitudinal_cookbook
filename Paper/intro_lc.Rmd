@@ -2,6 +2,15 @@
 output: pdf_document
 ---
 
+# Take aways from last time
+
+* Orgs are systems, systems unfold over time, there are different inferences and research questions we can explore to gain a better understanding of how organizational phenomena unfold over time.
+
+* Linking inferences to models; don't say best models
+
+* 						◊ Of course, none of these types of inferences/questions perfectly discovers the data generating mechanism. Rather, each asks an interesting and important question about a DV and how it relates to an IV. Only with lots of asking about lots of different patterns of relationships across the variables could we piece together the actual data generating process (hopefully having a good theory to guide the way).
+
+
 # Hook thoughts
 
 ## Hook from last meeting
@@ -39,7 +48,9 @@ output: pdf_document
 * We are going to describe them
 * This paper is for newcomers who want some examples and for longitudinal modelers who want other options to augment what they are doing
 
+Organizations are systems. Systems are dynamic entities. Therefore, we need to study these systems over time. Moreover, studying things over time reveals new and interesting insights. 
 
+There are different inferences/research questions we can ask to gain a better understanding of how organizational phenomena unfold over time. 
 
 Organizational researchers are increasingly interested in longitudinal data structures. These data align with the processes we study, which "are not static but instead develop, change, and evolve over time" [@pitariu2010, p. 405] or are "sequences of events that play out within each person's stream of experience" [@beal2015, p. 5]. If researchers can collect longitudinal data, they are then in a better position to understand patterns over time. Kozlowski and Bell [-@kozlowski2003], for example, state that "longitudinal designs...will be far more revealing of the team phenomeon under investigation" (p. 59). Similarly -- in their review of emotional labor -- Grandey and Gabriel (2015) suggest that future researchers may be much better equipped to demonstrate emotion regulation patters "with longitudinal methods" (p. 329). Not only do longitudinal data collections help researchers observe relationships over time, many argue that doing so helps improve our theories. For instance, Pitariu and Ployhart (2010) suggest that collecting longitudinal data, observing change, and testing dynamic models "stimulates greater refinement in our existing theories" (p. 411), and Grandey and Gabriel (2015) urge for greater theoretical development of emotions by studying their "reciprocal and unfolding...processes...through momentary assessments or lagged effects" (p. 322). These quotes reveal our field's emphasis on collecting longitudinal data to sufficiently observe a process and build better theory.
 
