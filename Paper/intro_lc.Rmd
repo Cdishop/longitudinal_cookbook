@@ -16,7 +16,7 @@ We want to link inferences to models in this paper so that researchers know whic
 
 Below, we do these things.
 
-### A similar hook but with a separate parts for research questions and inferences. Paragraphs 3, 4, and 5 are different.
+## A similar hook but with a separate parts for research questions and inferences. Paragraphs 3, 4, and 5 are different.
 
 There is now a common understanding that the phenomena organizational researchers study unfold over time... 
 
@@ -31,22 +31,154 @@ The spine of an investigation, finally, is to interpret the model to make an inf
 None of these inferences perfectly discovers the data generating mechanism. Rather, each asks an interesting and important question about how DVs relate to IVs. Only with lots of asking about lots of different patterns of relationships across the variables could we piece together one (of many) possible representation(s) of the data generating process -- hopefully having a good theory to guide the way.
 
 We want to link inferences to models in this paper so that researchers...
-    
-# Rest of paper
 
-## Define longitudinal
+# Longitudinal Definitions
 
 This paper is exclusively devoted to the inferences we make with repeated observations, so we begin by identifying a few labels and definitions. Authors typically identify a "longitudinal" study by making a contrast with respect to either a) research designs or b) data structures. Longitudinal *research* is different from cross-sectional research because longitudinal designs entail three or more repeated observations (Ployhart & Bliese, Singer & Willett). We therefore emphasize differences on the number of observations when we distinguish longitudinal from other types of research. Longitudinal *data* are repeated observations on several units (i.e., $N$ or $i$ > 1), whereas panel data are observations of one unit over time -- a distinction that focuses on the amount of people in our study (given repeated measures). Most organizational studies collect data on more than one unit, therefore our discussion below focuses on longitudinal research with longitudinal data, or designs with $N$ > 1, $t$ >= 3, and the same construct(s) measured on (potentially) each $i$ at (potentially) each $t$. 
 
-## Introduce framework
-#### Relationships, Growth, Change, Dynamics
-#### These are umbrella research foci. Each has its own sub-inferences and models. 
+## Framework
+Relationships. Growth. Change. Dynamics. These are umbrella research foci, each has its own sub-inferences and models. 
 
-## Plan for each umbrella foci
-#### An introductory paragraph about the general notion
-#### A sub question
-#### A sub model with SEM (no results, just the string). We can include full model code in an appendix
-#### A sub inference
+# Relationships
+
+General discussion.
+
+## Inference 1
+
+A stable $x$ relates to $y$.
+
+### Model
+
+.
+
+```{r, eval = F}
+'
+perf.1 ~ b1*gender
+perf.2 ~ b1*gender
+perf.3 ~ b1*gender
+perf.4 ~ b1*gender
+
+'
+```
+
+## Inference 2
+
+A fluctuating $x$ relates to $y$.
+
+### Model
+.
+```{r, eval = F}
+'
+perf.1 ~ b1*affect.1
+perf.2 ~ b1*affect.2
+perf.3 ~ b1*affect.3
+perf.4 ~ b1*affect.4
+
+'
+
+```
+
+# Growth
+
+General discussion.
+
+## Inference 1
+
+There is growth (positive or negative) in a given variable. Other terms: trend, slope, some call this change; we won't.
+
+### Model
+.
+
+```{r, eval = F}
+
+'
+latent_perf_slope =~ 0*perf.1 + 1*perf.2 + 2*perf.3 + 3*perf.4
+
+'
+```
+
+## Inference 2
+
+There is a relationship between growth (slope) and level in a given variable.
+
+### Model
+.
+```{r, eval = F}
+'
+latent_perf_level ~~ latent_perf_slope
+
+'
+
+```
+
+## Inference 3
+
+There is a relationship between a stable $x$ and growth in $y$.
+
+### Model
+
+.
+```{r, eval = F}
+
+
+'
+latent_perf_slope ~ b1*gender
+
+'
+
+```
+
+\noindent Could also do this for level.
+
+## Inference 4
+
+There is a relationship between a fluctuating $x$ and $y$ after partialling the growth in $y$; or there is growth in $y$ after partialling the relationship between a fluctuating $x$ and $y$.
+
+### Model
+
+.
+
+```{r, eval = F}
+
+'
+latent_per_slope =~ 0*perf.1 + 1*perf.2 + 2*perf.3 + 3*perf.4
+
+perf.1 ~ b1*affect.1
+perf.2 ~ b1*affect.2
+perf.3 ~ b1*affect.3
+perf.4 ~ b1*affect.4
+
+'
+```
+
+# Growth 2.0
+
+Above, we examined growth in $y$ and how it related to correlates or predictors -- but those predictors/correlates were assumed to have no growth. There is also a class of models for examining relationships between two variables where both are assumed to grow.
+
+## Inference 1
+
+There are correlated slopes among two growth curves.
+
+### Model
+
+.
+
+```{r, eval = F}
+
+'
+
+latent_perf_slope ~~ latent_affect_slope
+
+'
+
+```
+
+# Change
+
+Partial technique in MLM
+
+Dual change in SEM
+
 
 ## Relationships
 ### Sub Inference 1
