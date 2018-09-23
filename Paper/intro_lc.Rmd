@@ -2,7 +2,7 @@
 output: pdf_document
 ---
 
-There is now a common understanding that the phenomena organizational researchers study unfold over time. @beal_esm_2015, for example, states that psychological phenomena are "sequences of events and event reactions that play out within each person's stream of experience," and "describing these within-person processes is fundamental to understanding" (p. 5). Similarly, @pitariu_explaining_2010 note that the processes we study "are not static but instead develop, change, and evolve over time" (p. 405). Moreover, organizations are systems with many connected parts, and systems are inherently dynamic. Studying these systems and processes, therefore, requires paying attention to how things happen over time; doing so puts us in a better position to capture the sequence, understand it, and can lead to new and interesting insights [@kozlowski_work_2003].
+Organizational phenomena unfold over time. They are processes that develop, change, and evolve [@pitariu_explaining_2010] that create a sequence of events within a person's stream of experience [@beal_esm_2015]. Moreover, organizations are systems with many connected parts, and systems are inherently dynamic. Studying these systems and processes, therefore, requires paying attention not to static snapshots of behavior [@ilgen_computational_2000], but variables and relationships as they move through time; doing so puts us in a better position to capture the sequence, understand it, and can lead to new and interesting insights [@kozlowski_work_2003].
 
 This sentiment is reflected in our empirical literature, where repeated assessments are now common. For instance, @jones_baby_2016 observed the work attitudes of pregnant women in their second trimester every week until they gave birth. @meier_reciprocal_2013 examined counterproductive work behavior over five waves. @hardy_interrelationships_2018 investigated self-regulation over 20 lab trials. Finally, @johnson_good_2014 observed justice behavior and resource depletion across 10 consecutive workdays.
 
@@ -237,32 +237,8 @@ perf.4 ~ b1*affect.3
 
 ```
 
+
 ## Inference 3
-
-There is a relationship direction among a set of variables. Either both variables predict each other, neither predict the other, or the relationship occurs in one direction.
-
-### Model
-
-.
-
-```{r, eval = F}
-
-'
-
-perf.2 ~ b1*affect.1
-perf.3 ~ b1*affect.2
-perf.4 ~ b1*affect.3
-
-affect.2 ~ b2*perf.1
-affect.3 ~ b2*perf.2
-affect.4 ~ b2*perf.3
-
-'
-
-```
-
-
-## Inference 4
 
 There is a reciprocal relationship, or feedback, where one variable subsequently relates to another, and this second variable then relates to the first at an even later point in time.
 
@@ -340,10 +316,6 @@ There is autoregression in a variable, a relationship between prior and future v
 There are cross-lag effects, where one variable relates to another at a different point in time.
 
 ## Inference 3
-
-There is a relationship direction among a set of variables. Either both variables predict each other, neither predict the other, or the relationship occurs in one direction.
-
-## Inference 4
 
 There is a reciprocal relationship, or feedback, where one variable subsequently relates to another, and this second variable then relates to the first at an even later point in time.
 
