@@ -16,6 +16,10 @@ When we examine more than one unit on a variable we can also look at the variabi
 
 When we examine two or more variables, we can of course look at trend or slope in each of them. The next step is to then correlate slopes or regress one slope on another. Does the trend in affect relate to the trend in helping behaviors?
 
+figure \ref{trend}
+figure \ref{trend_var}
+figure \ref{trend_relation}
+
 ## Inference List
 
 There is growth in a variable across time. Its slope/trend is positive or negative. 
@@ -29,7 +33,7 @@ There is a relationship between two growth curves. Two trends are correlated.
 
 ## Pictures
 
-```{r, echo = F, fig.cap = 't\\label{trend}'}
+```{r, echo = F, fig.cap = 'Trend across time\\label{trend}'}
 set.seed(3)
 
 ind <- c(1:20)
@@ -60,7 +64,7 @@ ggplot(fam, aes(x = Time, y = Y, color = legend)) +
 
 ```
 
-```{r, echo = F, fig.cap = 'tr\\label{trend_var}'}
+```{r, echo = F, fig.cap = 'Differences in trend variability across units\\label{trend_var}'}
 set.seed(88)
 
 per1 <- 4 + 0.6*ind + rnorm(20, 0, 0.5)
@@ -99,7 +103,7 @@ ggplot(yup, aes(x = Time, y = Y, color = Person), alpha = 0.4) +
 ```
 
 
-```{r, echo = F, fig.cap = 'trend to trend\\label{trend_rel}', fig.height = 10}
+```{r, echo = F, fig.cap = 'Correlating slopes, or relating the affect to performance trend\\label{trend_relation}', fig.height = 10}
 
 set.seed(33)
 tre_affect <- 6 + 0.6*ind + rnorm(20,0,1)
@@ -162,16 +166,16 @@ tp1 <- ggplot(trend_rel, aes(x = Time, y = Y, group = call)) +
 
 
 trend_trend <- data.frame(
-  'Affect' = c(1, 2, 3),
-  'Performance' = c(3, 2, 1),
+  'Affect' = c(-0.8, 0, 0.8),
+  'Performance' = c(0.8, 0, -0.8),
   'label' = c('green', 'blue', 'red')
 )
 
 tp2 <- ggplot(trend_trend, aes(x = Affect, y = Performance, color = label)) + 
   geom_point(size = 6, alpha = 0.6) + 
   theme_classic() + 
-  scale_y_continuous(labels = NULL) + 
-  scale_x_continuous(labels = NULL) + 
+  scale_y_continuous(breaks = c(-1, 0, 1)) + 
+  scale_x_continuous(breaks = c(-1, 0, 1)) + 
   ylab("Trend in Performance") + 
   xlab("Trend in Affect") + 
   theme(legend.title = element_blank()) + 

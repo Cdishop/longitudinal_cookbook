@@ -2,41 +2,45 @@
 \ifnextchar[{\eatarg}{}
 
 \centering
-\includegraphics{figures/unnamed-chunk-7-1.pdf}
-\caption{\label{fig:unnamed-chunk-7}something here\label{level}}
-\end{figure*}
-\begin{figure*}[hbt]
-\ifnextchar[{\eatarg}{}
-
-\centering
 \includegraphics{figures/unnamed-chunk-8-1.pdf}
-\caption{\label{fig:unnamed-chunk-8}another\label{level_var}}
+\caption{\label{fig:unnamed-chunk-8}Level examples\label{level}}
 \end{figure*}
 \begin{figure*}[hbt]
 \ifnextchar[{\eatarg}{}
 
 \centering
 \includegraphics{figures/unnamed-chunk-9-1.pdf}
-\caption{\label{fig:unnamed-chunk-9}double\label{level_relation}}
+\caption{\label{fig:unnamed-chunk-9}Trajectories with similar starting and
+average levels but different ending levels\label{level_var}}
 \end{figure*}
 \begin{figure*}[hbt]
 \ifnextchar[{\eatarg}{}
 
 \centering
 \includegraphics{figures/unnamed-chunk-10-1.pdf}
-\caption{\label{fig:unnamed-chunk-10}t\label{trend}}
+\caption{\label{fig:unnamed-chunk-10}Relating affect to performance
+levels\label{level_relation}}
 \end{figure*}
 \begin{figure*}[hbt]
 \ifnextchar[{\eatarg}{}
 
 \centering
 \includegraphics{figures/unnamed-chunk-11-1.pdf}
-\caption{\label{fig:unnamed-chunk-11}tr\label{trend_var}}
+\caption{\label{fig:unnamed-chunk-11}Trend across time\label{trend}}
 \end{figure*}
 \begin{figure*}[hbt]
 \ifnextchar[{\eatarg}{}
 
 \centering
 \includegraphics{figures/unnamed-chunk-12-1.pdf}
-\caption{\label{fig:unnamed-chunk-12}trend to trend\label{trend_rel}}
+\caption{\label{fig:unnamed-chunk-12}Differences in trend variability across
+units\label{trend_var}}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{figures/unnamed-chunk-13-1.pdf}
+\caption{\label{fig:unnamed-chunk-13}Correlating slopes, or relating the
+affect to performance trend\label{trend_relation}}
 \end{figure*}

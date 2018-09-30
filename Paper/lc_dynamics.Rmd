@@ -4,3 +4,29 @@ output: pdf_document
 
 # Dynamics
 
+Dynamics refers to systems with memory. When the past matters, dynamics are at play. 
+
+Stuff about change.
+
+Dynamics refers to a specific branch of mathematics, but the term is used in different ways throughout our literature. It is used informally to mean "change", "fluctuating," "volatile," "longitudinal," or "over time" (among others), whereas formal definitions in our literature are presented within certain contexts. Wang defines a dynamic *model* as a "representation of a system that evolves over time. In particular it describes how the system evolves from a given state at time *t* to another state at time *t + 1* as governed by the transition rules and potential external inputs" (p. 242). Vancouver states that dynamic *variables* "behave as if they have memory; that is, their value at any one time depends somewhat on their previous value" (p. 604). Finally, Monge suggests that in dynamic *analyses*, "it is essential to know how variables depend upon their own past history" (p. 409). 
+
+The crucial notion to take from dynamics, then, is memory. When the past matters, and future states are constrained by where they were at prior points in time, dynamics are at play.
+
+## Inference List
+
+A variable has autoregression.
+
+Level relationships with lags: $x_t$ is associated with $y_t+1$ across time. There are cross-lag effects, where one variable relates to another at a different point in time. Distinguish this from one measurement at t_1 and one measurement of y at t_2...this inference is not that. This inference is about a bunch of repeated measurements, and at each of those x predicts the next moment of y.
+
+The inference above can be extended to include reciprocal relationships or multiple variables.
+
+Change relationships. $x$ is associated with a change in $y$. This implies that $x_t$ predicts $y_t$, but $y_t$ is no longer just the straight observation, it is the difference between $y_t$ and $y_t-1$ (or with $y_t-1$ partialled). 
+
+Change relationships with lags. Same thing as above but now a different lag of $x$ is predicting change in $y$. 
+
+
+
+
+
+
+

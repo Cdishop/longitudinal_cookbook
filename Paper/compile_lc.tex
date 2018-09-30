@@ -248,7 +248,7 @@ trajectories or relationships over time, their small differences have
 large implications for what we take away from them -- what we ultimately
 conclude. Moreoever, there are many inferences, many models, and
 different models can be used to understand or explore the same
-inference. In this paper, we provide readers with a specific model for
+inference. In this paper, we provide readers with potential models for
 each inference so that they can be sure that the model they evoke is
 appropriate for the research question that they are interested in. In
 summary, this paper exposes researchers to the span of inferences they
@@ -294,73 +294,186 @@ have different names, some require stationary, some don't. You need to
 appreciate that and make sure you are attending to all of its nuance.
 All we are doing here is pointing you in the direction.
 
-\hypertarget{level}{%
-\section{Level}\label{level}}
+Different literatures talk about the idea of level in different ways. In
+mathematical biology a variable is referred to as a state, the span of
+values that it can take is known as the state space, and its current
+value is called the condition of the state. Level is therefore
+synonymous with the condition of a state. Monge refers to it as
+magnitude.
 
-Level inferences concern the value that a variable takes (high or low)
-across time. If we put a variable on the y-axis and plot its values
-against time on the x-axis, what value does it take at time \(t\), or
-what value does it take on average, across time, or what value does it
-take within certain windows of time?
-
-Level has to do with the condition of a state with respect to its state
-space. It may have a state space of zero to ten, and its current
-condition is seven. This is level. It has also been called magnitude.
-
-Is affect high, on average, across time? Is trainee skill low at the
-beginning of a training session? Are newcomer perceptions of unit
-climate high at the end of a two-week socialization process?
-
-Level, with respect to a certain point or window in time, is called the
+In the statistical literature, level is called the intercept. Level,
+with respect to a certain point or window in time, is called the
 intercept in the statistical literature, and we can make an inference
 about the intercept at any observation point. Sometimes we are
 interested in the level at the beginning of the study, other times we
 are interested in the level at the last observation. We can of course
 also be interested in the average level across time.
 
+\hypertarget{level}{%
+\section{Level}\label{level}}
+
+Is employee emotional exhaustion, on average, high across the study? Is
+trainee skill low at the beginning of a training session? What value are
+newcomer perceptions of unit climate at the end of a two-week
+socialization process? These are questions about level, or the specific
+value of a variable.
+
+We can think about level at a specific moment or averaged across a
+window of time. That is, if we put a variable on the \(y\) axis and plot
+its values against time on the \(x\) axis, we can explore the value that
+it takes at time \(t\), or the value that it takes on average across any
+span of \(t\). Figure \ref{level} demonstrates this idea graphically. A
+variable is plotted across time, and the color labels indicate levels --
+two at specific \(t\)'s and the third averaged across time -- that we
+may be interested in.
+
+\begin{center}
+
+------------
+
+Insert Figure \ref{level} about here
+
+------------
+
+\end{center}
+
+\noindent Our first level inference, therefore, concerns the value of a
+variable at a specific time or averaged across a window of time.
+
+\hypertarget{inference-1-what-is-the-level-of-x-at-time-t-or-across-a-span-of-t}{%
+\paragraph{\texorpdfstring{Inference 1: What is the level of \(x\) at
+time \(t\), or across a span of
+\(t\)?}{Inference 1: What is the level of x at time t, or across a span of t?}}\label{inference-1-what-is-the-level-of-x-at-time-t-or-across-a-span-of-t}}
+
 When we retain one variable but add multiple units -- people or
 organizations, for example -- then we can look at the variability in
 level. Does everyone have high affect across time? Is there variability
 in the level of skill among trainees at the beginning of a training
-session? Now there are multiple points on our graph at each time.
+session? We demonstrate this idea in figure \ref{level_var}, where each
+unit (person) has a similar trajectory but different levels at the last
+time point.
 
-When we measure two or more variables we can examine all of their
-levels, but we can also correlate them, or regress some variables onto
-others. Is the level of affect related to the level of helping behaviors
-across time? That is, when affect is high, are helping behaviors also
-high or are they low? When team cohesion is low, is team performance low
-as well, or is it high?
+\begin{center}
 
-figure \ref{level}
+------------
 
-\hypertarget{inference-list}{%
-\subsection{Inference List}\label{inference-list}}
+Insert Figure \ref{level_var} about here
+
+------------
+
+\end{center}
+
+\noindent The second level inference, therefore, is about the
+variability of level across units.
+
+\hypertarget{inference-2-there-is-variability-in-the-level-of-x-at-time-t-or-across-a-span-of-t.}{%
+\paragraph{\texorpdfstring{Inference 2: There is variability in the
+level of \(x\) at time \(t\), or across a span of
+\(t\).}{Inference 2: There is variability in the level of x at time t, or across a span of t.}}\label{inference-2-there-is-variability-in-the-level-of-x-at-time-t-or-across-a-span-of-t.}}
+
+Inferences one and two concern a single variable, but they can of course
+be iterated across any or all observed variables in a study. For
+example, we might discover that \(x\) and \(y\) have high average levels
+across time, but that \(y\) has greater variability, suggesting
+individual differences in the sample. Or we might learn that \(x\) has a
+low initial level whereas \(y\)'s initial level is high.
+
+Correlating these levels is the next inference. When \(x\) on average is
+low at the initial time point and \(y\) on average is high at the
+initial time point, we can correlate them to discover if units (people)
+with low initial levels of \(x\) have high initial levels on \(y\) and
+people with high initial levels on \(x\) have low initial levels on
+\(y\).
+
+Figure \ref{level_correlate} demonstrates this graphically. all about
+the graph.
+
+\hypertarget{inference-3-there-is-a-correlation-between-the-level-of-x-and-y-at-t.}{%
+\paragraph{\texorpdfstring{Inference 3: There is a correlation between
+the level of \(x\) and \(y\) at
+\(t\).}{Inference 3: There is a correlation between the level of x and y at t.}}\label{inference-3-there-is-a-correlation-between-the-level-of-x-and-y-at-t.}}
+
+The final inference is horizontal. Rather than regressing a point
+estimate of the level on another level, we regress the values on a
+variable across time on another variable's values across time.
+
+Questions. Is the level of affect related to the level of helping
+behaviors across time? That is, when affect is high, are helping
+behaviors also high or are they low? When team cohesion is low, is team
+performance low as well, or is it high?
+
+Figure \ref{level_relation}
+
+\hypertarget{inference-4-there-is-a-relationship-between-x-and-y-across-time.}{%
+\paragraph{\texorpdfstring{Inference 4: There is a relationship between
+\(x\) and \(y\) across
+time.}{Inference 4: There is a relationship between x and y across time.}}\label{inference-4-there-is-a-relationship-between-x-and-y-across-time.}}
+
+\hypertarget{level-inference-table}{%
+\subsection{Level Inference Table}\label{level-inference-table}}
+
+\begin{tabular}{>{\raggedright\arraybackslash}p{5em}>{\raggedright\arraybackslash}p{30em}}
+\toprule
+Inference & Examples\\
+\midrule
+1 & Burnout is high at the last time point.\newline Performance is low, on average, across time.\\
+\hline
+2 & Average affect across time differs across people (units).\newline There is variability in the initial level of turnover across organizations.\\
+\hline
+3 & People with greater initial health status also have greater initial happiness.\newline People with high performance on average across time have lower anxiety on average across time.\\
+\hline
+4 & Affect relates to performance across time.\newline Helping behaviors predict depletion across time.\\
+\bottomrule
+\end{tabular}
+
+What is the level of \(x\) at \(t\), or across a span of \(t\)?
+
+Burnout is high at the last time point. Performance is low, on average,
+across time.
+
+There is variability in the level of \(x\) at \(t\), or across a span of
+\(t\).
+
+Average affect across time differs across people (units). There is
+variability in the initial level of turnover across organizations.
+
+There is a correlation between the level of \(x\) and level of \(y\) at
+\(t\).
+
+People with greater initial health status also have greater initial
+happiness.
 
 The level of \(x\) at time \(t\) is\ldots{} Picture 1.
 
 There is variability in the level of \(x\) at time \(t\). Picture 2.
 
+Correlate levels. People with high starting point on \(x\) have a high
+starting point on \(y\).
+
 There is a relationship between the levels of multiple variables. \(x\)
 relates to \(y\) across time. Stable vs fluctuating \(x\),
 time-invariant vs time-varying covariates.
 
-\hypertarget{pictures}{%
-\subsection{Pictures}\label{pictures}}
+\hypertarget{models}{%
+\subsection{Models}\label{models}}
 
-One Variable, one unit.
+Intercept only models: these can be done in HLM or SEM. Time-varying or
+invariant covariates analysis, these can be done in HLM or SEM. Point to
+references.
 
 \begin{figure}
 \centering
-\includegraphics{figures/unnamed-chunk-7-1.pdf}
-\caption{\label{fig:unnamed-chunk-7}something here\label{level}}
+\includegraphics{figures/unnamed-chunk-8-1.pdf}
+\caption{\label{fig:unnamed-chunk-8}Level examples\label{level}}
 \end{figure}
 
 One variable, multiple units
 
 \begin{figure}
 \centering
-\includegraphics{figures/unnamed-chunk-8-1.pdf}
-\caption{\label{fig:unnamed-chunk-8}another\label{level_var}}
+\includegraphics{figures/unnamed-chunk-9-1.pdf}
+\caption{\label{fig:unnamed-chunk-9}Trajectories with similar starting and
+average levels but different ending levels\label{level_var}}
 \end{figure}
 
 Muliple Variables
@@ -370,16 +483,10 @@ is high.
 
 \begin{figure}
 \centering
-\includegraphics{figures/unnamed-chunk-9-1.pdf}
-\caption{\label{fig:unnamed-chunk-9}double\label{level_relation}}
+\includegraphics{figures/unnamed-chunk-10-1.pdf}
+\caption{\label{fig:unnamed-chunk-10}Relating affect to performance
+levels\label{level_relation}}
 \end{figure}
-
-\hypertarget{models}{%
-\subsection{Models}\label{models}}
-
-Intercept only models: these can be done in HLM or SEM. Time-varying or
-invariant covariates analysis, these can be done in HLM or SEM. Point to
-references.
 
 \hypertarget{trend}{%
 \section{Trend}\label{trend}}
@@ -414,8 +521,10 @@ slope in each of them. The next step is to then correlate slopes or
 regress one slope on another. Does the trend in affect relate to the
 trend in helping behaviors?
 
-\hypertarget{inference-list-1}{%
-\subsection{Inference List}\label{inference-list-1}}
+figure \ref{trend} figure \ref{trend_var} figure \ref{trend_relation}
+
+\hypertarget{inference-list}{%
+\subsection{Inference List}\label{inference-list}}
 
 There is growth in a variable across time. Its slope/trend is positive
 or negative.
@@ -428,25 +537,27 @@ There are correlates/predictors of trend.
 There is a relationship between two growth curves. Two trends are
 correlated.
 
-\hypertarget{pictures-1}{%
-\subsection{Pictures}\label{pictures-1}}
-
-\begin{figure}
-\centering
-\includegraphics{figures/unnamed-chunk-10-1.pdf}
-\caption{\label{fig:unnamed-chunk-10}t\label{trend}}
-\end{figure}
+\hypertarget{pictures}{%
+\subsection{Pictures}\label{pictures}}
 
 \begin{figure}
 \centering
 \includegraphics{figures/unnamed-chunk-11-1.pdf}
-\caption{\label{fig:unnamed-chunk-11}tr\label{trend_var}}
+\caption{\label{fig:unnamed-chunk-11}Trend across time\label{trend}}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics{figures/unnamed-chunk-12-1.pdf}
-\caption{\label{fig:unnamed-chunk-12}trend to trend\label{trend_rel}}
+\caption{\label{fig:unnamed-chunk-12}Differences in trend variability across
+units\label{trend_var}}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{figures/unnamed-chunk-13-1.pdf}
+\caption{\label{fig:unnamed-chunk-13}Correlating slopes, or relating the
+affect to performance trend\label{trend_relation}}
 \end{figure}
 
 \hypertarget{models-1}{%
@@ -456,6 +567,54 @@ Growth curves in SEM or HLM. Bivariate growth curves.
 
 \hypertarget{dynamics}{%
 \section{Dynamics}\label{dynamics}}
+
+Dynamics refers to systems with memory. When the past matters, dynamics
+are at play.
+
+Stuff about change.
+
+Dynamics refers to a specific branch of mathematics, but the term is
+used in different ways throughout our literature. It is used informally
+to mean \enquote{change}, \enquote{fluctuating,} \enquote{volatile,}
+\enquote{longitudinal,} or \enquote{over time} (among others), whereas
+formal definitions in our literature are presented within certain
+contexts. Wang defines a dynamic \emph{model} as a
+\enquote{representation of a system that evolves over time. In
+particular it describes how the system evolves from a given state at
+time \emph{t} to another state at time \emph{t + 1} as governed by the
+transition rules and potential external inputs} (p.~242). Vancouver
+states that dynamic \emph{variables} \enquote{behave as if they have
+memory; that is, their value at any one time depends somewhat on their
+previous value} (p.~604). Finally, Monge suggests that in dynamic
+\emph{analyses}, \enquote{it is essential to know how variables depend
+upon their own past history} (p.~409).
+
+The crucial notion to take from dynamics, then, is memory. When the past
+matters, and future states are constrained by where they were at prior
+points in time, dynamics are at play.
+
+\hypertarget{inference-list-1}{%
+\subsection{Inference List}\label{inference-list-1}}
+
+A variable has autoregression.
+
+Level relationships with lags: \(x_t\) is associated with \(y_t+1\)
+across time. There are cross-lag effects, where one variable relates to
+another at a different point in time. Distinguish this from one
+measurement at t\_1 and one measurement of y at t\_2\ldots{}this
+inference is not that. This inference is about a bunch of repeated
+measurements, and at each of those x predicts the next moment of y.
+
+The inference above can be extended to include reciprocal relationships
+or multiple variables.
+
+Change relationships. \(x\) is associated with a change in \(y\). This
+implies that \(x_t\) predicts \(y_t\), but \(y_t\) is no longer just the
+straight observation, it is the difference between \(y_t\) and \(y_t-1\)
+(or with \(y_t-1\) partialled).
+
+Change relationships with lags. Same thing as above but now a different
+lag of \(x\) is predicting change in \(y\).
 
 \hypertarget{mediation}{%
 \section{Mediation}\label{mediation}}

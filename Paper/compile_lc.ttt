@@ -1,0 +1,15 @@
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[H]
+\centering
+\begin{tabular}{>{\raggedright\arraybackslash}p{5em}>{\raggedright\arraybackslash}p{30em}}
+\toprule
+Inference & Examples\\
+\midrule
+1 & Burnout is high at the last time point.\newline Performance is low, on average, across time.\\
+2 & Average affect across time differs across people (units).\newline There is variability in the initial level of turnover across organizations.\\
+3 & People with greater initial health status also have greater initial happiness.\newline People with high performance on average across time have lower anxiety on average across time.\\
+4 & Affect relates to performance across time.\newline Helping behaviors predict depletion across time.\\
+\bottomrule
+\end{tabular}
+\end{table*}
