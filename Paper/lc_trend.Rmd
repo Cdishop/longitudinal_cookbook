@@ -1,0 +1,201 @@
+---
+output: pdf_document
+---
+
+# Trend
+
+Trend has to do with the global shape of the trajectory across time. If we put a variable on the y-axis and plot its values against time on the x-axis, do the values tend to go up or down over time? Trend can be thought of as the coarse-grained direction of a trajectory. Also referred to as growth.
+
+Does affect go up or down across our measurement period, or is it relatively stable? Does trainee skill increase over the training session? 
+
+These are all linear examples of trend. We can also look at curvilinear things. Do newcomer perceptions of the positive attitude in the workplace increase and then plateua over time? Does the response time of a medical team decrease with each successive case but then remain stable once every crew member has reached their maximum potential to coordinate their actions?
+
+The statistical term for trend is slope, and linear slopes are straight lines whereas curvilinear slopes bend across time. 
+
+When we examine more than one unit on a variable we can also look at the variability in trend. Do all trainees develop greater skill across time? Is there variability in the trend of helping behaviors, or counterproductive work behaviors over time? 
+
+When we examine two or more variables, we can of course look at trend or slope in each of them. The next step is to then correlate slopes or regress one slope on another. Does the trend in affect relate to the trend in helping behaviors?
+
+## Inference List
+
+There is growth in a variable across time. Its slope/trend is positive or negative. 
+
+There is variability in the growth of a variable across time. Slopes/trends differ across units.
+
+There are correlates/predictors of trend.
+
+There is a relationship between two growth curves. Two trends are correlated. 
+
+
+## Pictures
+
+```{r, echo = F, fig.cap = 't\\label{trend}'}
+set.seed(3)
+
+ind <- c(1:20)
+chris <- 4 + 0.7*ind + rnorm(20,0,2)
+josh <- 4 - 0.7*ind  + rnorm(20, 0, 2)
+chris[1] <- 4
+josh[1] <- 4
+
+fam <- data.frame(
+  'Time' = c(ind, ind),
+  'Y' = c(chris, josh),
+  'legend' = c(rep('Positive Trend', 20), rep('Negative Trend', 20))
+)
+
+library(ggplot2)
+ggplot(fam, aes(x = Time, y = Y, color = legend)) + 
+  geom_point() + 
+  geom_abline(intercept = 4, slope = 0.7, color = 'blue', alpha = 0.5) +
+  geom_abline(intercept = 4, slope = -0.7, color = 'red', alpha = 0.5) + 
+  scale_y_continuous(labels = NULL) + 
+  theme_classic() + 
+  theme(legend.title = element_blank()) + 
+  scale_color_manual(values = c('Positive Trend' = 'blue', 
+                                'Negative Trend' = 'red'),
+                     breaks = c('Positive Trend', 
+                                'Negative Trend'))
+
+
+```
+
+```{r, echo = F, fig.cap = 'tr\\label{trend_var}'}
+set.seed(88)
+
+per1 <- 4 + 0.6*ind + rnorm(20, 0, 0.5)
+per2 <- 4 + 0.6*ind + rnorm(20, 0, 2)
+per3 <- 4 + 0.6*ind + rnorm(20, 0, 0.5)
+
+per4 <- 4 + 0.6*ind + rnorm(20, 0, 1)
+per5 <- 4 - 0.9*ind + rnorm(20, 0, 1)
+per6 <- 4 + 0.01*ind + rnorm(20,0,1)
+
+
+yup <- data.frame(
+  'Time' = c(ind, ind, ind, ind, ind, ind),
+  'Y' = c(per1, per2, per3, per4, per5, per6),
+  'Person' = c(rep('Person 1', 20),
+               rep("Person 2", 20),
+               rep('Person 3', 20),
+               rep('Person 1', 20),
+               rep('Person 2', 20),
+               rep('Person 3', 20)),
+  'type' = c(rep('No Trend Variability', 60),
+             rep('Trend Variability', 60))
+)
+
+
+ggplot(yup, aes(x = Time, y = Y, color = Person), alpha = 0.4) + 
+  geom_point() + 
+  geom_smooth(method = 'lm', se = F, aes(color = Person)) + 
+  facet_wrap(~type) + 
+  theme_classic() + 
+  theme(legend.title = element_blank()) + 
+  scale_y_continuous(labels = NULL)
+
+
+
+```
+
+
+```{r, echo = F, fig.cap = 'trend to trend\\label{trend_rel}', fig.height = 10}
+
+set.seed(33)
+tre_affect <- 6 + 0.6*ind + rnorm(20,0,1)
+tre_perf <- 2 - 0.6*ind + rnorm(20,0,1)
+
+affect2 <- 6- 0.6*ind + rnorm(20,0,1)
+perf2 <- 2 + 0.6*ind + rnorm(20,0,1)
+
+affect3 <- 5 + 0.02*ind + rnorm(20,0,1)
+perf3 <- 5 + 0.01*ind + rnorm(20,0,1)
+
+trend_rel <- data.frame(
+  'Time' = c(ind, ind,
+             ind, ind,
+             ind, ind),
+  'Y' = c(tre_affect, tre_perf,
+          affect2, perf2,
+          affect3, perf3),
+  'call' = c(rep('Affect', 20),
+              rep('Performance', 20),
+             rep('Affect', 20),
+             rep('Performance', 20),
+             rep('Affect', 20),
+             rep('Performance', 20)),
+  'Person' = c(rep('Person 1', 40),
+               rep('Person 2', 40),
+               rep('Person 3', 40))
+)
+
+trend_lines <- data.frame(
+  'Person' = c('Person 1',
+          'Person 1',
+          'Person 2',
+          'Person 2',
+          'Person 3',
+          'Person 3'),
+  'call' = c('Affect',
+             'Performance',
+             'Affect', 
+             'Performance',
+             'Affect',
+             'Performance'),
+  'intercept' = c(6, 2,
+                  6, 2, 
+                  5, 5),
+  'slope' = c(0.6, -0.6,
+              -0.6, 0.6,
+              0.02, 0.01)
+)
+
+tp1 <- ggplot(trend_rel, aes(x = Time, y = Y, group = call)) + 
+  geom_line(aes(linetype = call)) + 
+  theme_classic() + 
+  scale_y_continuous(labels = NULL) + 
+  theme(legend.title = element_blank()) + 
+  facet_grid(~Person, scales = 'free', space = 'free') + 
+  geom_abline(aes(intercept = intercept, slope = slope, color = Person), data = trend_lines, alpha = 0.9, show.legend = F)
+  
+
+
+
+trend_trend <- data.frame(
+  'Affect' = c(1, 2, 3),
+  'Performance' = c(3, 2, 1),
+  'label' = c('green', 'blue', 'red')
+)
+
+tp2 <- ggplot(trend_trend, aes(x = Affect, y = Performance, color = label)) + 
+  geom_point(size = 6, alpha = 0.6) + 
+  theme_classic() + 
+  scale_y_continuous(labels = NULL) + 
+  scale_x_continuous(labels = NULL) + 
+  ylab("Trend in Performance") + 
+  xlab("Trend in Affect") + 
+  theme(legend.title = element_blank()) + 
+  scale_color_manual(values = c('red' = 'red', 
+                                'blue' = 'blue',
+                                'green' = 'green'),
+                     labels = c('Person 3',
+                                'Person 2',
+                                'Person 1'))
+                     #breaks = c('Person 1',
+                          #      'Person 2',
+                           #     'Person 3'))
+
+library(gridExtra)
+
+grid.arrange(tp1, tp2, ncol = 1)
+
+```
+
+
+
+## Models
+
+Growth curves in SEM or HLM. Bivariate growth curves. 
+
+
+

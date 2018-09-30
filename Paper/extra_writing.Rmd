@@ -187,6 +187,331 @@ lme(
 
 ```
 
+
+# Relationships
+
+General discussion.
+
+## Inference 1
+
+A stable $x$ relates to $y$.
+
+### Model
+
+.
+
+```{r, eval = F}
+'
+perf.1 ~ b1*gender
+perf.2 ~ b1*gender
+perf.3 ~ b1*gender
+perf.4 ~ b1*gender
+
+'
+```
+
+## Inference 2
+
+A fluctuating $x$ relates to $y$.
+
+### Model
+.
+```{r, eval = F}
+'
+perf.1 ~ b1*affect.1
+perf.2 ~ b1*affect.2
+perf.3 ~ b1*affect.3
+perf.4 ~ b1*affect.4
+
+'
+
+```
+
+# Growth
+
+General discussion.
+
+## Inference 1
+
+There is growth (positive or negative) in a given variable. Other terms: trend, slope, some call this change; we won't.
+
+### Model
+.
+
+```{r, eval = F}
+
+'
+latent_perf_slope =~ 0*perf.1 + 1*perf.2 + 2*perf.3 + 3*perf.4
+
+'
+```
+
+## Inference 2
+
+There are inter-individual differences in growth.
+
+### Model
+
+.
+
+```{r, eval = F}
+'
+latent_perf_slope =~ 0*perf.1 + 1*perf.2 + 2*perf.3 + 3*perf.4
+
+'
+```
+
+
+## Inference 3
+
+There is a relationship between growth (slope) and level in a given variable.
+
+### Model
+.
+```{r, eval = F}
+'
+latent_perf_level ~~ latent_perf_slope
+
+'
+
+```
+
+## Inference 4
+
+There is a relationship between a stable $x$ and growth in $y$. There are inter-individual characteristics that relate to inter-individual differences in slope.
+
+### Model
+
+.
+```{r, eval = F}
+
+
+'
+latent_perf_slope ~ b1*gender
+
+'
+
+```
+
+\noindent Could also do this for level.
+
+## Inference 5
+
+There is a relationship between a fluctuating $x$ and $y$ after partialling the growth in $y$. Or, there is growth in $y$ after partialling the relationship between a fluctuating $x$ and $y$.
+
+### Model
+
+.
+
+```{r, eval = F}
+
+'
+latent_per_slope =~ 0*perf.1 + 1*perf.2 + 2*perf.3 + 3*perf.4
+
+perf.1 ~ b1*affect.1
+perf.2 ~ b1*affect.2
+perf.3 ~ b1*affect.3
+perf.4 ~ b1*affect.4
+
+'
+```
+
+# Growth 2.0
+
+Above, we examined growth in $y$ and how it related to correlates or predictors -- but those predictors/correlates were assumed to have no growth. There is also a class of models for examining relationships between two variables where both are assumed to grow.
+
+## Inference 1
+
+There are correlated slopes among two growth curves.
+
+### Model
+
+.
+
+```{r, eval = F}
+
+'
+
+latent_perf_slope ~~ latent_affect_slope
+
+'
+
+```
+
+# Change
+
+General Discussion.
+
+## Inference 1
+
+$x$ is associated with a change in $y$: an increase or decrease. 
+
+### Model
+.
+
+```{r, eval = F}
+
+'
+
+perf.2 ~ b1*affect.2 + g1*perf.1
+perf.3 ~ b1*affect.3 + g1*perf.2
+perf.4 ~ b1*affect.4 + g1*perf.3
+
+'
+
+```
+
+# Dynamics
+
+General discussion.
+
+## Inference 1
+
+There is autoregression in a variable, a relationship between prior and future values.
+
+### Model
+.
+
+```{r, eval = F}
+'
+perf.2 ~ g1*perf.1
+perf.3 ~ g1*perf.2
+perf.4 ~ g1*perf.3
+
+'
+```
+
+## Inference 2
+
+There are cross-lag effects, where one variable relates to another at a different point in time.
+
+### Model
+.
+
+```{r, eval = F}
+
+'
+
+perf.2 ~ b1*affect.1
+perf.3 ~ b1*affect.2
+perf.4 ~ b1*affect.3
+
+'
+
+```
+
+
+## Inference 3
+
+There is a reciprocal relationship, or feedback, where one variable subsequently relates to another, and this second variable then relates to the first at an even later point in time.
+
+### Model
+.
+
+```{r, eval = F}
+
+'
+
+perf.2 ~ b1*affect.1
+perf.3 ~ b1*affect.2
+perf.4 ~ b1*affect.3
+
+affect.2 ~ b2*perf.1
+affect.3 ~ b2*perf.2
+affect.4 ~ b2*perf.3
+
+'
+
+```
+
+# Summary List of Inferences
+
+# Relationships
+
+## Inference 1
+
+A stable $x$ relates to $y$.
+
+## Inference 2
+
+A flucuating $x$ relates to $y$.
+
+# Growth
+
+## Inference 1
+
+There is growth (positive or negative) in a given variable.
+
+## Inference 2
+
+There are inter-individual differences in growth.
+
+## Inference 3
+
+There is a relationship between growth (slope) and level in a given variable.
+
+## Inference 4
+
+There is a relationship between a stable $x$ and growth in $y$. There are inter-individual characteristics that relate to inter-individual differences in slope.
+
+## Inference 5
+
+There is a relationship between a fluctuating $x$ and $y$ after partialling the growth in $y$. Or, there is growth in $y$ after partialling the relationship between a fluctuating $x$ and $y$.
+
+## Inference 6 (growth 2.0)
+
+There are correlated slopes among two growth curves.
+
+# Change
+
+## Inference 1
+
+$x$ is associated with a change in $y$: an increase or decrease. 
+
+# Dynamics
+
+## Inference 1
+
+There is autoregression in a variable, a relationship between prior and future values.
+
+## Inference 2
+
+There are cross-lag effects, where one variable relates to another at a different point in time.
+
+## Inference 3
+
+There is a reciprocal relationship, or feedback, where one variable subsequently relates to another, and this second variable then relates to the first at an even later point in time.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \noindent where we again replace `code` and `more code` from the introductory HLM snippet with a regression of performance on affect. Notice that we do not need to type the performance on affect regressions at each time point as we did with the SEM code. Typically, in SEM software you type out the entire model, whereas HLM packages use condensed code. There are two other new pieces of code: `fixed` and `random`. These commands specify how we want HLM to estimate the parameters we are interested in, but at this point we do not unpack them further -- we will return to what they mean in the full modeling section at the end of the paper. 
 
 We will devote an entire section to the statistical properties of HLM and SEM below, what is important here is our regression of performance on affect. In both HLM and SEM we estimate a stable parameter relating affect at time $t$ to performance at time $t$ -- in SEM software we explicitly identify a parameter (`b1`) whereas HLM software typically does so automatically. 

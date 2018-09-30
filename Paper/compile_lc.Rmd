@@ -53,9 +53,23 @@ knitr::opts_chunk$set(fig.path = 'figures/', echo = TRUE, warning = FALSE, messa
 ```
 
 
-```{r child = 'intro_lc.Rmd'}
+```{r child = 'lc_intro.Rmd'}
 ```
 
+```{r child = 'lc_level.Rmd'}
+```
+
+```{r child = 'lc_trend.Rmd'}
+```
+
+```{r child = 'lc_dynamics.Rmd'}
+```
+
+```{r child = 'lc_mediation.Rmd'}
+```
+
+```{r child = 'lc_discussion.Rmd'}
+```
 
 \newpage
 

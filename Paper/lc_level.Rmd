@@ -1,0 +1,192 @@
+---
+output:
+  html_document:
+    df_print: paged
+---
+
+# Level
+
+Level inferences concern the value that a variable takes (high or low) across time. If we put a variable on the y-axis and plot its values against time on the x-axis, what value does it take at time $t$, or what value does it take on average, across time, or what value does it take within certain windows of time?
+
+Level has to do with the condition of a state with respect to its state space. It may have a state space of zero to ten, and its current condition is seven. This is level. It has also been called magnitude. 
+
+Is affect high, on average, across time? Is trainee skill low at the beginning of a training session? Are newcomer perceptions of unit climate high at the end of a two-week socialization process?
+
+Level, with respect to a certain point or window in time, is called the intercept in the statistical literature, and we can make an inference about the intercept at any observation point. Sometimes we are interested in the level at the beginning of the study, other times we are interested in the level at the last observation. We can of course also be interested in the average level across time.
+
+When we retain one variable but add multiple units -- people or organizations, for example -- then we can look at the variability in level. Does everyone have high affect across time? Is there variability in the level of skill among trainees at the beginning of a training session? Now there are multiple points on our graph at each time.
+
+When we measure two or more variables we can examine all of their levels, but we can also correlate them, or regress some variables onto others. Is the level of affect related to the level of helping behaviors across time? That is, when affect is high, are helping behaviors also high or are they low? When team cohesion is low, is team performance low as well, or is it high?
+
+figure \ref{level}
+
+## Inference List
+
+The level of $x$ at time $t$ is... Picture 1.
+
+There is variability in the level of $x$ at time $t$. Picture 2.
+
+There is a relationship between the levels of multiple variables. $x$ relates to $y$ across time. Stable vs fluctuating $x$, time-invariant vs time-varying covariates. 
+
+## Pictures
+
+One Variable, one unit.
+
+```{r, echo = F, fig.cap = "something here\\label{level}"}
+
+set.seed(11)
+time <- c(seq(from = 0, to = 20, by = 5))
+y <- 5 + rnorm(5, 0, 2) + rnorm(5, 2, 2)
+y1 <- y[1]
+yend <- y[length(time)]
+yave <- mean(y)
+
+
+cd <- data.frame(
+  'Time' = c(time),
+  'Y' = c(y),
+  'Legend' = c('Start', NA, 'Ave', NA, 'End'),
+  'pos' = c(y1, NA, yave, NA, yend)
+)
+
+library(ggplot2)
+
+ggplot(cd, aes(x = Time, y = Y)) + 
+  geom_smooth(se = F, color = 'black') + 
+  scale_y_continuous(labels = NULL) + 
+  geom_point(size = 4, aes(x = Time, y = pos, color = Legend), alpha = 0.5) + 
+  scale_color_manual(values = c('Start' = 'red', 'Ave' = 'blue', 'End' = 'green'),
+                     labels = c('Starting Level', 'Average Level', 'Ending Level'),
+                     breaks = c('Start', 'Ave', 'End')) + 
+  theme_classic() + 
+  theme(legend.title = element_blank()) + 
+  geom_segment(aes(x = 7, y = yave, xend = 13, yend = yave), color = 'blue', alpha = 0.2, linetype = 'dashed') + 
+  geom_segment(aes(x = -3, y = y1, xend = 3, yend = y1), color = 'red', alpha = 0.2, linetype = 'dashed') + 
+  geom_segment(aes(x = 17, y = yend, xend = 23, yend = yend), color = 'green', alpha = 0.2, linetype = 'dashed')
+  
+
+
+```
+
+One variable, multiple units
+
+```{r, echo = F, fig.cap = 'another\\label{level_var}'}
+
+person1 <- y
+person2 <- c(y[1:4] + 0.1, yend + 3)
+person3 <- c(y[1:4] - 0.1, yend - 3)
+per2ave <- mean(person2)
+per3ave <- mean(person3)
+
+df <- data.frame(
+  'Time' = c(time),
+  'Y' = c(person1, person2, person3),
+  'person' = c(rep('Person 1', length(time)), rep('Person 2', length(time)), rep('Person 3', length(time))),
+  'pos' = c(y1, NA, yave, NA, yend, 
+            y1, NA, per2ave, NA, person2[length(time)],
+            y1, NA, per3ave, NA, person3[length(time)]),
+  'Legend' = c(NA, NA, NA, NA, 'End',
+               NA, NA, NA, NA, 'End',
+               NA, NA, NA, NA, 'End')
+)
+
+
+library(ggplot2)
+
+ggplot(df, aes(x = Time, y = Y, group = person, linetype = person)) + 
+  geom_smooth(se = F, color = 'black') + 
+  scale_y_continuous(labels = NULL) + 
+  geom_point(size = 4, aes(x = Time, y = pos, color = Legend), alpha = 0.5) + 
+  scale_color_manual(values = c('End' = 'green'),
+                     labels = c('Ending Level'),
+                     breaks = c('End')) + 
+  theme_classic() + 
+  theme(legend.title = element_blank()) + 
+  #geom_segment(aes(x = 7, y = yave, xend = 13, yend = yave), color = 'blue', alpha = 0.2, linetype = 'dashed') + 
+  #geom_segment(aes(x = -3, y = y1, xend = 3, yend = y1), color = 'red', alpha = 0.2, linetype = 'dashed') + 
+  geom_segment(aes(x = 17, y = yend, xend = 23, yend = yend), color = 'green', alpha = 0.2, linetype = 'dashed') + 
+  geom_segment(aes(x = 17, y = person2[length(time)], xend = 23, yend = person2[length(time)]), color = 'green', alpha = 0.2, linetype = 'dashed') + 
+  geom_segment(aes(x = 17, y = person3[length(time)], xend = 23, yend = person3[length(time)]), color = 'green', alpha = 0.2, linetype = 'dashed')
+
+
+```
+
+
+Muliple Variables
+
+When affect is low performance is low. When affect is high performance is high.
+
+```{r, echo = F, fig.cap = 'double\\label{level_relation}'}
+library(tidyverse)
+set.seed(2)
+timer <- 20
+da <- matrix(, ncol = 3, nrow = timer)
+
+for(i in 1:timer){
+  
+  if(i < 6){
+  da[i, 1] <- i
+  da[i, 2] <- 3 + rnorm(1, 0, 4)
+  da[i, 3] <- 19 + rnorm(1, 0, 1) + 0.6* da[i, 2]
+  }else if (i > 5 & i < 11){
+    
+    da[i, 1] <- i
+    da[i, 2] <- 16 + rnorm(1,0,1)
+    da[i, 3] <- 32 + rnorm(1,0,1) + 0.6*da[i, 2]
+  } else{
+    
+      da[i, 1] <- i
+      da[i, 2] <- 3 + rnorm(1, 0, 4)
+      da[i, 3] <- 6 + rnorm(1, 0, 1) + 0.6* da[i, 2]
+    
+  }
+}
+
+da <- data.frame(da)
+names(da) <- c('Time', 'Affect', 'Performance')
+da <- da %>%
+  gather(Affect, Performance, key = 'Variable', value = 'Value')
+
+library(ggplot2)
+
+g1 <- ggplot(da, aes(x = Time, y = Value, group = Variable)) + 
+  geom_line(aes(linetype = Variable)) + 
+  theme_classic() + 
+  scale_y_continuous(labels = NULL) + 
+  geom_rect(aes(xmin = 2, xmax = 4, ymin = 3, ymax = 6), fill = 'red', alpha = 0.01) + 
+  #geom_segment(aes(x = 3, xend = 3, y = 5, yend = 21), color = 'blue', alpha = 0.5, linetype = 'dashed') + 
+  geom_rect(aes(xmin = 2, xmax = 4, ymin = 20, ymax = 23), fill = 'red', alpha = 0.01) + 
+  geom_rect(aes(xmin = 18, xmax = 20, ymin = 3, ymax = 6), fill = 'green', alpha = 0.01) + 
+  #geom_segment(aes(x = 17, xend = 17, y = 19, yend = 32), color = 'blue', alpha = 0.5, linetype = 'dashed') + 
+  geom_rect(aes(xmin = 18, xmax = 20, ymin = -2, ymax = 1), fill = 'green', alpha = 0.01) + 
+  geom_rect(aes(xmin = 7, xmax = 9, ymin = 40, ymax = 43), fill = 'blue', alpha = 0.01) + 
+  geom_rect(aes(xmin = 7, xmax = 9, ymin = 16, ymax = 19), fill = 'blue', alpha = 0.01)
+
+affect_line <- c(1:21)
+perf_line <- affect_line*0.7 + rnorm(21, 0, 1)
+lin_df <- data.frame(
+  'Affect' = c(affect_line),
+  'Performance' = c(perf_line),
+  'label' = c(rep('green', 7), rep('red', 7), rep('blue', 7)))
+
+g2 <- ggplot(lin_df, aes(x = Affect, y = Performance, color = label)) + 
+  geom_point(size = 2, alpha = 0.6) + 
+  theme_classic() + 
+  scale_x_continuous(labels = NULL) + 
+  scale_y_continuous(labels = NULL) + 
+  scale_color_manual(values = c('blue' = 'blue',
+                                'green' = 'green',
+                                'red' = 'red')) + 
+  theme(legend.position = 'none')
+
+library(gridExtra)
+
+grid.arrange(g1, g2, ncol = 1)
+```
+
+
+## Models
+
+Intercept only models: these can be done in HLM or SEM. Time-varying or invariant covariates analysis, these can be done in HLM or SEM. Point to references. 
+
+ 

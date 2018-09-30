@@ -283,387 +283,190 @@ measured on (potentially) each \(i\) at (potentially) each \(t\).
 \hypertarget{framework}{%
 \subsection{Framework}\label{framework}}
 
-Relationships. Growth. Change. Dynamics. These are umbrella research
-foci, each has its own sub-inferences and models.
-
-\hypertarget{relationships}{%
-\section{Relationships}\label{relationships}}
-
-General discussion.
-
-\hypertarget{inference-1}{%
-\subsection{Inference 1}\label{inference-1}}
-
-A stable \(x\) relates to \(y\).
-
-\hypertarget{model}{%
-\subsubsection{Model}\label{model}}
-
-.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\StringTok{'}
-\StringTok{perf.1 ~ b1*gender}
-\StringTok{perf.2 ~ b1*gender}
-\StringTok{perf.3 ~ b1*gender}
-\StringTok{perf.4 ~ b1*gender}
-
-\StringTok{'}
-\end{Highlighting}
-\end{Shaded}
-
-\hypertarget{inference-2}{%
-\subsection{Inference 2}\label{inference-2}}
-
-A fluctuating \(x\) relates to \(y\).
-
-\hypertarget{model-1}{%
-\subsubsection{Model}\label{model-1}}
-
-.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\StringTok{'}
-\StringTok{perf.1 ~ b1*affect.1}
-\StringTok{perf.2 ~ b1*affect.2}
-\StringTok{perf.3 ~ b1*affect.3}
-\StringTok{perf.4 ~ b1*affect.4}
-
-\StringTok{'}
-\end{Highlighting}
-\end{Shaded}
-
-\hypertarget{growth}{%
-\section{Growth}\label{growth}}
-
-General discussion.
-
-\hypertarget{inference-1-1}{%
-\subsection{Inference 1}\label{inference-1-1}}
-
-There is growth (positive or negative) in a given variable. Other terms:
-trend, slope, some call this change; we won't.
-
-\hypertarget{model-2}{%
-\subsubsection{Model}\label{model-2}}
-
-.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\StringTok{'}
-\StringTok{latent_perf_slope =~ 0*perf.1 + 1*perf.2 + 2*perf.3 + 3*perf.4}
-
-\StringTok{'}
-\end{Highlighting}
-\end{Shaded}
-
-\hypertarget{inference-2-1}{%
-\subsection{Inference 2}\label{inference-2-1}}
-
-There are inter-individual differences in growth.
-
-\hypertarget{model-3}{%
-\subsubsection{Model}\label{model-3}}
-
-.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\StringTok{'}
-\StringTok{latent_perf_slope =~ 0*perf.1 + 1*perf.2 + 2*perf.3 + 3*perf.4}
-
-\StringTok{'}
-\end{Highlighting}
-\end{Shaded}
-
-\hypertarget{inference-3}{%
-\subsection{Inference 3}\label{inference-3}}
-
-There is a relationship between growth (slope) and level in a given
-variable.
-
-\hypertarget{model-4}{%
-\subsubsection{Model}\label{model-4}}
-
-.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\StringTok{'}
-\StringTok{latent_perf_level ~~ latent_perf_slope}
-
-\StringTok{'}
-\end{Highlighting}
-\end{Shaded}
-
-\hypertarget{inference-4}{%
-\subsection{Inference 4}\label{inference-4}}
-
-There is a relationship between a stable \(x\) and growth in \(y\).
-There are inter-individual characteristics that relate to
-inter-individual differences in slope.
-
-\hypertarget{model-5}{%
-\subsubsection{Model}\label{model-5}}
-
-.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\StringTok{'}
-\StringTok{latent_perf_slope ~ b1*gender}
-
-\StringTok{'}
-\end{Highlighting}
-\end{Shaded}
-
-\noindent Could also do this for level.
-
-\hypertarget{inference-5}{%
-\subsection{Inference 5}\label{inference-5}}
-
-There is a relationship between a fluctuating \(x\) and \(y\) after
-partialling the growth in \(y\). Or, there is growth in \(y\) after
-partialling the relationship between a fluctuating \(x\) and \(y\).
-
-\hypertarget{model-6}{%
-\subsubsection{Model}\label{model-6}}
-
-.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\StringTok{'}
-\StringTok{latent_per_slope =~ 0*perf.1 + 1*perf.2 + 2*perf.3 + 3*perf.4}
-
-\StringTok{perf.1 ~ b1*affect.1}
-\StringTok{perf.2 ~ b1*affect.2}
-\StringTok{perf.3 ~ b1*affect.3}
-\StringTok{perf.4 ~ b1*affect.4}
-
-\StringTok{'}
-\end{Highlighting}
-\end{Shaded}
-
-\hypertarget{growth-2.0}{%
-\section{Growth 2.0}\label{growth-2.0}}
-
-Above, we examined growth in \(y\) and how it related to correlates or
-predictors -- but those predictors/correlates were assumed to have no
-growth. There is also a class of models for examining relationships
-between two variables where both are assumed to grow.
-
-\hypertarget{inference-1-2}{%
-\subsection{Inference 1}\label{inference-1-2}}
-
-There are correlated slopes among two growth curves.
-
-\hypertarget{model-7}{%
-\subsubsection{Model}\label{model-7}}
-
-.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\StringTok{'}
-
-\StringTok{latent_perf_slope ~~ latent_affect_slope}
-
-\StringTok{'}
-\end{Highlighting}
-\end{Shaded}
-
-\hypertarget{change}{%
-\section{Change}\label{change}}
-
-General Discussion.
-
-\hypertarget{inference-1-3}{%
-\subsection{Inference 1}\label{inference-1-3}}
-
-\(x\) is associated with a change in \(y\): an increase or decrease.
-
-\hypertarget{model-8}{%
-\subsubsection{Model}\label{model-8}}
-
-.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\StringTok{'}
-
-\StringTok{perf.2 ~ b1*affect.2 + g1*perf.1}
-\StringTok{perf.3 ~ b1*affect.3 + g1*perf.2}
-\StringTok{perf.4 ~ b1*affect.4 + g1*perf.3}
-
-\StringTok{'}
-\end{Highlighting}
-\end{Shaded}
+Level. Trend. Dynamics. These are umbrella research foci, each has its
+own sub-inferences and models. Each section will basically have two
+notions: trying to understand the thing itself (one variable). Looking
+at trend or variability in trend. Then looking at correlates or
+predictors of the thing: correlates of trend, etc.
+
+Each section will also point to models. But there is nuance. The models
+have different names, some require stationary, some don't. You need to
+appreciate that and make sure you are attending to all of its nuance.
+All we are doing here is pointing you in the direction.
+
+\hypertarget{level}{%
+\section{Level}\label{level}}
+
+Level inferences concern the value that a variable takes (high or low)
+across time. If we put a variable on the y-axis and plot its values
+against time on the x-axis, what value does it take at time \(t\), or
+what value does it take on average, across time, or what value does it
+take within certain windows of time?
+
+Level has to do with the condition of a state with respect to its state
+space. It may have a state space of zero to ten, and its current
+condition is seven. This is level. It has also been called magnitude.
+
+Is affect high, on average, across time? Is trainee skill low at the
+beginning of a training session? Are newcomer perceptions of unit
+climate high at the end of a two-week socialization process?
+
+Level, with respect to a certain point or window in time, is called the
+intercept in the statistical literature, and we can make an inference
+about the intercept at any observation point. Sometimes we are
+interested in the level at the beginning of the study, other times we
+are interested in the level at the last observation. We can of course
+also be interested in the average level across time.
+
+When we retain one variable but add multiple units -- people or
+organizations, for example -- then we can look at the variability in
+level. Does everyone have high affect across time? Is there variability
+in the level of skill among trainees at the beginning of a training
+session? Now there are multiple points on our graph at each time.
+
+When we measure two or more variables we can examine all of their
+levels, but we can also correlate them, or regress some variables onto
+others. Is the level of affect related to the level of helping behaviors
+across time? That is, when affect is high, are helping behaviors also
+high or are they low? When team cohesion is low, is team performance low
+as well, or is it high?
+
+figure \ref{level}
+
+\hypertarget{inference-list}{%
+\subsection{Inference List}\label{inference-list}}
+
+The level of \(x\) at time \(t\) is\ldots{} Picture 1.
+
+There is variability in the level of \(x\) at time \(t\). Picture 2.
+
+There is a relationship between the levels of multiple variables. \(x\)
+relates to \(y\) across time. Stable vs fluctuating \(x\),
+time-invariant vs time-varying covariates.
+
+\hypertarget{pictures}{%
+\subsection{Pictures}\label{pictures}}
+
+One Variable, one unit.
+
+\begin{figure}
+\centering
+\includegraphics{figures/unnamed-chunk-7-1.pdf}
+\caption{\label{fig:unnamed-chunk-7}something here\label{level}}
+\end{figure}
+
+One variable, multiple units
+
+\begin{figure}
+\centering
+\includegraphics{figures/unnamed-chunk-8-1.pdf}
+\caption{\label{fig:unnamed-chunk-8}another\label{level_var}}
+\end{figure}
+
+Muliple Variables
+
+When affect is low performance is low. When affect is high performance
+is high.
+
+\begin{figure}
+\centering
+\includegraphics{figures/unnamed-chunk-9-1.pdf}
+\caption{\label{fig:unnamed-chunk-9}double\label{level_relation}}
+\end{figure}
+
+\hypertarget{models}{%
+\subsection{Models}\label{models}}
+
+Intercept only models: these can be done in HLM or SEM. Time-varying or
+invariant covariates analysis, these can be done in HLM or SEM. Point to
+references.
+
+\hypertarget{trend}{%
+\section{Trend}\label{trend}}
+
+Trend has to do with the global shape of the trajectory across time. If
+we put a variable on the y-axis and plot its values against time on the
+x-axis, do the values tend to go up or down over time? Trend can be
+thought of as the coarse-grained direction of a trajectory. Also
+referred to as growth.
+
+Does affect go up or down across our measurement period, or is it
+relatively stable? Does trainee skill increase over the training
+session?
+
+These are all linear examples of trend. We can also look at curvilinear
+things. Do newcomer perceptions of the positive attitude in the
+workplace increase and then plateua over time? Does the response time of
+a medical team decrease with each successive case but then remain stable
+once every crew member has reached their maximum potential to coordinate
+their actions?
+
+The statistical term for trend is slope, and linear slopes are straight
+lines whereas curvilinear slopes bend across time.
+
+When we examine more than one unit on a variable we can also look at the
+variability in trend. Do all trainees develop greater skill across time?
+Is there variability in the trend of helping behaviors, or
+counterproductive work behaviors over time?
+
+When we examine two or more variables, we can of course look at trend or
+slope in each of them. The next step is to then correlate slopes or
+regress one slope on another. Does the trend in affect relate to the
+trend in helping behaviors?
+
+\hypertarget{inference-list-1}{%
+\subsection{Inference List}\label{inference-list-1}}
+
+There is growth in a variable across time. Its slope/trend is positive
+or negative.
+
+There is variability in the growth of a variable across time.
+Slopes/trends differ across units.
+
+There are correlates/predictors of trend.
+
+There is a relationship between two growth curves. Two trends are
+correlated.
+
+\hypertarget{pictures-1}{%
+\subsection{Pictures}\label{pictures-1}}
+
+\begin{figure}
+\centering
+\includegraphics{figures/unnamed-chunk-10-1.pdf}
+\caption{\label{fig:unnamed-chunk-10}t\label{trend}}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{figures/unnamed-chunk-11-1.pdf}
+\caption{\label{fig:unnamed-chunk-11}tr\label{trend_var}}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{figures/unnamed-chunk-12-1.pdf}
+\caption{\label{fig:unnamed-chunk-12}trend to trend\label{trend_rel}}
+\end{figure}
+
+\hypertarget{models-1}{%
+\subsection{Models}\label{models-1}}
+
+Growth curves in SEM or HLM. Bivariate growth curves.
 
 \hypertarget{dynamics}{%
 \section{Dynamics}\label{dynamics}}
 
-General discussion.
+\hypertarget{mediation}{%
+\section{Mediation}\label{mediation}}
 
-\hypertarget{inference-1-4}{%
-\subsection{Inference 1}\label{inference-1-4}}
+\hypertarget{discussion}{%
+\section{Discussion}\label{discussion}}
 
-There is autoregression in a variable, a relationship between prior and
-future values.
-
-\hypertarget{model-9}{%
-\subsubsection{Model}\label{model-9}}
-
-.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\StringTok{'}
-\StringTok{perf.2 ~ g1*perf.1}
-\StringTok{perf.3 ~ g1*perf.2}
-\StringTok{perf.4 ~ g1*perf.3}
-
-\StringTok{'}
-\end{Highlighting}
-\end{Shaded}
-
-\hypertarget{inference-2-2}{%
-\subsection{Inference 2}\label{inference-2-2}}
-
-There are cross-lag effects, where one variable relates to another at a
-different point in time.
-
-\hypertarget{model-10}{%
-\subsubsection{Model}\label{model-10}}
-
-.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\StringTok{'}
-
-\StringTok{perf.2 ~ b1*affect.1}
-\StringTok{perf.3 ~ b1*affect.2}
-\StringTok{perf.4 ~ b1*affect.3}
-
-\StringTok{'}
-\end{Highlighting}
-\end{Shaded}
-
-\hypertarget{inference-3-1}{%
-\subsection{Inference 3}\label{inference-3-1}}
-
-There is a reciprocal relationship, or feedback, where one variable
-subsequently relates to another, and this second variable then relates
-to the first at an even later point in time.
-
-\hypertarget{model-11}{%
-\subsubsection{Model}\label{model-11}}
-
-.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\StringTok{'}
-
-\StringTok{perf.2 ~ b1*affect.1}
-\StringTok{perf.3 ~ b1*affect.2}
-\StringTok{perf.4 ~ b1*affect.3}
-
-\StringTok{affect.2 ~ b2*perf.1}
-\StringTok{affect.3 ~ b2*perf.2}
-\StringTok{affect.4 ~ b2*perf.3}
-
-\StringTok{'}
-\end{Highlighting}
-\end{Shaded}
-
-\hypertarget{summary-list-of-inferences}{%
-\section{Summary List of Inferences}\label{summary-list-of-inferences}}
-
-\hypertarget{relationships-1}{%
-\section{Relationships}\label{relationships-1}}
-
-\hypertarget{inference-1-5}{%
-\subsection{Inference 1}\label{inference-1-5}}
-
-A stable \(x\) relates to \(y\).
-
-\hypertarget{inference-2-3}{%
-\subsection{Inference 2}\label{inference-2-3}}
-
-A flucuating \(x\) relates to \(y\).
-
-\hypertarget{growth-1}{%
-\section{Growth}\label{growth-1}}
-
-\hypertarget{inference-1-6}{%
-\subsection{Inference 1}\label{inference-1-6}}
-
-There is growth (positive or negative) in a given variable.
-
-\hypertarget{inference-2-4}{%
-\subsection{Inference 2}\label{inference-2-4}}
-
-There are inter-individual differences in growth.
-
-\hypertarget{inference-3-2}{%
-\subsection{Inference 3}\label{inference-3-2}}
-
-There is a relationship between growth (slope) and level in a given
-variable.
-
-\hypertarget{inference-4-1}{%
-\subsection{Inference 4}\label{inference-4-1}}
-
-There is a relationship between a stable \(x\) and growth in \(y\).
-There are inter-individual characteristics that relate to
-inter-individual differences in slope.
-
-\hypertarget{inference-5-1}{%
-\subsection{Inference 5}\label{inference-5-1}}
-
-There is a relationship between a fluctuating \(x\) and \(y\) after
-partialling the growth in \(y\). Or, there is growth in \(y\) after
-partialling the relationship between a fluctuating \(x\) and \(y\).
-
-\hypertarget{inference-6-growth-2.0}{%
-\subsection{Inference 6 (growth 2.0)}\label{inference-6-growth-2.0}}
-
-There are correlated slopes among two growth curves.
-
-\hypertarget{change-1}{%
-\section{Change}\label{change-1}}
-
-\hypertarget{inference-1-7}{%
-\subsection{Inference 1}\label{inference-1-7}}
-
-\(x\) is associated with a change in \(y\): an increase or decrease.
-
-\hypertarget{dynamics-1}{%
-\section{Dynamics}\label{dynamics-1}}
-
-\hypertarget{inference-1-8}{%
-\subsection{Inference 1}\label{inference-1-8}}
-
-There is autoregression in a variable, a relationship between prior and
-future values.
-
-\hypertarget{inference-2-5}{%
-\subsection{Inference 2}\label{inference-2-5}}
-
-There are cross-lag effects, where one variable relates to another at a
-different point in time.
-
-\hypertarget{inference-3-3}{%
-\subsection{Inference 3}\label{inference-3-3}}
-
-There is a reciprocal relationship, or feedback, where one variable
-subsequently relates to another, and this second variable then relates
-to the first at an even later point in time.
+Points to include. 1) Econometrics modeling levels vs.~modeling
+differences. 2) Keep in mind you might see weird stuff in the
+literature. X at time 1 relates to Z at time 2, which relates to Y at
+time 3, but none are measured repeatedly across time. This is no good.
 
 \newpage
 

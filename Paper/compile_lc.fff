@@ -2,6 +2,41 @@
 \ifnextchar[{\eatarg}{}
 
 \centering
-\includegraphics{figures/common_models.png}
-\caption{Figure 1. Common longitudinal research foci.}
+\includegraphics{figures/unnamed-chunk-7-1.pdf}
+\caption{\label{fig:unnamed-chunk-7}something here\label{level}}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{figures/unnamed-chunk-8-1.pdf}
+\caption{\label{fig:unnamed-chunk-8}another\label{level_var}}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{figures/unnamed-chunk-9-1.pdf}
+\caption{\label{fig:unnamed-chunk-9}double\label{level_relation}}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{figures/unnamed-chunk-10-1.pdf}
+\caption{\label{fig:unnamed-chunk-10}t\label{trend}}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{figures/unnamed-chunk-11-1.pdf}
+\caption{\label{fig:unnamed-chunk-11}tr\label{trend_var}}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{figures/unnamed-chunk-12-1.pdf}
+\caption{\label{fig:unnamed-chunk-12}trend to trend\label{trend_rel}}
 \end{figure*}
