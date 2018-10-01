@@ -426,34 +426,6 @@ Inference & Examples\\
 \bottomrule
 \end{tabular}
 
-What is the level of \(x\) at \(t\), or across a span of \(t\)?
-
-Burnout is high at the last time point. Performance is low, on average,
-across time.
-
-There is variability in the level of \(x\) at \(t\), or across a span of
-\(t\).
-
-Average affect across time differs across people (units). There is
-variability in the initial level of turnover across organizations.
-
-There is a correlation between the level of \(x\) and level of \(y\) at
-\(t\).
-
-People with greater initial health status also have greater initial
-happiness.
-
-The level of \(x\) at time \(t\) is\ldots{} Picture 1.
-
-There is variability in the level of \(x\) at time \(t\). Picture 2.
-
-Correlate levels. People with high starting point on \(x\) have a high
-starting point on \(y\).
-
-There is a relationship between the levels of multiple variables. \(x\)
-relates to \(y\) across time. Stable vs fluctuating \(x\),
-time-invariant vs time-varying covariates.
-
 \hypertarget{models}{%
 \subsection{Models}\label{models}}
 
@@ -491,72 +463,108 @@ levels\label{level_relation}}
 \hypertarget{trend}{%
 \section{Trend}\label{trend}}
 
-Trend has to do with the global shape of the trajectory across time. If
-we put a variable on the y-axis and plot its values against time on the
-x-axis, do the values tend to go up or down over time? Trend can be
-thought of as the coarse-grained direction of a trajectory. Also
-referred to as growth.
-
 Does affect go up or down across our measurement period, or is it
 relatively stable? Does trainee skill increase over the training
-session?
+session? These first two examples are questions about linear trend; we
+can also explore curvilinear trajectories. Do newcomer perceptions of
+climate increase and then plateua over time? Does the response time of a
+medical team decrease with each successive case but then remain stable
+once the team can no longer improve their coordination?
 
-These are all linear examples of trend. We can also look at curvilinear
-things. Do newcomer perceptions of the positive attitude in the
-workplace increase and then plateua over time? Does the response time of
-a medical team decrease with each successive case but then remain stable
-once every crew member has reached their maximum potential to coordinate
-their actions?
+Trend has to do with the global shape of the trajectory across time. If
+we put a variable on the \(y\)-axis and plot its values against time on
+the \(x\)-axis, do the values tend to go up or down over time? It can be
+thought of as the coarse-grained direction of a trajectory. Figure
+\ref{trend} demonstrates trend differences, where the red line shows
+positive, increasing trend, the blue line shows negative, decreasing
+trend, and the green line shows a curvilinear trajectory. Keep in mind
+that curvilinear and linear trajectories are both \textbf{linear in
+parameters} and should not be confused with non-linear systems.
 
-The statistical term for trend is slope, and linear slopes are straight
-lines whereas curvilinear slopes bend across time.
+Our first trend inference, therefore, concerns the shape of the
+trajectory.
 
-When we examine more than one unit on a variable we can also look at the
-variability in trend. Do all trainees develop greater skill across time?
-Is there variability in the trend of helping behaviors, or
-counterproductive work behaviors over time?
+\hypertarget{inference-1-there-is-positivenegativecurvilinear-trend-in-a-variable-across-time.}{%
+\paragraph{Inference 1: There is positive/negative/curvilinear trend in
+a variable across
+time.}\label{inference-1-there-is-positivenegativecurvilinear-trend-in-a-variable-across-time.}}
 
-When we examine two or more variables, we can of course look at trend or
-slope in each of them. The next step is to then correlate slopes or
-regress one slope on another. Does the trend in affect relate to the
-trend in helping behaviors?
+We can also examine trend variability when we observe more than one
+unit. Do all trainees develop greater skill across time? Is there
+variability in the trend of helping behaviors, or counterproductive work
+behaviors over time?
 
-figure \ref{trend} figure \ref{trend_var} figure \ref{trend_relation}
+Figure \ref{trend_var} shows differences in trend variability. In the
+first panel all units (people) show the same positive trend, whereas
+everyone in the second panel shows different trend: person one's data
+appear to increase over time, person two's data remain flat, and person
+three's data decrease over time. With greater variability there is less
+consistency in trend across units.
 
-\hypertarget{inference-list}{%
-\subsection{Inference List}\label{inference-list}}
+\hypertarget{inference-2-there-is-variability-in-the-trend-of-a-variable-across-time.-trend-differs-across-units.}{%
+\paragraph{Inference 2: There is variability in the trend of a variable
+across time. Trend differs across
+units.}\label{inference-2-there-is-variability-in-the-trend-of-a-variable-across-time.-trend-differs-across-units.}}
 
-There is growth in a variable across time. Its slope/trend is positive
-or negative.
+Just like our discussion of the \enquote{level} inferences, inferences
+one and two were about one variable, but they can be iterated across all
+observed variables. For example, we might discover that \(x\) and \(y\)
+both have decreasing trend, but that \(y\) has greater variability,
+suggesting individual differences in the sample. Or we might learn that
+\(x\) has negative trend whereas \(y\) has positive trend.
 
-There is variability in the growth of a variable across time.
-Slopes/trends differ across units.
+Correlating these trends is the next inference. People with positive
+trend in \(x\) also have positive trend in \(y\).
 
-There are correlates/predictors of trend.
+Figure \ref{trend_correlation}. Explain.
 
-There is a relationship between two growth curves. Two trends are
-correlated.
+\hypertarget{inference-3-there-are-correlated-trends.-there-is-a-relationship-between-two-trends.}{%
+\paragraph{Inference 3: There are correlated trends. There is a
+relationship between two
+trends.}\label{inference-3-there-are-correlated-trends.-there-is-a-relationship-between-two-trends.}}
 
-\hypertarget{pictures}{%
-\subsection{Pictures}\label{pictures}}
+Correlates/predictors of trend.
 
-\begin{figure}
-\centering
-\includegraphics{figures/unnamed-chunk-11-1.pdf}
-\caption{\label{fig:unnamed-chunk-11}Trend across time\label{trend}}
-\end{figure}
+Figure \ref{trend_relation}
+
+\hypertarget{inference-4-there-are-correlatespredictors-of-trend.}{%
+\paragraph{Inference 4: There are correlates/predictors of
+trend.}\label{inference-4-there-are-correlatespredictors-of-trend.}}
+
+\hypertarget{trend-inference-table}{%
+\subsection{Trend Inference Table}\label{trend-inference-table}}
+
+\begin{tabular}{>{\raggedright\arraybackslash}p{5em}>{\raggedright\arraybackslash}p{30em}}
+\toprule
+Inference & Examples\\
+\midrule
+1 & Burnout decreases over time.\newline Performance increases over time.\\
+\hline
+2 & Affect trends differ across people (units).\newline There is variability in turnover trends across organizations.\\
+\hline
+3 & People with positive health status trends have positive happiness trends.\newline People with positive performance trends have negative anxiety trends.\\
+\hline
+4 & Affect relates to the performance trend across time.\newline Helping behaviors predict depletion trends.\\
+\bottomrule
+\end{tabular}
 
 \begin{figure}
 \centering
 \includegraphics{figures/unnamed-chunk-12-1.pdf}
-\caption{\label{fig:unnamed-chunk-12}Differences in trend variability across
-units\label{trend_var}}
+\caption{\label{fig:unnamed-chunk-12}Trend across time\label{trend}}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics{figures/unnamed-chunk-13-1.pdf}
-\caption{\label{fig:unnamed-chunk-13}Correlating slopes, or relating the
+\caption{\label{fig:unnamed-chunk-13}Differences in trend variability across
+units\label{trend_var}}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{figures/unnamed-chunk-14-1.pdf}
+\caption{\label{fig:unnamed-chunk-14}Correlating slopes, or relating the
 affect to performance trend\label{trend_relation}}
 \end{figure}
 
@@ -593,8 +601,46 @@ The crucial notion to take from dynamics, then, is memory. When the past
 matters, and future states are constrained by where they were at prior
 points in time, dynamics are at play.
 
-\hypertarget{inference-list-1}{%
-\subsection{Inference List}\label{inference-list-1}}
+\hypertarget{inference-1-there-is-autoregression-in-x.}{%
+\paragraph{\texorpdfstring{Inference 1: There is autoregression in
+\(x\).}{Inference 1: There is autoregression in x.}}\label{inference-1-there-is-autoregression-in-x.}}
+
+\hypertarget{inference-2-there-is-a-cross-lag-relationship-where-one-variable-relates-to-another-at-a-different-point-in-time.-x_t-is-associated-with-y_t1-across-time.}{%
+\paragraph{Inference 2: There is a cross-lag relationship, where one
+variable relates to another at a different point in time. x\_t is
+associated with y\_t+1 across
+time.}\label{inference-2-there-is-a-cross-lag-relationship-where-one-variable-relates-to-another-at-a-different-point-in-time.-x_t-is-associated-with-y_t1-across-time.}}
+
+\hypertarget{inference-3-there-is-a-change-relationship-where-one-variable-relates-to-the-change-in-another.-x_t-is-associated-with-delta-y_t.}{%
+\paragraph{Inference 3: There is a change relationship, where one
+variable relates to the change in another. x\_t is associated with delta
+y\_t.}\label{inference-3-there-is-a-change-relationship-where-one-variable-relates-to-the-change-in-another.-x_t-is-associated-with-delta-y_t.}}
+
+\hypertarget{inference-4-there-is-a-cross-lag-relationship-of-change-where-one-variable-relates-to-the-change-of-another-at-a-different-point-in-time.-x_t-is-associated-with-change-at-y_t1.}{%
+\paragraph{Inference 4: There is a cross-lag relationship of change,
+where one variable relates to the change of another at a different point
+in time. x\_t is associated with change at
+y\_t+1.}\label{inference-4-there-is-a-cross-lag-relationship-of-change-where-one-variable-relates-to-the-change-of-another-at-a-different-point-in-time.-x_t-is-associated-with-change-at-y_t1.}}
+
+\hypertarget{dynamics-inference-table}{%
+\subsection{Dynamics Inference Table}\label{dynamics-inference-table}}
+
+\begin{tabular}{>{\raggedright\arraybackslash}p{5em}>{\raggedright\arraybackslash}p{30em}}
+\toprule
+Inference & Examples\\
+\midrule
+1 & Burnout demonstrates self-similarity across time.\newline Performance relates to subsequent performance.\\
+\hline
+2 & Affect predicts subsequent counterproductive work behaviors.\newline Turnover relates to subsequent firm performance.\\
+\hline
+3 & Positive health status relates to change in happiness.\newline Anxiety relates to changes in performance.\\
+\hline
+4 & Affect relates to subsequent change in performance.\newline Helping behaviors predict subsequent depletion changes.\\
+\bottomrule
+\end{tabular}
+
+\hypertarget{inference-list}{%
+\subsection{Inference List}\label{inference-list}}
 
 A variable has autoregression.
 

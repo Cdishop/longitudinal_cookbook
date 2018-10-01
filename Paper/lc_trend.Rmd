@@ -4,34 +4,65 @@ output: pdf_document
 
 # Trend
 
-Trend has to do with the global shape of the trajectory across time. If we put a variable on the y-axis and plot its values against time on the x-axis, do the values tend to go up or down over time? Trend can be thought of as the coarse-grained direction of a trajectory. Also referred to as growth.
+Does affect go up or down across our measurement period, or is it relatively stable? Does trainee skill increase over the training session? These first two examples are questions about linear trend; we can also explore curvilinear trajectories. Do newcomer perceptions of climate increase and then plateua over time? Does the response time of a medical team decrease with each successive case but then remain stable once the team can no longer improve their coordination? 
 
-Does affect go up or down across our measurement period, or is it relatively stable? Does trainee skill increase over the training session? 
+Trend has to do with the global shape of the trajectory across time. If we put a variable on the $y$-axis and plot its values against time on the $x$-axis, do the values tend to go up or down over time? It can be thought of as the coarse-grained direction of a trajectory. Figure \ref{trend} demonstrates trend differences, where the red line shows positive, increasing trend, the blue line shows negative, decreasing trend, and the green line shows a curvilinear trajectory. Keep in mind that curvilinear and linear trajectories are both **linear in parameters** and should not be confused with non-linear systems. 
 
-These are all linear examples of trend. We can also look at curvilinear things. Do newcomer perceptions of the positive attitude in the workplace increase and then plateua over time? Does the response time of a medical team decrease with each successive case but then remain stable once every crew member has reached their maximum potential to coordinate their actions?
+Our first trend inference, therefore, concerns the shape of the trajectory.
 
-The statistical term for trend is slope, and linear slopes are straight lines whereas curvilinear slopes bend across time. 
+#### Inference 1: There is positive/negative/curvilinear trend in a variable across time. 
 
-When we examine more than one unit on a variable we can also look at the variability in trend. Do all trainees develop greater skill across time? Is there variability in the trend of helping behaviors, or counterproductive work behaviors over time? 
+We can also examine trend variability when we observe more than one unit. Do all trainees develop greater skill across time? Is there variability in the trend of helping behaviors, or counterproductive work behaviors over time? 
 
-When we examine two or more variables, we can of course look at trend or slope in each of them. The next step is to then correlate slopes or regress one slope on another. Does the trend in affect relate to the trend in helping behaviors?
+Figure \ref{trend_var} shows differences in trend variability. In the first panel all units (people) show the same positive trend, whereas everyone in the second panel shows different trend: person one's data appear to increase over time, person two's data remain flat, and person three's data decrease over time. With greater variability there is less consistency in trend across units.
 
-figure \ref{trend}
-figure \ref{trend_var}
-figure \ref{trend_relation}
+#### Inference 2: There is variability in the trend of a variable across time. Trend differs across units.
 
-## Inference List
+Just like our discussion of the "level" inferences, inferences one and two were about one variable, but they can be iterated across all observed variables. For example, we might discover that $x$ and $y$ both have decreasing trend, but that $y$ has greater variability, suggesting individual differences in the sample. Or we might learn that $x$ has negative trend whereas $y$ has positive trend.
 
-There is growth in a variable across time. Its slope/trend is positive or negative. 
+Correlating these trends is the next inference. People with positive trend in $x$ also have positive trend in $y$.
 
-There is variability in the growth of a variable across time. Slopes/trends differ across units.
+Figure \ref{trend_correlation}. Explain.
 
-There are correlates/predictors of trend.
+#### Inference 3: There are correlated trends. There is a relationship between two trends.
 
-There is a relationship between two growth curves. Two trends are correlated. 
+Correlates/predictors of trend. 
+
+Figure \ref{trend_relation}
+
+#### Inference 4: There are correlates/predictors of trend. 
+
+## Trend Inference Table
+
+```{r, echo = F}
+library(xtable)
+library(knitr)
+library(kableExtra)
+library(tidyverse)
+
+inference_text2 <- c('There is positive/negative/curvilinear trend in a variable across time.?',
+                    'There is variability in the trend of a variable across time. Trend differs across units.',
+                    'There are correlated trends. There is a relationship between two trends.',
+                    'There are correlates/predictors of trend.')
+trend_table <- data.frame(
+  Inference = c(1, 2, 3, 4),
+  Examples = c(linebreak('Burnout decreases over time.\nPerformance increases over time.'),
+                 linebreak('Affect trends differ across people (units).\nThere is variability in turnover trends across organizations.'),
+                 linebreak('People with positive health status trends have positive happiness trends.\nPeople with positive performance trends have negative anxiety trends.'),
+                 linebreak('Affect relates to the performance trend across time.\nHelping behaviors predict depletion trends.'))
+)
+
+trend_table %>%
+  kable('latex', booktabs = T, escape = F, align = 'l') %>%
+    column_spec(1, width = '5em') %>%
+    column_spec(2, width = '30em') %>%
+  row_spec(1:3, hline_after = T)
 
 
-## Pictures
+```
+
+
+
 
 ```{r, echo = F, fig.cap = 'Trend across time\\label{trend}'}
 set.seed(3)

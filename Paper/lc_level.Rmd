@@ -65,7 +65,7 @@ Figure \ref{level_relation}
 
 ## Level Inference Table
 
-```{r, echo = F, results = 'asis'}
+```{r, echo = F}
 library(xtable)
 library(knitr)
 library(kableExtra)
