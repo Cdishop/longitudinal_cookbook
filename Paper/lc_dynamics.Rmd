@@ -18,7 +18,7 @@ The crucial notion to take from dynamics, then, is memory. When the past matters
 
 #### Inference 3: There is a change relationship, where one variable relates to the change in another. x_t is associated with $\Delta$ y_t.
 
-#### Inference 4: There is a cross-lag relationship of change, where one variable relates to the change of another at a different point in time. x_t is associated with change at y_t+1.
+#### Inference 4: There is a cross-lag relationship of change, where one variable relates to the change of another at a different point in time. x_t is associated with $\Delta$ y_t+1.
 
 ## Dynamics Inference Table
 

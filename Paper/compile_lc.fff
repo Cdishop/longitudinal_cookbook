@@ -42,5 +42,5 @@ units\label{trend_var}}
 \centering
 \includegraphics{figures/unnamed-chunk-14-1.pdf}
 \caption{\label{fig:unnamed-chunk-14}Correlating slopes, or relating the
-affect to performance trend\label{trend_relation}}
+affect to performance trend\label{trend_correlation}}
 \end{figure*}

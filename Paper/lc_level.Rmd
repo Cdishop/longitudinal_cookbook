@@ -53,7 +53,7 @@ Figure \ref{level_correlate} (no figure yet) demonstrates this graphically. Para
 
 #### Inference 3: There is a correlation between the level of $x$ and $y$ at $t$. 
 
-The final level inference is horizontal. Rather than correlating values from a single moment or a single averaged moment, we correlate values across time. For example, we might ask if affect is related to performance across time; i.e., when affect is high is performance also high, and when affect is low is performance also low? 
+The final level inference is horizontal. Rather than correlating values from a single moment or a single averaged moment, we correlate values across time. For example, we might ask if affect is related to performance across time; i.e., when affect is high is performance also high, and when affect is low is performance also low? This inference sounds similar to the one just presented, but their difference is important. With inference three we ask about affect and performance at $t$ or at an averaged window of $t$ -- we examine how averaged values across time of affect are related to averaged values across time of performance. Here, we ask about affect and performance across all $t$ -- we retain all of the information make a statement about the relationship between affect and performance across time.
 
 Figure \ref{level_relation} shows this inference graphically. The top panel plots affect and performance trajectories across time. The colored squares represent levels at different points in time. The green squares highlight low values of both variables, the blue high values, and the red middle values. The bottom panel shows how those respective values map onto a graph that describes the relationship between affect and performance across time. Notice that there appears to be a positive relationship in the scatterplot, which tells us that when affect is high performance also tends to be high, and vice versa.
 
@@ -72,7 +72,7 @@ Insert Figure \ref{level_relation} about here
 
 ## Level Inference Table
 
-The inference table below provides examples of each level inference. Inference one is about level itself -- a single value that describes one time point or the average time point. Inference two is about variability across units in level. Inference three is about correlating those single level estimates. Inference four, finally, is about correlating levels across time. 
+The inference table below provides examples of each level inference. Inference one is about level itself -- a single value that describes the variable at one time or averaged across time. Inference two is about variability across units in level. Inference three takes the level in one variable and asks whether it tends to co-occur with the level in another. Inference four, finally, is about the relationship between raw values across time.
 
 ```{r, echo = F}
 library(xtable)
@@ -136,8 +136,8 @@ ggplot(cd, aes(x = Time, y = Y)) +
   theme_classic() + 
   theme(legend.title = element_blank()) + 
   geom_segment(aes(x = 7, y = yave, xend = 13, yend = yave), color = 'blue', alpha = 0.2, linetype = 'dashed') + 
-  geom_segment(aes(x = -3, y = y1, xend = 3, yend = y1), color = 'red', alpha = 0.2, linetype = 'dashed') + 
-  geom_segment(aes(x = 17, y = yend, xend = 23, yend = yend), color = 'green', alpha = 0.2, linetype = 'dashed')
+  geom_segment(aes(x = -1, y = y1, xend = 1, yend = y1), color = 'red', alpha = 0.2, linetype = 'dashed') + 
+  geom_segment(aes(x = 19, y = yend, xend = 21, yend = yend), color = 'green', alpha = 0.2, linetype = 'dashed')
   
 
 

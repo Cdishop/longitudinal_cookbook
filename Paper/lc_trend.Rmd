@@ -4,7 +4,7 @@ output: pdf_document
 
 # Trend
 
-Does affect go up or down across time, or is it relatively stable? Does trainee skill increase over the training session? These are questions about trend, and these first two are specifically about linear trend. It is also possible to explore how variables might bend or curve across time. Do newcomer perceptions of climate increase and then plateua over time? Does the response time of a medical team decrease with each successive case but then remain stable once the team can no longer improve their coordination? These latter questions concern curvilinear trajectories. 
+Does affect go up or down across time, or is it relatively stable? Does trainee skill increase over the training session? These are questions about trend, and these first two are specifically about linear trend. It is also possible to explore how variables bend or curve across time. Do newcomer perceptions of climate increase and then plateau over time? Does the response time of a medical team decrease with each successive case but then remain stable once the team can no longer improve their coordination? These latter questions concern curvilinear trajectories. 
 
 Trend has to do with the global shape of the trajectory across time. If we put a variable on the $y$-axis and plot its values against time on the $x$-axis, do the values tend to go up or down over time? It can be thought of as the coarse-grained direction of a trajectory. 
 
@@ -40,11 +40,11 @@ Insert Figure \ref{trend_var} about here
 
 #### Inference 2: There is variability in the trend of a variable across time; trend differs across units.
 
-Inferences one and two were about one variable, but they can also be iterated across all observed variables. For example, we might discover that affect and performance trends both decrease, but there is greater variability across units in the affect trend. Or we might learn that affect has a negative trend while performance has a positive trend.
+Inferences one and two are about one variable, but they can also be iterated across all observed variables. For example, we might discover that affect and performance trends both decrease, but there is greater variability across units in the affect trend. Or we might learn that affect has a negative trend while performance has a positive trend.
 
-Correlating these trends is the next inference. 
+Correlating these trends is the next inference. Just like before, correlating gives us a indication of co-occuring patterns, but this time we are focused on trends rather than levels. A large positive correlation between affect and performance trends indicates that people with a positive affect trend also have a positive performance trend, and people with a negative affect trend also tend to have a negative performance trend. 
 
-Figure \ref{trend_correlation}. Paragraph about graph. 
+Figure \ref{trend_correlation} shows the inuition behind the inference with a set of graphs. On the top panel, affect and performance are plotted across time for three individuals. For individual one, affect goes up while performance goes down, this pattern is reversed for person two, and person three reports fluctuating affect and performance but with no trend. The bottom panel then maps those pairings onto a figure that shows the relationship between the affect and performance trend. For example, person one has a positive affect trend and a negative performance trend, so their point on the bottom panel goes on the bottom right, whereas person two has the opposite pattern and therefore is placed on the top left (where performance trend is positive and affect trend is negative). Producing this bottom scatter plot tells us that the relationship between affect and performance trend is negative. That is, people with a positive affect trend usually have a negative performance trend. 
 
 \begin{center}
 
@@ -65,6 +65,8 @@ Figure \ref{trend_relation} (no figure yet). Paragraph about graph.
 #### Inference 4: There are correlates/predictors of trend. 
 
 ## Trend Inference Table
+
+The inference table below provides examples of each trend inference. Inference one is about the general direction or shape of a trajectory across time. Inference two is about variability in that shape across units. Inference three takes the trend in one variable and asks whether it tends to co-occur with trend in another. Inference four, finally, is about the relationship between trend in one variable and the raw values of one or more predictors.
 
 ```{r, echo = F}
 library(xtable)
@@ -94,7 +96,7 @@ trend_table %>%
 ```
 
 
-
+### A note on phrasing. Correlating trends: "people with a negative affect trend have a positive performance trend." This description IS WAY DIFFERENT THAN: when people's affect decreases their performance goes up; and when their affect increases their performance goes down. This second statement is about fluctuations, not about global trends. Correlating trends only tells you about the former kind of statement. 
 
 ```{r, echo = F, fig.cap = 'Trend across time\\label{trend}'}
 set.seed(3)
