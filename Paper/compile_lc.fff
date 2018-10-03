@@ -10,8 +10,8 @@
 
 \centering
 \includegraphics{figures/unnamed-chunk-9-1.pdf}
-\caption{\label{fig:unnamed-chunk-9}Trajectories with similar starting and
-average levels but different ending levels\label{level_var}}
+\caption{\label{fig:unnamed-chunk-9}Trajectories with variability in ending
+level across units\label{level_var}}
 \end{figure*}
 \begin{figure*}[hbt]
 \ifnextchar[{\eatarg}{}

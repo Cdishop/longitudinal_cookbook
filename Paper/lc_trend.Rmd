@@ -4,31 +4,63 @@ output: pdf_document
 
 # Trend
 
-Does affect go up or down across our measurement period, or is it relatively stable? Does trainee skill increase over the training session? These first two examples are questions about linear trend; we can also explore curvilinear trajectories. Do newcomer perceptions of climate increase and then plateua over time? Does the response time of a medical team decrease with each successive case but then remain stable once the team can no longer improve their coordination? 
+Does affect go up or down across time, or is it relatively stable? Does trainee skill increase over the training session? These are questions about trend, and these first two are specifically about linear trend. It is also possible to explore how variables might bend or curve across time. Do newcomer perceptions of climate increase and then plateua over time? Does the response time of a medical team decrease with each successive case but then remain stable once the team can no longer improve their coordination? These latter questions concern curvilinear trajectories. 
 
-Trend has to do with the global shape of the trajectory across time. If we put a variable on the $y$-axis and plot its values against time on the $x$-axis, do the values tend to go up or down over time? It can be thought of as the coarse-grained direction of a trajectory. Figure \ref{trend} demonstrates trend differences, where the red line shows positive, increasing trend, the blue line shows negative, decreasing trend, and the green line shows a curvilinear trajectory. Keep in mind that curvilinear and linear trajectories are both **linear in parameters** and should not be confused with non-linear systems. 
+Trend has to do with the global shape of the trajectory across time. If we put a variable on the $y$-axis and plot its values against time on the $x$-axis, do the values tend to go up or down over time? It can be thought of as the coarse-grained direction of a trajectory. 
+
+Figure \ref{trend} demonstrates trend, where the red line shows positive, increasing trend, the blue line shows negative, decreasing trend, and the green line shows a curvilinear trajectory (ADD GREEN LINE). Keep in mind that curvilinear and linear trajectories are both *linear in parameters* and should not be confused with non-linear systems. 
+
+\begin{center}
+
+------------
+
+Insert Figure \ref{trend} about here
+
+------------
+
+\end{center}
 
 Our first trend inference, therefore, concerns the shape of the trajectory.
 
 #### Inference 1: There is positive/negative/curvilinear trend in a variable across time. 
 
-We can also examine trend variability when we observe more than one unit. Do all trainees develop greater skill across time? Is there variability in the trend of helping behaviors, or counterproductive work behaviors over time? 
+As with the level inferences, when we add more units we can examine trend variability. Do all trainees develop greater skill across time? Is there variability in the trend of helping behaviors, or counterproductive work behaviors over time? 
 
 Figure \ref{trend_var} shows differences in trend variability. In the first panel all units (people) show the same positive trend, whereas everyone in the second panel shows different trend: person one's data appear to increase over time, person two's data remain flat, and person three's data decrease over time. With greater variability there is less consistency in trend across units.
 
-#### Inference 2: There is variability in the trend of a variable across time. Trend differs across units.
+\begin{center}
 
-Just like our discussion of the "level" inferences, inferences one and two were about one variable, but they can be iterated across all observed variables. For example, we might discover that $x$ and $y$ both have decreasing trend, but that $y$ has greater variability, suggesting individual differences in the sample. Or we might learn that $x$ has negative trend whereas $y$ has positive trend.
+------------
 
-Correlating these trends is the next inference. People with positive trend in $x$ also have positive trend in $y$.
+Insert Figure \ref{trend_var} about here
 
-Figure \ref{trend_correlation}. Explain.
+------------
+
+\end{center}
+
+#### Inference 2: There is variability in the trend of a variable across time; trend differs across units.
+
+Inferences one and two were about one variable, but they can also be iterated across all observed variables. For example, we might discover that affect and performance trends both decrease, but there is greater variability across units in the affect trend. Or we might learn that affect has a negative trend while performance has a positive trend.
+
+Correlating these trends is the next inference. 
+
+Figure \ref{trend_correlation}. Paragraph about graph. 
+
+\begin{center}
+
+------------
+
+Insert Figure \ref{trend_correlation} about here
+
+------------
+
+\end{center}
 
 #### Inference 3: There are correlated trends. There is a relationship between two trends.
 
 Correlates/predictors of trend. 
 
-Figure \ref{trend_relation}
+Figure \ref{trend_relation} (no figure yet). Paragraph about graph.
 
 #### Inference 4: There are correlates/predictors of trend. 
 
@@ -134,7 +166,7 @@ ggplot(yup, aes(x = Time, y = Y, color = Person), alpha = 0.4) +
 ```
 
 
-```{r, echo = F, fig.cap = 'Correlating slopes, or relating the affect to performance trend\\label{trend_relation}', fig.height = 10}
+```{r, echo = F, fig.cap = 'Correlating slopes, or relating the affect to performance trend\\label{trend_correlation}', fig.height = 10}
 
 set.seed(33)
 tre_affect <- 6 + 0.6*ind + rnorm(20,0,1)
@@ -230,7 +262,7 @@ grid.arrange(tp1, tp2, ncol = 1)
 
 ## Models
 
-Growth curves in SEM or HLM. Bivariate growth curves. 
+Trends are called slope estimates in the statistical modeling literature. They are also referred to as growth. Mean estimates of slopes, or trends, or growth will tell you about trend, whereas the variance estimates will tell you about variability across units. Growth curves in SEM or HLM. Bivariate growth curves. 
 
 
 

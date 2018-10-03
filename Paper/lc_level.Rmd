@@ -5,15 +5,13 @@ output:
   pdf_document: default
 ---
 
-Different literatures talk about the idea of level in different ways. In mathematical biology a variable is referred to as a state, the span of values that it can take is known as the state space, and its current value is called the condition of the state. Level is therefore synonymous with the condition of a state. Monge refers to it as magnitude. 
-
-In the statistical literature, level is called the intercept. Level, with respect to a certain point or window in time, is called the intercept in the statistical literature, and we can make an inference about the intercept at any observation point. Sometimes we are interested in the level at the beginning of the study, other times we are interested in the level at the last observation. We can of course also be interested in the average level across time.
-
 # Level
 
 Is employee emotional exhaustion, on average, high across the study? Is trainee skill low at the beginning of a training session? What value are newcomer perceptions of unit climate at the end of a two-week socialization process? These are questions about level, or the specific value of a variable. 
 
-We can think about level at a specific moment or averaged across a window of time. That is, if we put a variable on the $y$ axis and plot its values against time on the $x$ axis, we can explore the value that it takes at time $t$, or the value that it takes on average across any span of $t$. Figure \ref{level} demonstrates this idea graphically. A variable is plotted across time, and the color labels indicate levels -- two at specific $t$'s and the third averaged across time -- that we may be interested in. 
+Levels either describe the variable at one moment or averaged across a span of time. That is, if we put a variable on the $y$ axis and plot its values against time on the $x$ axis, we can explore the value that it takes at time $t$, or the value that it takes on average across any span of $t$. 
+
+Figure \ref{level} demonstrates this idea graphically. A variable is plotted across time, and the color labels indicate levels -- the red and green describe the variable at a specific moment while the purple, average level, describes it across a window. 
 
 \begin{center}
 
@@ -29,7 +27,9 @@ Insert Figure \ref{level} about here
 
 #### Inference 1: What is the level of $x$ at time $t$, or across a span of $t$?
 
-When we retain one variable but add multiple units -- people or organizations, for example -- then we can look at the variability in level. Does everyone have high affect across time? Is there variability in the level of skill among trainees at the beginning of a training session? We demonstrate this idea in figure \ref{level_var}, where each unit (person) has a similar trajectory but different levels at the last time point. 
+When we retain one variable but add multiple units -- people or organizations, for example -- then we can look at the variability in level. Does everyone have high affect across time? Is there variability in the level of skill among trainees at the beginning of a training session? 
+
+We demonstrate this idea in figure \ref{level_var}, where each unit (person) has a similar trajectory but different levels at the last time point. 
 
 \begin{center}
 
@@ -41,29 +41,38 @@ Insert Figure \ref{level_var} about here
 
 \end{center}
 
-\noindent The second level inference, therefore, is about the variability of level across units.
+\noindent The second level inference, therefore, is about level variability across units.
 
-#### Inference 2: There is variability in the level of $x$ at time $t$, or across a span of $t$. 
+#### Inference 2: Across a span of $t$ or at a specific $t$ there is variability in the level of $x$.
 
-Inferences one and two concern a single variable, but they can of course be iterated across any or all observed variables in a study. For example, we might discover that $x$ and $y$ have high average levels across time, but that $y$ has greater variability, suggesting individual differences in the sample. Or we might learn that $x$ has a low initial level whereas $y$'s initial level is high.
+Inferences one and two concern a single variable, but they can of course be iterated across any or all observed variables in the study. For example, we might discover that affect and performance have high average levels across time, but that affect has greater level variability. Or we might learn that affect has a low initial level whereas performance is initially high. What we are doing here is making descriptive comparisons between the level of one variable and the level of another. We can also produce a quantitative statement about the extent to which levels are related.
 
-Correlating these levels is the next inference. When $x$ on average is low at the initial time point and $y$ on average is high at the initial time point, we can correlate them to discover if units (people) with low initial levels of $x$ have high initial levels on $y$ and people with high initial levels on $x$ have low initial levels on $y$. 
+Correlating levels provides us with that quantitative statement. A large positive correlation between the initial levels of affect and performance would mean that people with greater initial levels of affect also tend to have greater intial performance, and people with lower initial affect also tend to have lower initial performance. 
 
-Figure \ref{level_correlate} demonstrates this graphically. all about the graph.
+Figure \ref{level_correlate} (no figure yet) demonstrates this graphically. Paragraph about the graph. 
 
 #### Inference 3: There is a correlation between the level of $x$ and $y$ at $t$. 
 
-The final inference is horizontal. Rather than regressing a point estimate of the level on another level, we regress the values on a variable across time on another variable's values across time.
+The final level inference is horizontal. Rather than correlating values from a single moment or a single averaged moment, we correlate values across time. For example, we might ask if affect is related to performance across time; i.e., when affect is high is performance also high, and when affect is low is performance also low? 
 
-Questions.  Is the level of affect related to the level of helping behaviors across time? That is, when affect is high, are helping behaviors also high or are they low? When team cohesion is low, is team performance low as well, or is it high?
+Figure \ref{level_relation} shows this inference graphically. The top panel plots affect and performance trajectories across time. The colored squares represent levels at different points in time. The green squares highlight low values of both variables, the blue high values, and the red middle values. The bottom panel shows how those respective values map onto a graph that describes the relationship between affect and performance across time. Notice that there appears to be a positive relationship in the scatterplot, which tells us that when affect is high performance also tends to be high, and vice versa.
 
+\begin{center}
 
-Figure \ref{level_relation}
+------------
+
+Insert Figure \ref{level_relation} about here
+
+------------
+
+\end{center}
 
 #### Inference 4: There is a relationship between $x$ and $y$ across time. 
 
 
 ## Level Inference Table
+
+The inference table below provides examples of each level inference. Inference one is about level itself -- a single value that describes one time point or the average time point. Inference two is about variability across units in level. Inference three is about correlating those single level estimates. Inference four, finally, is about correlating levels across time. 
 
 ```{r, echo = F}
 library(xtable)
@@ -95,9 +104,7 @@ level_table %>%
 
 ## Models
 
-Intercept only models: these can be done in HLM or SEM. Time-varying or invariant covariates analysis, these can be done in HLM or SEM. Point to references. 
-
- 
+Level is called intercept in the statistical modeling literature. Typically the mean estimate tells you about the level, and the variance estimate tells you about the variability across units. Intercept only models in HLM or SEM. Time-varying or invariant covariates analyses. Point to references. 
 
 
 ```{r, echo = F, fig.cap = "Level examples\\label{level}"}
@@ -136,9 +143,8 @@ ggplot(cd, aes(x = Time, y = Y)) +
 
 ```
 
-One variable, multiple units
 
-```{r, echo = F, fig.cap = 'Trajectories with similar starting and average levels but different ending levels\\label{level_var}'}
+```{r, echo = F, fig.cap = 'Trajectories with variability in ending level across units\\label{level_var}'}
 
 person1 <- y
 person2 <- c(y[1:4] + 0.1, yend + 3)
@@ -178,11 +184,6 @@ ggplot(df, aes(x = Time, y = Y, group = person, linetype = person)) +
 
 
 ```
-
-
-Muliple Variables
-
-When affect is low performance is low. When affect is high performance is high.
 
 ```{r, echo = F, fig.cap = 'Relating affect to performance levels\\label{level_relation}', fig.height = 8}
 library(tidyverse)
