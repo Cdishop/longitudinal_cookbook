@@ -5,4 +5,6 @@ output: pdf_document
 # Discussion
 
 
-Points to include. 1) Econometrics modeling levels vs. modeling differences. 2) Keep in mind you might see weird stuff in the literature. X at time 1 relates to Z at time 2, which relates to Y at time 3, but none are measured repeatedly across time. This is no good. We opened with "we couch ourselves by only discussing studies where constructs were measured on each $i$ at each $t$." Sometimes this doesn't happen...
+Points to include. 1) Econometrics modeling levels vs. modeling differences. 
+
+2) Keep in mind you might see weird stuff in the literature. X at time 1 relates to Z at time 2, which relates to Y at time 3, but none are measured repeatedly across time. This is no good. We opened with "we couch ourselves by only discussing studies where constructs were measured on each $i$ at each $t$." Sometimes this doesn't happen...

@@ -4,23 +4,43 @@ output: pdf_document
 
 # Dynamics
 
-Dynamics refers to systems with memory. When the past matters, dynamics are at play. 
-
-Stuff about change.
-
 Dynamics refers to a specific branch of mathematics, but the term is used in different ways throughout our literature. It is used informally to mean "change", "fluctuating," "volatile," "longitudinal," or "over time" (among others), whereas formal definitions in our literature are presented within certain contexts. Wang defines a dynamic *model* as a "representation of a system that evolves over time. In particular it describes how the system evolves from a given state at time *t* to another state at time *t + 1* as governed by the transition rules and potential external inputs" (p. 242). Vancouver states that dynamic *variables* "behave as if they have memory; that is, their value at any one time depends somewhat on their previous value" (p. 604). Finally, Monge suggests that in dynamic *analyses*, "it is essential to know how variables depend upon their own past history" (p. 409). 
 
-The crucial notion to take from dynamics, then, is memory. When the past matters, and future states are constrained by where they were at prior points in time, dynamics are at play.
+The crucial notion to take from dynamics, then, is memory. When the past matters, and future states are constrained by where they were at prior points in time, dynamics are at play. In this section, we unpack a variety of inferences that are couched in this idea.
+
+Does performance relate to itself over time? Do current helping behaviors depend on prior helping behaviors? Does unit climate demonstrate self-similarity across time? Does income now predict income in the future? These are questions about the relationship of a single variable with itself over time. Does it predict itself at each subsequent moment? 
+
+Figure \ref{dynamics} (no graph yet) shows the concept graphically. Paragraph about the graph.
+
+The statistical term used to describe self-similarity is autoregression, and we use it to put a label on this first inference.
 
 #### Inference 1: There is autoregression in $x$. 
 
+Inference one was of course about a single variable, what about when we apply the concept of memory to the relationship among multiple variables? This raises the question of how one variable relates to another at a future time. Does affect predict subsequent performance? Do prior counterproductive work behaviors relate to current incivility? When goal discrepancy is large (high), is effort at the subsequent time point also high? When prior depletion is low, is current emotional exhaustion high?
+
+We can capture this second inference by relating current values on one variable to future values on another. Equivalently, we can relate prior values on one variable to current values on another. Figure \ref{dynamics_cl} (no figure yet) plots...Paragraph about the graph.
+
+Relating current to future (or prior to current) from one variable to another is called a "cross lag" relationship.
+
 #### Inference 2: There is a cross-lag relationship, where one variable relates to another at a different point in time. x_t is associated with y_t+1 across time. 
+
+Inference two tells us whether the patterns in one variable co-occur with the patterns in another at a subsequent time point. Across time, when affect is low is subsequent performance also low? A related question is as follows: across time, when affect is low does performance increase or decrease? This second question is about change. How does one variable relate to the change in another?
+
+When goal discrepancy is large (high), does effort increase or decrease? When unit climate is low, do perceptions of the leader change? When performance is high, does self efficacy go up or down? 
+
+All of these questions are about change, but an immediate question that arises is, change from what? Baseline? The prior time point? The last three time points? Typically change is construed with respect to the last time point. When affect is low, does performance from the last to the current time point increase or decrease? How does effort change from the prior to the current time point when goal discrepancy is high?
+
+Figure \ref{dynamics_change} demonstrates these ideas. Paragraph about the graph.
+
+It is typical to think of change from the prior to the current time point, but researchers are free to move it as they please. Here are the two final inferences that capture change in different locations.
 
 #### Inference 3: There is a change relationship, where one variable relates to the change in another. x_t is associated with $\Delta$ y_t.
 
 #### Inference 4: There is a cross-lag relationship of change, where one variable relates to the change of another at a different point in time. x_t is associated with $\Delta$ y_t+1.
 
 ## Dynamics Inference Table
+
+Again, we provide an inference table below -- this time with respect to dynamic inferences. Inference one is about autoregression, or memory in a single variable. Inference two asks how a variable at one time co-occurs with another at a different time. Inferences three and four try to understand change: when one variable is high or low, does it relate to the change (an increase or decrease) in the values of another variable.
 
 ```{r, echo = F}
 library(xtable)
@@ -36,7 +56,7 @@ dy_table <- data.frame(
   Inference = c(1, 2, 3, 4),
   Examples = c(linebreak('Burnout demonstrates self-similarity across time.\nPerformance relates to subsequent performance.'),
                  linebreak('Affect predicts subsequent counterproductive work behaviors.\nTurnover relates to subsequent firm performance.'),
-                 linebreak('Positive health status relates to change in happiness.\nAnxiety relates to changes in performance.'),
+                 linebreak('Positive health status relates to change in happiness.\nAnxiety relates to change in performance.'),
                  linebreak('Affect relates to subsequent change in performance.\nHelping behaviors predict subsequent depletion changes.'))
 )
 
@@ -51,17 +71,10 @@ dy_table %>%
 
 
 
-## Inference List
+## Models
 
-A variable has autoregression.
+Our literature has a history with difference scores and partialling. We debated difference scores so we have converged to partialling models. Typical we create a model with prior values of the response variable as a predictor. 
 
-Level relationships with lags: $x_t$ is associated with $y_t+1$ across time. There are cross-lag effects, where one variable relates to another at a different point in time. Distinguish this from one measurement at t_1 and one measurement of y at t_2...this inference is not that. This inference is about a bunch of repeated measurements, and at each of those x predicts the next moment of y.
-
-The inference above can be extended to include reciprocal relationships or multiple variables.
-
-Change relationships. $x$ is associated with a change in $y$. This implies that $x_t$ predicts $y_t$, but $y_t$ is no longer just the straight observation, it is the difference between $y_t$ and $y_t-1$ (or with $y_t-1$ partialled). 
-
-Change relationships with lags. Same thing as above but now a different lag of $x$ is predicting change in $y$. 
 
 
 

@@ -3,3 +3,5 @@ output: pdf_document
 ---
 
 # Mediation
+
+Systems of variables. Reciprocal relationships. 

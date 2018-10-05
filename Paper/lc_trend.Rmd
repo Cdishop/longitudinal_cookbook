@@ -42,7 +42,7 @@ Insert Figure \ref{trend_var} about here
 
 Inferences one and two are about one variable, but they can also be iterated across all observed variables. For example, we might discover that affect and performance trends both decrease, but there is greater variability across units in the affect trend. Or we might learn that affect has a negative trend while performance has a positive trend.
 
-Correlating these trends is the next inference. Just like before, correlating gives us a indication of co-occuring patterns, but this time we are focused on trends rather than levels. A large positive correlation between affect and performance trends indicates that people with a positive affect trend also have a positive performance trend, and people with a negative affect trend also tend to have a negative performance trend. 
+Correlating these trends is the next inference. Just like before, correlating indicates co-occuring patterns, but this time we are focused on trends rather than levels. A large positive correlation between affect and performance trends indicates that people with a positive affect trend (usually) have a positive performance trend and people with a negative affect trend (usually) have a negative performance trend. 
 
 Figure \ref{trend_correlation} shows the inuition behind the inference with a set of graphs. On the top panel, affect and performance are plotted across time for three individuals. For individual one, affect goes up while performance goes down, this pattern is reversed for person two, and person three reports fluctuating affect and performance but with no trend. The bottom panel then maps those pairings onto a figure that shows the relationship between the affect and performance trend. For example, person one has a positive affect trend and a negative performance trend, so their point on the bottom panel goes on the bottom right, whereas person two has the opposite pattern and therefore is placed on the top left (where performance trend is positive and affect trend is negative). Producing this bottom scatter plot tells us that the relationship between affect and performance trend is negative. That is, people with a positive affect trend usually have a negative performance trend. 
 
@@ -58,9 +58,11 @@ Insert Figure \ref{trend_correlation} about here
 
 #### Inference 3: There are correlated trends. There is a relationship between two trends.
 
-Correlates/predictors of trend. 
+The final trend inference is about identifying covariates or predictors of trend. Do helping behaviors predict the trend in depletion? Does the trend in unit climate covary with perceptions of leader quality? 
 
-Figure \ref{trend_relation} (no figure yet). Paragraph about graph.
+Notice the difference between this inference and inference three. Inference three asks how one trend is related to another, whereas this inference asks how raw values relate to or predict the trend in a different variable. **Note: How is this possible? Slope is a single value, like 0.5, whereas there are as many raw values as there are time points. So X is trying to predict Y, but X has 10 values and Y has 1 value.**
+
+Figure \ref{trend_relation} (no figure yet). Paragraph about graph. Not sure what this would entail. 
 
 #### Inference 4: There are correlates/predictors of trend. 
 

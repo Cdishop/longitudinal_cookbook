@@ -388,7 +388,13 @@ The final level inference is horizontal. Rather than correlating values
 from a single moment or a single averaged moment, we correlate values
 across time. For example, we might ask if affect is related to
 performance across time; i.e., when affect is high is performance also
-high, and when affect is low is performance also low?
+high, and when affect is low is performance also low? This inference
+sounds similar to the one just presented, but their difference is
+important. With inference three we ask about affect and performance at
+\(t\) or at an averaged window of \(t\) -- we examine how averaged
+values across time relate to averaged values across time, for example.
+Here, we retain all of the information and examine the relationship
+between affect and performance across all \(t\).
 
 Figure \ref{level_relation} shows this inference graphically. The top
 panel plots affect and performance trajectories across time. The colored
@@ -419,11 +425,14 @@ time.}{Inference 4: There is a relationship between x and y across time.}}\label
 \subsection{Level Inference Table}\label{level-inference-table}}
 
 The inference table below provides examples of each level inference.
-Inference one is about level itself -- a single value that describes one
-time point or the average time point. Inference two is about variability
-across units in level. Inference three is about correlating those single
-level estimates. Inference four, finally, is about correlating levels
-across time.
+Inference one is about level itself -- a single value that describes the
+variable at one time or averaged across time. Inference two is about
+variability across units in level. Inference three takes the level in
+one variable and asks whether it tends to co-occur with the level in
+another. Think of inference three as creating a latent level variable at
+a single moment and asking how it relates to another latent variable
+from a single momoment. Inference four, finally, is about the
+relationship between raw values across time.
 
 \begin{tabular}{>{\raggedright\arraybackslash}p{5em}>{\raggedright\arraybackslash}p{30em}}
 \toprule
@@ -537,19 +546,18 @@ Insert Figure \ref{trend_var} about here
 across time; trend differs across
 units.}\label{inference-2-there-is-variability-in-the-trend-of-a-variable-across-time-trend-differs-across-units.}}
 
-Inferences one and two were about one variable, but they can also be
+Inferences one and two are about one variable, but they can also be
 iterated across all observed variables. For example, we might discover
 that affect and performance trends both decrease, but there is greater
 variability across units in the affect trend. Or we might learn that
 affect has a negative trend while performance has a positive trend.
 
 Correlating these trends is the next inference. Just like before,
-correlating gives us a indication of co-occuring patterns, but this time
-we are focused on trends rather than levels. A large positive
-correlation between affect and performance trends indicates that people
-with a positive affect trend also have a positive performance trend, and
-people with a negative affect trend also tend to have a negative
-performance trend.
+correlating indicates co-occuring patterns, but this time we are focused
+on trends rather than levels. A large positive correlation between
+affect and performance trends indicates that people with a positive
+affect trend (usually) have a positive performance trend and people with
+a negative affect trend (usually) have a negative performance trend.
 
 Figure \ref{trend_correlation} shows the inuition behind the inference
 with a set of graphs. On the top panel, affect and performance are
@@ -561,11 +569,11 @@ that shows the relationship between the affect and performance trend.
 For example, person one has a positive affect trend and a negative
 performance trend, so their point on the bottom panel goes on the bottom
 right, whereas person two has the opposite pattern and therefore is
-placed on the top left (where trend is performance is positive and trend
-in affect is negative). Producing this bottom scatter plot tells us that
-the relationship between affect and performance trend is negative. That
-is, people with a positive affect trend usually have a negative
-performance trend.
+placed on the top left (where performance trend is positive and affect
+trend is negative). Producing this bottom scatter plot tells us that the
+relationship between affect and performance trend is negative. That is,
+people with a positive affect trend usually have a negative performance
+trend.
 
 \begin{center}
 
@@ -582,9 +590,20 @@ Insert Figure \ref{trend_correlation} about here
 relationship between two
 trends.}\label{inference-3-there-are-correlated-trends.-there-is-a-relationship-between-two-trends.}}
 
-Correlates/predictors of trend.
+The final trend inference is about identifying covariates or predictors
+of trend. Do helping behaviors predict the trend in depletion? Does the
+trend in unit climate covary with perceptions of leader quality?
 
-Figure \ref{trend_relation} (no figure yet). Paragraph about graph.
+Notice the difference between this inference and inference three.
+Inference three asks how one trend is related to another, whereas this
+inference asks how raw values relate to or predict the trend in a
+different variable. \textbf{Note: How is this possible? Slope is a
+single value, like 0.5, whereas there are as many raw values as there
+are time points. So X is trying to predict Y, but X has 10 values and Y
+has 1 value.}
+
+Figure \ref{trend_relation} (no figure yet). Paragraph about graph. Not
+sure what this would entail.
 
 \hypertarget{inference-4-there-are-correlatespredictors-of-trend.}{%
 \paragraph{Inference 4: There are correlates/predictors of
@@ -597,9 +616,9 @@ The inference table below provides examples of each trend inference.
 Inference one is about the general direction or shape of a trajectory
 across time. Inference two is about variability in that shape across
 units. Inference three takes the trend in one variable and asks whether
-it tends to co-occur with another kind of trend -- it correlates single
-trend estimates. Inference four, finally, correlates trend estimates
-with the raw values of preditors across time.
+it tends to co-occur with trend in another. Inference four, finally, is
+about the relationship between trend in one variable and the raw values
+of one or more predictors.
 
 \begin{tabular}{>{\raggedright\arraybackslash}p{5em}>{\raggedright\arraybackslash}p{30em}}
 \toprule
@@ -657,11 +676,6 @@ curves in SEM or HLM. Bivariate growth curves.
 \hypertarget{dynamics}{%
 \section{Dynamics}\label{dynamics}}
 
-Dynamics refers to systems with memory. When the past matters, dynamics
-are at play.
-
-Stuff about change.
-
 Dynamics refers to a specific branch of mathematics, but the term is
 used in different ways throughout our literature. It is used informally
 to mean \enquote{change}, \enquote{fluctuating,} \enquote{volatile,}
@@ -680,17 +694,74 @@ upon their own past history} (p.~409).
 
 The crucial notion to take from dynamics, then, is memory. When the past
 matters, and future states are constrained by where they were at prior
-points in time, dynamics are at play.
+points in time, dynamics are at play. In this section, we unpack a
+variety of inferences that are couched in this idea.
+
+Does performance relate to itself over time? Do current helping
+behaviors depend on prior helping behaviors? Does unit climate
+demonstrate self-similarity across time? Does income now predict income
+in the future? These are questions about the relationship of a single
+variable with itself over time. Does it predict itself at each
+subsequent moment?
+
+Figure \ref{dynamics} (no graph yet) shows the concept graphically.
+Paragraph about the graph.
+
+The statistical term used to describe self-similarity is autoregression,
+and we use it to put a label on this first inference.
 
 \hypertarget{inference-1-there-is-autoregression-in-x.}{%
 \paragraph{\texorpdfstring{Inference 1: There is autoregression in
 \(x\).}{Inference 1: There is autoregression in x.}}\label{inference-1-there-is-autoregression-in-x.}}
+
+Inference one was of course about a single variable, what about when we
+apply the concept of memory to the relationship among multiple
+variables? This raises the question of how one variable relates to
+another at a future time. Does affect predict subsequent performance? Do
+prior counterproductive work behaviors relate to current incivility?
+When goal discrepancy is large (high), is effort at the subsequent time
+point also high? When prior depletion is low, is current emotional
+exhaustion high?
+
+We can capture this second inference by relating current values on one
+variable to future values on another. Equivalently, we can relate prior
+values on one variable to current values on another. Figure
+\ref{dynamics_cl} (no figure yet) plots\ldots{}Paragraph about the
+graph.
+
+Relating current to future (or prior to current) from one variable to
+another is called a \enquote{cross lag} relationship.
 
 \hypertarget{inference-2-there-is-a-cross-lag-relationship-where-one-variable-relates-to-another-at-a-different-point-in-time.-x_t-is-associated-with-y_t1-across-time.}{%
 \paragraph{Inference 2: There is a cross-lag relationship, where one
 variable relates to another at a different point in time. x\_t is
 associated with y\_t+1 across
 time.}\label{inference-2-there-is-a-cross-lag-relationship-where-one-variable-relates-to-another-at-a-different-point-in-time.-x_t-is-associated-with-y_t1-across-time.}}
+
+Inference two tells us whether the patterns in one variable co-occur
+with the patterns in another at a subsequent time point. Across time,
+when affect is low is subsequent performance also low? A related
+question is as follows: across time, when affect is low does performance
+increase or decrease? This second question is about change. How does one
+variable relate to the change in another?
+
+When goal discrepancy is large (high), does effort increase or decrease?
+When unit climate is low, do perceptions of the leader change? When
+performance is high, does self efficacy go up or down?
+
+All of these questions are about change, but an immediate question that
+arises is, change from what? Baseline? The prior time point? The last
+three time points? Typically change is construed with respect to the
+last time point. When affect is low, does from the last time point to
+the current time point increase or decrease? How does effort change from
+the prior to the current time point when goal discrepancy is high?
+
+Figure \ref{dynamics_change} demonstrates these ideas. Paragraph about
+the graph.
+
+It is typical to think of change from the prior to the current time
+point, but researchers are free to move it as they please. Here are the
+two final inferences that capture change in different locations.
 
 \hypertarget{inference-3-there-is-a-change-relationship-where-one-variable-relates-to-the-change-in-another.-x_t-is-associated-with-delta-y_t.}{%
 \paragraph{\texorpdfstring{Inference 3: There is a change relationship,
@@ -707,6 +778,14 @@ y\_t+1.}{Inference 4: There is a cross-lag relationship of change, where one var
 \hypertarget{dynamics-inference-table}{%
 \subsection{Dynamics Inference Table}\label{dynamics-inference-table}}
 
+Again, we provide an inference table below -- this time with respect to
+dynamic inferences. Inference one is about autoregression, or memory in
+a single variable. Inference two asks how a variable at one time
+co-occurs with another at a different time. Inferences three and four
+try to understand change: when one variable is high or low, does it
+relate to the change (an increase or decrease) in the values of another
+variable.
+
 \begin{tabular}{>{\raggedright\arraybackslash}p{5em}>{\raggedright\arraybackslash}p{30em}}
 \toprule
 Inference & Examples\\
@@ -715,48 +794,43 @@ Inference & Examples\\
 \hline
 2 & Affect predicts subsequent counterproductive work behaviors.\newline Turnover relates to subsequent firm performance.\\
 \hline
-3 & Positive health status relates to change in happiness.\newline Anxiety relates to changes in performance.\\
+3 & Positive health status relates to change in happiness.\newline Anxiety relates to change in performance.\\
 \hline
 4 & Affect relates to subsequent change in performance.\newline Helping behaviors predict subsequent depletion changes.\\
 \bottomrule
 \end{tabular}
 
-\hypertarget{inference-list}{%
-\subsection{Inference List}\label{inference-list}}
+\hypertarget{models-2}{%
+\subsection{Models}\label{models-2}}
 
-A variable has autoregression.
-
-Level relationships with lags: \(x_t\) is associated with \(y_t+1\)
-across time. There are cross-lag effects, where one variable relates to
-another at a different point in time. Distinguish this from one
-measurement at t\_1 and one measurement of y at t\_2\ldots{}this
-inference is not that. This inference is about a bunch of repeated
-measurements, and at each of those x predicts the next moment of y.
-
-The inference above can be extended to include reciprocal relationships
-or multiple variables.
-
-Change relationships. \(x\) is associated with a change in \(y\). This
-implies that \(x_t\) predicts \(y_t\), but \(y_t\) is no longer just the
-straight observation, it is the difference between \(y_t\) and \(y_t-1\)
-(or with \(y_t-1\) partialled).
-
-Change relationships with lags. Same thing as above but now a different
-lag of \(x\) is predicting change in \(y\).
+Our literature and its history with difference scores and partialing. We
+debated difference scores so we have converged to partialling models.
+Typical to create a model with prior values of the response variable as
+a predictor.
 
 \hypertarget{mediation}{%
 \section{Mediation}\label{mediation}}
+
+Systems of variables. Reciprocal relationships.
 
 \hypertarget{discussion}{%
 \section{Discussion}\label{discussion}}
 
 Points to include. 1) Econometrics modeling levels vs.~modeling
-differences. 2) Keep in mind you might see weird stuff in the
-literature. X at time 1 relates to Z at time 2, which relates to Y at
-time 3, but none are measured repeatedly across time. This is no good.
-We opened with \enquote{we couch ourselves by only discussing studies
-where constructs were measured on each \(i\) at each \(t\).} Sometimes
-this doesn't happen\ldots{}
+differences.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Keep in mind you might see weird stuff in the literature. X at time 1
+  relates to Z at time 2, which relates to Y at time 3, but none are
+  measured repeatedly across time. This is no good. We opened with
+  \enquote{we couch ourselves by only discussing studies where
+  constructs were measured on each \(i\) at each \(t\).} Sometimes this
+  doesn't happen\ldots{}
+\end{enumerate}
 
 \newpage
 
