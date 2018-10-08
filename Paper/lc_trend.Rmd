@@ -42,7 +42,7 @@ Insert Figure \ref{trend_var} about here
 
 Inferences one and two are about one variable, but they can also be iterated across all observed variables. For example, we might discover that affect and performance trends both decrease, but there is greater variability across units in the affect trend. Or we might learn that affect has a negative trend while performance has a positive trend.
 
-Correlating these trends is the next inference. Just like before, correlating indicates co-occuring patterns, but this time we are focused on trends rather than levels. A large positive correlation between affect and performance trends indicates that people with a positive affect trend (usually) have a positive performance trend and people with a negative affect trend (usually) have a negative performance trend. 
+Correlating these trends is the next inference. Correlating indicates co-occuring patterns, but this time we are focused on trends rather than levels. A large positive correlation between affect and performance trends indicates that people with a positive affect trend (usually) have a positive performance trend and people with a negative affect trend (usually) have a negative performance trend. 
 
 Figure \ref{trend_correlation} shows the inuition behind the inference with a set of graphs. On the top panel, affect and performance are plotted across time for three individuals. For individual one, affect goes up while performance goes down, this pattern is reversed for person two, and person three reports fluctuating affect and performance but with no trend. The bottom panel then maps those pairings onto a figure that shows the relationship between the affect and performance trend. For example, person one has a positive affect trend and a negative performance trend, so their point on the bottom panel goes on the bottom right, whereas person two has the opposite pattern and therefore is placed on the top left (where performance trend is positive and affect trend is negative). Producing this bottom scatter plot tells us that the relationship between affect and performance trend is negative. That is, people with a positive affect trend usually have a negative performance trend. 
 
@@ -60,9 +60,9 @@ Insert Figure \ref{trend_correlation} about here
 
 The final trend inference is about identifying covariates or predictors of trend. Do helping behaviors predict the trend in depletion? Does the trend in unit climate covary with perceptions of leader quality? 
 
-Notice the difference between this inference and inference three. Inference three asks how one trend is related to another, whereas this inference asks how raw values relate to or predict the trend in a different variable. **Note: How is this possible? Slope is a single value, like 0.5, whereas there are as many raw values as there are time points. So X is trying to predict Y, but X has 10 values and Y has 1 value.**
+Notice the difference between this inference and inference three. Inference three asks how one trend is related to another, whereas this inference asks how raw values relate to or predict the trend in a different variable.
 
-Figure \ref{trend_relation} (no figure yet). Paragraph about graph. Not sure what this would entail. 
+Figure \ref{trend_relation} (no figure yet). Paragraph about graph. **Not sure how to graph. Slope is a single term, like 0.5. It is being predicted by the raw values of X across time...** 
 
 #### Inference 4: There are correlates/predictors of trend. 
 
@@ -98,7 +98,7 @@ trend_table %>%
 ```
 
 
-### A note on phrasing. Correlating trends: "people with a negative affect trend have a positive performance trend." This description IS WAY DIFFERENT THAN: when people's affect decreases their performance goes up; and when their affect increases their performance goes down. This second statement is about fluctuations, not about global trends. Correlating trends only tells you about the former kind of statement. 
+### A note on phrasing. Correlating trends, statement (a): "people with a negative affect trend have a positive performance trend." Some use phrases like statement (b), "when affect decreases performance goes up; and when affect increases performance goes down." You could construe statements (a) and (b) as equivalent, but usually they are not. When people state (b) they actually mean "when affect decreases performance immediately or subsequently goes up, and at a later point in time when the same trajectory of affect goes down performance immediately or subsequently goes up." These are very different statements. Correlating trends only gives you (a). 
 
 ```{r, echo = F, fig.cap = 'Trend across time\\label{trend}'}
 set.seed(3)

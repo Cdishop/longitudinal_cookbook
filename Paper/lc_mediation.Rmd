@@ -5,3 +5,5 @@ output: pdf_document
 # Mediation
 
 Systems of variables. Reciprocal relationships. 
+
+Somehow say that mediation kind of goes away when you get into reciprocal dynamics -- without making it sound like we don't care about mediation. 

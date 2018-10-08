@@ -51,9 +51,11 @@ Correlating levels provides us with that quantitative statement. A large positiv
 
 Figure \ref{level_correlate} (no figure yet) demonstrates this graphically. Paragraph about the graph. 
 
-#### Inference 3: There is a correlation between the level of $x$ and $y$ at $t$. 
+#### Inference 3: There is a correlation between the level of $x$ and the level of $y$ at $t$. 
 
-The final level inference is horizontal. Rather than correlating values from a single moment or a single averaged moment, we correlate values across time. For example, we might ask if affect is related to performance across time; i.e., when affect is high is performance also high, and when affect is low is performance also low? This inference sounds similar to the one just presented, but their difference is important. With inference three we ask about affect and performance at $t$ or at an averaged window of $t$ -- we examine how averaged values across time relate to averaged values across time, for example. Here, we retain all of the information and examine the relationship between affect and performance across all $t$. 
+The final level inference is horizontal. Rather than correlating values from a single moment or a single averaged moment, we correlate values across time. For example, we might ask if affect is related to performance across time; i.e., when affect is high is performance also high, and when affect is low is performance also low? 
+
+This inference sounds similar to the one just presented, but their difference is important. With inference three we ask about affect and performance at $t$ or at an averaged window of $t$ -- we examine, for example, how averaged values across time relate to averaged values across time. Here, we retain all of the information and examine the relationship between affect and performance across all $t$. 
 
 Figure \ref{level_relation} shows this inference graphically. The top panel plots affect and performance trajectories across time. The colored squares represent levels at different points in time. The green squares highlight low values of both variables, the blue high values, and the red middle values. The bottom panel shows how those respective values map onto a graph that describes the relationship between affect and performance across time. Notice that there appears to be a positive relationship in the scatterplot, which tells us that when affect is high performance also tends to be high, and vice versa.
 
@@ -72,7 +74,7 @@ Insert Figure \ref{level_relation} about here
 
 ## Level Inference Table
 
-The inference table below provides examples of each level inference. Inference one is about level itself -- a single value that describes the variable at one time or averaged across time. Inference two is about variability across units in level. Inference three takes the level in one variable and asks whether it tends to co-occur with the level in another. Think of inference three as creating a latent level variable at a single moment and asking how it relates to another latent variable from a single momoment. Inference four, finally, is about the relationship between raw values across time.
+The inference table below provides examples of each level inference. Inference one is about level itself -- a single value that describes the variable at one time or averaged across time. Inference two is about variability across units in level. Inference three takes the level in one variable and asks whether it tends to co-occur with the level in another. Think of inference three as creating a latent level variable at a single moment and asking how it relates to another latent variable from a single moment. Inference four, finally, is about the relationship between raw values across time.
 
 ```{r, echo = F}
 library(xtable)

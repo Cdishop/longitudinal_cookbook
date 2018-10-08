@@ -16,7 +16,7 @@ The statistical term used to describe self-similarity is autoregression, and we 
 
 #### Inference 1: There is autoregression in $x$. 
 
-Inference one was of course about a single variable, what about when we apply the concept of memory to the relationship among multiple variables? This raises the question of how one variable relates to another at a future time. Does affect predict subsequent performance? Do prior counterproductive work behaviors relate to current incivility? When goal discrepancy is large (high), is effort at the subsequent time point also high? When prior depletion is low, is current emotional exhaustion high?
+Inference one was of course about a single variable. When we apply the notion of memory to multivariate systems we move away from asking how variables relate to one another at $t$, or at an average window of $t$, or across $t$, and instead ask how variables to one another at different lags. Does affect predict subsequent performance? Do prior counterproductive work behaviors relate to current incivility? When goal discrepancy is large (high), is effort at the subsequent time point also high? When prior depletion is low, is current emotional exhaustion high?
 
 We can capture this second inference by relating current values on one variable to future values on another. Equivalently, we can relate prior values on one variable to current values on another. Figure \ref{dynamics_cl} (no figure yet) plots...Paragraph about the graph.
 
@@ -28,7 +28,7 @@ Inference two tells us whether the patterns in one variable co-occur with the pa
 
 When goal discrepancy is large (high), does effort increase or decrease? When unit climate is low, do perceptions of the leader change? When performance is high, does self efficacy go up or down? 
 
-All of these questions are about change, but an immediate question that arises is, change from what? Baseline? The prior time point? The last three time points? Typically change is construed with respect to the last time point. When affect is low, does performance from the last to the current time point increase or decrease? How does effort change from the prior to the current time point when goal discrepancy is high?
+All of these questions are about change, but notice that we have not defined change from what? Baseline? The prior time point? The last three time points? Typically change is construed with respect to the last time point. When affect is low, does performance from the last to the current time point increase or decrease? How does effort change from the prior to the current time point when goal discrepancy is high?
 
 Figure \ref{dynamics_change} demonstrates these ideas. Paragraph about the graph.
 
