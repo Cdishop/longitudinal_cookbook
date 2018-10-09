@@ -28,7 +28,7 @@ Inference two tells us whether the patterns in one variable co-occur with the pa
 
 When goal discrepancy is large (high), does effort increase or decrease? When unit climate is low, do perceptions of the leader change? When performance is high, does self efficacy go up or down? 
 
-All of these questions are about change, but notice that we have not defined change from what? Baseline? The prior time point? The last three time points? Typically change is construed with respect to the last time point. When affect is low, does performance from the last to the current time point increase or decrease? How does effort change from the prior to the current time point when goal discrepancy is high?
+All of these questions are about change, but notice that change can be construed across different lags. Change from what? Baseline? The prior time point? The last three time points? Typically change is construed with respect to the last time point. When affect is low, does performance from the last to the current time point increase or decrease? How does effort change from the prior to the current time point when goal discrepancy is high?
 
 Figure \ref{dynamics_change} demonstrates these ideas. Paragraph about the graph.
 
