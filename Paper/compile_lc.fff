@@ -18,29 +18,37 @@ level across units\label{level_var}}
 
 \centering
 \includegraphics{figures/unnamed-chunk-10-1.pdf}
-\caption{\label{fig:unnamed-chunk-10}Relating affect to performance
+\caption{\label{fig:unnamed-chunk-10}Correlating starting levels, or
+relating initial affect to initial performance\label{level_correlate}}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{figures/unnamed-chunk-11-1.pdf}
+\caption{\label{fig:unnamed-chunk-11}Relating affect to performance
 levels\label{level_relation}}
 \end{figure*}
 \begin{figure*}[hbt]
 \ifnextchar[{\eatarg}{}
 
 \centering
-\includegraphics{figures/unnamed-chunk-12-1.pdf}
-\caption{\label{fig:unnamed-chunk-12}Trend across time\label{trend}}
-\end{figure*}
-\begin{figure*}[hbt]
-\ifnextchar[{\eatarg}{}
-
-\centering
 \includegraphics{figures/unnamed-chunk-13-1.pdf}
-\caption{\label{fig:unnamed-chunk-13}Differences in trend variability across
-units\label{trend_var}}
+\caption{\label{fig:unnamed-chunk-13}Trend across time\label{trend}}
 \end{figure*}
 \begin{figure*}[hbt]
 \ifnextchar[{\eatarg}{}
 
 \centering
 \includegraphics{figures/unnamed-chunk-14-1.pdf}
-\caption{\label{fig:unnamed-chunk-14}Correlating slopes, or relating the
+\caption{\label{fig:unnamed-chunk-14}Differences in trend variability across
+units\label{trend_var}}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{figures/unnamed-chunk-15-1.pdf}
+\caption{\label{fig:unnamed-chunk-15}Correlating slopes, or relating the
 affect to performance trend\label{trend_correlation}}
 \end{figure*}

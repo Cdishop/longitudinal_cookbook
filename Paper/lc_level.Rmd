@@ -25,7 +25,7 @@ Insert Figure \ref{level} about here
 
 \noindent Our first level inference, therefore, concerns the value of a variable at a specific time or averaged across a window of time. 
 
-#### Inference 1: What is the level of $x$ at time $t$, or across a span of $t$?
+>> **Inference 1:** What is the level of $x$ at time $t$, or across a span of $t$?
 
 When we retain one variable but add multiple units -- people or organizations, for example -- then we can look at the variability in level. Does everyone have high affect across time? Is there variability in the level of skill among trainees at the beginning of a training session? 
 
@@ -43,15 +43,15 @@ Insert Figure \ref{level_var} about here
 
 \noindent The second level inference, therefore, is about level variability across units.
 
-#### Inference 2: Across a span of $t$ or at a specific $t$ there is variability in the level of $x$.
+>> **Inference 2:** Across a span of $t$ or at a specific $t$ there is variability in the level of $x$.
 
 Inferences one and two concern a single variable, but they can of course be iterated across any or all observed variables in the study. For example, we might discover that affect and performance have high average levels across time, but that affect has greater level variability. Or we might learn that affect has a low initial level whereas performance is initially high. What we are doing here is making descriptive comparisons between the level of one variable and the level of another. We can also produce a quantitative statement about the extent to which levels are related.
 
 Correlating levels provides us with that quantitative statement. A large positive correlation between the initial levels of affect and performance would mean that people with greater initial levels of affect also tend to have greater intial performance, and people with lower initial affect also tend to have lower initial performance. 
 
-Figure \ref{level_correlate} (no figure yet) demonstrates this graphically. Paragraph about the graph. 
+Figure \ref{level_correlate} demonstrates this graphically. Paragraph about the graph. 
 
-#### Inference 3: There is a correlation between the level of $x$ and the level of $y$ at $t$. 
+>> **Inference 3:** There is a correlation between the level of $x$ and the level of $y$ at $t$. 
 
 The final level inference is horizontal. Rather than correlating values from a single moment or a single averaged moment, we correlate values across time. For example, we might ask if affect is related to performance across time; i.e., when affect is high is performance also high, and when affect is low is performance also low? 
 
@@ -69,7 +69,7 @@ Insert Figure \ref{level_relation} about here
 
 \end{center}
 
-#### Inference 4: There is a relationship between $x$ and $y$ across time. 
+>> **Inference 4:** There is a relationship between $x$ and $y$ across time. 
 
 
 ## Level Inference Table
@@ -187,6 +187,104 @@ ggplot(df, aes(x = Time, y = Y, group = person, linetype = person)) +
 
 ```
 
+
+
+
+```{r, echo = F, fig.cap = 'Correlating starting levels, or relating initial affect to initial performance\\label{level_correlate}', fig.height = 10}
+library(ggplot2)
+set.seed(38)
+
+ind <- c(1:20)
+lev_affect <- c(10, 7, (8 + rnorm(18,0,1)))
+lev_perf <- c(1, 3, (6 + rnorm(18,0,1))) 
+
+lev_affect2 <- c(1, (2 + rnorm(19,0,1)))
+lev_perf2 <- c(10, 7, 4, (2 + rnorm(17,0,1)))
+
+lev_affect3 <- c(5, (7 + rnorm(19,0,1)))
+lev_perf3 <- c(4.8, (2 + rnorm(19,0,1)))
+
+lev_rel <- data.frame(
+  'Time' = c(ind, ind,
+             ind, ind,
+             ind, ind),
+  'Value' = c(lev_affect, lev_perf,
+          lev_affect2, lev_perf2,
+          lev_affect3, lev_perf3),
+  'call' = c(rep('Affect', 20),
+              rep('Performance', 20),
+             rep('Affect', 20),
+             rep('Performance', 20),
+             rep('Affect', 20),
+             rep('Performance', 20)),
+  'Person' = c(rep('Person 1', 40),
+               rep('Person 2', 40),
+               rep('Person 3', 40)),
+  'pos' = c(
+    10, rep(NA, 19),
+    1, rep(NA, 19),
+    1, rep(NA, 19),
+    10, rep(NA, 19),
+    5, rep(NA, 19),
+    4.8, rep(NA, 19)
+  )
+)
+
+
+
+lev_relate1 <- ggplot(lev_rel, aes(x = Time, y = Value, group = call)) + 
+  #geom_smooth(aes(linetype = call), se = F, color = 'black', span = 0.4) + 
+  geom_line(aes(linetype = call)) + 
+  theme_classic() + 
+  scale_y_continuous(labels = NULL) + 
+  theme(legend.title = element_blank()) + 
+  facet_grid(~Person, scales = 'free', space = 'free') + 
+  geom_point(size = 4, aes(y = pos, color = Person), show.legend = F, alpha = 0.6) +
+  scale_color_manual(values = c('Person 1' = 'red',
+                                'Person 2' = 'green',
+                                'Person 3' = 'blue'))
+
+
+
+lev_lev <- data.frame(
+  'Affect' = c(1, 5, 10),
+  'Performance' = c(10, 5, 1),
+  'label' = c('green', 'blue', 'red')
+)
+
+lev_relate2 <- ggplot(lev_lev, aes(x = Affect, y = Performance, color = label)) + 
+  geom_point(size = 6, alpha = 0.6) + 
+  theme_classic() + 
+  scale_y_continuous(breaks = c(0, 5, 11)) + 
+  scale_x_continuous(breaks = c(0, 5, 11)) + 
+  ylab("Initial Level of Performance") + 
+  xlab("Initial Level of Affect") + 
+  theme(legend.title = element_blank()) + 
+  theme(
+    axis.text.x = element_blank(),
+    axis.text.y = element_blank(),
+    axis.ticks = element_blank()
+  ) + 
+  scale_color_manual(values = c('red' = 'red', 
+                                'blue' = 'blue',
+                                'green' = 'green'),
+                     labels = c('Person 3',
+                                'Person 2',
+                                'Person 1'))
+                     #breaks = c('Person 1',
+                          #      'Person 2',
+                           #     'Person 3'))
+
+library(gridExtra)
+
+grid.arrange(lev_relate1, lev_relate2, ncol = 1)
+
+```
+
+
+
+
+
 ```{r, echo = F, fig.cap = 'Relating affect to performance levels\\label{level_relation}', fig.height = 8}
 library(tidyverse)
 set.seed(2)
@@ -224,14 +322,14 @@ g1 <- ggplot(da, aes(x = Time, y = Value, group = Variable)) +
   geom_line(aes(linetype = Variable)) + 
   theme_classic() + 
   scale_y_continuous(labels = NULL) + 
-  geom_rect(aes(xmin = 2, xmax = 4, ymin = 3, ymax = 6), fill = 'red', alpha = 0.01) + 
+  geom_rect(aes(xmin = 2, xmax = 4, ymin = 3, ymax = 6), fill = 'red', alpha = 0.03) + 
   #geom_segment(aes(x = 3, xend = 3, y = 5, yend = 21), color = 'blue', alpha = 0.5, linetype = 'dashed') + 
-  geom_rect(aes(xmin = 2, xmax = 4, ymin = 20, ymax = 23), fill = 'red', alpha = 0.01) + 
-  geom_rect(aes(xmin = 18, xmax = 20, ymin = 3, ymax = 6), fill = 'green', alpha = 0.01) + 
+  geom_rect(aes(xmin = 2, xmax = 4, ymin = 20, ymax = 23), fill = 'red', alpha = 0.03) + 
+  geom_rect(aes(xmin = 18, xmax = 20, ymin = 3, ymax = 6), fill = 'green', alpha = 0.03) + 
   #geom_segment(aes(x = 17, xend = 17, y = 19, yend = 32), color = 'blue', alpha = 0.5, linetype = 'dashed') + 
-  geom_rect(aes(xmin = 18, xmax = 20, ymin = -2, ymax = 1), fill = 'green', alpha = 0.01) + 
-  geom_rect(aes(xmin = 7, xmax = 9, ymin = 40, ymax = 43), fill = 'blue', alpha = 0.01) + 
-  geom_rect(aes(xmin = 7, xmax = 9, ymin = 16, ymax = 19), fill = 'blue', alpha = 0.01)
+  geom_rect(aes(xmin = 18, xmax = 20, ymin = -2, ymax = 1), fill = 'green', alpha = 0.03) + 
+  geom_rect(aes(xmin = 7, xmax = 9, ymin = 40, ymax = 43), fill = 'blue', alpha = 0.03) + 
+  geom_rect(aes(xmin = 7, xmax = 9, ymin = 16, ymax = 19), fill = 'blue', alpha = 0.03)
 
 affect_line <- c(1:21)
 perf_line <- affect_line*0.7 + rnorm(21, 0, 1)

@@ -1,0 +1,14 @@
+---
+title: "meeting notes"
+output: html_document
+---
+
+# Post thanksgiving
+
+Do we want data plots or x y plots or not plots? Read up through inference 3. Would that make sense with no plots?
+
+Goran said what if I just make one data set and examine each data set with respect to all inferences. Could I make such a data set? Yes, but I would have to focus in on specific people. Not sure it is worth it.
+
+Can I say, there are some difficult inferences to understand. We provide graphs of those? I don't need one for autoregression. I need one to demonstrate correlated trends. 
+
+Level and trend inferences on graphs. Dynamics inferences with boxes and arrows? Or, the level and trend inferences are hard to demonstrate, so I graphically show them.

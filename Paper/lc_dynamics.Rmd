@@ -14,19 +14,19 @@ Figure \ref{dynamics} (no graph yet) shows the concept graphically. Paragraph ab
 
 The statistical term used to describe self-similarity is autoregression, and we use it to put a label on this first inference.
 
-#### Inference 1: There is autoregression in $x$. 
+>> **Inference 1:** There is autoregression in $x$. 
 
-Inference one was of course about a single variable. When we apply the notion of memory to multivariate systems we move away from asking how variables relate to one another at $t$, or at an average window of $t$, or across $t$, and instead ask how variables to one another at different lags. Does affect predict subsequent performance? Do prior counterproductive work behaviors relate to current incivility? When goal discrepancy is large (high), is effort at the subsequent time point also high? When prior depletion is low, is current emotional exhaustion high?
+Inference one was of course about a single variable. When we apply the notion of memory to multivariate systems we move away from asking how variables relate to one another at $t$, or at an average window of $t$, or across $t$, and instead ask how variables relate to one another at different lags. Does affect predict subsequent performance? Do prior counterproductive work behaviors relate to current incivility? When goal discrepancy is large is effort at the subsequent time point high? When prior depletion is low, is current emotional exhaustion high?
 
 We can capture this second inference by relating current values on one variable to future values on another. Equivalently, we can relate prior values on one variable to current values on another. Figure \ref{dynamics_cl} (no figure yet) plots...Paragraph about the graph.
 
-Relating current to future (or prior to current) from one variable to another is called a "cross lag" relationship.
+Relating current to future (or prior to current) values from one variable to another is called a "cross lag" relationship.
 
-#### Inference 2: There is a cross-lag relationship, where one variable relates to another at a different point in time. x_t is associated with y_t+1 across time. 
+>> **Inference 2:** There is a cross-lag relationship, where one variable relates to another at a different point in time.
 
 Inference two tells us whether the patterns in one variable co-occur with the patterns in another at a subsequent time point. Across time, when affect is low is subsequent performance also low? A related question is as follows: across time, when affect is low does performance increase or decrease? This second question is about change. How does one variable relate to the change in another?
 
-When goal discrepancy is large (high), does effort increase or decrease? When unit climate is low, do perceptions of the leader change? When performance is high, does self efficacy go up or down? 
+When goal discrepancy is large does effort increase or decrease? When unit climate is low do perceptions of the leader change? When performance is high does self efficacy go up or down? 
 
 All of these questions are about change, but notice that change can be construed across different lags. Change from what? Baseline? The prior time point? The last three time points? Typically change is construed with respect to the last time point. When affect is low, does performance from the last to the current time point increase or decrease? How does effort change from the prior to the current time point when goal discrepancy is high?
 
@@ -34,13 +34,13 @@ Figure \ref{dynamics_change} demonstrates these ideas. Paragraph about the graph
 
 It is typical to think of change from the prior to the current time point, but researchers are free to move it as they please. Here are the two final inferences that capture change in different locations.
 
-#### Inference 3: There is a change relationship, where one variable relates to the change in another. x_t is associated with $\Delta$ y_t.
+>> **Inference 3:** There is a change relationship, where one variable relates to the change in another.
 
-#### Inference 4: There is a cross-lag relationship of change, where one variable relates to the change of another at a different point in time. x_t is associated with $\Delta$ y_t+1.
+>> **Inference 4:** There is a cross-lag relationship of change, where one variable relates to the change of another at a different point in time.
 
 ## Dynamics Inference Table
 
-Again, we provide an inference table below -- this time with respect to dynamic inferences. Inference one is about autoregression, or memory in a single variable. Inference two asks how a variable at one time co-occurs with another at a different time. Inferences three and four try to understand change: when one variable is high or low, does it relate to the change (an increase or decrease) in the values of another variable.
+Again, we provide an inference table below -- this time with respect to dynamic inferences. Inference one is about autoregression, or memory in a single variable. Inference two asks how a variable at one time co-occurs with another at a different time. Inferences three and four focus on change: when one variable is high or low, does it relate to the change (an increase or decrease) in the values of another variable?
 
 ```{r, echo = F}
 library(xtable)
@@ -73,7 +73,7 @@ dy_table %>%
 
 ## Models
 
-Our literature has a history with difference scores and partialling. We debated difference scores so we have converged to partialling models. Typical we create a model with prior values of the response variable as a predictor. 
+Our literature has a history with difference scores and partialling. We debated difference scores so we have converged to partialling models. Typically we create a model with prior values of the response variable as a predictor. 
 
 
 

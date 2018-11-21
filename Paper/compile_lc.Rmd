@@ -74,7 +74,7 @@ knitr::opts_chunk$set(fig.path = 'figures/', echo = TRUE, warning = FALSE, messa
 \newpage
 
 # References
-```{r create_references}
+```{r create_references, echo = F}
 r_refs(file = "references.bib")
 ```
 

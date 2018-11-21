@@ -22,7 +22,7 @@ Insert Figure \ref{trend} about here
 
 Our first trend inference, therefore, concerns the shape of the trajectory.
 
-#### Inference 1: There is positive/negative/curvilinear trend in a variable across time. 
+>> **Inference 1:** There is positive/negative/curvilinear trend in a variable across time. 
 
 As with the level inferences, when we add more units we can examine trend variability. Do all trainees develop greater skill across time? Is there variability in the trend of helping behaviors, or counterproductive work behaviors over time? 
 
@@ -38,13 +38,13 @@ Insert Figure \ref{trend_var} about here
 
 \end{center}
 
-#### Inference 2: There is variability in the trend of a variable across time; trend differs across units.
+>> **Inference 2:** There is variability in the trend of a variable across time; trend differs across units.
 
 Inferences one and two are about one variable, but they can also be iterated across all observed variables. For example, we might discover that affect and performance trends both decrease, but there is greater variability across units in the affect trend. Or we might learn that affect has a negative trend while performance has a positive trend.
 
 Correlating these trends is the next inference. Correlating indicates co-occuring patterns, but this time we are focused on trends rather than levels. A large positive correlation between affect and performance trends indicates that people with a positive affect trend (usually) have a positive performance trend and people with a negative affect trend (usually) have a negative performance trend. 
 
-Figure \ref{trend_correlation} shows the inuition behind the inference with a set of graphs. On the top panel, affect and performance are plotted across time for three individuals. For individual one, affect goes up while performance goes down, this pattern is reversed for person two, and person three reports fluctuating affect and performance but with no trend. The bottom panel then maps those pairings onto a figure that shows the relationship between the affect and performance trend. For example, person one has a positive affect trend and a negative performance trend, so their point on the bottom panel goes on the bottom right, whereas person two has the opposite pattern and therefore is placed on the top left (where performance trend is positive and affect trend is negative). Producing this bottom scatter plot tells us that the relationship between affect and performance trend is negative. That is, people with a positive affect trend usually have a negative performance trend. 
+Figure \ref{trend_correlation} shows the inuition behind the inference with a set of graphs. On the top panel, affect and performance are plotted across time for three individuals. For individual one, affect goes up while performance goes down, this pattern is reversed for person two, and person three reports fluctuating affect and performance but with no trend. The bottom panel then maps those pairings onto a figure that shows the relationship between the affect and performance trend. For example, person one has a positive affect trend and a negative performance trend, so their point on the bottom panel goes on the bottom right, whereas person two has the opposite pattern and therefore is placed on the top left (where performance trend is positive and affect trend is negative). Producing this bottom scatter plot tells us that the relationship between affect and performance trend is negative. That is, people with a positive affect trend usually have a negative performance trend, people with a negative affect trend are more likely to have a positive performance trend, and people with no affect trend usually have no performance trend. 
 
 \begin{center}
 
@@ -56,7 +56,7 @@ Insert Figure \ref{trend_correlation} about here
 
 \end{center}
 
-#### Inference 3: There are correlated trends. There is a relationship between two trends.
+>> **Inference 3:** There are correlated trends. There is a relationship between two trends.
 
 The final trend inference is about identifying covariates or predictors of trend. Do helping behaviors predict the trend in depletion? Does the trend in unit climate covary with perceptions of leader quality? 
 
@@ -64,7 +64,7 @@ Notice the difference between this inference and inference three. Inference thre
 
 Figure \ref{trend_relation} (no figure yet). Paragraph about graph. **Not sure how to graph. Slope is a single term, like 0.5. It is being predicted by the raw values of X across time...** 
 
-#### Inference 4: There are correlates/predictors of trend. 
+>> **Inference 4:** There are correlates/predictors of trend. 
 
 ## Trend Inference Table
 
@@ -84,7 +84,7 @@ trend_table <- data.frame(
   Inference = c(1, 2, 3, 4),
   Examples = c(linebreak('Burnout decreases over time.\nPerformance increases over time.'),
                  linebreak('Affect trends differ across people (units).\nThere is variability in turnover trends across organizations.'),
-                 linebreak('People with positive health status trends have positive happiness trends.\nPeople with positive performance trends have negative anxiety trends.'),
+                 linebreak('People with a positive health status trend have a positive happiness trend.\nPeople with a positive performance trend have a negative anxiety trend.'),
                  linebreak('Affect relates to the performance trend across time.\nHelping behaviors predict depletion trends.'))
 )
 
@@ -98,35 +98,46 @@ trend_table %>%
 ```
 
 
-### A note on phrasing. Correlating trends, statement (a): "people with a negative affect trend have a positive performance trend." Some use phrases like statement (b), "when affect decreases performance goes up; and when affect increases performance goes down." You could construe statements (a) and (b) as equivalent, but usually they are not. When people state (b) they actually mean "when affect decreases performance immediately or subsequently goes up, and at a later point in time when the same trajectory of affect goes down performance immediately or subsequently goes up." These are very different statements. Correlating trends only gives you (a). 
+We want to close this section with a note on phrasing. The inferences we explored in this section have to do with correlating trends, where a statement like "affect and performance trends covary, such that people with a negative affect trend have a positive performance trend" is appropriate. There is a less precise phrase that is easy to fall into -- and we have seen it used in our literature. Sometimes, researchers will correlate trends and then state, "when affect decreases performance goes up." We urge researchers to avoid this second statement because it is not clear if it refers to a static relationship about trends or a dynamic statement about how trajectories move across time. That is, the phrase "when affect decreases performance goes up" could refer to correlated trends, but it could also mean something like, "when affect decreases performance immediately or subsequently goes up." This second statement is far different and it should not be used when an analysis only correlates trends or evokes predictors of trend. Again, we urge researchers to phrase their inferences as we have shown here.
+
 
 ```{r, echo = F, fig.cap = 'Trend across time\\label{trend}'}
 set.seed(3)
 
 ind <- c(1:20)
-chris <- 4 + 0.7*ind + rnorm(20,0,2)
-josh <- 4 - 0.7*ind  + rnorm(20, 0, 2)
+chris <- 4 + 0.7*ind + rnorm(20,0,0.5)
+josh <- 4 - 0.7*ind  + rnorm(20, 0, 0.5)
 chris[1] <- 4
 josh[1] <- 4
+#timothy <- c(4, 5, 15, 18, 21, 20, 19, 17, -6, -10, -12, -16, -14, 0, 1,2,3,4,5,9)
+timothy <- 15*sin(ind/3)
 
 fam <- data.frame(
-  'Time' = c(ind, ind),
-  'Y' = c(chris, josh),
-  'legend' = c(rep('Positive Trend', 20), rep('Negative Trend', 20))
+  'Time' = c(ind, ind, ind),
+  'Y' = c(chris, josh, timothy),
+  'legend' = c(rep('Positive Trend', 20), rep('Negative Trend', 20), rep('Curvilinear Trend', 20))
+)
+
+hm <- data.frame(
+  'Time' = c(ind),
+  'Y' = c(timothy)
 )
 
 library(ggplot2)
 ggplot(fam, aes(x = Time, y = Y, color = legend)) + 
-  geom_point() + 
+  geom_point(alpha = 0.6) + 
   geom_abline(intercept = 4, slope = 0.7, color = 'blue', alpha = 0.5) +
   geom_abline(intercept = 4, slope = -0.7, color = 'red', alpha = 0.5) + 
   scale_y_continuous(labels = NULL) + 
   theme_classic() + 
   theme(legend.title = element_blank()) + 
   scale_color_manual(values = c('Positive Trend' = 'blue', 
-                                'Negative Trend' = 'red'),
+                                'Negative Trend' = 'red',
+                                'Curvilinear Trend' = 'green'),
                      breaks = c('Positive Trend', 
-                                'Negative Trend'))
+                                'Negative Trend',
+                                'Curvilinear Trend')) + 
+  geom_smooth(data = hm, aes(x = Time, y = Y), se = F, color = 'green', alpha = 0.6, size = 0.5, alpha = 0.2)
 
 
 ```
@@ -157,13 +168,17 @@ yup <- data.frame(
 )
 
 
-ggplot(yup, aes(x = Time, y = Y, color = Person), alpha = 0.4) + 
-  geom_point() + 
-  geom_smooth(method = 'lm', se = F, aes(color = Person)) + 
+ggplot(yup, aes(x = Time, y = Y, color = Person)) + 
+  geom_point(alpha = 0.6) + 
+  geom_smooth(method = 'lm', se = F, aes(color = Person), size = 0.5, alpha = 0.6) + 
   facet_wrap(~type) + 
   theme_classic() + 
   theme(legend.title = element_blank()) + 
-  scale_y_continuous(labels = NULL)
+  scale_y_continuous(labels = NULL) + 
+  scale_color_manual(values = c('Person 1' = 'red',
+                                'Person 2' = 'green',
+                                'Person 3' = 'blue')
+                     )
 
 
 
@@ -186,7 +201,7 @@ trend_rel <- data.frame(
   'Time' = c(ind, ind,
              ind, ind,
              ind, ind),
-  'Y' = c(tre_affect, tre_perf,
+  'Value' = c(tre_affect, tre_perf,
           affect2, perf2,
           affect3, perf3),
   'call' = c(rep('Affect', 20),
@@ -221,13 +236,16 @@ trend_lines <- data.frame(
               0.02, 0.01)
 )
 
-tp1 <- ggplot(trend_rel, aes(x = Time, y = Y, group = call)) + 
+tp1 <- ggplot(trend_rel, aes(x = Time, y = Value, group = call)) + 
   geom_line(aes(linetype = call)) + 
   theme_classic() + 
   scale_y_continuous(labels = NULL) + 
   theme(legend.title = element_blank()) + 
   facet_grid(~Person, scales = 'free', space = 'free') + 
-  geom_abline(aes(intercept = intercept, slope = slope, color = Person), data = trend_lines, alpha = 0.9, show.legend = F)
+  geom_abline(aes(intercept = intercept, slope = slope, color = Person), data = trend_lines, alpha = 0.9, show.legend = F) + 
+  scale_color_manual(values = c('Person 1' = 'red',
+                                'Person 2' = 'green',
+                                'Person 3' = 'blue'))
   
 
 
