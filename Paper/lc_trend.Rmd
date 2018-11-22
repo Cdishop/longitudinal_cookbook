@@ -56,7 +56,7 @@ Insert Figure \ref{trend_correlation} about here
 
 \end{center}
 
->> **Inference 3:** There are correlated trends. There is a relationship between two trends.
+>> **Inference 3:** There are correlated trends.
 
 The final trend inference is about identifying covariates or predictors of trend. Do helping behaviors predict the trend in depletion? Does the trend in unit climate covary with perceptions of leader quality? 
 
