@@ -8,7 +8,7 @@ Does affect go up or down across time, or is it relatively stable? Does trainee 
 
 Trend has to do with the global shape of the trajectory across time. If we put a variable on the $y$-axis and plot its values against time on the $x$-axis, do the values tend to go up or down over time? It can be thought of as the coarse-grained direction of a trajectory. 
 
-Figure \ref{trend} demonstrates trend, where the red line shows positive, increasing trend, the blue line shows negative, decreasing trend, and the green line shows a curvilinear trajectory (ADD GREEN LINE). Keep in mind that curvilinear and linear trajectories are both *linear in parameters* and should not be confused with non-linear systems. 
+Figure \ref{trend} demonstrates trend, where the red line shows positive, increasing trend, the blue line shows negative, decreasing trend, and the green line shows a curvilinear trajectory. Keep in mind that curvilinear and linear trajectories are both *linear in parameters* and should not be confused with non-linear systems. 
 
 \begin{center}
 
@@ -26,7 +26,7 @@ Our first trend inference, therefore, concerns the shape of the trajectory.
 
 As with the level inferences, when we add more units we can examine trend variability. Do all trainees develop greater skill across time? Is there variability in the trend of helping behaviors, or counterproductive work behaviors over time? 
 
-Figure \ref{trend_var} shows differences in trend variability. In the first panel all units (people) show the same positive trend, whereas everyone in the second panel shows different trend: person one's data appear to increase over time, person two's data remain flat, and person three's data decrease over time. With greater variability there is less consistency in trend across units.
+Figure \ref{trend_var} shows differences in trend variability. In the first facet all units (people) show the same positive trend, whereas everyone in the second panel shows different trend: person one's data appear to increase over time, person two's data remain flat, and person three's data decrease over time. With greater variability there is less consistency in trend across units.
 
 \begin{center}
 
@@ -44,7 +44,9 @@ Inferences one and two are about one variable, but they can also be iterated acr
 
 Correlating these trends is the next inference. Correlating indicates co-occuring patterns, but this time we are focused on trends rather than levels. A large positive correlation between affect and performance trends indicates that people with a positive affect trend (usually) have a positive performance trend and people with a negative affect trend (usually) have a negative performance trend. 
 
-Figure \ref{trend_correlation} shows the inuition behind the inference with a set of graphs. On the top panel, affect and performance are plotted across time for three individuals. For individual one, affect goes up while performance goes down, this pattern is reversed for person two, and person three reports fluctuating affect and performance but with no trend. The bottom panel then maps those pairings onto a figure that shows the relationship between the affect and performance trend. For example, person one has a positive affect trend and a negative performance trend, so their point on the bottom panel goes on the bottom right, whereas person two has the opposite pattern and therefore is placed on the top left (where performance trend is positive and affect trend is negative). Producing this bottom scatter plot tells us that the relationship between affect and performance trend is negative. That is, people with a positive affect trend usually have a negative performance trend, people with a negative affect trend are more likely to have a positive performance trend, and people with no affect trend usually have no performance trend. 
+Figure \ref{trend_correlation} shows the inuition behind the inference with a set of graphs. In Panel A we plot affect and performance across time for three individuals. Affect goes up while performance goes down for person one, this pattern is reversed for person two, and person three reports trendless affect and performance (i.e., zero trend), but both variables fluctuate across time for this individual. We use different colors to label the trends for each person. The affect and performance trends for person 1 are labeled with red lines, whereas person 2 has green lines and person 4 has blue lines.
+
+Panel B then maps those pairings onto a figure that shows the relationship between the affect and performance trend. For example, person one has a positive affect trend and a negative performance trend, so their value in Panel B goes on the bottom right, whereas person two has the opposite pattern and therefore is placed on the top left (where performance trend is positive and affect trend is negative). Producing this bottom scatter plot tells us that the relationship between affect and performance trend is negative. That is, people with a positive affect trend usually have a negative performance trend, people with a negative affect trend are more likely to have a positive performance trend, and people with no affect trend usually have no performance trend. 
 
 \begin{center}
 
@@ -58,17 +60,15 @@ Insert Figure \ref{trend_correlation} about here
 
 >> **Inference 3:** There are correlated trends.
 
-The final trend inference is about identifying covariates or predictors of trend. Do helping behaviors predict the trend in depletion? Does the trend in unit climate covary with perceptions of leader quality? 
+The final trend inference is about identifying covariates or predictors of trend. Does gender predict depletion trends? Does the trend in unit climate covary with between unit differences in leader quality? Notice the difference between this inference and inference three. Inference three asks how one trend is related to another, whereas this inference asks how one trend relates to a covariate.
 
-Notice the difference between this inference and inference three. Inference three asks how one trend is related to another, whereas this inference asks how raw values relate to or predict the trend in a different variable.
-
-Figure \ref{trend_relation} (no figure yet). Paragraph about graph. **Not sure how to graph. Slope is a single term, like 0.5. It is being predicted by the raw values of X across time...** 
+Figure \ref{trend_covariate} demonstrates the inference in a plot. We plot affect across time for six employees, and these employees differ by job type. The first three individuals work in research and development, whereas the final three individuals work in sales. Affect trajectories tend to decrease over time for employees in research and development, whereas affect trajectories tend to increase for those in sales. An individual's job type, then, gives us a clue to their likely affect trend -- said formally, job type covaries with affect trends, such that we expect individuals in sales to have positive affect trends and individuals in research and development to have negative affect trends. The expected trends are plotted as the thick blue lines. 
 
 >> **Inference 4:** There are correlates/predictors of trend. 
 
 ## Trend Inference Table
 
-The inference table below provides examples of each trend inference. Inference one is about the general direction or shape of a trajectory across time. Inference two is about variability in that shape across units. Inference three takes the trend in one variable and asks whether it tends to co-occur with trend in another. Inference four, finally, is about the relationship between trend in one variable and the raw values of one or more predictors.
+The inference table below provides examples of each trend inference. Inference one is about the general direction or shape of a trajectory across time. Inference two is about variability in that shape across units. Inference three takes the trend in one variable and asks whether co-occurs with trend in another. Inference four, finally, is about the relationship between trend in one variable and the raw values of one or more predictors.
 
 ```{r, echo = F}
 library(xtable)
@@ -85,7 +85,7 @@ trend_table <- data.frame(
   Examples = c(linebreak('Burnout decreases over time.\nPerformance increases over time.'),
                  linebreak('Affect trends differ across people (units).\nThere is variability in turnover trends across organizations.'),
                  linebreak('People with a positive health status trend have a positive happiness trend.\nPeople with a positive performance trend have a negative anxiety trend.'),
-                 linebreak('Affect relates to the performance trend across time.\nHelping behaviors predict depletion trends.'))
+                 linebreak('Gender predicts depletion trends.\nUnit climate covaries with unit performance trends.'))
 )
 
 trend_table %>%
@@ -245,7 +245,8 @@ tp1 <- ggplot(trend_rel, aes(x = Time, y = Value, group = call)) +
   geom_abline(aes(intercept = intercept, slope = slope, color = Person), data = trend_lines, alpha = 0.9, show.legend = F) + 
   scale_color_manual(values = c('Person 1' = 'red',
                                 'Person 2' = 'green',
-                                'Person 3' = 'blue'))
+                                'Person 3' = 'blue')) + 
+  ggtitle('Panel A')
   
 
 
@@ -263,6 +264,7 @@ tp2 <- ggplot(trend_trend, aes(x = Affect, y = Performance, color = label)) +
   scale_x_continuous(breaks = c(-1, 0, 1)) + 
   ylab("Trend in Performance") + 
   xlab("Trend in Affect") + 
+  ggtitle('Panel B') + 
   theme(legend.title = element_blank()) + 
   scale_color_manual(values = c('red' = 'red', 
                                 'blue' = 'blue',
@@ -280,6 +282,69 @@ grid.arrange(tp1, tp2, ncol = 1)
 
 ```
 
+```{r, echo = F, fig.cap = 'Job type as a covariate of affect trend\\label{trend_covariate}'}
+
+library(ggplot2)
+library(tidyverse)
+
+xs <- c(1:20)
+
+person1 <- 4 + 0.5*xs + rnorm(20,0,1)
+person2 <- 4 + 0.6*xs + rnorm(20,0,1)
+person3 <- 4 + 0.36*xs + rnorm(20,0,1)
+
+person4 <- 4 - 0.5*xs + rnorm(20,0,1)
+person5 <- 4 - 0.45*xs + rnorm(20,0,1)
+person6 <- 4 - 0.68*xs + rnorm(20, 0, 1)
+
+
+covary_trend_df <- data.frame(
+  'id' = c(rep('Person 6',20), rep('Person 5',20), rep('Person 4',20),
+           rep('Person 3',20), rep('Person 2',20), rep('Person 1',20)),
+  'affect' = c(person1, person2, person3,
+               person4, person5, person6),
+  'time' = c(xs, xs, xs,
+             xs, xs, xs),
+  'job_type' = c(rep('Sales', 60),
+                 rep('Research and Development', 60))
+  
+)
+
+trend_df <- data.frame(
+  'id' = c('Person 6',
+           'Person 5',
+           'Person 4',
+           'Person 3',
+           'Person 2',
+           'Person 1'),
+  'intercept' = c(rep(4, 6)),
+  'slope' = c(rep(0.45, 3),
+              rep(-0.52, 3)),
+  'job_type' = c(rep('Sales', 3),
+                 rep('Research and Development', 3))
+)
+
+ggplot(covary_trend_df, aes(x = time, y = affect, linetype = id)) + 
+  geom_point() + 
+  geom_line() + 
+  theme_classic() +
+  theme(legend.title = element_blank()) + 
+  ylab('Affect') + 
+  xlab('Time') + 
+  scale_y_continuous(labels = NULL) + 
+  facet_wrap(~job_type) + 
+  geom_abline(data = trend_df, aes(intercept = intercept, slope = slope, color = id), alpha = 0.2, show.legend = F, size = 4) + 
+  scale_color_manual(values = c('Person 1' = 'blue',
+                                'Person 2' = 'blue',
+                                'Person 3' = 'blue',
+                                'Person 4' = 'blue',
+                                'Person 5' = 'blue',
+                                'Person 6' = 'blue'))
+  
+
+
+
+```
 
 
 ## Models

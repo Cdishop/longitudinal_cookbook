@@ -65,9 +65,6 @@ knitr::opts_chunk$set(fig.path = 'figures/', echo = TRUE, warning = FALSE, messa
 ```{r child = 'lc_dynamics.Rmd'}
 ```
 
-```{r child = 'lc_mediation.Rmd'}
-```
-
 ```{r child = 'lc_discussion.Rmd'}
 ```
 

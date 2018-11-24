@@ -154,15 +154,15 @@ longitudinal data, process-oriented methods are still relatively new to
 our field and newcomers without much longitudinal modeling training may
 be unfamiliar with the variety of questions they can ask. Consider a few
 recent longitudinal studies that all pose different questions. Jones et
-al. (2016) ask about trend: they want to determine if the trajectories
-among certain variables increase or decrease over time. Johnson, Lanaj,
-and Barnes (2014) about change: they are interested in how changes in
-one variable relate to changes in another across time. Hardy, Day, and
-Steele (2018) inquire about dynamic relationships, where prior values on
-one variable predict subsequent values on another, and this second
-variable then goes back to predict the first at a later point in time.
-Finally, Meier and Spector (2013) examine how effect sizes change when
-they vary the time lag between their independent and dependent variable.
+al. (2016) ask if the trajectories among certain variables increase or
+decrease over time. Johnson, Lanaj, and Barnes (2014) study how changes
+in one variable relate to changes in another across time. Hardy, Day,
+and Steele (2018) inquire about dynamic relationships, where prior
+values on one variable predict subsequent values on another, and this
+second variable then goes back to predict the first at a later point in
+time. Finally, Meier and Spector (2013) examine how effect sizes change
+when they vary the time lag between their independent and dependent
+variable.
 
 There are then complex statistical models that researchers evoke to
 examine their questions. Meier and Spector (2013) present a sequence of
@@ -213,14 +213,13 @@ There are many interesting questions researchers can explore with
 longitudinal data. Consider a few recent longitudinal studies that all
 pose different questions. Jones et al. (2016) ask about trend: they want
 to determine if the trajectories among certain variables increase or
-decrease over time. Johnson et al. (2014) about change: they are
-interested in how changes in one variable relate to changes in another
-across time. Hardy et al. (2018) inquire about dynamic relationships,
-where prior values on one variable predict subsequent values on another,
-and this second variable then goes back to predict the first at a later
-point in time. Finally, Meier and Spector (2013) examine how effect
-sizes change when they vary the time lag between their independent and
-dependent variable.
+decrease over time. Johnson et al. (2014) study how changes in one
+variable relate to changes in another across time. Hardy et al. (2018)
+inquire about dynamic relationships, where prior values on one variable
+predict subsequent values on another, and this second variable then goes
+back to predict the first at a later point in time. Finally, Meier and
+Spector (2013) examine how effect sizes change when they vary the time
+lag between their independent and dependent variable.
 
 There are then complex statistical models that researchers evoke to
 examine their questions. Meier and Spector (2013) present a sequence of
@@ -269,20 +268,20 @@ Below, we do these things.
 This paper is exclusively devoted to the inferences we make with
 repeated observations, so we begin by identifying a few labels and
 definitions. Authors typically identify a \enquote{longitudinal} study
-by making a contrast with respect to either a) research designs or b)
-data structures. Longitudinal \emph{research} is different from
-cross-sectional research because longitudinal designs entail three or
-more repeated observations (Ployhart \& Vandenberg, 2010). We therefore
-emphasize differences on the number of observations when we distinguish
-longitudinal from other types of research. Longitudinal \emph{data} are
-repeated observations on several units (i.e., \(N\) or \(i\)
-\textgreater{} 1), whereas panel data are observations of one unit over
-time -- a distinction that focuses on the amount of people in our study
-(given repeated measures). Most organizational studies collect data on
-more than one unit, therefore our discussion below focuses on
-longitudinal research with longitudinal data, or designs with \(N\)
-\textgreater{} 1, \(t\) \textgreater{}= 3, and the same construct(s)
-measured on each \(i\) at each \(t\).
+by contrasting either a) research designs or b) data structures.
+Longitudinal \emph{research} is different from cross-sectional research
+because longitudinal designs entail three or more repeated observations
+(Ployhart \& Vandenberg, 2010). We therefore emphasize differences on
+the number of observations when we distinguish longitudinal from other
+types of research. Longitudinal \emph{data} are repeated observations on
+several units (i.e., \(N\) or \(i\) \textgreater{} 1), whereas panel
+data are observations of one unit over time -- a distinction that
+focuses on the amount of people in our study (given repeated measures).
+Most organizational studies collect data on more than one unit,
+therefore our discussion below focuses on longitudinal research with
+longitudinal data, or designs with \(N\) \textgreater{} 1, \(t\)
+\textgreater{}= 3, and the same construct(s) measured on each \(i\) at
+each \(t\).
 
 \hypertarget{framework}{%
 \subsection{Framework}\label{framework}}
@@ -328,9 +327,12 @@ it takes at time \(t\), or the value that it takes on average across any
 span of \(t\).
 
 Figure \ref{level} demonstrates this idea graphically. A variable is
-plotted across time, and the color labels indicate levels -- the red and
-green describe the variable at a specific moment while the purple,
-average level, describes it across a window.
+plotted across time for a single person (i.e., unit), and the color
+labels indicate levels -- the red and green describe the variable at a
+specific moment while the purple, average level, describes it across a
+window. The starting level is the value of the variable at the first
+time point, the ending level is its value at the last time point, and
+the average level is its average level across time.
 
 \begin{center}
 
@@ -353,14 +355,16 @@ across a span of \(t\)?
 \end{quote}
 
 When we retain one variable but add multiple units -- people or
-organizations, for example -- then we can look at the variability in
-level. Does everyone have high affect across time? Is there variability
-in the level of skill among trainees at the beginning of a training
-session?
+organizations, for example -- then we can examine variability in level.
+Does everyone have high affect across time? Is there variability in the
+level of skill among trainees at the beginning of a training session?
 
-We demonstrate this idea in figure \ref{level_var}, where each unit
-(person) has a similar trajectory but different levels at the last time
-point.
+We demonstrate this idea in figure \ref{level_var}, where we now plot
+three units (people) across time. Each individual has a similar
+trajectory, but their ending levels of \(y\) are different. The formal
+way to say that each person has a different level at the last time point
+is to say, \enquote{there is variability across units in level at the
+last time point.}
 
 \begin{center}
 
@@ -383,10 +387,11 @@ there is variability in the level of \(x\).
 \end{quote}
 
 Inferences one and two concern a single variable, but they can of course
-be iterated across any or all observed variables in the study. For
-example, we might discover that affect and performance have high average
-levels across time, but that affect has greater level variability. Or we
-might learn that affect has a low initial level whereas performance is
+be iterated across any or all observed variables in the study (remember
+that variables are different than units). For example, we might discover
+that affect and performance have high average levels across time, but
+that affect has greater level variability across units. Or we might
+learn that affect has a low initial level whereas performance is
 initially high. What we are doing here is making descriptive comparisons
 between the level of one variable and the level of another. We can also
 produce a quantitative statement about the extent to which levels are
@@ -398,8 +403,34 @@ performance would mean that people with greater initial levels of affect
 also tend to have greater intial performance, and people with lower
 initial affect also tend to have lower initial performance.
 
-Figure \ref{level_correlate} demonstrates this graphically. Paragraph
-about the graph.
+Figure \ref{level_correlate} demonstrates a correlation of starting
+levels. In Panel A we plot affect and performance trajectories for three
+individuals across time, where the black solid line indicates affect and
+the dashed line indicates performance. We indicate starting levels for
+both variables in Panel A by placing colored circles on the graph for
+each individual. For example, we indicate the starting levels of affect
+and performance for person 1 with a red circle, and the starting levels
+for person two with green circles. Panel B of figure
+\ref{level_correlate} maps those starting levels onto a new plot that
+leads to our inference. On the \(x\)-axis is initial level of affect,
+where high values indicate a high starting level of affect, and on the
+\(y\)-axis is initial level of performance, where high values indicate a
+high starting level of performance. The red circle for person 1 is on
+the bottom right because that individual has a high initial level of
+affect and a low initial level of performance. Person 2 (the green
+circle) is on the top left because that individual has a high initial
+level of performance and a low initial level of affect, and person 3 is
+in the middle. The overall relationship in Panel B is negative, the dots
+slope downward which tells us that there is a negative relationship
+between initial level of affect and initial level of performance.
+
+Overall, figure \ref{level_correlate} tells us that the starting levels
+of affect and performance are correlated. Panel A shows the actual
+starting levels, and Panel B shows that there is a strong negative
+correlation between initial affect and initial performance. This
+negative relationship means that we expect people with low initial
+affect to have high initial performance, whereas we expect people with
+high initial affect to have low initial performance.
 
 \begin{quote}
 \begin{quote}
@@ -408,28 +439,36 @@ and the level of \(y\) at \(t\).
 \end{quote}
 \end{quote}
 
-The final level inference is horizontal. Rather than correlating values
-from a single moment or a single averaged moment, we correlate values
-across time. For example, we might ask if affect is related to
-performance across time; i.e., when affect is high is performance also
-high, and when affect is low is performance also low?
+In our final level inference we correlate values across time rather than
+correlating values from a single moment or a single averaged moment. For
+example, we might ask if affect is related to performance across time;
+i.e., when affect is high is performance also high, and when affect is
+low is performance also low?
 
 This inference sounds similar to the one just presented, but their
 difference is important. With inference three we ask about affect and
 performance at \(t\) or at an averaged window of \(t\) -- we examine,
-for example, how averaged values across time relate to averaged values
-across time. Here, we retain all of the information and examine the
+for example, how ending performance relates to ending affect, or how
+affect averaged across all time relates to performance averaged across
+all time. Here, we retain all of the information and examine the
 relationship between affect and performance across all \(t\).
 
-Figure \ref{level_relation} shows this inference graphically. The top
-panel plots affect and performance trajectories across time. The colored
-squares represent levels at different points in time. The green squares
+Figure \ref{level_relation} shows this inference graphically. In Panel A
+we plot affect and performance trajectories across time, where the solid
+line indicates affect and the dashed line indicates performance -- this
+time we only focus on a single individual or unit. The colored squares
+represent levels at different points in time. The green squares
 highlight low values of both variables, the blue high values, and the
-red middle values. The bottom panel shows how those respective values
-map onto a graph that describes the relationship between affect and
-performance across time. Notice that there appears to be a positive
-relationship in the scatterplot, which tells us that when affect is high
-performance also tends to be high, and vice versa.
+red middle values.
+
+Panel B shows how those respective values map onto a scatterplot of
+affect and performance -- which again will lead us to the inference. The
+blue values indicate that high values of affect tend to co-occur with
+high values of performance (shown respectively by the blue scquares in
+Panel A). The red values indicate that middle values of affect tend to
+co-occur with middle values of performance. The green values, finally,
+indicate that low values of affect tend to co-occur with low values of
+performance. Across time, affect and performance covary.
 
 \begin{center}
 
@@ -486,28 +525,28 @@ Point to references.
 
 \begin{figure}
 \centering
-\includegraphics{figures/unnamed-chunk-8-1.pdf}
-\caption{\label{fig:unnamed-chunk-8}Level examples\label{level}}
+\includegraphics{figures/unnamed-chunk-7-1.pdf}
+\caption{\label{fig:unnamed-chunk-7}Level examples\label{level}}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics{figures/unnamed-chunk-9-1.pdf}
-\caption{\label{fig:unnamed-chunk-9}Trajectories with variability in ending
+\includegraphics{figures/unnamed-chunk-8-1.pdf}
+\caption{\label{fig:unnamed-chunk-8}Trajectories with variability in ending
 level across units\label{level_var}}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics{figures/unnamed-chunk-10-1.pdf}
-\caption{\label{fig:unnamed-chunk-10}Correlating starting levels, or
-relating initial affect to initial performance\label{level_correlate}}
+\includegraphics{figures/unnamed-chunk-9-1.pdf}
+\caption{\label{fig:unnamed-chunk-9}Correlating starting levels, or relating
+initial affect to initial performance\label{level_correlate}}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics{figures/unnamed-chunk-11-1.pdf}
-\caption{\label{fig:unnamed-chunk-11}Relating affect to performance
+\includegraphics{figures/unnamed-chunk-10-1.pdf}
+\caption{\label{fig:unnamed-chunk-10}Relating affect to performance
 levels\label{level_relation}}
 \end{figure}
 
@@ -530,10 +569,9 @@ thought of as the coarse-grained direction of a trajectory.
 
 Figure \ref{trend} demonstrates trend, where the red line shows
 positive, increasing trend, the blue line shows negative, decreasing
-trend, and the green line shows a curvilinear trajectory (ADD GREEN
-LINE). Keep in mind that curvilinear and linear trajectories are both
-\emph{linear in parameters} and should not be confused with non-linear
-systems.
+trend, and the green line shows a curvilinear trajectory. Keep in mind
+that curvilinear and linear trajectories are both \emph{linear in
+parameters} and should not be confused with non-linear systems.
 
 \begin{center}
 
@@ -561,7 +599,7 @@ there variability in the trend of helping behaviors, or
 counterproductive work behaviors over time?
 
 Figure \ref{trend_var} shows differences in trend variability. In the
-first panel all units (people) show the same positive trend, whereas
+first facet all units (people) show the same positive trend, whereas
 everyone in the second panel shows different trend: person one's data
 appear to increase over time, person two's data remain flat, and person
 three's data decrease over time. With greater variability there is less
@@ -598,22 +636,27 @@ a positive performance trend and people with a negative affect trend
 (usually) have a negative performance trend.
 
 Figure \ref{trend_correlation} shows the inuition behind the inference
-with a set of graphs. On the top panel, affect and performance are
-plotted across time for three individuals. For individual one, affect
-goes up while performance goes down, this pattern is reversed for person
-two, and person three reports fluctuating affect and performance but
-with no trend. The bottom panel then maps those pairings onto a figure
-that shows the relationship between the affect and performance trend.
-For example, person one has a positive affect trend and a negative
-performance trend, so their point on the bottom panel goes on the bottom
-right, whereas person two has the opposite pattern and therefore is
-placed on the top left (where performance trend is positive and affect
-trend is negative). Producing this bottom scatter plot tells us that the
-relationship between affect and performance trend is negative. That is,
-people with a positive affect trend usually have a negative performance
-trend, people with a negative affect trend are more likely to have a
-positive performance trend, and people with no affect trend usually have
-no performance trend.
+with a set of graphs. In Panel A we plot affect and performance across
+time for three individuals. Affect goes up while performance goes down
+for person one, this pattern is reversed for person two, and person
+three reports trendless affect and performance (i.e., zero trend), but
+both variables fluctuate across time for this individual. We use
+different colors to label the trends for each person. The affect and
+performance trends for person 1 are labeled with red lines, whereas
+person 2 has green lines and person 4 has blue lines.
+
+Panel B then maps those pairings onto a figure that shows the
+relationship between the affect and performance trend. For example,
+person one has a positive affect trend and a negative performance trend,
+so their value in Panel B goes on the bottom right, whereas person two
+has the opposite pattern and therefore is placed on the top left (where
+performance trend is positive and affect trend is negative). Producing
+this bottom scatter plot tells us that the relationship between affect
+and performance trend is negative. That is, people with a positive
+affect trend usually have a negative performance trend, people with a
+negative affect trend are more likely to have a positive performance
+trend, and people with no affect trend usually have no performance
+trend.
 
 \begin{center}
 
@@ -627,23 +670,28 @@ Insert Figure \ref{trend_correlation} about here
 
 \begin{quote}
 \begin{quote}
-\textbf{Inference 3:} There are correlated trends. There is a
-relationship between two trends.
+\textbf{Inference 3:} There are correlated trends.
 \end{quote}
 \end{quote}
 
 The final trend inference is about identifying covariates or predictors
-of trend. Do helping behaviors predict the trend in depletion? Does the
-trend in unit climate covary with perceptions of leader quality?
+of trend. Does gender predict depletion trends? Does the trend in unit
+climate covary with between unit differences in leader quality? Notice
+the difference between this inference and inference three. Inference
+three asks how one trend is related to another, whereas this inference
+asks how one trend relates to a covariate.
 
-Notice the difference between this inference and inference three.
-Inference three asks how one trend is related to another, whereas this
-inference asks how raw values relate to or predict the trend in a
-different variable.
-
-Figure \ref{trend_relation} (no figure yet). Paragraph about graph.
-\textbf{Not sure how to graph. Slope is a single term, like 0.5. It is
-being predicted by the raw values of X across time\ldots{}}
+Figure \ref{trend_covariate} demonstrates the inference in a plot. We
+plot affect across time for six employees, and these employees differ by
+job type. The first three individuals work in research and development,
+whereas the final three individuals work in sales. Affect trajectories
+tend to decrease over time for employees in research and development,
+whereas affect trajectories tend to increase for those in sales. An
+individual's job type, then, gives us a clue to their likely affect
+trend -- said formally, job type covaries with affect trends, such that
+we expect individuals in sales to have positive affect trends and
+individuals in research and development to have negative affect trends.
+The expected trends are plotted as the thick blue lines.
 
 \begin{quote}
 \begin{quote}
@@ -658,9 +706,9 @@ The inference table below provides examples of each trend inference.
 Inference one is about the general direction or shape of a trajectory
 across time. Inference two is about variability in that shape across
 units. Inference three takes the trend in one variable and asks whether
-it tends to co-occur with trend in another. Inference four, finally, is
-about the relationship between trend in one variable and the raw values
-of one or more predictors.
+co-occurs with trend in another. Inference four, finally, is about the
+relationship between trend in one variable and the raw values of one or
+more predictors.
 
 \begin{tabular}{>{\raggedright\arraybackslash}p{5em}>{\raggedright\arraybackslash}p{30em}}
 \toprule
@@ -672,7 +720,7 @@ Inference & Examples\\
 \hline
 3 & People with a positive health status trend have a positive happiness trend.\newline People with a positive performance trend have a negative anxiety trend.\\
 \hline
-4 & Affect relates to the performance trend across time.\newline Helping behaviors predict depletion trends.\\
+4 & Gender predicts depletion trends.\newline Unit climate covaries with unit performance trends.\\
 \bottomrule
 \end{tabular}
 
@@ -696,22 +744,29 @@ shown here.
 
 \begin{figure}
 \centering
-\includegraphics{figures/unnamed-chunk-13-1.pdf}
-\caption{\label{fig:unnamed-chunk-13}Trend across time\label{trend}}
+\includegraphics{figures/unnamed-chunk-12-1.pdf}
+\caption{\label{fig:unnamed-chunk-12}Trend across time\label{trend}}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics{figures/unnamed-chunk-14-1.pdf}
-\caption{\label{fig:unnamed-chunk-14}Differences in trend variability across
+\includegraphics{figures/unnamed-chunk-13-1.pdf}
+\caption{\label{fig:unnamed-chunk-13}Differences in trend variability across
 units\label{trend_var}}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics{figures/unnamed-chunk-15-1.pdf}
-\caption{\label{fig:unnamed-chunk-15}Correlating slopes, or relating the
+\includegraphics{figures/unnamed-chunk-14-1.pdf}
+\caption{\label{fig:unnamed-chunk-14}Correlating slopes, or relating the
 affect to performance trend\label{trend_correlation}}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{figures/unnamed-chunk-15-1.pdf}
+\caption{\label{fig:unnamed-chunk-15}Job type as a covariate of affect
+trend\label{trend_covariate}}
 \end{figure}
 
 \hypertarget{models-1}{%
@@ -864,14 +919,20 @@ debated difference scores so we have converged to partialling models.
 Typically we create a model with prior values of the response variable
 as a predictor.
 
-\hypertarget{mediation}{%
-\section{Mediation}\label{mediation}}
+\hypertarget{extensions}{%
+\subsection{Extensions}\label{extensions}}
 
-Systems of variables. Reciprocal relationships.
+Reciprocal relationships. Systems of variables. Mediation. Mediation
+kind of goes away when you get into reciprocal dynamics.
 
-Somehow say that mediation kind of goes away when you get into
-reciprocal dynamics -- without making it sound like we don't care about
-mediation.
+\begin{figure}
+
+{\centering \includegraphics[width=3.75in]{figures/dynamics/dall} 
+
+}
+
+\caption{Univariate and bivariate dynamics adapted from DeShon (2012). Panel A shows self-similarity or autoregression in $X$ across time. Panel B shows $X$ predicting subsequent $Y$. Panel C shows $X$ predicting subsequent change in $Y$. Panel D shows reciprocal dynamics between $X$ and $Y$.}\label{fig:unnamed-chunk-17}
+\end{figure}
 
 \hypertarget{discussion}{%
 \section{Discussion}\label{discussion}}

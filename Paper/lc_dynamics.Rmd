@@ -75,6 +75,27 @@ dy_table %>%
 
 Our literature has a history with difference scores and partialling. We debated difference scores so we have converged to partialling models. Typically we create a model with prior values of the response variable as a predictor. 
 
+## Extensions
+
+Reciprocal relationships. Systems of variables. Mediation. Mediation kind of goes away when you get into reciprocal dynamics. 
+
+
+```{r, echo = F, fig.cap = 'Univariate and bivariate dynamics adapted from DeShon (2012). Panel A shows self-similarity or autoregression in $X$ across time. Panel B shows $X$ predicting subsequent $Y$. Panel C shows $X$ predicting subsequent change in $Y$. Panel D shows reciprocal dynamics between $X$ and $Y$.', fig.height = 10, fig.align = 'center'}
+
+library(png)
+library(grid)
+library(gridExtra)
+
+#plot1 <- readPNG('figures/dynamics/d1.png')
+#plot2 <- readPNG('figures/dynamics/d2.png')
+#dall <- readPNG('figures/dynamics/dall.png')
+
+#grid.arrange(rasterGrob(dall))
+
+library(knitr)
+knitr::include_graphics('figures/dynamics/dall.png')
+
+```
 
 
 
