@@ -260,8 +260,6 @@ collect longitudinal data, links those inferences to models, and parses
 some of the modeling literature that may be difficult to consume for
 researchers with only graduate level training in statistics.
 
-Below, we do these things.
-
 \hypertarget{longitudinal-definitions}{%
 \section{Longitudinal Definitions}\label{longitudinal-definitions}}
 
@@ -284,32 +282,39 @@ longitudinal data, or designs with \(N\) \textgreater{} 1, \(t\)
 each \(t\).
 
 \hypertarget{framework}{%
-\subsection{Framework}\label{framework}}
+\section{Framework}\label{framework}}
 
-Level. Trend. Dynamics. These are umbrella research foci, each has its
-own sub-inferences and models. Each section will have several inferences
-but they all gather into two basic notions: 1) trying to understand the
-thing itself and variability about the thing itself across units, and 2)
-correlates or predictors of the thing.
+We use three inference categories to partition our discussion, including
+level, trend, and dynamics. Each of these are broad categories, and they
+will all have their own sub-inferences and models. Our writing style
+will be the same throughout each section, where we first discuss the
+category itself and then sequentially walk through the inferences.
+During that sequence, we will pose questions to orient the reader as to
+what the inference captures, unpack graphs and figures, and then close
+with a table that provides example hypotheses that align with each
+inference. The figures we use in the level and trend sections are graphs
+that show what the inferences look like in data -- we feel that graphing
+the inferences with respect to data is more informative than your usual
+box and arrow diagram. There is a caveat, however, that we want to make
+sure everyone is aware of. Data are always messy. You will almost never
+find data where the inferences expose themselves simply by plotting --
+although it is certainly possible. We are using these \enquote{data
+plots} to clearly convey what the inferences mean, but please be aware
+that field data will always be messy. In the dynamics section we then
+use box and arrow diagrams because they better convey the ideas in that
+section.
 
-Each section will also point to models. But there is nuance. The models
-have different names, some require stationary, some don't. You need to
-appreciate that and make sure you are attending to all of its nuance.
-All we are doing here is pointing you in the direction.
-
-Something about our graphs. We are going to talk about the inferences
-and provide researchers with phrases that they can use to present
-hypotheses. But we are also going to show what the inferences look like
-in data. We feel that graphing the inferences with respect to data is
-more informative than plotting your usual box and arrow diagrams (and
-for some of the inferences boxes and arrows would not work). There is a
-caveat, however, that we want to make sure our readers are aware of.
-Data are always messy. You will almost never find data in the style that
-we show here, where the inferences expose themselves simply by plotting.
-We are using these \enquote{data plots} as heuristics, and in our
-opinion they serve the reader better than box and arrow heuristics --
-even though our plots carry their own limitations. Again, know that
-field data will always be messy.
+Finally, we end each inference section by pointing researchers to
+respective statistical models. Although we direct researchers to models,
+our paper is not about statistical modeling only -- it is about
+inferences -- and researchers therefore need to be sure that they
+appreciate all of the nuance before applying a recommended model. There
+are many complex statistical issues that arise with longitudinal
+modeling -- like stationarity -- and the models differ in how they
+handle these issues, the assumptions they make, and the data format they
+require. There are plenty of great references on each model, what we are
+doing here is guiding researchers to those references based on the
+underlying inferences that interest them.
 
 \hypertarget{level}{%
 \section{Level}\label{level}}
@@ -361,10 +366,9 @@ level of skill among trainees at the beginning of a training session?
 
 We demonstrate this idea in figure \ref{level_var}, where we now plot
 three units (people) across time. Each individual has a similar
-trajectory, but their ending levels of \(y\) are different. The formal
-way to say that each person has a different level at the last time point
-is to say, \enquote{there is variability across units in level at the
-last time point.}
+trajectory, but their ending levels of \(y\) are different. Said
+formally that is, \enquote{there is variability across units in level at
+the last time point.}
 
 \begin{center}
 
@@ -409,22 +413,24 @@ individuals across time, where the black solid line indicates affect and
 the dashed line indicates performance. We indicate starting levels for
 both variables in Panel A by placing colored circles on the graph for
 each individual. For example, we indicate the starting levels of affect
-and performance for person 1 with a red circle, and the starting levels
-for person two with green circles. Panel B of figure
-\ref{level_correlate} maps those starting levels onto a new plot that
-leads to our inference. On the \(x\)-axis is initial level of affect,
-where high values indicate a high starting level of affect, and on the
-\(y\)-axis is initial level of performance, where high values indicate a
-high starting level of performance. The red circle for person 1 is on
-the bottom right because that individual has a high initial level of
-affect and a low initial level of performance. Person 2 (the green
-circle) is on the top left because that individual has a high initial
-level of performance and a low initial level of affect, and person 3 is
-in the middle. The overall relationship in Panel B is negative, the dots
-slope downward which tells us that there is a negative relationship
-between initial level of affect and initial level of performance.
+and performance for person 1 with red circles and the starting levels
+for person two with green circles.
 
-Overall, figure \ref{level_correlate} tells us that the starting levels
+Panel B of figure \ref{level_correlate} maps those starting levels onto
+a new plot that leads to our inference. On the \(x\)-axis is initial
+level of affect, where high values indicate a high starting level of
+affect, and on the \(y\)-axis is initial level of performance, where
+high values indicate a high starting level of performance. The red
+circle for person 1 is on the bottom right because that individual has a
+high initial level of affect and a low initial level of performance.
+Person 2 (the green circle) is on the top left because that individual
+has a high initial level of performance and a low initial level of
+affect, and person 3 is in the middle because they have roughly the same
+starting levels of affect and performance. The dots slope downward in
+Panel B, which tells us that there is a negative relationship between
+initial level of affect and initial level of performance.
+
+Overall, figure \ref{level_correlate} suggests that the starting levels
 of affect and performance are correlated. Panel A shows the actual
 starting levels, and Panel B shows that there is a strong negative
 correlation between initial affect and initial performance. This
@@ -449,9 +455,9 @@ This inference sounds similar to the one just presented, but their
 difference is important. With inference three we ask about affect and
 performance at \(t\) or at an averaged window of \(t\) -- we examine,
 for example, how ending performance relates to ending affect, or how
-affect averaged across all time relates to performance averaged across
-all time. Here, we retain all of the information and examine the
-relationship between affect and performance across all \(t\).
+affect averaged across time relates to performance averaged across time.
+Here, we retain all of the information and examine the relationship
+between affect and performance across all \(t\).
 
 Figure \ref{level_relation} shows this inference graphically. In Panel A
 we plot affect and performance trajectories across time, where the solid
@@ -464,7 +470,7 @@ red middle values.
 Panel B shows how those respective values map onto a scatterplot of
 affect and performance -- which again will lead us to the inference. The
 blue values indicate that high values of affect tend to co-occur with
-high values of performance (shown respectively by the blue scquares in
+high values of performance (shown respectively by the blue squares in
 Panel A). The red values indicate that middle values of affect tend to
 co-occur with middle values of performance. The green values, finally,
 indicate that low values of affect tend to co-occur with low values of
@@ -500,7 +506,30 @@ a single moment and asking how it relates to another latent variable
 from a single moment. Inference four, finally, is about the relationship
 between raw values across time.
 
-\begin{tabular}{>{\raggedright\arraybackslash}p{5em}>{\raggedright\arraybackslash}p{30em}}
+\begin{center}
+
+------------
+
+Insert Table \ref{level_table} about here
+
+------------
+
+\end{center}
+
+\hypertarget{models}{%
+\subsection{Models}\label{models}}
+
+Level is called intercept in the statistical modeling literature.
+Typically the mean estimate tells you about the level, and the variance
+estimate tells you about the variability across units. Intercept only
+models in HLM or SEM. Time-varying or invariant covariates analyses.
+Point to references.
+
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-6}\label{level_table}Examples of level inferences.}
+\centering
+\begin{tabular}[t]{>{\raggedright\arraybackslash}p{5em}>{\raggedright\arraybackslash}p{30em}}
 \toprule
 Inference & Examples\\
 \midrule
@@ -513,15 +542,7 @@ Inference & Examples\\
 4 & Affect relates to performance across time.\newline Helping behaviors predict depletion across time.\\
 \bottomrule
 \end{tabular}
-
-\hypertarget{models}{%
-\subsection{Models}\label{models}}
-
-Level is called intercept in the statistical modeling literature.
-Typically the mean estimate tells you about the level, and the variance
-estimate tells you about the variability across units. Intercept only
-models in HLM or SEM. Time-varying or invariant covariates analyses.
-Point to references.
+\end{table}
 
 \begin{figure}
 \centering
@@ -568,7 +589,7 @@ the \(x\)-axis, do the values tend to go up or down over time? It can be
 thought of as the coarse-grained direction of a trajectory.
 
 Figure \ref{trend} demonstrates trend, where the red line shows
-positive, increasing trend, the blue line shows negative, decreasing
+negative, decreasing trend, the blue line shows positive, increasing
 trend, and the green line shows a curvilinear trajectory. Keep in mind
 that curvilinear and linear trajectories are both \emph{linear in
 parameters} and should not be confused with non-linear systems.
@@ -601,8 +622,8 @@ counterproductive work behaviors over time?
 Figure \ref{trend_var} shows differences in trend variability. In the
 first facet all units (people) show the same positive trend, whereas
 everyone in the second panel shows different trend: person one's data
-appear to increase over time, person two's data remain flat, and person
-three's data decrease over time. With greater variability there is less
+appear to increase over time, person two's data decrease over time, and
+person three's data remain flat. With greater variability there is less
 consistency in trend across units.
 
 \begin{center}
@@ -650,13 +671,13 @@ relationship between the affect and performance trend. For example,
 person one has a positive affect trend and a negative performance trend,
 so their value in Panel B goes on the bottom right, whereas person two
 has the opposite pattern and therefore is placed on the top left (where
-performance trend is positive and affect trend is negative). Producing
-this bottom scatter plot tells us that the relationship between affect
-and performance trend is negative. That is, people with a positive
-affect trend usually have a negative performance trend, people with a
-negative affect trend are more likely to have a positive performance
-trend, and people with no affect trend usually have no performance
-trend.
+the performance trend is positive and the affect trend is negative).
+Producing this bottom scatter plot tells us that the relationship
+between the affect and performance trend is negative. That is, people
+with a positive affect trend usually have a negative performance trend,
+people with a negative affect trend are more likely to have a positive
+performance trend, and people with no affect trend usually have no
+performance trend.
 
 \begin{center}
 
@@ -695,7 +716,7 @@ The expected trends are plotted as the thick blue lines.
 
 \begin{quote}
 \begin{quote}
-\textbf{Inference 4:} There are correlates/predictors of trend.
+\textbf{Inference 4:} There are correlates of trend.
 \end{quote}
 \end{quote}
 
@@ -706,23 +727,19 @@ The inference table below provides examples of each trend inference.
 Inference one is about the general direction or shape of a trajectory
 across time. Inference two is about variability in that shape across
 units. Inference three takes the trend in one variable and asks whether
-co-occurs with trend in another. Inference four, finally, is about the
-relationship between trend in one variable and the raw values of one or
-more predictors.
+it co-occurs with trend in another. Inference four, finally, is about
+the relationship between trend in one variable and the raw values of one
+or more correlates.
 
-\begin{tabular}{>{\raggedright\arraybackslash}p{5em}>{\raggedright\arraybackslash}p{30em}}
-\toprule
-Inference & Examples\\
-\midrule
-1 & Burnout decreases over time.\newline Performance increases over time.\\
-\hline
-2 & Affect trends differ across people (units).\newline There is variability in turnover trends across organizations.\\
-\hline
-3 & People with a positive health status trend have a positive happiness trend.\newline People with a positive performance trend have a negative anxiety trend.\\
-\hline
-4 & Gender predicts depletion trends.\newline Unit climate covaries with unit performance trends.\\
-\bottomrule
-\end{tabular}
+\begin{center}
+
+------------
+
+Insert Table \ref{trend_table} about here
+
+------------
+
+\end{center}
 
 We want to close this section with a note on phrasing. The inferences we
 explored in this section have to do with correlating trends, where a
@@ -741,6 +758,34 @@ goes up.} This second statement is far different and it should not be
 used when an analysis only correlates trends or evokes predictors of
 trend. Again, we urge researchers to phrase their inferences as we have
 shown here.
+
+\hypertarget{models-1}{%
+\subsection{Models}\label{models-1}}
+
+Trends are called slope estimates in the statistical modeling
+literature. They are also referred to as growth. Mean estimates of
+slopes, or trends, or growth will tell you about trend, whereas the
+variance estimates will tell you about variability across units. Growth
+curves in SEM or HLM. Bivariate growth curves.
+
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-11}\label{trend_table}Examples of trend inferences.}
+\centering
+\begin{tabular}[t]{>{\raggedright\arraybackslash}p{5em}>{\raggedright\arraybackslash}p{30em}}
+\toprule
+Inference & Examples\\
+\midrule
+1 & Burnout decreases over time.\newline Performance increases over time.\\
+\hline
+2 & Affect trends differ across people (units).\newline There is variability in turnover trends across organizations.\\
+\hline
+3 & People with a positive health status trend have a positive happiness trend.\newline People with a positive performance trend have a negative anxiety trend.\\
+\hline
+4 & Gender correlates with depletion trends.\newline Unit climate covaries with unit performance trends.\\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \begin{figure}
 \centering
@@ -768,15 +813,6 @@ affect to performance trend\label{trend_correlation}}
 \caption{\label{fig:unnamed-chunk-15}Job type as a covariate of affect
 trend\label{trend_covariate}}
 \end{figure}
-
-\hypertarget{models-1}{%
-\subsection{Models}\label{models-1}}
-
-Trends are called slope estimates in the statistical modeling
-literature. They are also referred to as growth. Mean estimates of
-slopes, or trends, or growth will tell you about trend, whereas the
-variance estimates will tell you about variability across units. Growth
-curves in SEM or HLM. Bivariate growth curves.
 
 \hypertarget{dynamics}{%
 \section{Dynamics}\label{dynamics}}
@@ -806,25 +842,30 @@ Does performance relate to itself over time? Do current helping
 behaviors depend on prior helping behaviors? Does unit climate
 demonstrate self-similarity across time? Does income now predict income
 in the future? These are questions about the relationship of a single
-variable with itself over time. Does it predict itself at each
-subsequent moment?
+variable with itself over time -- does it predict itself at each
+subsequent moment? Is it constrained by where it was in the past?
 
-Figure \ref{dynamics} (no graph yet) shows the concept graphically.
-Paragraph about the graph.
-
-The statistical term used to describe self-similarity is autoregression,
-and we use it to put a label on this first inference.
+Panel A of figure \ref{dynamics_figure} shows the concept with a box and
+arrow diagram. \(x\) predicts itself across every moment -- it has
+self-similarity and its value now is constrained by where it was a
+moment ago. In our diagram we show that \(x\) at time \(t\) is related
+to \(X\) at time \(t + 1\). In other words, we posit that \(x\) shows a
+lag-one relationship, where \(x\) is related to its future value one
+time step away. Modelers and theorists are of course free to suggest any
+lag amount that they believe captures the actual relationship.
 
 \begin{quote}
 \begin{quote}
-\textbf{Inference 1:} There is autoregression in \(x\).
+\textbf{Inference 1:} There is self-similarity in \(x\); \(x\) relates
+to itself across time.
 \end{quote}
 \end{quote}
 
-Inference one was of course about a single variable. When we apply the
-notion of memory to multivariate systems we move away from asking how
-variables relate to one another at \(t\), or at an average window of
-\(t\), or across \(t\), and instead ask how variables relate to one
+Inference one was about a single variable, and in the level and trend
+inference sections we saw that when we moved to multiple variables we
+started asking how variables relate to one another at \(t\), or at an
+average window of \(t\), or across \(t\). With dynamics, where memory is
+a fundamental concept, we instead ask how variables relate to one
 another at different lags. Does affect predict subsequent performance?
 Do prior counterproductive work behaviors relate to current incivility?
 When goal discrepancy is large is effort at the subsequent time point
@@ -832,10 +873,12 @@ high? When prior depletion is low, is current emotional exhaustion high?
 
 We can capture this second inference by relating current values on one
 variable to future values on another. Equivalently, we can relate prior
-values on one variable to current values on another. Figure
-\ref{dynamics_cl} (no figure yet) plots\ldots{}Paragraph about the
-graph.
-
+values on one variable to current values on another. Panel B of figure
+\ref{dynamics_figure} shows this second dynamics inference. \(x\) still
+shows self-similarity across time, but it now predicts \(y\) at the
+subsequent moment. We are positing a lag-one relationship between \(x\)
+and \(y\). Said formally, we believe that \(x_t\) is related to
+\(y_{t+1}\) (or equivalently, \(x_{t-1}\) is related to \(y_{t}\)).
 Relating current to future (or prior to current) values from one
 variable to another is called a \enquote{cross lag} relationship.
 
@@ -865,8 +908,11 @@ performance from the last to the current time point increase or
 decrease? How does effort change from the prior to the current time
 point when goal discrepancy is high?
 
-Figure \ref{dynamics_change} demonstrates these ideas. Paragraph about
-the graph.
+Panel C of figure \ref{dynamics_figure} demonstrates this idea. We are
+positing the same self-similarity in \(x\) and the same cross-lag
+relationship that we saw before, but now \(y\) also has self-similarity
+across time. The cross-lag relationship, therefore, is now capturing how
+\(y\) has changed from the last point in time.
 
 It is typical to think of change from the prior to the current time
 point, but researchers are free to move it as they please. Here are the
@@ -897,7 +943,37 @@ co-occurs with another at a different time. Inferences three and four
 focus on change: when one variable is high or low, does it relate to the
 change (an increase or decrease) in the values of another variable?
 
-\begin{tabular}{>{\raggedright\arraybackslash}p{5em}>{\raggedright\arraybackslash}p{30em}}
+\begin{center}
+
+------------
+
+Insert Table \ref{dynamics_table} about here
+
+------------
+
+\end{center}
+
+\hypertarget{extensions}{%
+\subsection{Extensions}\label{extensions}}
+
+Reciprocal relationships. Systems of variables. Mediation. Mediation
+kind of goes away when you get into reciprocal dynamics.
+
+\hypertarget{models-2}{%
+\subsection{Models}\label{models-2}}
+
+Autoregression is the statistical word for the estimate of
+self-similarity in a variable, the relationship between a variable now
+and its future value. Our literature has a history with difference
+scores and partialling. We debated difference scores so we have
+converged to partialling models. Typically we create a model with prior
+values of the response variable as a predictor.
+
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-16}\label{dynamics_table}Examples of dynamic inferences.}
+\centering
+\begin{tabular}[t]{>{\raggedright\arraybackslash}p{5em}>{\raggedright\arraybackslash}p{30em}}
 \toprule
 Inference & Examples\\
 \midrule
@@ -910,20 +986,7 @@ Inference & Examples\\
 4 & Affect relates to subsequent change in performance.\newline Helping behaviors predict subsequent depletion changes.\\
 \bottomrule
 \end{tabular}
-
-\hypertarget{models-2}{%
-\subsection{Models}\label{models-2}}
-
-Our literature has a history with difference scores and partialling. We
-debated difference scores so we have converged to partialling models.
-Typically we create a model with prior values of the response variable
-as a predictor.
-
-\hypertarget{extensions}{%
-\subsection{Extensions}\label{extensions}}
-
-Reciprocal relationships. Systems of variables. Mediation. Mediation
-kind of goes away when you get into reciprocal dynamics.
+\end{table}
 
 \begin{figure}
 
@@ -931,27 +994,27 @@ kind of goes away when you get into reciprocal dynamics.
 
 }
 
-\caption{Univariate and bivariate dynamics adapted from DeShon (2012). Panel A shows self-similarity or autoregression in $X$ across time. Panel B shows $X$ predicting subsequent $Y$. Panel C shows $X$ predicting subsequent change in $Y$. Panel D shows reciprocal dynamics between $X$ and $Y$.}\label{fig:unnamed-chunk-17}
+\caption{Univariate and bivariate dynamics adapted from DeShon (2012). Panel A shows self-similarity or autoregression in $X$ across time. Panel B shows $X$ predicting subsequent $Y$. Panel C shows $X$ predicting subsequent change in $Y$. Panel D shows reciprocal dynamics between $X$ and $Y$.\label{dynamics_figure}}\label{fig:unnamed-chunk-17}
 \end{figure}
 
 \hypertarget{discussion}{%
 \section{Discussion}\label{discussion}}
 
-Points to include. 1) Econometrics modeling levels vs.~modeling
-differences.
+Summary paragraph. We talked about these things.
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi})}
-\setcounter{enumi}{1}
-\tightlist
-\item
-  Keep in mind you might see weird stuff in the literature. X at time 1
-  relates to Z at time 2, which relates to Y at time 3, but none are
-  measured repeatedly across time. This is no good. We opened with
-  \enquote{we couch ourselves by only discussing studies where
-  constructs were measured on each \(i\) at each \(t\).} Sometimes this
-  doesn't happen\ldots{}
-\end{enumerate}
+Other possible discussion pieces. 1) Keep in mind you might see weird
+stuff in the literature. X at time 1 relates to Z at time 2, which
+relates to Y at time 3, but none are measured repeatedly across time.
+This is no good. We opened with \enquote{we couch ourselves by only
+discussing studies where constructs were measured on each \(i\) at each
+\(t\).} Sometimes this doesn't happen\ldots{} 2) Econometrics modeling
+levels vs.~modeling differences.
+
+A section about our opinions of static versus dynamic research. We don't
+want to get into the difference between explaining a mechanism vs
+describing an observed \enquote{longitudinal} pattern, and we don't want
+to say that static research is useless\ldots{}but can we close with some
+sort of exciting call to action about dynamics?
 
 \newpage
 

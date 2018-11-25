@@ -8,7 +8,7 @@ Does affect go up or down across time, or is it relatively stable? Does trainee 
 
 Trend has to do with the global shape of the trajectory across time. If we put a variable on the $y$-axis and plot its values against time on the $x$-axis, do the values tend to go up or down over time? It can be thought of as the coarse-grained direction of a trajectory. 
 
-Figure \ref{trend} demonstrates trend, where the red line shows positive, increasing trend, the blue line shows negative, decreasing trend, and the green line shows a curvilinear trajectory. Keep in mind that curvilinear and linear trajectories are both *linear in parameters* and should not be confused with non-linear systems. 
+Figure \ref{trend} demonstrates trend, where the red line shows negative, decreasing trend, the blue line shows positive, increasing trend, and the green line shows a curvilinear trajectory. Keep in mind that curvilinear and linear trajectories are both *linear in parameters* and should not be confused with non-linear systems. 
 
 \begin{center}
 
@@ -26,7 +26,7 @@ Our first trend inference, therefore, concerns the shape of the trajectory.
 
 As with the level inferences, when we add more units we can examine trend variability. Do all trainees develop greater skill across time? Is there variability in the trend of helping behaviors, or counterproductive work behaviors over time? 
 
-Figure \ref{trend_var} shows differences in trend variability. In the first facet all units (people) show the same positive trend, whereas everyone in the second panel shows different trend: person one's data appear to increase over time, person two's data remain flat, and person three's data decrease over time. With greater variability there is less consistency in trend across units.
+Figure \ref{trend_var} shows differences in trend variability. In the first facet all units (people) show the same positive trend, whereas everyone in the second panel shows different trend: person one's data appear to increase over time, person two's data decrease over time, and person three's data remain flat. With greater variability there is less consistency in trend across units.
 
 \begin{center}
 
@@ -46,7 +46,7 @@ Correlating these trends is the next inference. Correlating indicates co-occurin
 
 Figure \ref{trend_correlation} shows the inuition behind the inference with a set of graphs. In Panel A we plot affect and performance across time for three individuals. Affect goes up while performance goes down for person one, this pattern is reversed for person two, and person three reports trendless affect and performance (i.e., zero trend), but both variables fluctuate across time for this individual. We use different colors to label the trends for each person. The affect and performance trends for person 1 are labeled with red lines, whereas person 2 has green lines and person 4 has blue lines.
 
-Panel B then maps those pairings onto a figure that shows the relationship between the affect and performance trend. For example, person one has a positive affect trend and a negative performance trend, so their value in Panel B goes on the bottom right, whereas person two has the opposite pattern and therefore is placed on the top left (where performance trend is positive and affect trend is negative). Producing this bottom scatter plot tells us that the relationship between affect and performance trend is negative. That is, people with a positive affect trend usually have a negative performance trend, people with a negative affect trend are more likely to have a positive performance trend, and people with no affect trend usually have no performance trend. 
+Panel B then maps those pairings onto a figure that shows the relationship between the affect and performance trend. For example, person one has a positive affect trend and a negative performance trend, so their value in Panel B goes on the bottom right, whereas person two has the opposite pattern and therefore is placed on the top left (where the performance trend is positive and the affect trend is negative). Producing this bottom scatter plot tells us that the relationship between the affect and performance trend is negative. That is, people with a positive affect trend usually have a negative performance trend, people with a negative affect trend are more likely to have a positive performance trend, and people with no affect trend usually have no performance trend. 
 
 \begin{center}
 
@@ -64,11 +64,30 @@ The final trend inference is about identifying covariates or predictors of trend
 
 Figure \ref{trend_covariate} demonstrates the inference in a plot. We plot affect across time for six employees, and these employees differ by job type. The first three individuals work in research and development, whereas the final three individuals work in sales. Affect trajectories tend to decrease over time for employees in research and development, whereas affect trajectories tend to increase for those in sales. An individual's job type, then, gives us a clue to their likely affect trend -- said formally, job type covaries with affect trends, such that we expect individuals in sales to have positive affect trends and individuals in research and development to have negative affect trends. The expected trends are plotted as the thick blue lines. 
 
->> **Inference 4:** There are correlates/predictors of trend. 
+>> **Inference 4:** There are correlates of trend. 
 
 ## Trend Inference Table
 
-The inference table below provides examples of each trend inference. Inference one is about the general direction or shape of a trajectory across time. Inference two is about variability in that shape across units. Inference three takes the trend in one variable and asks whether co-occurs with trend in another. Inference four, finally, is about the relationship between trend in one variable and the raw values of one or more predictors.
+The inference table below provides examples of each trend inference. Inference one is about the general direction or shape of a trajectory across time. Inference two is about variability in that shape across units. Inference three takes the trend in one variable and asks whether it co-occurs with trend in another. Inference four, finally, is about the relationship between trend in one variable and the raw values of one or more correlates.
+
+\begin{center}
+
+------------
+
+Insert Table \ref{trend_table} about here
+
+------------
+
+\end{center}
+
+We want to close this section with a note on phrasing. The inferences we explored in this section have to do with correlating trends, where a statement like "affect and performance trends covary, such that people with a negative affect trend have a positive performance trend" is appropriate. There is a less precise phrase that is easy to fall into -- and we have seen it used in our literature. Sometimes, researchers will correlate trends and then state, "when affect decreases performance goes up." We urge researchers to avoid this second statement because it is not clear if it refers to a static relationship about trends or a dynamic statement about how trajectories move across time. That is, the phrase "when affect decreases performance goes up" could refer to correlated trends, but it could also mean something like, "when affect decreases performance immediately or subsequently goes up." This second statement is far different and it should not be used when an analysis only correlates trends or evokes predictors of trend. Again, we urge researchers to phrase their inferences as we have shown here.
+
+
+## Models
+
+Trends are called slope estimates in the statistical modeling literature. They are also referred to as growth. Mean estimates of slopes, or trends, or growth will tell you about trend, whereas the variance estimates will tell you about variability across units. Growth curves in SEM or HLM. Bivariate growth curves. 
+
+
 
 ```{r, echo = F}
 library(xtable)
@@ -85,11 +104,11 @@ trend_table <- data.frame(
   Examples = c(linebreak('Burnout decreases over time.\nPerformance increases over time.'),
                  linebreak('Affect trends differ across people (units).\nThere is variability in turnover trends across organizations.'),
                  linebreak('People with a positive health status trend have a positive happiness trend.\nPeople with a positive performance trend have a negative anxiety trend.'),
-                 linebreak('Gender predicts depletion trends.\nUnit climate covaries with unit performance trends.'))
+                 linebreak('Gender correlates with depletion trends.\nUnit climate covaries with unit performance trends.'))
 )
 
 trend_table %>%
-  kable('latex', booktabs = T, escape = F, align = 'l') %>%
+  kable('latex', booktabs = T, escape = F, align = 'l', caption = '\\label{trend_table}Examples of trend inferences.') %>%
     column_spec(1, width = '5em') %>%
     column_spec(2, width = '30em') %>%
   row_spec(1:3, hline_after = T)
@@ -97,8 +116,6 @@ trend_table %>%
 
 ```
 
-
-We want to close this section with a note on phrasing. The inferences we explored in this section have to do with correlating trends, where a statement like "affect and performance trends covary, such that people with a negative affect trend have a positive performance trend" is appropriate. There is a less precise phrase that is easy to fall into -- and we have seen it used in our literature. Sometimes, researchers will correlate trends and then state, "when affect decreases performance goes up." We urge researchers to avoid this second statement because it is not clear if it refers to a static relationship about trends or a dynamic statement about how trajectories move across time. That is, the phrase "when affect decreases performance goes up" could refer to correlated trends, but it could also mean something like, "when affect decreases performance immediately or subsequently goes up." This second statement is far different and it should not be used when an analysis only correlates trends or evokes predictors of trend. Again, we urge researchers to phrase their inferences as we have shown here.
 
 
 ```{r, echo = F, fig.cap = 'Trend across time\\label{trend}'}
@@ -345,11 +362,6 @@ ggplot(covary_trend_df, aes(x = time, y = affect, linetype = id)) +
 
 
 ```
-
-
-## Models
-
-Trends are called slope estimates in the statistical modeling literature. They are also referred to as growth. Mean estimates of slopes, or trends, or growth will tell you about trend, whereas the variance estimates will tell you about variability across units. Growth curves in SEM or HLM. Bivariate growth curves. 
 
 
 

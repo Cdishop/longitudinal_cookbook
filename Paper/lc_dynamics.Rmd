@@ -8,19 +8,15 @@ Dynamics refers to a specific branch of mathematics, but the term is used in dif
 
 The crucial notion to take from dynamics, then, is memory. When the past matters, and future states are constrained by where they were at prior points in time, dynamics are at play. In this section, we unpack a variety of inferences that are couched in this idea.
 
-Does performance relate to itself over time? Do current helping behaviors depend on prior helping behaviors? Does unit climate demonstrate self-similarity across time? Does income now predict income in the future? These are questions about the relationship of a single variable with itself over time. Does it predict itself at each subsequent moment? 
+Does performance relate to itself over time? Do current helping behaviors depend on prior helping behaviors? Does unit climate demonstrate self-similarity across time? Does income now predict income in the future? These are questions about the relationship of a single variable with itself over time -- does it predict itself at each subsequent moment? Is it constrained by where it was in the past?
 
-Figure \ref{dynamics} (no graph yet) shows the concept graphically. Paragraph about the graph.
+Panel A of figure \ref{dynamics_figure} shows the concept with a box and arrow diagram. $x$ predicts itself across every moment -- it has self-similarity and its value now is constrained by where it was a moment ago. In our diagram we show that $x$ at time $t$ is related to $X$ at time $t + 1$. In other words, we posit that $x$ shows a lag-one relationship, where $x$ is related to its future value one time step away. Modelers and theorists are of course free to suggest any lag amount that they believe captures the actual relationship. 
 
-The statistical term used to describe self-similarity is autoregression, and we use it to put a label on this first inference.
+>> **Inference 1:** There is self-similarity in $x$; $x$ relates to itself across time. 
 
->> **Inference 1:** There is autoregression in $x$. 
+Inference one was about a single variable, and in the level and trend inference sections we saw that when we moved to multiple variables we started asking how variables relate to one another at $t$, or at an average window of $t$, or across $t$. With dynamics, where memory is a fundamental concept, we instead ask how variables relate to one another at different lags. Does affect predict subsequent performance? Do prior counterproductive work behaviors relate to current incivility? When goal discrepancy is large is effort at the subsequent time point high? When prior depletion is low, is current emotional exhaustion high?
 
-Inference one was of course about a single variable. When we apply the notion of memory to multivariate systems we move away from asking how variables relate to one another at $t$, or at an average window of $t$, or across $t$, and instead ask how variables relate to one another at different lags. Does affect predict subsequent performance? Do prior counterproductive work behaviors relate to current incivility? When goal discrepancy is large is effort at the subsequent time point high? When prior depletion is low, is current emotional exhaustion high?
-
-We can capture this second inference by relating current values on one variable to future values on another. Equivalently, we can relate prior values on one variable to current values on another. Figure \ref{dynamics_cl} (no figure yet) plots...Paragraph about the graph.
-
-Relating current to future (or prior to current) values from one variable to another is called a "cross lag" relationship.
+We can capture this second inference by relating current values on one variable to future values on another. Equivalently, we can relate prior values on one variable to current values on another. Panel B of figure \ref{dynamics_figure} shows this second dynamics inference. $x$ still shows self-similarity across time, but it now predicts $y$ at the subsequent moment. We are positing a lag-one relationship between $x$ and $y$. Said formally, we believe that $x_t$ is related to $y_{t+1}$ (or equivalently, $x_{t-1}$ is related to $y_{t}$). Relating current to future (or prior to current) values from one variable to another is called a "cross lag" relationship.
 
 >> **Inference 2:** There is a cross-lag relationship, where one variable relates to another at a different point in time.
 
@@ -30,7 +26,7 @@ When goal discrepancy is large does effort increase or decrease? When unit clima
 
 All of these questions are about change, but notice that change can be construed across different lags. Change from what? Baseline? The prior time point? The last three time points? Typically change is construed with respect to the last time point. When affect is low, does performance from the last to the current time point increase or decrease? How does effort change from the prior to the current time point when goal discrepancy is high?
 
-Figure \ref{dynamics_change} demonstrates these ideas. Paragraph about the graph.
+Panel C of figure \ref{dynamics_figure} demonstrates this idea. We are positing the same self-similarity in $x$ and the same cross-lag relationship that we saw before, but now $y$ also has self-similarity across time. The cross-lag relationship, therefore, is now capturing how $y$ has changed from the last point in time.
 
 It is typical to think of change from the prior to the current time point, but researchers are free to move it as they please. Here are the two final inferences that capture change in different locations.
 
@@ -41,6 +37,25 @@ It is typical to think of change from the prior to the current time point, but r
 ## Dynamics Inference Table
 
 Again, we provide an inference table below -- this time with respect to dynamic inferences. Inference one is about autoregression, or memory in a single variable. Inference two asks how a variable at one time co-occurs with another at a different time. Inferences three and four focus on change: when one variable is high or low, does it relate to the change (an increase or decrease) in the values of another variable?
+
+\begin{center}
+
+------------
+
+Insert Table \ref{dynamics_table} about here
+
+------------
+
+\end{center}
+
+## Extensions
+
+Reciprocal relationships. Systems of variables. Mediation. Mediation kind of goes away when you get into reciprocal dynamics.
+
+## Models
+
+Autoregression is the statistical word for the estimate of self-similarity in a variable, the relationship between a variable now and its future value. Our literature has a history with difference scores and partialling. We debated difference scores so we have converged to partialling models. Typically we create a model with prior values of the response variable as a predictor. 
+
 
 ```{r, echo = F}
 library(xtable)
@@ -61,7 +76,7 @@ dy_table <- data.frame(
 )
 
 dy_table %>%
-  kable('latex', booktabs = T, escape = F, align = 'l') %>%
+  kable('latex', booktabs = T, escape = F, align = 'l', caption = '\\label{dynamics_table}Examples of dynamic inferences.') %>%
     column_spec(1, width = '5em') %>%
     column_spec(2, width = '30em') %>%
   row_spec(1:3, hline_after = T)
@@ -71,16 +86,7 @@ dy_table %>%
 
 
 
-## Models
-
-Our literature has a history with difference scores and partialling. We debated difference scores so we have converged to partialling models. Typically we create a model with prior values of the response variable as a predictor. 
-
-## Extensions
-
-Reciprocal relationships. Systems of variables. Mediation. Mediation kind of goes away when you get into reciprocal dynamics. 
-
-
-```{r, echo = F, fig.cap = 'Univariate and bivariate dynamics adapted from DeShon (2012). Panel A shows self-similarity or autoregression in $X$ across time. Panel B shows $X$ predicting subsequent $Y$. Panel C shows $X$ predicting subsequent change in $Y$. Panel D shows reciprocal dynamics between $X$ and $Y$.', fig.height = 10, fig.align = 'center'}
+```{r, echo = F, fig.cap = 'Univariate and bivariate dynamics adapted from DeShon (2012). Panel A shows self-similarity or autoregression in $X$ across time. Panel B shows $X$ predicting subsequent $Y$. Panel C shows $X$ predicting subsequent change in $Y$. Panel D shows reciprocal dynamics between $X$ and $Y$.\\label{dynamics_figure}', fig.height = 10, fig.align = 'center'}
 
 library(png)
 library(grid)
