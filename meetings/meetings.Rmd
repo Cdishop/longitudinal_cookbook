@@ -5,10 +5,12 @@ output: html_document
 
 # Post thanksgiving
 
-Do we want data plots or x y plots or not plots? Read up through inference 3. Would that make sense with no plots?
+If you don't want plots, how do you differentiate level inferences three and four? If you don't want plots, you cannot make boxes and arrows for level inferences...
 
-Goran said what if I just make one data set and examine each data set with respect to all inferences. Could I make such a data set? Yes, but I would have to focus in on specific people. Not sure it is worth it.
+Level and trend inferences on graphs. Dynamics inferences with boxes and arrows. Why? Because they better convey the message. Matter of factly.
 
-Can I say, there are some difficult inferences to understand. We provide graphs of those? I don't need one for autoregression. I need one to demonstrate correlated trends. 
+Mediation. I could put that under the "extentions" section, but I don't want to.
 
-Level and trend inferences on graphs. Dynamics inferences with boxes and arrows? Or, the level and trend inferences are hard to demonstrate, so I graphically show them.
+Help writing models part.
+
+Discussion. Our own opinions about how the field should be thinking?

@@ -8,5 +8,5 @@ Summary paragraph. We talked about these things.
 
 Other possible discussion pieces. 1)  Keep in mind you might see weird stuff in the literature. X at time 1 relates to Z at time 2, which relates to Y at time 3, but none are measured repeatedly across time. This is no good. We opened with "we couch ourselves by only discussing studies where constructs were measured on each $i$ at each $t$." Sometimes this doesn't happen... 2) Econometrics modeling levels vs. modeling differences. 
 
-A section about our opinions of static versus dynamic research. We don't want to get into the difference between explaining a mechanism vs describing an observed "longitudinal" pattern, and we don't want to say that static research is useless...but can we close with some sort of exciting call to action about dynamics?
+A section about our opinions of static versus dynamic research. We don't want to get into the difference between explaining a mechanism vs describing an observed "longitudinal" pattern, and we don't want to say that static research is useless...but can we close with some of our opinions? Some of the ways we hope researchers will go?
 
