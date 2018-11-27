@@ -5,12 +5,21 @@ output: html_document
 
 # Post thanksgiving
 
-If you don't want plots, how do you differentiate level inferences three and four? If you don't want plots, you cannot make boxes and arrows for level inferences...
+1) Plots
 
-Level and trend inferences on graphs. Dynamics inferences with boxes and arrows. Why? Because they better convey the message. Matter of factly.
+I would be fine with no plots. But if we do plots, I think we should not use boxes and arrows. How do you differentiate all the level inferences, or the level from trend inferences, with just boxes and arrows?
 
-Mediation. I could put that under the "extentions" section, but I don't want to.
+Matter of factly say that level and trend on graphs, dynamics with boxes and arrows.
 
-Help writing models part.
+2) Intro
 
-Discussion. Our own opinions about how the field should be thinking?
+Just highlight vs. problem
+
+3) Mediation
+
+Is that enough? I don't want to talk about this
+
+4) Discussion
+
+Our own opinions?
+
