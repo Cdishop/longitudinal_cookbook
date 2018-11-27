@@ -445,37 +445,6 @@ and the level of \(y\) at \(t\).
 \end{quote}
 \end{quote}
 
-In our final level inference we correlate values across time rather than
-correlating values from a single moment or a single averaged moment. For
-example, we might ask if affect is related to performance across time;
-i.e., when affect is high is performance also high, and when affect is
-low is performance also low?
-
-This inference sounds similar to the one just presented, but their
-difference is important. With inference three we ask about affect and
-performance at \(t\) or at an averaged window of \(t\) -- we examine,
-for example, how ending performance relates to ending affect, or how
-affect averaged across time relates to performance averaged across time.
-Here, we retain all of the information and examine the relationship
-between affect and performance across all \(t\).
-
-Figure \ref{level_relation} shows this inference graphically. In Panel A
-we plot affect and performance trajectories across time, where the solid
-line indicates affect and the dashed line indicates performance -- this
-time we only focus on a single individual or unit. The colored squares
-represent levels at different points in time. The green squares
-highlight low values of both variables, the blue high values, and the
-red middle values.
-
-Panel B shows how those respective values map onto a scatterplot of
-affect and performance -- which again will lead to the inference. The
-blue values indicate that high values of affect tend to co-occur with
-high values of performance (shown respectively by the blue squares in
-Panel A). The red values indicate that middle values of affect tend to
-co-occur with middle values of performance. The green values, finally,
-indicate that low values of affect tend to co-occur with low values of
-performance. Across time, affect and performance covary.
-
 \begin{center}
 
 ------------
@@ -485,13 +454,6 @@ Insert Figure \ref{level_relation} about here
 ------------
 
 \end{center}
-
-\begin{quote}
-\begin{quote}
-\textbf{Inference 4:} There is a relationship between \(x\) and \(y\)
-across time.
-\end{quote}
-\end{quote}
 
 \hypertarget{level-inference-table}{%
 \subsection{Level Inference Table}\label{level-inference-table}}
@@ -503,8 +465,7 @@ variability across units in level. Inference three takes the level in
 one variable and asks whether it tends to co-occur with the level in
 another. Think of inference three as creating a latent level variable at
 a single moment and asking how it relates to another latent variable
-from a single moment. Inference four, finally, is about the relationship
-between raw values across time.
+from a single moment.
 
 \begin{center}
 
@@ -522,12 +483,11 @@ Insert Table \ref{level_table} about here
 Level is called intercept in the statistical modeling literature.
 Typically the mean estimate tells you about the level, and the variance
 estimate tells you about the variability across units. Intercept only
-models in HLM or SEM. Time-varying or invariant covariates analyses.
-Point to references.
+models in HLM or SEM. Point to references.
 
 \begin{table}
 
-\caption{\label{tab:unnamed-chunk-6}\label{level_table}Examples of level inferences.}
+\caption{\label{tab:unnamed-chunk-7}\label{level_table}Examples of level inferences.}
 \centering
 \begin{tabular}[t]{>{\raggedright\arraybackslash}p{5em}>{\raggedright\arraybackslash}p{30em}}
 \toprule
@@ -538,37 +498,28 @@ Inference & Examples\\
 2 & Average affect across time differs across people (units).\newline There is variability in the initial level of turnover across organizations.\\
 \hline
 3 & People with greater initial health status also have greater initial happiness.\newline People with high performance on average across time have lower anxiety on average across time.\\
-\hline
-4 & Affect relates to performance across time.\newline Helping behaviors predict depletion across time.\\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \begin{figure}
 \centering
-\includegraphics{figures/unnamed-chunk-7-1.pdf}
-\caption{\label{fig:unnamed-chunk-7}Level examples\label{level}}
-\end{figure}
-
-\begin{figure}
-\centering
 \includegraphics{figures/unnamed-chunk-8-1.pdf}
-\caption{\label{fig:unnamed-chunk-8}Trajectories with variability in ending
-level across units\label{level_var}}
+\caption{\label{fig:unnamed-chunk-8}Level examples.\label{level}}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics{figures/unnamed-chunk-9-1.pdf}
-\caption{\label{fig:unnamed-chunk-9}Correlating starting levels, or relating
-initial affect to initial performance\label{level_correlate}}
+\caption{\label{fig:unnamed-chunk-9}Trajectories with variability in ending
+level across units.\label{level_var}}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics{figures/unnamed-chunk-10-1.pdf}
-\caption{\label{fig:unnamed-chunk-10}Relating affect to performance
-levels\label{level_relation}}
+\caption{\label{fig:unnamed-chunk-10}Correlating starting levels, or
+relating initial affect to initial performance.\label{level_correlate}}
 \end{figure}
 
 \hypertarget{trend}{%
@@ -790,28 +741,133 @@ Inference & Examples\\
 \begin{figure}
 \centering
 \includegraphics{figures/unnamed-chunk-12-1.pdf}
-\caption{\label{fig:unnamed-chunk-12}Trend across time\label{trend}}
+\caption{\label{fig:unnamed-chunk-12}Trend across time.\label{trend}}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics{figures/unnamed-chunk-13-1.pdf}
 \caption{\label{fig:unnamed-chunk-13}Differences in trend variability across
-units\label{trend_var}}
+units.\label{trend_var}}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics{figures/unnamed-chunk-14-1.pdf}
 \caption{\label{fig:unnamed-chunk-14}Correlating slopes, or relating the
-affect to performance trend\label{trend_correlation}}
+affect to performance trend.\label{trend_correlation}}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics{figures/unnamed-chunk-15-1.pdf}
 \caption{\label{fig:unnamed-chunk-15}Job type as a covariate of affect
-trend\label{trend_covariate}}
+trend.\label{trend_covariate}}
+\end{figure}
+
+\hypertarget{relationships}{%
+\section{Relationships}\label{relationships}}
+
+In our final level inference we correlate values across time rather than
+correlating values from a single moment or a single averaged moment. For
+example, we might ask if affect is related to performance across time;
+i.e., when affect is high is performance also high, and when affect is
+low is performance also low?
+
+This inference sounds similar to the one just presented, but their
+difference is important. With inference three we ask about affect and
+performance at \(t\) or at an averaged window of \(t\) -- we examine,
+for example, how ending performance relates to ending affect, or how
+affect averaged across time relates to performance averaged across time.
+Here, we retain all of the information and examine the relationship
+between affect and performance across all \(t\).
+
+Figure \ref{level_relation} shows this inference graphically. In Panel A
+we plot affect and performance trajectories across time, where the solid
+line indicates affect and the dashed line indicates performance -- this
+time we only focus on a single individual or unit. The colored squares
+represent levels at different points in time. The green squares
+highlight low values of both variables, the blue high values, and the
+red middle values.
+
+Panel B shows how those respective values map onto a scatterplot of
+affect and performance -- which again will lead to the inference. The
+blue values indicate that high values of affect tend to co-occur with
+high values of performance (shown respectively by the blue squares in
+Panel A). The red values indicate that middle values of affect tend to
+co-occur with middle values of performance. The green values, finally,
+indicate that low values of affect tend to co-occur with low values of
+performance. Across time, affect and performance covary.
+
+Inference four, finally, is about the relationship between raw values
+across time.
+
+\begin{quote}
+\begin{quote}
+\textbf{Inference 1:} There is a relationship between \(x\) and \(y\)
+across time.
+\end{quote}
+\end{quote}
+
+Figure \ref{relation_tvc} shows the inference.
+
+\begin{quote}
+\begin{quote}
+\textbf{Inference 2:} There is a relationship between \(x\) and \(y\)
+across units over time.
+\end{quote}
+\end{quote}
+
+\hypertarget{relationships-inference-table}{%
+\subsection{Relationships Inference
+Table}\label{relationships-inference-table}}
+
+Text.
+
+\begin{center}
+
+------------
+
+Insert Table \ref{relationships_table} about here
+
+------------
+
+\end{center}
+
+\hypertarget{models-2}{%
+\subsection{Models}\label{models-2}}
+
+Time-varying or invariant covariates analyses.
+
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-16}\label{relationships_table}Examples of Relationship inferences.}
+\centering
+\begin{tabular}[t]{>{\raggedright\arraybackslash}p{5em}>{\raggedright\arraybackslash}p{30em}}
+\toprule
+Inference & Examples\\
+\midrule
+1 & Affect relates to performance across time.\newline Helping behaviors predict depletion across time.\\
+\hline
+2 & Affect relates to performance across people (and it is consistent over time/and averaged over time it is positive).\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}
+\centering
+\includegraphics{figures/unnamed-chunk-17-1.pdf}
+\caption{\label{fig:unnamed-chunk-17}Relating affect to performance on one
+unit across time.\label{level_relation}}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{figures/unnamed-chunk-18-1.pdf}
+\caption{\label{fig:unnamed-chunk-18}Relating affect to performance across
+units over time. A typical time-varying covariates model constrains the
+correlation to be equivalent across time. Here, the relationship is
+unconstrained at each time point.\label{relation_tvc}}
 \end{figure}
 
 \hypertarget{dynamics}{%
@@ -983,10 +1039,11 @@ Also notice that complex dynamics subsume the concept of mediation. It
 is of course an important idea, but when we focus on systems of
 variables and reciprocal dynamics we place our emphasis elsewhere. If
 readers are interested in mediation we urge them to read one of the many
-great papers on it (cites).
+great papers on it (Maxwell \& Cole, 2007; Maxwell, Cole, \& Mitchell,
+2011; Stone-Romero \& Rosopa, 2008).
 
-\hypertarget{models-2}{%
-\subsection{Models}\label{models-2}}
+\hypertarget{models-3}{%
+\subsection{Models}\label{models-3}}
 
 Autoregression is the statistical word for the estimate of
 self-similarity in a variable, the relationship between a variable now
@@ -997,7 +1054,7 @@ values of the response variable as a predictor.
 
 \begin{table}
 
-\caption{\label{tab:unnamed-chunk-16}\label{dynamics_table}Examples of dynamic inferences.}
+\caption{\label{tab:unnamed-chunk-19}\label{dynamics_table}Examples of dynamic inferences.}
 \centering
 \begin{tabular}[t]{>{\raggedright\arraybackslash}p{5em}>{\raggedright\arraybackslash}p{30em}}
 \toprule
@@ -1020,7 +1077,7 @@ Inference & Examples\\
 
 }
 
-\caption{Univariate and bivariate dynamics adapted from DeShon (2012). Panel A shows self-similarity or autoregression in $X$ across time. Panel B shows $X$ predicting subsequent $Y$. Panel C shows $X$ predicting subsequent change in $Y$. Panel D shows reciprocal dynamics between $X$ and $Y$.\label{dynamics_figure}}\label{fig:unnamed-chunk-17}
+\caption{Univariate and bivariate dynamics adapted from DeShon (2012). Panel A shows self-similarity or autoregression in $X$ across time. Panel B shows $X$ predicting subsequent $Y$. Panel C shows $X$ predicting subsequent change in $Y$. Panel D shows reciprocal dynamics between $X$ and $Y$.\label{dynamics_figure}}\label{fig:unnamed-chunk-20}
 \end{figure}
 
 \hypertarget{discussion}{%
@@ -1090,6 +1147,17 @@ doi:\href{https://doi.org/10.5465/amj.2014.0262}{10.5465/amj.2014.0262}
 Kozlowski, S. W., \& Bell, B. S. (2003). Work groups and teams in
 organizations. \emph{Handbook of Psychology}, 333--375.
 
+\leavevmode\hypertarget{ref-maxwell2007bias}{}%
+Maxwell, S. E., \& Cole, D. A. (2007). Bias in cross-sectional analyses
+of longitudinal mediation. \emph{Psychological Methods}, \emph{12}(1),
+23.
+
+\leavevmode\hypertarget{ref-maxwell2011bias}{}%
+Maxwell, S. E., Cole, D. A., \& Mitchell, M. A. (2011). Bias in
+cross-sectional analyses of longitudinal mediation: Partial and complete
+mediation under an autoregressive model. \emph{Multivariate Behavioral
+Research}, \emph{46}(5), 816--841.
+
 \leavevmode\hypertarget{ref-meier_reciprocal_2013}{}%
 Meier, L. L., \& Spector, P. E. (2013). Reciprocal effects of work
 stressors and counterproductive work behavior: A five-wave longitudinal
@@ -1120,6 +1188,12 @@ adaptation theory. \emph{Journal of Applied Psychology}, \emph{101}(12),
 Rosen, C. C., Koopman, J., Gabriel, A. S., \& Johnson, R. E. (2016). Who
 strikes back? A daily investigation of when and why incivility begets
 incivility. \emph{Journal of Applied Psychology}, \emph{101}(11), 1620.
+
+\leavevmode\hypertarget{ref-stone2008relative}{}%
+Stone-Romero, E. F., \& Rosopa, P. J. (2008). The relative validity of
+inferences about mediation as a function of research design
+characteristics. \emph{Organizational Research Methods}, \emph{11}(2),
+326--352.
 
 \leavevmode\hypertarget{ref-vancouver_translating_2018}{}%
 Vancouver, J. B., Wang, M., \& Li, X. (2018). Translating Informal

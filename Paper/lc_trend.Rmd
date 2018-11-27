@@ -118,7 +118,7 @@ trend_table %>%
 
 
 
-```{r, echo = F, fig.cap = 'Trend across time\\label{trend}'}
+```{r, echo = F, fig.cap = 'Trend across time.\\label{trend}'}
 set.seed(3)
 
 ind <- c(1:20)
@@ -159,7 +159,7 @@ ggplot(fam, aes(x = Time, y = Y, color = legend)) +
 
 ```
 
-```{r, echo = F, fig.cap = 'Differences in trend variability across units\\label{trend_var}'}
+```{r, echo = F, fig.cap = 'Differences in trend variability across units.\\label{trend_var}'}
 set.seed(88)
 
 per1 <- 4 + 0.6*ind + rnorm(20, 0, 0.5)
@@ -202,7 +202,7 @@ ggplot(yup, aes(x = Time, y = Y, color = Person)) +
 ```
 
 
-```{r, echo = F, fig.cap = 'Correlating slopes, or relating the affect to performance trend\\label{trend_correlation}', fig.height = 10}
+```{r, echo = F, fig.cap = 'Correlating slopes, or relating the affect to performance trend.\\label{trend_correlation}', fig.height = 10}
 
 set.seed(33)
 tre_affect <- 6 + 0.6*ind + rnorm(20,0,1)
@@ -299,7 +299,7 @@ grid.arrange(tp1, tp2, ncol = 1)
 
 ```
 
-```{r, echo = F, fig.cap = 'Job type as a covariate of affect trend\\label{trend_covariate}'}
+```{r, echo = F, fig.cap = 'Job type as a covariate of affect trend.\\label{trend_covariate}'}
 
 library(ggplot2)
 library(tidyverse)

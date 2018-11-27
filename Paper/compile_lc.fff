@@ -2,39 +2,31 @@
 \ifnextchar[{\eatarg}{}
 
 \centering
-\includegraphics{figures/unnamed-chunk-7-1.pdf}
-\caption{\label{fig:unnamed-chunk-7}Level examples\label{level}}
-\end{figure*}
-\begin{figure*}[hbt]
-\ifnextchar[{\eatarg}{}
-
-\centering
 \includegraphics{figures/unnamed-chunk-8-1.pdf}
-\caption{\label{fig:unnamed-chunk-8}Trajectories with variability in ending
-level across units\label{level_var}}
+\caption{\label{fig:unnamed-chunk-8}Level examples.\label{level}}
 \end{figure*}
 \begin{figure*}[hbt]
 \ifnextchar[{\eatarg}{}
 
 \centering
 \includegraphics{figures/unnamed-chunk-9-1.pdf}
-\caption{\label{fig:unnamed-chunk-9}Correlating starting levels, or relating
-initial affect to initial performance\label{level_correlate}}
+\caption{\label{fig:unnamed-chunk-9}Trajectories with variability in ending
+level across units.\label{level_var}}
 \end{figure*}
 \begin{figure*}[hbt]
 \ifnextchar[{\eatarg}{}
 
 \centering
 \includegraphics{figures/unnamed-chunk-10-1.pdf}
-\caption{\label{fig:unnamed-chunk-10}Relating affect to performance
-levels\label{level_relation}}
+\caption{\label{fig:unnamed-chunk-10}Correlating starting levels, or
+relating initial affect to initial performance.\label{level_correlate}}
 \end{figure*}
 \begin{figure*}[hbt]
 \ifnextchar[{\eatarg}{}
 
 \centering
 \includegraphics{figures/unnamed-chunk-12-1.pdf}
-\caption{\label{fig:unnamed-chunk-12}Trend across time\label{trend}}
+\caption{\label{fig:unnamed-chunk-12}Trend across time.\label{trend}}
 \end{figure*}
 \begin{figure*}[hbt]
 \ifnextchar[{\eatarg}{}
@@ -42,7 +34,7 @@ levels\label{level_relation}}
 \centering
 \includegraphics{figures/unnamed-chunk-13-1.pdf}
 \caption{\label{fig:unnamed-chunk-13}Differences in trend variability across
-units\label{trend_var}}
+units.\label{trend_var}}
 \end{figure*}
 \begin{figure*}[hbt]
 \ifnextchar[{\eatarg}{}
@@ -50,7 +42,7 @@ units\label{trend_var}}
 \centering
 \includegraphics{figures/unnamed-chunk-14-1.pdf}
 \caption{\label{fig:unnamed-chunk-14}Correlating slopes, or relating the
-affect to performance trend\label{trend_correlation}}
+affect to performance trend.\label{trend_correlation}}
 \end{figure*}
 \begin{figure*}[hbt]
 \ifnextchar[{\eatarg}{}
@@ -58,7 +50,25 @@ affect to performance trend\label{trend_correlation}}
 \centering
 \includegraphics{figures/unnamed-chunk-15-1.pdf}
 \caption{\label{fig:unnamed-chunk-15}Job type as a covariate of affect
-trend\label{trend_covariate}}
+trend.\label{trend_covariate}}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{figures/unnamed-chunk-17-1.pdf}
+\caption{\label{fig:unnamed-chunk-17}Relating affect to performance on one
+unit across time.\label{level_relation}}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{figures/unnamed-chunk-18-1.pdf}
+\caption{\label{fig:unnamed-chunk-18}Relating affect to performance across
+units over time. A typical time-varying covariates model constrains the
+correlation to be equivalent across time. Here, the relationship is
+unconstrained at each time point.\label{relation_tvc}}
 \end{figure*}
 \begin{figure*}[hbt]
 \ifnextchar[{\eatarg}{}
@@ -68,5 +78,5 @@ trend\label{trend_covariate}}
 
 }
 
-\caption{Univariate and bivariate dynamics adapted from DeShon (2012). Panel A shows self-similarity or autoregression in $X$ across time. Panel B shows $X$ predicting subsequent $Y$. Panel C shows $X$ predicting subsequent change in $Y$. Panel D shows reciprocal dynamics between $X$ and $Y$.\label{dynamics_figure}}\label{fig:unnamed-chunk-17}
+\caption{Univariate and bivariate dynamics adapted from DeShon (2012). Panel A shows self-similarity or autoregression in $X$ across time. Panel B shows $X$ predicting subsequent $Y$. Panel C shows $X$ predicting subsequent change in $Y$. Panel D shows reciprocal dynamics between $X$ and $Y$.\label{dynamics_figure}}\label{fig:unnamed-chunk-20}
 \end{figure*}
