@@ -23,3 +23,18 @@ Is that enough? I don't want to talk about this
 
 Our own opinions?
 
+Notes from talk
+
+1) Intro higher level
+
+Not so referency. We are organizing. Focus on inferences that will never go away. These are patterns that we see, a framework that we have developed and makes the literature easier to parse.
+
+2) Relationships section
+
+TVC model: is the relationship across people consistent over time? It is a correlation across people that is contrained to be the same over time. TVC is more than 1 subject. 
+
+My relationships thing is relationships among time series. Figure 4 is a correlation across time. TVC is a correlation across people that is averaged across time, constrained to be equal across time.
+
+New figure:
+Correlation between X and Y on Y axis. Time on x axis. TVC constrians that line to be flat. 
+
