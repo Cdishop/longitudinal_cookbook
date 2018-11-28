@@ -284,25 +284,25 @@ each \(t\).
 \hypertarget{framework}{%
 \section{Framework}\label{framework}}
 
-We use three inference categories to partition our discussion, including
-level, trend, and dynamics. Each of these are broad categories, and they
-will all have their own sub-inferences and models. Our writing style
-will be the same throughout each section, where we first discuss the
-category itself and then sequentially walk through the inferences.
-During that sequence, we will pose questions to orient the reader as to
-what the inference captures, unpack graphs and figures, and then close
-with a table that provides example hypotheses that align with each
-inference. The figures we use in the level and trend sections are graphs
-that show what the inferences look like in data -- we feel that graphing
-the inferences with respect to data is more informative than your usual
-box and arrow diagram. There is a caveat, however, that we want to make
-sure everyone is aware of. Data are always messy. It is rare to find
-data where the inferences expose themselves simply by plotting --
-although it is certainly possible. We are using these \enquote{data
-plots} to clearly convey what the inferences mean, but please be aware
-that field data will always be messy. When we discuss dynamics section
-we then use box and arrow diagrams because they better convey the ideas
-in that section.
+We use four inference categories to partition our discussion, including
+level, trend, relationships, and dynamics. Each of these are broad
+categories, and they will all have their own sub-inferences and models.
+Our writing style will be the same throughout each section, where we
+first discuss the category itself and then sequentially walk through the
+inferences. During that sequence, we will pose questions to orient the
+reader as to what the inference captures, unpack graphs and figures, and
+then close with a table that provides example hypotheses that align with
+each inference. The figures we use in the level, trend, and
+relationships sections are graphs that show what the inferences look
+like in data -- we feel that graphing the inferences with respect to
+data is more informative than your usual box and arrow diagram. There is
+a caveat, however, that we want to make sure everyone is aware of. Data
+are always messy. It is rare to find data where the inferences expose
+themselves simply by plotting -- although it is certainly possible. We
+are using these \enquote{data plots} to clearly convey what the
+inferences mean, but please be aware that field data will always be
+messy. When we discuss dynamics section we then use box and arrow
+diagrams because they better convey the ideas in that section.
 
 Finally, we end each inference section by pointing researchers to
 respective statistical models. Although we direct researchers to models,
@@ -768,27 +768,24 @@ trend.\label{trend_covariate}}
 \hypertarget{relationships}{%
 \section{Relationships}\label{relationships}}
 
-In our final level inference we correlate values across time rather than
-correlating values from a single moment or a single averaged moment. For
-example, we might ask if affect is related to performance across time;
-i.e., when affect is high is performance also high, and when affect is
-low is performance also low?
+In the sections above we explored covariance at a single moment, general
+trends, and covariance between trends. Here, we explore relationship
+patterns between two variables over time. Does affect relate to
+performance across time? Over time, does unit climate covary with shared
+mental models? Do the fluctuations in voice match the fluctuations in
+commitment over time -- i.e., when voice is high is commitment also
+high?
 
-This inference sounds similar to the one just presented, but their
-difference is important. With inference three we ask about affect and
-performance at \(t\) or at an averaged window of \(t\) -- we examine,
-for example, how ending performance relates to ending affect, or how
-affect averaged across time relates to performance averaged across time.
-Here, we retain all of the information and examine the relationship
-between affect and performance across all \(t\).
-
-Figure \ref{level_relation} shows this inference graphically. In Panel A
-we plot affect and performance trajectories across time, where the solid
-line indicates affect and the dashed line indicates performance -- this
-time we only focus on a single individual or unit. The colored squares
-represent levels at different points in time. The green squares
-highlight low values of both variables, the blue high values, and the
-red middle values.
+Our first inference focuses on a single unit -- one person, one team, or
+one organization over time. The trajectory of a single unit over time is
+called a time-series, and two are plotted simultaneously in figure
+\ref{relation_ts}. The solid line shows a time-series of affect over
+time, and the dashed line plots a time-series of performance. Notice
+that, across time, when affect is high respective to itself performance
+is also high (and vice versa). The colored squares represent values of
+each variable at different points in time. The green squares highlight
+low values of both variables, the blue high values, and the red middle
+values.
 
 Panel B shows how those respective values map onto a scatterplot of
 affect and performance -- which again will lead to the inference. The
@@ -797,10 +794,8 @@ high values of performance (shown respectively by the blue squares in
 Panel A). The red values indicate that middle values of affect tend to
 co-occur with middle values of performance. The green values, finally,
 indicate that low values of affect tend to co-occur with low values of
-performance. Across time, affect and performance covary.
-
-Inference four, finally, is about the relationship between raw values
-across time.
+performance. Across time, affect and performance covary and the
+relationship is positive.
 
 \begin{quote}
 \begin{quote}
@@ -809,7 +804,39 @@ across time.
 \end{quote}
 \end{quote}
 
-Figure \ref{relation_tvc} shows the inference.
+What happens when we add more units? Doing so changes the question from
+\enquote{what is the relationship across time} to, \enquote{at each
+moment, what is the relationship across units?} Ultimately we move from
+a within-unit question to a between-unit focus, and we apply that
+between unit focus to each time point.
+
+In the prior inference we asked if affect relates to performance across
+time -- on a single person/unit. Now imagine that we gather data on
+multiple people across time, so we have many affect and performance
+trajectories. One of the most popular inferences in our literature is to
+take those time series and slice them into individual time points, look
+at between-person correlations among affect and performance at a single
+moment, and then repeat that analysis for each time point. At time one,
+what is the correlation between affect and performance? At time two,
+what is the correlation between affect and performance? At time three,
+what is the correlation between affect and performance? Because we have
+multiple people we can explore correlations at a single moment.
+Researchers then typically report the average of these single moment
+correlations, or they constrain them to be equivalent across time.
+
+Figure \ref{relation_tvc} shows the inference with data. Panel A plots
+the familiar affect and performance trajectories for each person. The
+red circles in Panel A highlight each individual's affect and
+performance values at time point six. Given that we have three people
+for time point six, we can calculate a correlation between affect and
+performance at that moment (granted, it is a small sample size). The
+calculated correlation coefficient is then mapped onto panel B with
+another red circle. At time point six, the correlation between affect
+and performance across people is large and positive.
+
+Panel B then shows correlation coefficients for the rest of the time
+points. Often these correlations are either averaged over time or
+constrained to be equal.
 
 \begin{quote}
 \begin{quote}
@@ -858,16 +885,17 @@ Inference & Examples\\
 \centering
 \includegraphics{figures/unnamed-chunk-17-1.pdf}
 \caption{\label{fig:unnamed-chunk-17}Relating affect to performance on one
-unit across time.\label{level_relation}}
+unit across time.\label{relation_ts}}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics{figures/unnamed-chunk-18-1.pdf}
 \caption{\label{fig:unnamed-chunk-18}Relating affect to performance across
-units over time. A typical time-varying covariates model constrains the
-correlation to be equivalent across time. Here, the relationship is
-unconstrained at each time point.\label{relation_tvc}}
+units over time. The red circles demonstrate the between unit
+correlation for time point six. A typical time-varying covariates model
+constrains the correlation to be equivalent across time. Here, the
+relationship is unconstrained at each time point.\label{relation_tvc}}
 \end{figure}
 
 \hypertarget{dynamics}{%

@@ -58,7 +58,7 @@ trend.\label{trend_covariate}}
 \centering
 \includegraphics{figures/unnamed-chunk-17-1.pdf}
 \caption{\label{fig:unnamed-chunk-17}Relating affect to performance on one
-unit across time.\label{level_relation}}
+unit across time.\label{relation_ts}}
 \end{figure*}
 \begin{figure*}[hbt]
 \ifnextchar[{\eatarg}{}
@@ -66,9 +66,10 @@ unit across time.\label{level_relation}}
 \centering
 \includegraphics{figures/unnamed-chunk-18-1.pdf}
 \caption{\label{fig:unnamed-chunk-18}Relating affect to performance across
-units over time. A typical time-varying covariates model constrains the
-correlation to be equivalent across time. Here, the relationship is
-unconstrained at each time point.\label{relation_tvc}}
+units over time. The red circles demonstrate the between unit
+correlation for time point six. A typical time-varying covariates model
+constrains the correlation to be equivalent across time. Here, the
+relationship is unconstrained at each time point.\label{relation_tvc}}
 \end{figure*}
 \begin{figure*}[hbt]
 \ifnextchar[{\eatarg}{}
