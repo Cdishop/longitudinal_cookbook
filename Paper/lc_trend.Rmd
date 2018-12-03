@@ -64,6 +64,18 @@ The final trend inference is about identifying covariates or predictors of trend
 
 Figure \ref{trend_covariate} demonstrates the inference in a plot. We plot affect across time for six employees, and these employees differ by job type. The first three individuals work in research and development, whereas the final three individuals work in sales. Affect trajectories tend to decrease over time for employees in research and development, whereas affect trajectories tend to increase for those in sales. An individual's job type, then, gives us a clue to their likely affect trend -- said formally, job type covaries with affect trends, such that we expect individuals in sales to have positive affect trends and individuals in research and development to have negative affect trends. The expected trends are plotted as the thick blue lines. 
 
+
+\begin{center}
+
+------------
+
+Insert Figure \ref{trend_covariate} about here
+
+------------
+
+\end{center}
+
+
 >> **Inference 4:** There are correlates of trend. 
 
 ## Trend Inference Table
