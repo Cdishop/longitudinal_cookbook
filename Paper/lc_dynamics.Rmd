@@ -48,7 +48,7 @@ It is typical to think of change from the prior to the current time point, but r
 
 ## Dynamics Inference Table
 
-Again, we provide an inference table below -- this time with respect to dynamic inferences. Inference one is about autoregression, or memory in a single variable. Inference two asks how a variable at one time co-occurs with another at a different time. Inferences three and four focus on change: when one variable is high or low, does it relate to the change (an increase or decrease) in the values of another variable?
+We provide an inference table below -- this time with respect to dynamic inferences. Inference one is about autoregression, or memory in a single variable. Inference two asks how a variable at one time co-occurs with another at a different time. Inferences three and four focus on change: when one variable is high or low, does it relate to the change (an increase or decrease) in the values of another variable?
 
 \begin{center}
 

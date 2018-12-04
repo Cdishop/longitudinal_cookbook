@@ -24,8 +24,9 @@
 \usepackage{hyperref}
 \hypersetup{unicode=true,
             pdftitle={Inferences With Longitudinal Data},
-            pdfauthor={\ldots{}},
-            pdfkeywords={\ldots{}.},
+            pdfauthor={Christopher R. Dishop, Mike Braun, Goran Kuljanin, \& Richard P. DeShon},
+            pdfkeywords={Inferences, dynamics, growth, longitudinal, process, over time, tvc,
+hlm, sem, models},
             pdfborder={0 0 0},
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
@@ -70,14 +71,16 @@
 
 
   \title{Inferences With Longitudinal Data}
-    \author{\ldots{}\textsuperscript{1}}
+    \author{Christopher R. Dishop\textsuperscript{1}, Mike Braun\textsuperscript{2},
+Goran Kuljanin\textsuperscript{3}, \& Richard P.
+DeShon\textsuperscript{1}}
     \date{}
   
 \shorttitle{LONGITUDINAL INFERENCES}
 \affiliation{
 \vspace{0.5cm}
-\textsuperscript{1} ...}
-\keywords{....\newline\indent Word count: 95}
+\textsuperscript{1} Michigan State University\\\textsuperscript{2} University of South Florida\\\textsuperscript{3} DePaul University}
+\keywords{Inferences, dynamics, growth, longitudinal, process, over time, tvc, hlm, sem, models\newline\indent Word count: 95}
 \usepackage{csquotes}
 \usepackage{upgreek}
 \captionsetup{font=singlespacing,justification=justified}
@@ -110,11 +113,29 @@
 
 \authornote{\ldots{}.
 
-Correspondence concerning this article should be addressed to \ldots{},
-\ldots{}. E-mail: \ldots{}}
+Correspondence concerning this article should be addressed to
+Christopher R. Dishop, 316 Physics Road, Psychology Building, Room 348,
+East Lansing, MI, 48823. E-mail:
+\href{mailto:dishopch@msu.edu}{\nolinkurl{dishopch@msu.edu}}}
 
 \abstract{
-Begin here\ldots{}
+Our field is increasingly interested in how things that happen over
+time, in within-person phenomena, dynamics, growth, person-oriented
+frameworks, and fundamental patterns in longitudinal data structures.
+Longitudinal data structures lend themselves to many different
+inferences -- to different patterns that researchers may emphasize --
+and there are different statistical models researchers can apply after
+collecting their data. Although the diversity of inferences and models
+provides a wide foundation for exploring a content area, it can also
+make it difficult for researchers to know all of the inferences
+available to them, which models to evoke given their question, and how
+to locate their specific study within the broader set of ``over time''
+inferences. We developed a framework that situates these inferences into
+a core set that exposes researchers to the variety of questions and
+inferences that can explore with longitudinal data. In this paper we
+unpack that framework, discuss the inferences, and link every inference
+to a set of models so that researchers know where to turn given their
+specific interest.
 
 
 }
@@ -195,7 +216,7 @@ graduate level training in statistics.
 This paper is exclusively devoted to the inferences we make with
 repeated observations, so we begin by identifying a few labels and
 definitions. Authors typically identify a \enquote{longitudinal} study
-by contrasting either a) research designs or b) data structures.
+by contrasting either (a) research designs or (b) data structures.
 Longitudinal \emph{research} is different from cross-sectional research
 because longitudinal designs entail three or more repeated observations
 (Ployhart \& Vandenberg, 2010). We therefore emphasize differences on
@@ -349,16 +370,16 @@ for person two with green circles.
 
 Panel B of figure \ref{level_correlate} maps those starting levels onto
 a new plot that leads to our inference. On the \(x\)-axis is initial
-level of affect, where high values indicate a high starting level of
-affect, and on the \(y\)-axis is initial level of performance, where
-high values indicate a high starting level of performance. The red
-circle for person one is on the bottom right because that individual has
-a high initial level of affect and a low initial level of performance.
-Person two (the green circle) is on the top left because that individual
-has a high initial level of performance and a low initial level of
-affect, and person three is in the middle because they have roughly the
-same starting levels of affect and performance. The dots slope downward
-in Panel B, which tells us that there is a negative relationship between
+level of affect where high values indicate a high starting level of
+affect, and on the \(y\)-axis is initial level of performance where high
+values indicate a high starting level of performance. The red circle for
+person one is on the bottom right because that individual has a high
+initial level of affect and a low initial level of performance. Person
+two (the green circle) is on the top left because that individual has a
+high initial level of performance and a low initial level of affect, and
+person three is in the middle because they have roughly the same
+starting levels of affect and performance. The dots slope downward in
+Panel B, which tells us that there is a negative relationship between
 initial level of affect and initial level of performance.
 
 Overall, figure \ref{level_correlate} suggests that the starting levels
@@ -380,7 +401,7 @@ and the level of \(y\) at \(t\).
 
 ------------
 
-Insert Figure \ref{level_relation} about here
+Insert Figure \ref{level_correlate} about here
 
 ------------
 
@@ -532,7 +553,7 @@ variability across units in the affect trend. Or we might learn that
 affect has a negative trend while performance has a positive trend.
 
 Correlating these trends is the next inference. Correlating indicates
-co-occuring patterns, but this time we are focused on trends rather than
+co-occuring patterns, but this time we focus on trends rather than
 levels. A large positive correlation between affect and performance
 trends indicates that people with a positive affect trend (usually) have
 a positive performance trend and people with a negative affect trend
@@ -595,6 +616,16 @@ trend -- said formally, job type covaries with affect trends, such that
 we expect individuals in sales to have positive affect trends and
 individuals in research and development to have negative affect trends.
 The expected trends are plotted as the thick blue lines.
+
+\begin{center}
+
+------------
+
+Insert Figure \ref{trend_covariate} about here
+
+------------
+
+\end{center}
 
 \begin{quote}
 \begin{quote}
@@ -718,6 +749,16 @@ each variable at different points in time. The green squares highlight
 low values of both variables, the blue high values, and the red middle
 values.
 
+\begin{center}
+
+------------
+
+Insert Figure \ref{relation_ts} about here
+
+------------
+
+\end{center}
+
 Panel B shows how those respective values map onto a scatterplot of
 affect and performance -- which again will lead to the inference. The
 blue values indicate that high values of affect tend to co-occur with
@@ -753,21 +794,36 @@ what is the correlation between affect and performance? At time three,
 what is the correlation between affect and performance? Because we have
 multiple people we can explore correlations at a single moment.
 Researchers then typically report the average of these single moment
-correlations, or they constrain them to be equivalent across time.
+correlations, or they constrain them to be equal across time.
 
 Figure \ref{relation_tvc} shows the inference with data. Panel A plots
-the familiar affect and performance trajectories for each person. The
-red circles in Panel A highlight each individual's affect and
-performance values at time point six. Given that we have three people
-for time point six, we can calculate a correlation between affect and
-performance at that moment (granted, it is a small sample size). The
-calculated correlation coefficient is then mapped onto panel B with
-another red circle. At time point six, the correlation between affect
-and performance across people is large and positive.
+affect and performance trajectories for each person. The red circles in
+Panel A highlight each individual's affect and performance values at
+time point six. Given that we have three people for time point six, we
+can calculate a correlation between affect and performance at that
+moment (granted, it is a small sample). The calculated correlation
+coefficient is then mapped onto panel B with another red circle. At time
+point six, the correlation between affect and performance across people
+is large and positive.
+
+\begin{center}
+
+------------
+
+Insert Figure \ref{relation_tvc} about here
+
+------------
+
+\end{center}
 
 Panel B then shows correlation coefficients for the rest of the time
 points. Often these correlations are either averaged over time or
-constrained to be equal.
+constrained to be equal. Again, this second inference is one of the most
+common inferences in our literature -- when a researcher uses a
+time-varying covariates, hierarchical linear, random-coefficient, or
+multi-level model on longitudinal data to explore relationships among
+one or more variables (and they are not evoking a growth curve) they are
+more than likely making this inference.
 
 \begin{quote}
 \begin{quote}
@@ -879,6 +935,16 @@ to itself across time.
 \end{quote}
 \end{quote}
 
+\begin{center}
+
+------------
+
+Insert Figure \ref{dynamics_figure} about here
+
+------------
+
+\end{center}
+
 Inference one was about a single variable, and in the level and trend
 inference sections we saw that when we moved to multiple variables we
 started asking how variables relate to one another at \(t\), or at an
@@ -954,12 +1020,12 @@ time.
 \hypertarget{dynamics-inference-table}{%
 \subsection{Dynamics Inference Table}\label{dynamics-inference-table}}
 
-Again, we provide an inference table below -- this time with respect to
-dynamic inferences. Inference one is about autoregression, or memory in
-a single variable. Inference two asks how a variable at one time
-co-occurs with another at a different time. Inferences three and four
-focus on change: when one variable is high or low, does it relate to the
-change (an increase or decrease) in the values of another variable?
+We provide an inference table below -- this time with respect to dynamic
+inferences. Inference one is about autoregression, or memory in a single
+variable. Inference two asks how a variable at one time co-occurs with
+another at a different time. Inferences three and four focus on change:
+when one variable is high or low, does it relate to the change (an
+increase or decrease) in the values of another variable?
 
 \begin{center}
 
@@ -986,7 +1052,7 @@ predictions -- all we did here was add more of them. Panel D of figure
 \ref{dynamics_figure} shows reciprocal dynamics, where both \(x\) and
 \(y\) show self-similarity and cross-lag relationships with one another.
 
-Moreover, the dynamic inferences shown here generalize to systems of
+The dynamic inferences shown here also generalize to systems of
 variables, where a researcher posits self-similarity and cross-lag
 predictions across many variables. There could be reciprocal dynamics
 between a set of variables like performance, self-efficacy, and affect.
@@ -1045,21 +1111,20 @@ Inference & Examples\\
 \hypertarget{discussion}{%
 \section{Discussion}\label{discussion}}
 
-Summary paragraph. We talked about these things.
-
-Other possible discussion pieces. 1) Keep in mind you might see weird
-stuff in the literature. X at time 1 relates to Z at time 2, which
-relates to Y at time 3, but none are measured repeatedly across time.
-This is no good. We opened with \enquote{we couch ourselves by only
-discussing studies where constructs were measured on each \(i\) at each
-\(t\).} Sometimes this doesn't happen\ldots{} 2) Econometrics modeling
-levels vs.~modeling differences.
-
-A section about our opinions of static versus dynamic research. We don't
-want to get into the difference between explaining a mechanism vs
-describing an observed \enquote{longitudinal} pattern, and we don't want
-to say that static research is useless\ldots{}but can we close with some
-of our opinions? Some of the ways we hope researchers will go?
+There are many different patterns to explore with longitudinal data
+structures. What does performance look like over time? Does it
+fluctuate? Is the trajectory consistent across people? What is its
+initial or ending level? Does it show a growth pattern? Does that growth
+pattern covary with another trend? Does it move across time in relation
+to another variable? Does it show self-similarity or memory? Does it
+show lagged relationships with other variables? Is it part of a
+reciprocal system? In this paper we presented a framework that organizes
+these inferences into a fundamental set. We discussed what the
+inferences mean, how to pose questions and hypotheses about them, and
+linked the inferences to appropriate statistical models. As our field
+dives into within-person, dynamic, and process-oriented methods we hope
+this paper helps researchers understand the spectrum of inferences that
+they can explore with rich longitudinal data.
 
 \newpage
 
@@ -1074,6 +1139,11 @@ of our opinions? Some of the ways we hope researchers will go?
 Beal, D. J. (2015). ESM 2.0: State of the art and future potential of
 experience sampling methods in organizational research. \emph{Annu. Rev.
 Organ. Psychol. Organ. Behav.}, \emph{2}(1), 383--407.
+
+\leavevmode\hypertarget{ref-deshon_multivariate_2012}{}%
+DeShon, R. P. (2012). Multivariate dynamics in organizational science.
+\emph{The Oxford Handbook of Organizational Psychology}, \emph{1},
+117--142.
 
 \leavevmode\hypertarget{ref-ilgen_computational_2000}{}%
 Ilgen, D. R., \& Hulin, C. L. (2000). \emph{Computational modeling of

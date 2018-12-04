@@ -1,32 +1,43 @@
 ---
+
 # https://crsh.github.io/papaja_man/index.html
 
 title             : "Inferences With Longitudinal Data"
 shorttitle        : "LONGITUDINAL INFERENCES"
 
 author: 
-  - name          : "..."
+  - name          : "Christopher R. Dishop"
     affiliation   : "1"
     corresponding : yes    # Define only one corresponding author
-    address       : "..."
-    email         : "..."
-
-
+    address       : "316 Physics Road, Psychology Building, Room 348, East Lansing, MI, 48823"
+    email         : "dishopch@msu.edu"
+  - name          : "Mike Braun"
+    affiliation   : "2"    
+  - name          : "Goran Kuljanin"
+    affiliation   : "3"
+  - name          : "Richard P. DeShon"
+    affiliation   : "1"
+    
 affiliation:
   - id            : "1"
-    institution   : "..."
+    institution   : "Michigan State University"
+  - id            : "2"
+    institution   : "University of South Florida"
+  - id            : "3"
+    institution   : "DePaul University"
 
 
 author_note: |
   ....
 
 abstract: |
-  Begin here...
+  Our field is increasingly interested in how things that happen over time, in within-person phenomena, dynamics, growth, person-oriented frameworks, and fundamental patterns in longitudinal data structures. Longitudinal data structures lend themselves to many different inferences -- to different patterns that researchers may emphasize -- and there are different statistical models researchers can apply after collecting their data. Although the diversity of inferences and models provides a wide foundation for exploring a content area, it can also make it difficult for researchers to know all of the inferences available to them, which models to evoke given their question, and how to locate their specific study within the broader set of "over time" inferences. We developed a framework that situates these inferences into a core set that exposes researchers to the variety of questions and inferences that can explore with longitudinal data. In this paper we unpack that framework, discuss the inferences, and link every inference to a set of models so that researchers know where to turn given their specific interest.
   
-keywords          : "...."
+keywords          : "Inferences, dynamics, growth, longitudinal, process, over time, tvc, hlm, sem, models"
 wordcount         : "95"
 
 bibliography      : ["references.bib"]
+nocite: '@deshon_multivariate_2012'
 
 figsintext        : no
 figurelist        : no
