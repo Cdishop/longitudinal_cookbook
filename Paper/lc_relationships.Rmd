@@ -58,8 +58,7 @@ Insert Table \ref{relationships_table} about here
 
 ## Models
 
-Time-varying or invariant covariates analyses.
-
+The workhorse of relationship inferences comes from time-varying covariates analyses. A discussion of these models is found in @schonfeld2007hierarchical and @finch2016multilevel Relatively straight-forward empirical examples are in @barnes_lack_2011 and @chi_can_2015. 
 
 
 

@@ -70,7 +70,7 @@ Also notice that complex dynamics subsume the concept of mediation. It is of cou
 
 ## Models
 
-Autoregression is the statistical word for the estimate of self-similarity in a variable, the relationship between a variable now and its future value. Our literature has a history with difference scores and partialling. We debated difference scores so we have converged to partialling models. Typically we create a model with prior values of the response variable as a predictor. 
+There are a number of recent papers on dynamic modeling that cover the inferences discussed in this section. There are several papers on vector-autoregressive modeling and time-series analyses, which are appropriate for researchers interested in dynamic modeling of single units [e.g., @deshon_multivariate_2012; @jebb_introduction_2017; @jebb_time_2015]. @Wang2016 reviews many different types of dynamic models and, although his paper will not provide readers will specific code it is an excellent starting paper to observe the variety of models available. Finally, Xu and DeShon (almost) discuss a dynamic model first introduced by @bollen_general_2010. This dynamic panel model is appropriate for researchers who want to model dynamics across more than one unit. Moreover, it is better suited than HLM for typical situations in organizational psychology and management (i.e., short $t$ and large $N$). 
 
 
 ```{r, echo = F}
