@@ -38,7 +38,7 @@ Insert Figure \ref{trend_var} about here
 
 \end{center}
 
->> **Inference 2:** There is variability in the trend of a variable across time; trend differs across units.
+>> **Inference 2:** Trend differs/does not differ across units.
 
 Inferences one and two are about one variable, but they can also be iterated across all observed variables. For example, we might discover that affect and performance trends both decrease, but there is greater variability across units in the affect trend. Or we might learn that affect has a negative trend while performance has a positive trend.
 
@@ -99,7 +99,7 @@ We want to close this section with a note on phrasing. The inferences we explore
 
 Trend is called the slope in the statistical modeling literature. That is, when a researcher estimates a model to explore whether a variable goes up or down over time she is estimating the trend coefficient. Again, the mean estimate will tell you about the trend itself and the variance estimate refers to the trend variability across units. In the statistical modeling literature these models are called growth-models or growth-curves. Keep in mind, however, that researchers use the word "change" informally to mean growth as well, so when you read a theoretical discussion you may see words like "change" and "increase" despite the researcher using a "growth" model. 
 
-Broad theoretical discussions of growth and change are found in @pitariu_explaining_2010 and @ployhart_longitudinal_2010, whereas @bliese_growth_2002 describe how to go about running an analysis. Growth curves are a core topic in developmental psychology, so there are many great articles and textbooks to read from their field. See @grimm_growth_2016, @singer_applied_2003, and @mcardle_latent_1987. For two straight-forward empirical examples in our own field see @dunford_is_2012 and @hulsheger_dawn_2016. 
+Broad theoretical discussions of growth and change are found in @pitariu_explaining_2010 and @ployhart_longitudinal_2010, whereas @bliese_growth_2002 describe how to go about running an analysis. Growth curves are a core topic in developmental psychology, so there are many great articles and textbooks to read from their field. See @grimm_growth_2016 and @singer_applied_2003 for two great textbooks on growth curve modeling, and @mcardle_latent_1987 for an empirical discussion. For two straight-forward empirical examples in our own field see @dunford_is_2012 and @hulsheger_dawn_2016. 
 
 ```{r, echo = F}
 library(xtable)
