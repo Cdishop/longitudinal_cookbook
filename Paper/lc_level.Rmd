@@ -9,6 +9,10 @@ output:
 
 Is employee emotional exhaustion, on average, high across the study? Is trainee skill low at the beginning of a training session? What value are newcomer perceptions of unit climate at the end of a two-week socialization process? These are questions about level, or the specific value of a variable. 
 
+### Comment
+
+Some comment here.
+
 Levels either describe the variable at one moment or averaged across a span of time. That is, if we put a variable on the $y$ axis and plot its values against time on the $x$ axis, we can explore the value that it takes at time $t$, or the value that it takes on average across any span of $t$. 
 
 Figure \ref{level} demonstrates this idea graphically. A variable is plotted across time for a single person (i.e., unit), and the color labels indicate levels -- the red and green describe the variable at a specific moment while the purple, average level, describes it across a window. The starting level is the value of the variable at the first time point, the ending level is its value at the last time point, and the average level is its average level across time.

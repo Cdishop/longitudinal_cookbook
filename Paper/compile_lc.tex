@@ -172,9 +172,9 @@ We have noticed a variety of inferences emerging in our literature that
 researchers explore when they want to understand something over time.
 Some focus on whether trajectories increase or decrease, or the pattern
 of growth in a variable over time. Others turn their attention not to
-trends but to relationship patterns across time, whereas others still
-emphasize dynamics. How are these ways of asking questions about
-patterns in longitudinal data different? We find these inferences
+trends but to relationship patterns across time. There is also an
+increasing emphasis on dynamics. How are these ways of asking questions
+about patterns in longitudinal data different? We find these inferences
 everywhere, and their persistence has driven us to ask how to organize
 them.
 
@@ -436,15 +436,13 @@ That is, when a researcher estimates a model to explore the starting
 level of a variable, like performance, she is estimating the intercept
 at the initial time point. The analysis will return a mean estimate
 which tells you about level, and it will also return a variance estimate
-that indicates variability across units. These models can be used in
-both hierarchical linear modeling (HLM) or structural equations modeling
-(SEM) frameworks. Typically you will hear researchers refer to models
-that only explore level as intercept-only models. Intercept-only models
-are almost always paired with more complex growth models, so we will
-save our reference recommendations for the next section. If a researcher
-is interested in level he or she can look to the references we point to
-in the \enquote{trend} section, all of those models also examine
-intercepts.
+that indicates variability across units. Typically you will hear
+researchers refer to models that only explore level as intercept-only
+models. Intercept-only models are almost always paired with more complex
+growth models, so we will save our reference recommendations for the
+next section. If a researcher is interested in level he or she can look
+to the references we point to in the next, \enquote{trend} section, all
+of those models also examine intercepts.
 
 \begin{table}
 
@@ -550,8 +548,7 @@ Insert Figure \ref{trend_var} about here
 
 \begin{quote}
 \begin{quote}
-\textbf{Inference 2:} There is variability in the trend of a variable
-across time; trend differs across units.
+\textbf{Inference 2:} Trend differs/does not differ across units.
 \end{quote}
 \end{quote}
 
@@ -701,10 +698,11 @@ and Ployhart (2010) and Ployhart and Vandenberg (2010), whereas Bliese
 and Ployhart (2002) describe how to go about running an analysis. Growth
 curves are a core topic in developmental psychology, so there are many
 great articles and textbooks to read from their field. See Grimm, Ram,
-and Estabrook (2016), Singer, Willett, and Willett (2003), and McArdle
-and Epstein (1987). For two straight-forward empirical examples in our
-own field see Dunford, Shipp, Boss, Angermeier, and Boss (2012) and
-Hülsheger (2016).
+and Estabrook (2016) and Singer, Willett, and Willett (2003) for two
+great textbooks on growth curve modeling, and McArdle and Epstein (1987)
+for an empirical discussion. For two straight-forward empirical examples
+in our own field see Dunford, Shipp, Boss, Angermeier, and Boss (2012)
+and Hülsheger (2016).
 
 \begin{table}
 
@@ -881,7 +879,7 @@ Insert Table \ref{relationships_table} about here
 
 The workhorse of relationship inferences comes from time-varying
 covariates analyses. A discussion of these models is found in Schonfeld
-and Rindskopf (2007) and Finch, Bolin, and Kelley (2016) Relatively
+and Rindskopf (2007) and Finch, Bolin, and Kelley (2016). Relatively
 straight-forward empirical examples are in Barnes, Schaubroeck, Huth,
 and Ghumman (2011) and Chi, Chang, and Huang (2015).
 
@@ -1103,15 +1101,17 @@ great papers on it (Maxwell \& Cole, 2007; Maxwell, Cole, \& Mitchell,
 \subsection{Models}\label{models-3}}
 
 There are a number of recent papers on dynamic modeling that cover the
-inferences discussed in this section. There are several papers on
-vector-autoregressive modeling and time-series analyses, which are
-appropriate for researchers interested in dynamic modeling of single
-units (e.g., DeShon, 2012; Jebb \& Tay, 2017; Jebb, Tay, Wang, \& Huang,
-2015). Wang et al. (2016) reviews many different types of dynamic models
-and, although his paper will not provide readers will specific code it
-is an excellent starting paper to observe the variety of models
-available. Finally, Xu and DeShon (almost) discuss a dynamic model first
-introduced by Bollen and Brand (2010). This dynamic panel model is
+inferences discussed in this section. Wang et al. (2016) reviews many
+different types of dynamic models and, although his paper will not
+provide readers will specific code it is an excellent starting paper to
+observe the variety of models available. When a researcher wants to
+explore dynamic inferences with respect to a single unit over time they
+will be examining time-series data, and there are a number of models for
+this application. DeShon (2012) discusses autoregressive distributed lag
+(ARDL) and vector autoregressive models, and Jebb and collegues (2017;
+2015) introduce ARDL and autoregressive distributed moving average
+(ARIMA) models. Finally, Xu and DeShon (almost) discuss a dynamic model
+first introduced by Bollen and Brand (2010). This dynamic panel model is
 appropriate for researchers who want to model dynamics across more than
 one unit. Moreover, it is better suited than HLM for typical situations
 in organizational psychology and management (i.e., short \(t\) and large
