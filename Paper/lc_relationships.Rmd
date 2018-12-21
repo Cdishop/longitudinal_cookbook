@@ -4,29 +4,9 @@ output: pdf_document
 
 # Relationships
 
-In the sections above we explored covariance at a single moment, general trends, and covariance between trends. Here, we explore relationship patterns between two variables over time. Does affect relate to performance across time? Over time, does unit climate covary with shared mental models? Do the fluctuations in voice match the fluctuations in commitment over time -- i.e., when voice is high is commitment also high? 
+One of the most common inferences in our literature is to explore between unit relationships over time. The second panel of Figure \ref{framework_figure} shows a relationships heuristic. A predictor is concurrently related to a response variable and the relationship is typically constrained to be equal across time or is averaged over time. Consider, for example, the between person relationship among affect and performance across time. This inference focuses on single-moment correlations aggregated across time or constrained to equivalence over time, where we assess the correlation among affect and performance at time one, again at time two, and at time three, and then ultimately take the average of those correlations.
 
-Our first inference focuses on a single unit -- one person, one team, or one organization over time. The trajectory of a single unit over time is called a time-series, and two are plotted simultaneously in figure \ref{relation_ts}. The solid line shows a time-series of affect over time, and the dashed line plots a time-series of performance. Notice that, across time, when affect is high respective to itself performance is also high (and vice versa). The colored squares represent values of each variable at different points in time. The green squares highlight low values of both variables, the blue high values, and the red middle values. 
-
-\begin{center}
-
-------------
-
-Insert Figure \ref{relation_ts} about here
-
-------------
-
-\end{center}
-
-Panel B shows how those respective values map onto a scatterplot of affect and performance -- which again will lead to the inference. The blue values indicate that high values of affect tend to co-occur with high values of performance (shown respectively by the blue squares in Panel A). The red values indicate that middle values of affect tend to co-occur with middle values of performance. The green values, finally, indicate that low values of affect tend to co-occur with low values of performance. Across time, affect and performance covary and the relationship is positive. 
-
->> **Inference 1:** There is a relationship between $x$ and $y$ across time. 
-
-What happens when we add more units? Doing so changes the question from "what is the relationship across time" to, "at each moment, what is the relationship across units?" Ultimately we move from a within-unit question to a between-unit focus, and we apply that between unit focus to each time point. 
-
-In the prior inference we asked if affect relates to performance across time -- on a single person/unit. Now imagine that we gather data on multiple people across time, so we have many affect and performance trajectories. One of the most popular inferences in our literature is to take those time series and slice them into individual time points, look at between-person correlations among affect and performance at a single moment, and then repeat that analysis for each time point. At time one, what is the correlation between affect and performance? At time two, what is the correlation between affect and performance? At time three, what is the correlation between affect and performance? Because we have multiple people we can explore correlations at a single moment. Researchers then typically report the average of these single moment correlations, or they constrain them to be equal across time. 
-
-Figure \ref{relation_tvc} shows the inference with data. Panel A plots affect and performance trajectories for each person. The red circles in Panel A highlight each individual's affect and performance values at time point six. Given that we have three people for time point six, we can calculate a correlation between affect and performance at that moment (granted, it is a small sample). The calculated correlation coefficient is then mapped onto panel B with another red circle. At time point six, the correlation between affect and performance across people is large and positive.
+Figure \ref{relation_tvc} shows the inuition of the inference with data. Panel A plots affect and performance trajectories for each person. The red circles in Panel A highlight each individual's affect and performance values at time point six. Given that we have three people for time point six, we can calculate a correlation between affect and performance at that moment (granted, it is a small sample). The calculated correlation coefficient is then mapped onto panel B with another red circle. At time point six, the correlation between affect and performance across people is large and positive.
 
 \begin{center}
 
@@ -38,23 +18,13 @@ Insert Figure \ref{relation_tvc} about here
 
 \end{center}
 
-Panel B then shows correlation coefficients for the rest of the time points. Often these correlations are either averaged over time or constrained to be equal. Again, this second inference is one of the most common inferences in our literature -- when a researcher uses a time-varying covariates, hierarchical linear, random-coefficient, or multi-level model on longitudinal data to explore relationships among one or more variables (and they are not evoking a growth curve) they are more than likely making this inference.
+Panel B then shows correlation coefficients for the rest of the time points. Often these correlations are either averaged over time or constrained to be equal. Again, this inference is one of the most common inferences in our literature -- when a researcher uses a time-varying covariates, hierarchical linear, random-coefficient, or multi-level model on longitudinal data to explore concurrent relationships among one or more variables (and they are not analyzing trend) they are making this inference.
 
->> **Inference 2:** There is a relationship between $x$ and $y$ across units over time.
+>> **Inference 1:** On average across units what is the relationship between $x$ and $y$? (Typically constrained to be equal over time or averaged over time).
 
-## Relationships Inference Table
+The first relationships inference concerned the average between-person association. As with the trend inferences, the next question is to examine variability in that estimated relationship across the sample.
 
-Table \ref{relationships_table} reports example inferences with respect to relationships. Inference one focuses on within-unit relationships across time, whereas inference two focuses on between-unit relationships at each moment. 
-
-\begin{center}
-
-------------
-
-Insert Table \ref{relationships_table} about here
-
-------------
-
-\end{center}
+>> **Inference 2:** There is variability in the between-unit relationship (constrained across time) among $x$ and $y$.
 
 ## Models
 
@@ -62,7 +32,7 @@ The workhorse of relationship inferences comes from time-varying covariates anal
 
 
 
-```{r, echo = F}
+```{r, echo = F, eval = F}
 library(xtable)
 library(knitr)
 library(kableExtra)
@@ -85,7 +55,7 @@ level_table %>%
 ```
 
 
-```{r, echo = F, fig.cap = 'Relating affect to performance on one unit across time.\\label{relation_ts}', fig.height = 8}
+```{r, eval = F, echo = F, fig.cap = 'Relating affect to performance on one unit across time.\\label{relation_ts}', fig.height = 8}
 library(tidyverse)
 set.seed(2)
 timer <- 20
@@ -158,7 +128,7 @@ grid.arrange(g1, g2, ncol = 1)
 
 
 
-```{r, echo = F, fig.cap = 'Relating affect to performance across units over time. The red circles demonstrate the between unit correlation for time point six. A typical time-varying covariates model constrains the correlation to be equivalent across time. Here, the relationship is unconstrained at each time point.\\label{relation_tvc}', fig.height = 8}
+```{r, echo = F, fig.cap = 'Relating affect to performance across units over time. The red circles demonstrate the between unit correlation at time point six. A typical time-varying covariates model constrains the correlation to be equivalent across time. Here, the relationship is unconstrained at each time point.\\label{relation_tvc}', fig.height = 8}
 library(ggplot2)
 set.seed(94)
 
