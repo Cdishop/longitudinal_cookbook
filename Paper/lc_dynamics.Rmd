@@ -10,7 +10,7 @@ Does performance relate to itself over time? Do current helping behaviors depend
 
 Panel A of Figure \ref{dynamics_figure} shows the concept with a box and arrow diagram. $y$ predicts itself across every moment -- it has self-similarity and its value now is constrained by where it was a moment ago. In our diagram we show that $y$ at time $t$ is related to $y$ at time $t + 1$. In other words, we posit that $y$ shows a lag-one relationship, where $y$ is related to its future value one time step away. Researchers are of course free to suggest any lag amount that they believe captures the actual relationship. 
 
->> **Inference 1:** On average across the sample there is self-similarity in $y$; $y$ relates to itself across time. 
+>> **Inference 1:** On average, there is self-similarity in $y$; $y$ relates to itself across time. 
 
 
 \begin{center}
@@ -23,15 +23,29 @@ Insert Figure \ref{dynamics_figure} about here
 
 \end{center}
 
-The next inference is about relating a predictor to our response variable while it still retains memory. Panel B of Figure \ref{dynamics_figure} shows this second dynamic inference. $y$ still shows self-similarity across time but it is now predicted by concurrent values of $x$. When current values of $x$ are associated with $y$ while accounting for memory -- i.e., partialling prior values of $y$ -- researchers typically call the association "change." How does affect relate to change in performance? Does depletion covary with change in OCBs? Accounting for prior $y$ means that we are assessing the relationship between concurrent $x$ and the difference between where $y$ was and where it is now. 
+As before, after exploring the expected average we turn to variability. How consistent are the self-similarity relationships? Are there between-unit differences in autoregression in, for example, employee voice? Do we expect a large variance in the autoregression of helping behaviors?
 
->> **Inference 2:** On average across the sample concurrent $x$ relates to the change in $y$ across time.
+>> **Inference 2:** There is variability in the expected autoregression of $y$. 
 
-It is also possible to assess lag relationships of change. Panel C of Figure \ref{dynamics_figure} shows concurrent relationships as we saw above but it also includes lags from the predictor to the outcome. $y$ retains memory, but it is predicted by both concurrent and prior values of $x$.
+The next inference is about relating a predictor to our response variable while it still retains memory. Panel B of Figure \ref{dynamics_figure} shows a box-and-arrow diagram: $y$ still has self-similarity across time but it is now predicted by concurrent values of $x$. This model is therefore said to partial prior $y$: it examines the concurrent relationship between $x$ and $y$ while statistically partialling values of $y$ at $t - 1$, or statistically accounting for $y$ at the prior moment.
 
->> **Inference 3:** On average across the sample there is a cross-lag relationship of change, where one variable relates to the change of another at a different point in time.
+Our literature has converged on calling this kind of relationship "change" because it emphasizes the difference between $y$ now and where it was in the past. The association asks how current $x$ relates to the difference between $y$ now and its immediately prior value. How does affect relate to change in performance? Does depletion covary with change in OCBs? Note that change can be construed from any prior time point (baseline, the prior time point, $t-3$); our literature commonly emphasizes lag-one change.
 
-Inferences one through three can also be paired with additional questions about variability across the sample. Perhaps we expect there to be variability in $y$'s self-similarity, or variability in the relationship between concurrent $x$ and change in $y$. 
+>> **Inference 3:** On average, concurrent $x$ relates to change in $y$.
+
+The analyst is also free to assess variability in the expected change relationship.
+
+>> **Inference 4:** There is variability in the expected change relationship between $x$ and $y$.
+
+Change relationships do not have to be concurrent. Panel C of Figure \ref{dynamics_figure} shows concurrent relationships as we saw above but it also includes lags from the predictor to the outcome. $y$ retains memory, but it is predicted by both concurrent and prior values of $x$. Typically we call these cross-lag relationships.
+
+Figure \ref{dynamics_figure} depicts lag-one change relationships. Does affect predict subsequent performance change? Do prior counterproductive work behaviors relate to current incivility change? Does metacognition predict subsequent exploratory behavior change? Change relationships are also not restricted to lag-one, these are simply the most common. 
+
+>> **Inference 5:** On average, there is a cross-lag relationship of change, where $x$ relates to the change in $y$ at a different point in time.
+
+Again, typically researchers explore variability after assessing the average estimate.
+
+>> **Inference 6:** There is variability in the expected cross-lag relationship of change.
 
 ## Extensions
 

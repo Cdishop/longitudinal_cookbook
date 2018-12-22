@@ -6,3 +6,5 @@ output: pdf_document
 
 There are many different patterns to explore with longitudinal data structures. What does performance look like over time? Does it fluctuate? Is the trajectory consistent across people? What is its initial or ending level? Does it show a growth pattern? Does that growth pattern covary with another trend? Does it move across time in relation to another variable? Does it show self-similarity or memory? Does it show lagged relationships with other variables? Is it part of a reciprocal system? In this paper we presented a framework that organizes these inferences into a fundamental set. We discussed what the inferences mean, how to pose questions and hypotheses about them, and linked the inferences to appropriate statistical models. As our field dives into within-person, dynamic, and process-oriented methods we hope this paper helps researchers understand the spectrum of inferences that they can explore with rich longitudinal data.
 
+within person stuff
+
