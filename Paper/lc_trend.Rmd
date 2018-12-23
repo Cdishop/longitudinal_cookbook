@@ -4,13 +4,13 @@ output: pdf_document
 
 # Trend
 
-The first inference category is trend. Made popular in the organizational literature by @bliese_growth_2002 and @chan1998conceptualization, trend inferences represent a class of thinking where researchers create an index of time and relate it to their response variable. The first panel of Figure \ref{framework_figure} shows a box-and-arrow heuristic where time is related to an outcome, $y$, and ultimately the analyst is interested in a variety of questions about trend and its correlates. Trend inferences have two components: trend itself and level. For clarity, we discuss them separately.
+Made popular in the organizational literature by @bliese_growth_2002 and @chan1998conceptualization, trend inferences represent a class of thinking where researchers create an index of time and relate it to their response variable. The first panel of Figure \ref{framework_figure} shows a box-and-arrow heuristic where time is related to an outcome, $y$, and ultimately the analyst is interested in a variety of questions about trend and its correlates. Trend inferences have two components: trend itself and level. For clarity, we discuss them separately.
 
 ### Component 1 - Trend
 
 Does affect, in general, go up or down across time, or is its trajectory relatively flat? Does trainee skill generally increase over the training session? These are questions about trend, and these first two are specifically about linear trend. It is also possible to explore how variables bend or curve across time. Do newcomer perceptions of climate increase and then plateau over time? Does the response time of a medical team decrease with each successive case but then remain stable once the team can no longer improve their coordination? These latter questions concern curvilinear trajectories. 
 
-Trend has to do with the global shape of the trajectory across time. If we put a variable on the $y$-axis and plot its values against time on the $x$-axis, do the values tend to go up or down over time? It can be thought of as the coarse-grained direction of a trajectory. A positive trend indicates that, on average, we expect the variable to increase over time and a negative trend indicates that we expect the variable to decrease over time. Our first trend inference, therefore, concerns the shape of the trajectory.
+Trend has to do with the systematic direction or global shape of a trajectory across time. If we put a variable on the $y$-axis and plot its values against time on the $x$-axis, do the values tend to go up or down over time? It can be thought of as the coarse-grained direction of a trajectory. A positive trend indicates that, on average, we expect the variable to increase over time and a negative trend indicates that we expect the variable to decrease over time. Our first trend inference, therefore, concerns the shape of the trajectory.
 
 >> **Inference 1:** On average, there is a positive/negative/curvilinear trend. 
 
