@@ -4,9 +4,11 @@ output: pdf_document
 
 # Relationships
 
-One of the most common inferences in our literature is to explore between-unit relationships over time. The second panel of Figure \ref{framework_figure} shows a relationships heuristic. A predictor is concurrently related to a response variable and the relationship is typically constrained to equality or is averaged over time. Essentially, the inference compiles single-moment between-unit correlations where we assess the correlation between, for example, OCBs and depletion at time one, again and times two and three, and then ultimately take the average of each correlation. 
+One of the most common inferences in our literature is to explore between-unit relationships over time. The second panel of Figure \ref{framework_figure} shows a relationships heuristic. A predictor is concurrently related to a response variable at each time point and the relationship is typically constrained to equality or is averaged over time. Essentially, the inference compiles single-moment between-unit correlations. For example, we assess the correlation between, say, OCBs and depletion at time one, again and times two and three, and then ultimately take the average of each individual correlation.
 
-Figure \ref{relation_tvc} shows the inuition of the inference with data. Panel A plots affect and performance trajectories for each person. The red circles in Panel A highlight each individual's affect and performance values at time point six. Given that we have three people at time point six, we can calculate a correlation between affect and performance at that moment (granted, it is a small sample). The calculated coefficient is then graphed in Panel B with another red circle. At time point six, the correlation between affect and performance across people is large and positive.
+Questions about static relationships over time take the following forms. What is the relationship between helping behaviors and incivility? Does burnout predict turnover intention? Is unethical behavior related to self-control?
+
+Figure \ref{relation_tvc} shows the inuition of the inference with data. Panel A plots affect and performance trajectories for three people. The red circles in Panel A highlight each individual's affect and performance values at time point six. Given that we have three people at time point six, we can calculate a correlation between affect and performance at that moment (granted, it is a small sample). The calculated coefficient is then graphed in Panel B with another red circle. At time point six, the correlation between affect and performance across people is large and positive.
 
 \begin{center}
 
@@ -22,13 +24,13 @@ Panel B also shows correlation coefficients for the rest of the time points. Oft
 
 >> **Inference 1:** On average, what is the relationship between $x$ and $y$ between-units? (Typically constrained to be equal over time or averaged over time).
 
-The first relationships inference emphasizes the expected average. As with the trend inferences, the next question is to examine variability in that estimated relationship across the sample. 
+The first relationships inference emphasizes the expected average. As with the trend inferences, the next question is to examine variability in that estimated relationship across the sample. How consistent across the sample is the relationship between distractions and fatigue? Is there variability in the relationship between emotions and volunteering behaviors?
 
 >> **Inference 2:** There is variability in the between-unit relationship among $x$ and $y$.
 
 ## Models
 
-Time-varying covariates analysis is the workhorse behind relationship inferences. A discussion of tvc models is in @schonfeld2007hierarchical and @finch2016multilevel. Relatively straight-forward empirical examples are in @barnes_lack_2011 and @chi_can_2015. 
+Time-varying covariates (tvc) analysis is the workhorse behind relationship inferences. A discussion of tvc models is in @schonfeld2007hierarchical and @finch2016multilevel. Relatively straight-forward empirical examples are in @barnes_lack_2011 and @chi_can_2015. 
 
 
 
