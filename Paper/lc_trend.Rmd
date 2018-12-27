@@ -14,7 +14,7 @@ Trend has to do with the systematic direction or global shape of a trajectory ac
 
 >> **Inference 1:** On average, there is a positive/negative/curvilinear trend. 
 
-Regardless of the specific technique or model, most inferences start with the average pattern (or relationship) and then move to variability, the same applies here. After learning about the average trend researchers then focus on trend variability. How much consistency is there in the trend pattern? Do all trainees develop greater skill across time? Is there variability in the trend of helping behaviors, or counterproductive work behaviors over time? 
+Regardless of the specific technique or model, most inferences start with the average pattern (or relationship) and then move to variability, the same applies here. After learning about the average trend across the sample researchers then focus on trend variability. How much consistency is there in the trend pattern? Do all trainees develop greater skill across time? Is there variability in the trend of helping behaviors, or counterproductive work behaviors over time? 
 
 >> **Inference 2:** Trend differs/does not differ across units.
 
