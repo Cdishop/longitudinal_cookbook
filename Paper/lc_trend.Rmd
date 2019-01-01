@@ -64,11 +64,11 @@ Researchers that explore trend also assess its predicted value at a given time $
 
 >> **Inference 5:** On average, what is the expected level of the $y$ trend at time $t$?
 
-After exploring the average trend level at a certain time we then move to its variability. Trend lines have a beginning (or end) point, how consistent do we expect that point to be? Is there variability in affect trend starting level? Are there large between-unit differences in the expected level of the performance trend at the last time point?
+After exploring the average trend level at a certain time we then move to its variability. Trend lines have a beginning (or end) point, how consistent do we expect that point to be across the sample? Is there variability in affect trend starting level? Are there large between-unit differences in the expected level of the performance trend at the last time point?
 
->> **Inference 6:** On average, there is variability in the expected level of the $y$ trend at time $t$.
+>> **Inference 6:** There is variability in the expected level of the $y$ trend at time $t$.
 
-It is also possible to assess between unit correlations among level and (a) trend in the same variable or (b) level or (c) trend in a different variable. First consider a relationship among level and trend in the same variable. On average, do people with low initial skill show positive skill trends whereas people with high initial skill show negative skill trends? Do organizations with high initial CWBs, on average, tend to have negative CWB trends?
+It is also possible to assess between unit correlations among level and (a) trend in the same variable or (b) level or (c) trend in a different variable. First, consider a relationship among level and trend in the same variable. On average, do people with low initial skill show positive skill trends whereas people with high initial skill show negative skill trends? Do organizations with high initial CWBs, on average, tend to have negative CWB trends?
 
 >> **Inference 7:** There is a between-unit correlation between trend and level in $y$. 
 
