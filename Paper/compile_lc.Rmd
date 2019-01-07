@@ -11,7 +11,7 @@ author:
     corresponding : yes    # Define only one corresponding author
     address       : "316 Physics Road, Psychology Building, Room 348, East Lansing, MI, 48823"
     email         : "dishopch@msu.edu"
-  - name          : "Mike Braun"
+  - name          : "Michael T. Braun"
     affiliation   : "2"    
   - name          : "Goran Kuljanin"
     affiliation   : "3"
