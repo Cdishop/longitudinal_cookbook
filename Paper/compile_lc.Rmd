@@ -31,10 +31,10 @@ author_note: |
   ....
 
 abstract: |
-  Our field is increasingly interested in how things that happen over time, in dynamics, growth, person-oriented frameworks, and fundamental patterns in longitudinal data structures. Longitudinal data lend themselves to many different inferences and there are a variety of statistical models available for anyone armed with repeated measures. Although the diversity of inferences and models provides a wide foundation for exploring a content area, it also makes it difficult for researchers to know all of the inferences available to them, which models to evoke given their question, and how to locate their specific study within the broader set of "over time" inferences. We developed a framework that exposes researchers to the variety of questions and inferences that they can explore with longitudinal data. In this paper, we unpack that framework and link every inference to a set of models so that researchers know where to turn given their specific interest.
+  Organizational scientists recognize the need to study psychological phenomena and processes as they unfold over time. To better understand psychological phenomena and processes, organizational researchers must work with longitudinal data and understand longitudinal inferences. Longitudinal inferences may focus on trajectories of constructs, relationships between constructs, or dynamics in constructs. Although the diversity of longitudinal inferences provides a wide foundation for garnering knowledge in any given area, it also makes it difficult for researchers to know the set of inferences they may explore with longitudinal data, which statistical models to use given their question, and how to locate their specific study within the broader set of longitudinal inferences. In this work, we develop a framework to describe the variety of research questions and inferences researchers may explore with longitudinal data, explicate longitudinal inferences with visualizations, and link inferences to statistical models so researchers know where to turn to given their particular interests.
   
-keywords          : "Inferences, dynamics, growth, longitudinal, process, over time, tvc, hlm, sem, models"
-wordcount         : "95"
+keywords          : "longitudinal inferences, growth trends, dynamics, relationships over time, processes"
+wordcount         : "151"
 
 bibliography      : ["references.bib"]
 nocite: '@deshon_multivariate_2012'

@@ -13,27 +13,21 @@
 
 \centering
 \includegraphics{figures/unnamed-chunk-10-1.pdf}
-\caption{\label{fig:unnamed-chunk-10}Between-unit correlation of trend in
-affect and performance.\label{trend_correlation}}
+\caption{\label{fig:unnamed-chunk-10}Between-unit correlation of trend in affect and performance.\label{trend_correlation}}
 \end{figure*}
 \begin{figure*}[hbt]
 \ifnextchar[{\eatarg}{}
 
 \centering
 \includegraphics{figures/unnamed-chunk-11-1.pdf}
-\caption{\label{fig:unnamed-chunk-11}Job type as a covariate of affect
-trend.\label{trend_covariate}}
+\caption{\label{fig:unnamed-chunk-11}Job type as a covariate of affect trend.\label{trend_covariate}}
 \end{figure*}
 \begin{figure*}[hbt]
 \ifnextchar[{\eatarg}{}
 
 \centering
 \includegraphics{figures/unnamed-chunk-14-1.pdf}
-\caption{\label{fig:unnamed-chunk-14}Relating affect to performance across
-units over time. The red circles demonstrate the between unit
-correlation at time point six. A typical time-varying covariates model
-constrains the correlation to be equivalent across time. Here, the
-relationship is unconstrained at each time point.\label{relation_tvc}}
+\caption{\label{fig:unnamed-chunk-14}Relating affect to performance across units over time. The red circles demonstrate the between unit correlation at time point six. A typical time-varying covariates model constrains the correlation to be equivalent across time. Here, the relationship is unconstrained at each time point.\label{relation_tvc}}
 \end{figure*}
 \begin{figure*}[hbt]
 \ifnextchar[{\eatarg}{}
