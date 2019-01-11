@@ -4,9 +4,20 @@ output: pdf_document
 
 # Discussion
 
-There are many different patterns to explore with multiple-unit, longitudinal data structures. What is the average trend in performance? Is it consistent across people or organizations? What is its initial or ending level? Does the performance trend covary with a predictor or trend in another variable? Does performance show self-similarity or memory? Or a lagged relationship with other variables? Is it part of a reciprocal system? We organized these questions and inferences into a fundamental set, discussed what they mean, and linked the inferences to appropriate statistical models. Ultimately, researchers should now be able to understand the spectrum of inferences that they can explore with rich, multiple-unit longitudinal data. 
+There are many different patterns to explore with longitudinal data structures. What is the average trend in performance? Is it consistent across people or organizations? What is its initial or ending level? Does the performance trend covary with a predictor or trend in another variable? Does performance show self-similarity or memory? Or a lagged relationship with other variables? Is it part of a reciprocal system? We organized these questions and inferences into a fundamental set, discussed what they mean, and linked the inferences to appropriate statistical models. Ultimately, researchers should now be able to understand the spectrum of between-unit inferences that they can explore with rich, longitudinal data. 
 
-## Within-Persons Modeling
+This paper mirrors the common questions and inferences currently explored by organizational scientists by emphasizing between-unit patterns. What is the between-unit relationship (averaged over time)? What is the between-unit expected trend? Are there between-unit differences in trend (also phrased as, "between-unit differences in within-unit change.") 
 
+Between-unit questions are common and useful, but an alternative lens to asking questions and making inferences with repeated measures is to focus on within-person patterns. Within-persons is... BEAL PERSON STREAM OF EXPERIENCE. This is a within-person statement. 
 
+Theorists hyping within-persons... Methods people hyping within-persons. 
 
+To actually explore within-person stuff we need greater T. Not necessarily long-term, but greater frequency. 
+
+Greater T gives you access to many benefits.
+
+First, Stationarity
+
+Second, Ergodicity
+
+Often, though, researchers have finite resources and must decide whether to emphasize between-unit or within-unit patterns. Your data collection should align with the inference that you are interested in. If you care about between-unit patterns (as shown in this paper), focus on N -- collect data on many participants. If you care about within-unit patterns, focus on T -- collect data across many time points. Large samples across many time points of course gives resarchers the ability to explore both frameworks, but our field will need to recognize that a small sample size (e.g., five or fewer participants) mesaured across many time points does allow a researcher to make within-person inferences. 
