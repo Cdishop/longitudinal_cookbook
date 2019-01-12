@@ -173,7 +173,7 @@ Fortunately, available technology and data repositories makes it easier
 to collect or obtain longitudinal data than previously possible.
 
 Researchers may explore a variety of inferences when they analyze
-longitudinal data. In particular, researchers may examine the shape of
+longitudinal data. For example, researchers may examine the shape of
 trajectories on psychological constructs (e.g., did job satisfaction
 generally increase or decrease over six months after a merger?), how two
 or more constructs relate to each other (e.g., did team communications
@@ -215,13 +215,13 @@ or (b) data structures. Longitudinal \emph{research} is different from
 cross-sectional research because longitudinal designs entail three or
 more repeated observations (Ployhart \& Vandenberg, 2010). We therefore
 emphasize differences on the number of observations when we distinguish
-longitudinal from other types of research. Longitudinal \emph{data} are
-repeated observations on several units (i.e., \(N\) or \(i\)
-\textgreater{} 1), whereas time-series data are observations of one unit
-over time -- a distinction that focuses on the amount of people in the
-study (given repeated measures). Most organizational studies collect
-data on more than one unit, therefore our discussion below focuses on
-longitudinal research with longitudinal data, or designs with \(N\)
+longitudinal from other types of research. Longitudinal or panel
+\emph{data} are repeated observations on several units (i.e., \(N\) or
+\(i\) \textgreater{} 1), whereas time-series data are observations of
+one unit over time -- a distinction that focuses on the amount of people
+in the study (given repeated measures). Most organizational studies
+collect data on more than one unit, therefore our discussion below
+focuses on longitudinal research with panel data, or designs with \(N\)
 \textgreater{} 1, \(t\) \textgreater{}= 3, and the same construct(s)
 measured on each \(i\) at each \(t\). That is, we focus on designs with
 repeated measures across many people (units) where every variable is
@@ -277,13 +277,12 @@ noisy.
 Finally, despite pointing researchers to statistical models, our paper
 puts a majority of its emphasis on inferences, therefore researchers
 need to be sure that they appreciate all of the nuance before applying a
-recommended statistical model. Numerous statistical issues arise when
-modeling longitudinal data, such as stationarity (see Braun, Kuljanin,
-\& DeShon, 2013; Kuljanin, Braun, \& DeShon, 2011), and the statistical
-models differ in how they handle these issues, the assumptions they
-make, and the data format they require. We do not speak directly to
-those issues here, but we refer readers to a number of informative
-references for each statistical model.
+recommended statistical model. Numerous issues arise when modeling
+longitudinal data and the statistical models differ in how they handle
+these issues, the assumptions they make, and the data format they
+require. We do not speak directly to those issues here, but we refer
+readers to a number of informative references for each statistical
+model.
 
 \begin{figure}
 
@@ -865,40 +864,113 @@ excellent starting paper to observe the variety of dynamic models.
 \section{Discussion}\label{discussion}}
 
 There are many different patterns to explore with longitudinal data
-structures. What is the average trend in performance? Is it consistent
-across people or organizations? What is its initial or ending level?
-Does the performance trend covary with a predictor or trend in another
-variable? Does performance show self-similarity or memory? Or a lagged
-relationship with other variables? Is it part of a reciprocal system? We
-organized these questions and inferences into a fundamental set,
-discussed what they mean, and linked the inferences to appropriate
-statistical models. Ultimately, researchers should now be able to
-understand the spectrum of between-unit inferences that they can explore
-with rich, longitudinal data.
-
-This paper mirrors the common questions and inferences currently
-explored by organizational scientists by emphasizing between-unit
-patterns. What is the between-unit relationship (averaged over time)?
+structures. This paper, by emphasizing between-unit patterns, mirrors
+the common questions and inferences currently explored by organizational
+scientists. What is the between-unit relationship (averaged over time)?
 What is the between-unit expected trend? Are there between-unit
 differences in trend (also phrased as, \enquote{between-unit differences
-in within-unit change.})
+in within-unit change})? We organized these questions and inferences
+into a fundamental set, discussed what they mean, and linked the
+inferences to appropriate statistical models. Ultimately, researchers
+should now be able to understand the spectrum of between-unit inferences
+that they can explore with rich, longitudinal data.
 
 Between-unit questions are common and useful, but an alternative lens to
 asking questions and making inferences with repeated measures is to
-focus on within-person patterns. Within-persons is\ldots{} BEAL PERSON
-STREAM OF EXPERIENCE. This is a within-person statement.
+focus on within-unit patterns. Within-unit inferences emphasize
+fluctuations over time rather than across units. For example, Beal
+(2015) notes that many of the psychological phenomenon in which we are
+interested are \enquote{sequences of events and event reactions that
+happen within each person's stream of experience} (p.~5). This is a
+within-unit statement: it assesses how a construct moves through time
+within a single individual.
 
-Theorists hyping within-persons\ldots{} Methods people hyping
-within-persons.
+Organizational scientists have become increasingly interested in
+within-unit perspectives over the past decade. Dalal, Bhave, and Fiset
+(2014) review theory and research on within-person job performance,
+Grandey and Gabriel (2015) review emotional labor and differentiate a
+variety of within-person perspectives, Park, Spitzmuller, and DeShon
+(2013) present a team motivation model describing within-individual
+resource allocation and within-team feedback, Vancouver, Weinhardt, and
+Schmidt (2010) present a within-person model of multiple-goal pursuit,
+Barnes (2012) describes recent within-person approaches to sleep and
+organizational behavior, and Methot, Lepak, Shipp, and Boswell (2017)
+present a within-person perspective of organizational citizenship
+behaviors.
 
-To actually explore within-person stuff we need greater T. Not
-necessarily long-term, but greater frequency.
+Taking a within-persons perspective requires greater \(T\) --
+researchers must collect observations over more time points. To collect
+more observations (over time), researchers can extend their sampling
+periods (e.g., collect once-a-week observations for 50 weeks rather than
+10) or increase the frequency of their observations (e.g., sample three,
+rather than two, times per day). Adding additional observations of
+course increases the power of the analysis, but it also allows
+researchers to assess important statistical properties that must receive
+attention -- although they are currently absent in our literature --
+during within-unit modeling: stationarity and ergodicity.
 
-Greater T gives you access to many benefits.
+Processes give rise to observed data, and those observed data are
+characterized by distributions and their moments. Stationarity is about
+whether or not the statistical characteristics of a process remain
+stable over time. When they do, the analyst has permission to use a
+variety of regression-based techniques like those described in this
+paper without additional concerns of faulty inferences. When
+trajectories are non-stationary, however, then the inferences drawn from
+regression-based techniques are often misguided (Granger \& Newbold,
+1974). Growth-models assume non-stationarity, whereas the other
+statistical models discussed in this paper assume stationarity. Full
+explanations of stationarity are in Kuljanin, Braun, and DeShon (2011),
+Braun, Kuljanin, and DeShon (2013), Jebb, Tay, Wang, and Huang (2015);
+and Metcalfe and Cowpertwait (2009), we draw attention to it here to
+emphasize that studies with greater \(T\) have the ability to assess
+stationarity and understand which statistical models are appropriate.
+Moreover, finding evidence of (non)stationary is useful theoretical
+knowledge and needs to take the foreground of studies that collect
+longitudinal data.
 
-First, Stationarity
+Ergodicity is another statistical characteristic of a process, and it is
+important because it determines whether or not researchers can
+generalize inferences about inter-individual variability from tests of
+between-unit differences to inferences of within-unit variability. To
+see the dilemma, consider the following. First, the standard statistical
+models in psychology and management, such as growth curves, multi-level
+models, mixture modeling, ANOVA, and factor analysis all focus on
+between-unit variation (Molenaar, 2004). Second, researchers using these
+techniques run their computations on a sample drawn from a population
+and then generalize their results back to the population, so (a) the
+results live at the level of the population and (b) researchers assume
+that the population (or sub population in mixture modeling) is
+homogenous (Molenaar \& Campbell, 2009). These notions are fine on their
+own, but researchers tend to make an additional assumption that is
+unlikely to hold: because resuls live at the level of the population and
+because researchers assume that the population is homogenous they often
+also assume that the results apply to the individuals making up the
+population (Molenaar, 2008b). In other words, they assume that the
+results from a test of between-unit variation hold at the level of
+within-individual variation.
 
-Second, Ergodicity
+When processes are ergodic, this implicit assumption holds: the results
+of an analysis of between-unit differences generalize to within-unit
+patterns and vice versa (Molenaar, 2007, 2008a). Researchers can
+generalize with ergodic processes, they can use a multi-level model to
+assess between-unit patterns and then make statements about
+within-person relationships. But this generalization is rarely
+appropriate. A gaussian process is non-ergodic if it is non-stationarity
+(e.g., it has time-varying trends) and/or heterogeneous across subjects
+(subject-specific dynamics). Stated simply, a gaussian process is
+non-ergodic if it has trend and/or Susie's trajectory is different from
+Bob's. If either is violated, which is often the case, then standard
+analyses of between-subject differences (growth models, multi-level or
+random-coefficient models, mixture models, ANOVA, factor analysis)
+cannot be used to make within-person statements. In general,
+within-person inferences need to come from unpooled, subject-specific
+time-series data structures (Molenaar, 2009).
+
+Collecting large samples across many time points allows researchers to
+assess stationarity and ergodicity. We urge researchers to start
+focusing on both so that our field can begin to understand the
+similarities and differences among between-unit and within-unit
+relationships.
 
 Often, though, researchers have finite resources and must decide whether
 to emphasize between-unit or within-unit patterns. Your data collection
@@ -908,9 +980,11 @@ collect data on many participants. If you care about within-unit
 patterns, focus on T -- collect data across many time points. Large
 samples across many time points of course gives resarchers the ability
 to explore both frameworks, but our field will need to recognize that a
-small sample size (e.g., five or fewer participants) mesaured across
-many time points does allow a researcher to make within-person
-inferences.
+small samples (e.g., five or fewer participants) mesaured across many
+time points does allow a researcher to make within-person inferences.
+Given the resource constraints that come with conducting research, we
+cannot shy away from few participants measured across many time points
+as viable techniques to assessing within-person relationships.
 
 \newpage
 
@@ -921,6 +995,11 @@ inferences.
 \setlength{\leftskip}{0.5in}
 
 \hypertarget{refs}{}
+\leavevmode\hypertarget{ref-barnes2012working}{}%
+Barnes, C. M. (2012). Working in our sleep: Sleep and self-regulation in
+organizations. \emph{Organizational Psychology Review}, \emph{2}(3),
+234--257.
+
 \leavevmode\hypertarget{ref-barnes_lack_2011}{}%
 Barnes, C. M., Schaubroeck, J., Huth, M., \& Ghumman, S. (2011). Lack of
 sleep and unethical conduct. \emph{Organizational Behavior and Human
@@ -936,11 +1015,11 @@ Bliese, P. D., \& Ployhart, R. E. (2002). Growth modeling using random
 coefficient models: Model building, testing, and illustrations.
 \emph{Organizational Research Methods}, \emph{5}(4), 362--387.
 
-\leavevmode\hypertarget{ref-braun2013spurious}{}%
-Braun, M. T., Kuljanin, G., \& DeShon, R. P. (2013). Spurious
-relationships in growth curve modeling: The effects of stochastic trends
-on regression-based models. In \emph{Modern research methods for the
-study of behavior in organizations} (pp. 187--224). Routledge.
+\leavevmode\hypertarget{ref-braun_spurious_2013}{}%
+Braun, M. T., Kuljanin, G., \& DeShon, R. P. (2013). Spurious Results in
+the Analysis of Longitudinal Data in Organizational Research.
+\emph{Organizational Research Methods}, \emph{16}(2), 302--330.
+doi:\href{https://doi.org/10.1177/1094428112469668}{10.1177/1094428112469668}
 
 \leavevmode\hypertarget{ref-chan1998conceptualization}{}%
 Chan, D. (1998). The conceptualization and analysis of change over time:
@@ -955,6 +1034,11 @@ and daily positive mood buffer the harmful effects of daily negative
 mood on task performance and service sabotage? A self-control
 perspective. \emph{Organizational Behavior and Human Decision
 Processes}, \emph{131}, 1--15.
+
+\leavevmode\hypertarget{ref-dalal2014within}{}%
+Dalal, R. S., Bhave, D. P., \& Fiset, J. (2014). Within-person
+variability in job performance: A theoretical review and research
+agenda. \emph{Journal of Management}, \emph{40}(5), 1396--1436.
 
 \leavevmode\hypertarget{ref-deshon_multivariate_2012}{}%
 DeShon, R. P. (2012). Multivariate dynamics in organizational science.
@@ -971,6 +1055,14 @@ doi:\href{https://doi.org/http://dx.doi.org.proxy2.cl.msu.edu/10.1037/a0027060}{
 \leavevmode\hypertarget{ref-finch2016multilevel}{}%
 Finch, W. H., Bolin, J. E., \& Kelley, K. (2016). \emph{Multilevel
 modeling using r}. Crc Press.
+
+\leavevmode\hypertarget{ref-grandey2015emotional}{}%
+Grandey, A. A., \& Gabriel, A. S. (2015). Emotional labor at a
+crossroads: Where do we go from here?
+
+\leavevmode\hypertarget{ref-granger_spurious_1974}{}%
+Granger, C. W., \& Newbold, P. (1974). Spurious regressions in
+econometrics. \emph{Journal of Econometrics}, \emph{2}(2), 111--120.
 
 \leavevmode\hypertarget{ref-grimm_growth_2016}{}%
 Grimm, K. J., Ram, N., \& Estabrook, R. (2016). \emph{Growth modeling:
@@ -1001,6 +1093,11 @@ Ilgen, D. R., \& Hulin, C. L. (2000). \emph{Computational modeling of
 behavior in organizations: The third scientific discipline.} American
 Psychological Association.
 
+\leavevmode\hypertarget{ref-jebb2015time}{}%
+Jebb, A. T., Tay, L., Wang, W., \& Huang, Q. (2015). Time series
+analysis for psychological research: Examining and forecasting change.
+\emph{Frontiers in Psychology}, \emph{6}, 727.
+
 \leavevmode\hypertarget{ref-jones_baby_2016}{}%
 Jones, K. P., King, E. B., Gilrane, V. L., McCausland, T. C., Cortina,
 J. M., \& Grimm, K. J. (2016). The baby bump: Managing a dynamic stigma
@@ -1025,10 +1122,11 @@ G. (2016). Capturing the multilevel dynamics of emergence: Computational
 modeling, simulation, and virtual experimentation. \emph{Organizational
 Psychology Review}, \emph{6}(1), 3--33.
 
-\leavevmode\hypertarget{ref-kuljanin2011cautionary}{}%
+\leavevmode\hypertarget{ref-kuljanin_cautionary_2011}{}%
 Kuljanin, G., Braun, M. T., \& DeShon, R. P. (2011). A cautionary note
 on modeling growth trends in longitudinal data. \emph{Psychological
 Methods}, \emph{16}(3), 249--264.
+doi:\href{https://doi.org/http://dx.doi.org.proxy2.cl.msu.edu/10.1037/a0023348}{http://dx.doi.org.proxy2.cl.msu.edu/10.1037/a0023348}
 
 \leavevmode\hypertarget{ref-lanaj_when_2016}{}%
 Lanaj, K., Johnson, R. E., \& Wang, M. (2016). When lending a hand
@@ -1054,15 +1152,64 @@ Developmental Structural Equation Models. \emph{Child Development},
 \emph{58}(1), 110--133.
 doi:\href{https://doi.org/10.2307/1130295}{10.2307/1130295}
 
+\leavevmode\hypertarget{ref-metcalfe2009introductory}{}%
+Metcalfe, A. V., \& Cowpertwait, P. S. (2009). \emph{Introductory time
+series with r}. New York, NY: Chapman; Hall.
+
+\leavevmode\hypertarget{ref-methot2017good}{}%
+Methot, J. R., Lepak, D., Shipp, A. J., \& Boswell, W. R. (2017). Good
+citizen interrupted: Calibrating a temporal theory of citizenship
+behavior. \emph{Academy of Management Review}, \emph{42}(1), 10--31.
+
 \leavevmode\hypertarget{ref-mitchell_building_2001}{}%
 Mitchell, T. R., \& James, L. R. (2001). Building better theory: Time
 and the specification of when things happen. \emph{Academy of Management
 Review}, \emph{26}(4), 530--547.
 
+\leavevmode\hypertarget{ref-molenaar_manifesto_2004}{}%
+Molenaar, P. C. (2004). A manifesto on psychology as idiographic
+science: Bringing the person back into scientific psychology, this time
+forever. \emph{Measurement}, \emph{2}(4), 201--218.
+
+\leavevmode\hypertarget{ref-molenaar2007psychological}{}%
+Molenaar, P. C. (2007). Psychological methodology will change profoundly
+due to the necessity to focus on intra-individual variation.
+\emph{Integrative Psychological and Behavioral Science}, \emph{41}(1),
+35--40.
+
+\leavevmode\hypertarget{ref-molenaar2008consequences}{}%
+Molenaar, P. C. (2008a). Consequences of the ergodic theorems for
+classical test theory, factor analysis, and the analysis of
+developmental processes. \emph{Handbook of Cognitive Aging}, 90--104.
+
+\leavevmode\hypertarget{ref-molenaar2008implications}{}%
+Molenaar, P. C. (2008b). On the implications of the classical ergodic
+theorems: Analysis of developmental processes has to focus on
+intra-individual variation. \emph{Developmental Psychobiology: The
+Journal of the International Society for Developmental Psychobiology},
+\emph{50}(1), 60--69.
+
+\leavevmode\hypertarget{ref-molenaar2009generalization}{}%
+Molenaar, P. C. (2009). How generalization works through the single
+case: A simple idiographic process analysis of an individual
+psychotherapy. In S. Salvatore, J. Valsiner, S. Strout, \& J. Clegg
+(Eds.), \emph{YIS: Yearbook of idiographic science} (Vol. 1, pp.
+23--38). Rome, Italy: Firera.
+
+\leavevmode\hypertarget{ref-molenaar2009new}{}%
+Molenaar, P. C., \& Campbell, C. G. (2009). The new person-specific
+paradigm in psychology. \emph{Current Directions in Psychological
+Science}, \emph{18}(2), 112--117.
+
 \leavevmode\hypertarget{ref-monge_theoretical_1990}{}%
 Monge, P. R. (1990). Theoretical and analytical issues in studying
 organizational processes. \emph{Organization Science}, \emph{1}(4),
 406--430.
+
+\leavevmode\hypertarget{ref-park2013advancing}{}%
+Park, G., Spitzmuller, M., \& DeShon, R. P. (2013). Advancing our
+understanding of team motivation: Integrating conceptual approaches and
+content areas. \emph{Journal of Management}, \emph{39}(5), 1339--1379.
 
 \leavevmode\hypertarget{ref-pitariu_explaining_2010}{}%
 Pitariu, A. H., \& Ployhart, R. E. (2010). Explaining change: Theorizing
@@ -1107,6 +1254,12 @@ Theories Into Formal Theories: The Case of the Dynamic Computational
 Model of the Integrated Model of Work Motivation. \emph{Organizational
 Research Methods}, 109442811878030.
 doi:\href{https://doi.org/10.1177/1094428118780308}{10.1177/1094428118780308}
+
+\leavevmode\hypertarget{ref-vancouver2010formal}{}%
+Vancouver, J. B., Weinhardt, J. M., \& Schmidt, A. M. (2010). A formal,
+computational theory of multiple-goal pursuit: Integrating goal-choice
+and goal-striving processes. \emph{Journal of Applied Psychology},
+\emph{95}(6), 985.
 
 \leavevmode\hypertarget{ref-Wang2016}{}%
 Wang, M., Zhou, L., \& Zhang, Z. (2016). Dynamic modeling. \emph{Annual
