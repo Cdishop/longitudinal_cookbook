@@ -10,7 +10,7 @@ Made popular in the organizational literature by @bliese_growth_2002 and @chan19
 
 Does affect, in general, go up or down across time, or is its trajectory relatively flat? Does trainee skill generally increase over the training session? These are questions about trend, and these first two are specifically about linear trend. It is also possible to explore how variables bend or curve across time. Do newcomer perceptions of climate increase and then plateau over time? Does the response time of a medical team decrease with each successive case but then remain stable once the team can no longer improve their coordination? These latter questions concern curvilinear trajectories. 
 
-Trend has to do with the systematic direction or global shape of a trajectory across time. If we put a variable on the $y$-axis and plot its values against time on the $x$-axis, do the values tend to go up or down over time? It can be thought of as the coarse-grained direction of a trajectory. A positive trend indicates that, on average, we expect the variable to increase over time and a negative trend indicates that we expect the variable to decrease over time. Our first trend research question, therefore, concerns the shape of the trajectory.
+Trend has to do with the systematic direction or global shape of a trajectory across time. If we put a variable on the $y$-axis and plot its values against time on the $x$-axis, do the values tend to go up or down over time? It can be thought of as the coarse-grained direction of a trajectory. A positive trend indicates that, on average across units, we expect the variable to increase over time and a negative trend indicates that we expect the variable to decrease over time. Our first trend research question, therefore, concerns the shape of the trajectory.
 
 >> **Research Question 1:** On average across units, is there a positive/negative/curvilinear trend?
 
@@ -18,7 +18,7 @@ Many research questions and inferences begin with the average pattern (or relati
 
 >> **Research Question 2:** Does trend differ across units?
 
-Research questions one and two concern one variable, but they can also be iterated across all observed variables. For example, we might discover that -- on average -- affect and performance trends both decrease, but there is greater variability across units in the affect trend. Or we might learn that affect has a negative trend while performance has a positive trend.
+Research questions one and two concern one variable, but they can also be iterated across all observed variables. For example, we might discover that -- on average across unit -- affect and performance trends both decrease, but there is greater variability across units in the affect trend. Or we might learn that affect has a negative trend while performance has a positive trend.
 
 Correlating these trends between-units is the next inference. Correlating indicates co-occuring patterns, where a large, positive, between-unit correlation between affect and performance trends would indicate that people with a positive affect trend (usually) have a positive performance trend and people with a negative affect trend (usually) have a negative performance trend. 
 
@@ -56,23 +56,23 @@ Insert Figure \ref{trend_covariate} about here
 
 >> **Research Question 4:** What is the betweeen-unit correlation among trend and a covariate?
 
-Note the difference between research questions three and four. Both are between unit, but three is about co-occuring trend patterns whereas inference four is about the relationship between trend and a covariate/predictor. With respect to our examples, inference three says, on average, if an individual has a positive affect trend then we expect her to have a negative performance trend. Inference four says, on average, if an individual is in research and development then we expect him to have a negative affect trend. 
+Note the difference between research questions three and four. Both are between unit, but three is about co-occuring trend patterns whereas four is about the relationship between trend and a covariate/predictor. With respect to our examples, inference three (i.e., the answer to research question three) says, on average, if an individual has a positive affect trend then we expect her to have a negative performance trend. Inference four says, on average, if an individual is in research and development then we expect him to have a negative affect trend. 
 
 ### Component 2 - Level
 
-Researchers that explore trend also assess its predicted value at a given time $t$, and this second component is called level. Level is almost always evaluated at the first or last observed time point -- e.g., What is the predicted level of the trainee skill trend at the beginning of a training session? On average, what is the expected level of the unit climate trend at the end of a two-week socialization process? -- although researchers are free to asssess level at any $t$. 
+Researchers that explore trend also assess its predicted value at a given time $t$, and this second component is called level. Level is almost always evaluated at the first or last observed time point -- e.g., What is the predicted level of the trainee skill trend, on average across units, at the beginning of a training session? On average across units, what is the expected level of the unit climate trend at the end of a two-week socialization process? -- although researchers are free to asssess level at any $t$. 
 
 >> **Research Question 5:** On average across units, what is the expected level of the $y$ trend at time $t$?
 
-After exploring the average trend level at a certain time we then move to its variability. Trend lines have a beginning (or end) point, how consistent do we expect that point to be across the sample? Is there variability in affect trend starting level? Are there large between-unit differences in the expected level of the performance trend at the last time point?
+After exploring the average (across units) trend level at a certain time we then move to its variability. Trend lines have a beginning (or end) point, how consistent do we expect that point to be across the sample? Is there variability in affect trend starting level? Are there large between-unit differences in the expected level of the performance trend at the last time point?
 
 >> **Research Question 6:** Is there variability across units in the expected level of the $y$ trend at time $t$?
 
-It is also possible to assess between unit correlations among level and (a) trend in the same variable or (b) level or (c) trend in a different variable. First, consider a relationship among level and trend in the same variable. On average, do people with low initial skill show positive skill trends whereas people with high initial skill show negative skill trends? Do organizations with high initial CWBs, on average, tend to have negative CWB trends?
+It is also possible to assess between-unit correlations among level and (a) trend in the same variable or (b) level or (c) trend in a different variable. First, consider a relationship among level and trend in the same variable. On average across units, do people with low initial skill show positive skill trends whereas people with high initial skill show negative skill trends? Do organizations with high initial CWBs, on average across units, tend to have negative CWB trends?
 
 >> **Research Question 7:** What is the between-unit correlation between trend and level in $y$? 
 
-Second, consider a between-unit correlation between level in one variable and level in another. On average, do people with a low initial performance also have low initial depletion (based on the initial levels predicted by the performance and depletion trends)? Are organizations with high initial turnover also expected, on average, to have high burnout (based on the initial levels predicted by the turnover and burnout trends)?
+Second, consider a between-unit correlation between level in one variable and level in another. On average across units, do people with a low initial performance also have low initial depletion (based on the initial levels predicted by the performance and depletion trends)? Are organizations with high initial turnover also expected, on average across units, to have high burnout (based on the initial levels predicted by the turnover and burnout trends)?
 
 >> **Research Question 8:** What is the between-unit correlation between level of the $x$ trend and level of the $y$ trend at $t$?
 
