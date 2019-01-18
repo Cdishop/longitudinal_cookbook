@@ -1,0 +1,19 @@
+
+1) Discussion reframing
+
+
+Beef up within person stuff. These are a different set of questions that you can ask. People are already doing it. Here are some examples and inferences. There could be another paper on the set of within-person inferences.
+
+Any time you are thinking about longitudinal data — within or between-unit inferences — there are additional complexities that you need to consider. There are things that your models will not reveal to you if you are not looking for them. 
+
+Stationarity and ergodicity are important for all longitudinal inferences.
+
+2) Introduction
+
+Mention in the introduction that we are focusing on between-unit inferences. There is a difference in between-unit vs. within-unit, and we come back to that distinction in the discussion.
+
+Perhaps throw in stationarity and ergodicity in the introduction. We focus on models that assume homogeneous dynamics. 
+
+Mention that some of the inferences vary in their exposure. We aren’t only focusing on research questions that people use. We used common research questions as a foundation, but also incorporated research questions that are not all that common.
+
+
