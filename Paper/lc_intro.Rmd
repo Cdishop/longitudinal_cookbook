@@ -22,7 +22,7 @@ Although we use box-and-arrow diagrams throughout to represent the broad inferen
 
 Finally, despite pointing researchers to statistical models, our paper puts a majority of its emphasis on inferences, therefore researchers need to be sure that they appreciate all of the nuance before applying a recommended statistical model. Numerous issues arise when modeling longitudinal data and the statistical models differ in how they handle these issues, the assumptions they make, and the data format they require. We do not speak directly to those issues here, but we refer readers to a number of informative references for each statistical model. 
 
-[^1]: Note that statistical models differ from the term, "model heuristic" that we use in the inference sections. A model heuristic is a visual representation only, whereas a statistical model is characterized by a formula explaining the data, assumptions on the errors, and an estimation technique. In this paper, we never use the term, "model" without pairing it either with "statistical" or "heuristic" -- the two differ substantially.
+[^1]: Note that statistical models differ from the term, "model heuristic." A model heuristic is a visual representation only, whereas a statistical model is characterized by a formula explaining the data and assumptions on the errors, and the parameters of statistical models are estimated using an estimation technique. In this paper, we never use the term, "model" without pairing it either with "statistical" or "heuristic" -- the two differ substantially.
 
 
 ```{r, echo = F, fig.cap = 'Common inference categories with models applied to longitudinal data.\\label{framework_figure}', fig.height = 10, fig.align = 'center'}
