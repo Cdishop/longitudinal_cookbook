@@ -82,9 +82,11 @@ Insert Table \ref{level_table} about here
 
 \end{center}
 
-## Models
+## Statistical Models for Level
 
-Level is called the intercept in the statistical modeling literature. That is, when a researcher estimates a model to explore the starting level of a variable, like performance, she is estimating the intercept at the initial time point. The analysis will return a mean estimate which tells you about level, and it will also return a variance estimate that indicates variability across units. Typically you will hear researchers refer to models that only explore level as intercept-only models. Intercept-only models are almost always paired with more complex growth models, so we will save our reference recommendations for the next section. If a researcher is interested in level he or she can look to the references we point to in the next, "trend" section, all of those models also examine intercepts. 
+Once the variable Time is included in the model (e.g., the ULGM), the intercept value represents the level of the DV at the time point coded 0 (typically the first or last time point). The intercept value is almost always modeled as random whereby the analysis will return a mean estimate which tells you the average level across units (answering RQ5), and it will also return a variance estimate that indicates variability in level between units. As such, the variance component on the intercept term determines whether there is significant between-unit variability in the level of the DV when time equals zero, answering RQ6. As previously referenced, it is common to estimate covariance among random predictors to determine any systematic within-unit relationships between IV-DV relationships. Therefore, the covariance between the intercept and slope (i.e., Time) random effects is used to determine whether units with higher (lower) initial values exhibit stronger (weaker) growth, answering RQ7. 
+
+[I am not actually sure how to model RQ8 and RQ9 within the random GCM. Obviuosly, the covariance among random effects of the intercept and X tells whether initial values co-vary with stronger (weaker) IV-DV relationships between X and Y. However, that doesnt appear to be what we are talking about.] [We also may want to integrate the trend and level sections with regards to statistical models - things to discuss.]
 
 ```{r, echo = F}
 library(xtable)
