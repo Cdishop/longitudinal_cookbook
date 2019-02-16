@@ -187,20 +187,21 @@ differences, enhance theoretical insight, guide data collection, and
 facilitate sound analytical work.
 
 We developed a framework to capture these inferences, a way to organize
-the fundamental patterns researchers explore with longitudinal data
-despite focusing on different content areas or using different
-statistical models. Researchers often focus on one famililiar inference
-despite having the data to explore many more fundamental patterns. We
-bring attention to the span of questions available so that researchers
-can fully appreciate and take advantage of their data. Moreover, there
-are many complex statistical models lingering in our literature and it
-is not always clear for which questions they are appropriate. We provide
-readers with potential models for each inference so that they can be
-sure that the model they evoke is appropriate for the research question
-that they are interested in. In summary, this paper exposes researchers
-to the span of inferences they may investigate when they collect
-longitudinal data, links those inferences to statistical models, and
-explains differences between various longitudinal inferences.
+the fundamental between-unit patterns researchers explore with
+longitudinal data despite focusing on different content areas or using
+different statistical models. Researchers often focus on one famililiar
+inference despite having the data to explore many more fundamental
+patterns. We bring attention to the span of questions available so that
+researchers can fully appreciate and take advantage of their data.
+Moreover, there are many complex statistical models lingering in our
+literature and it is not always clear for which questions they are
+appropriate. We provide readers with potential models for each inference
+so that they can be sure that the model they evoke is appropriate for
+the research question that they are interested in. In summary, this
+paper exposes researchers to the span of between-unit inferences they
+may investigate when they collect longitudinal data, links those
+inferences to statistical models, and explains differences between
+various longitudinal inferences.
 
 \hypertarget{longitudinal-research-in-psychology}{%
 \section{Longitudinal Research in
@@ -271,7 +272,7 @@ mock data -- some of the inferences in the trend and relationships
 sections are difficult to grasp without seeing them in data form. Keep
 in mind, however, that data are always messy. It is rare to find data in
 which the inferences present themselves simply by plotting -- althought
-it is certainly possilbe. We use these \enquote{data plots} to clearly
+it is certainly possible. We use these \enquote{data plots} to clearly
 convey what the inferences mean, but be aware that field data are often
 noisy.
 
@@ -545,19 +546,19 @@ inferences as we show here.
 \subsection{Statistical Models for
 Trend}\label{statistical-models-for-trend}}
 
-Currently, the dominant method to analyze longitudinal data in the
-organizational sciences is through the use of growth curve modeling
-(GCM; Braun, Kuljanin, \& DeShon, 2013, and @kuljanin2011cautionary).
-Broad theoretical discussions of growth are in Pitariu and Ployhart
-(2010) and Ployhart and Vandenberg (2010) (keep in mind that they call
-growth \enquote{change}), whereas Bliese and Ployhart (2002) describe
-actual growth-curve analysis. Growth curves are a core topic in
-developmental psychology, so there are many great articles and textbooks
-to read from their field. See Grimm, Ram, and Estabrook (2016) and
-Singer, Willett, and Willett (2003) for two great textbooks on growth
-curve modeling, and McArdle and Epstein (1987) for an empirical
-discussion. Two straight-forward empirical examples in our own field are
-in Dunford et al. (2012) and Hülsheger (2016).
+Currently, the dominant method for analyzing longitudinal data with
+respect to trend inferences in the organizational sciences is growth
+curve modeling (GCM; Braun, Kuljanin, \& DeShon, 2013; Kuljanin et al.,
+2011a). Broad theoretical discussions of growth are in Pitariu and
+Ployhart (2010) and Ployhart and Vandenberg (2010) (keep in mind that
+they call growth \enquote{change}), whereas Bliese and Ployhart (2002)
+describe actual growth curve analysis. Growth curves are a core topic in
+developmental psychology, so there are many articles and textbooks to
+read from their field. See Grimm, Ram, and Estabrook (2016) and Singer,
+Willett, and Willett (2003) for two great textbooks on growth curve
+modeling and McArdle and Epstein (1987) for an empirical discussion. Two
+straight-forward empirical examples from our own field include Dunford
+et al. (2012) and Hülsheger (2016).
 
 GCM is the longitudinal application of the more general statistical
 technique, random coefficient modeling (RCM; e.g, Hierarchical Linear
@@ -567,55 +568,136 @@ either a regression-based (e.g., Singer et al., 2003) or structural
 equation modeling-based (SEM; e.g., Bollen \& Curran, 2006) approach. A
 complete discussion of these two approaches is beyond the scope of this
 paper; rather, this paper only focuses on the regression-based approach
-of GCM. All models presented have an equivolent representation within
+of GCM. All models presented have an equivalent representation within
 the SEM framework and can acheive identical inferences.
 
-GCM models the dependent variable (DV) as a result of predictors at
-multiple levels of analysis. Level 1 predictors vary at the same
-frequency and level as the DV (i.e., within-unit) and may be entered
-into the model as either fixed or random. Fixed level 1 predictors
-estimate only the average relationship between the independent (IV) and
-dependent variable across all units, analogous to coefficients in
-multiple regression. Random level 1 predictors estimate not only the
-average IV-DV relationship across units but also estimate the degree of
-between-unit variaiblity in the relationship with variance components.
-Level 2 predictors vary only at the unit level and are used to explain
-variability in level 1 relationships. The most basic growth model is the
-unconditional means model (UMM). This model, presented in {[}Equation
-??{]}, conducts a one-way analysis of variance (ANOVA) on the means of
-the units over time to determine whether units differ. This model is
-typically used to calculate the intraclass correlation coefficient
-(ICC(1)) which estimates the proportion of total system variance
-attribute to between-unit differences. Assuming differences across units
-exist, it is then recommended to conduct the unconditional linear growth
-model (ULGM). The ULGM regresses the dependent variable on a fixed
-linear Time variable while allowing variability across units in
-intercepts. The regression weight on the Time variable (ie., slope)
-models the average trend across units and is used to answer RQ1. It is
-then common to allow the time-DV relationship to vary across units by
-entering the Time variable as a level 1 random predictor (seen in
-{[}Equation ??{]}). Doing so provides an estimate as to whether there is
-between-unit differences in growth trajecories across units in the
-sample, answering RQ2.
+GCM models the dependent variable -- performance, for example -- as a
+result of predictors at multiple levels of analysis. Level one
+predictors vary at the same level as the depenent variable, meaning that
+if individual performance is the outcome of interest then level one
+predictors might include individual goal-striving and individual
+cognitive ability. If, on the other hand, the outcome is organizational
+performance then level one predictors might include organizational
+climate or culture. Level two predictors occur at higher units of
+analysis -- team cohesion if the dependent variable is individual
+performance or national culture if the dependent variable is
+organizational performance. Variables at any level can enter into the
+statistical model either as fixed or random. Fixed predictors estimate
+only the average relationship across all units, whereas random
+predictors estimate not only the average IV-DV relationship across units
+but also estimate the degree of between-unit variability in the that
+relationship.
+
+The most basic growth model is the unconditional means model (UMM).
+Using notation from Singer et al. (2003), this model is specified as
+
+\begin{align}
+\label{UMM}
+Y_{ij} &= \pi_{0i} + \varepsilon_{ij} \\
+\pi_{0i} &= \gamma_{00} + \zeta_{0i}
+\end{align}
+
+\noindent where \(\varepsilon\) \textasciitilde{}
+\(N(0, \sigma_{\varepsilon}^2)\) and \(\zeta_{0i}\) \textasciitilde{}
+\(N(0, \sigma_{0}^2)\), \(Y_{ij}\) is the dependent variable measured
+for person \(i\) at time \(j\), \(\pi_{0i}\) is the mean of \(Y\) for
+individual \(i\), \(\gamma_{00}\) is the mean of \(Y\) across everyone
+in the population, \(\varepsilon_{ij}\) is the residual for individual
+\(i\) on occasion \(j\), \(\sigma_{\varepsilon}^2\) is the pooled
+within-person variance of each individual's data around his or her mean,
+\(\zeta_{0i}\) is the random effect for individual \(i\) (i.e.,
+deviation of the person-specific mean from the grand mean), and
+\(\sigma_0^2\) is the random effect variance.
+
+In words with individual performance as an example, this UMM says that
+performance for Rachel at any time is a function of her across time
+individual performance mean and error. Moreover, Rachel's individual
+performance mean is a function of the population performance mean (i.e.,
+the mean of everyone's individual performance) and error. What this
+model embodies is that a reasonable prediction for Rachel's performance
+given no other information, such as other predictors like goal-striving
+or cognitive ability, is the mean of individual performance.
+
+The initial UMM model is typically used to calculate the intraclass
+correlation coefficient (ICC(1)) which estimates the proportion of total
+variance attributed to between-unit differences. Researchers, for
+example, would conduct an initial UMM on individual performance and then
+state, perhaps, that 57\% of the total variance resides between
+individuals. It is also possible to conduct a \(\chi^2\) test to assess
+whether the estimated between-person variance differs from zero. Both
+results are used to argue that it is reasonable to move forward with
+more complicated statistical analyses, to include additional predictors
+that may explain (in a statistical sense) the observed between-person
+variability.
+
+Assuming differences across units exist, it is then recommended to
+conduct the unconditional linear growth model (ULGM). The ULGM regresses
+the dependent variable on a fixed linear Time variable while allowing
+variability across units in intercepts. The regression weight on the
+Time variable (ie., slope) models the average trend across units and is
+used to answer RQ1. It is then common to allow the Time-DV relationship
+to vary across units by entering the Time variable as a level 1 random
+predictor, as shown in the equation below.
+
+\begin{align}
+\label{ULGM}
+Y_{ij} &= \pi_{0i} + \pi_{i1}Time_{ij} + \varepsilon_{ij} \\
+\pi_{0i} &= \gamma_{00} + \zeta_{0i} \\
+\pi_{i1} &= \gamma_{10} + \zeta_{1i}
+\end{align}
+
+\noindent \noindent where \(\varepsilon\) \textasciitilde{}
+\(N(0, \sigma_{\varepsilon}^2)\) and
+\(\begin{bmatrix} \zeta_{0i} \\ \zeta_{1i} \end{bmatrix}\)
+\textasciitilde{}
+\(N\bigl(\begin{bmatrix} 0 \\ 0 \end{bmatrix}, \begin{bmatrix} \sigma_{0}^2 & \sigma_{10} \\ \sigma_{10} & \sigma_{1}^2\end{bmatrix}\bigr)\),
+\(\pi_{0i}\) is now the initial status (i.e., intercept) of \(Y\) for
+individual \(i\), \(\gamma_{00}\) is the average initial status of \(Y\)
+across everyone in the population, \(\pi_{1i}\) is the rate of change
+(i.e., slope) of \(Y\) for individual \(i\), \(\gamma_{10}\) is the
+average rate of change of \(Y\) across everyone in the population,
+\(\sigma_{\varepsilon}^2\) is the pooled variance of each individuals'
+data around his or her linear change trajectory, \(\zeta_{0i}\) is the
+intercept random effect for individual \(i\), \(\sigma_{0}^2\) is the
+variance of intercept random effects, \(\zeta_{1i}\) is the slope random
+effect for individual \(i\), \(\sigma_1^2\) is the variance of the slope
+random effects, \(\sigma_{10}\) is the population covariance between
+intercepts and slopes, and all other terms are defined above.
+
+In words with individual performance as example, this ULGM says that
+Rachel's performance is a function of her initial level of performance
+(which is a function of the population initial performance level and
+error) and time. Time, therefore, can be thought of as a predictor in
+the case of the ULGM which makes this statistical model an inherently
+static model (Voelkle \& Oud, 2015). We moved beyond the unconditional
+means model to \enquote{explain} more variation in Rachel's performance
+by including additional predictors. In this case, the ULGM uses time as
+a predictor which is level one and random and provides an estimate as to
+whether there are between-unit differences in growth trajectories across
+units in the sample, answering RQ2.
 
 Building upon the ULGM with Time as a random level 1 predictor,
 researchers can enter additional multiples of Time to determine whether
-trajecories are curvilinear (or follow other predictical temporal
-patterns) or subtantive predictors to address additional research
-questions. Including a substantive predictor, \(x\), as a random level 1
-predictor allows the third research question to be answered. Typically,
-when random level 1 predictors are modeled, covariances among all random
-predictors are estimated. Doing so allows the researchers to determine
+trajecories are curvilinear (or follow other temporal patterns) or
+subtantive predictors to address additional research questions.
+Including a substantive predictor, \(x\), as a random level 1 predictor
+allows the third research question to be answered. Typically, when
+random level 1 predictors are modeled, covariances among all random
+predictors are estimated. Doing so allows researchers to determine
 whether units with higher slopes (i.e., stronger relationships) on a
-given predictor (e.g., \(x\)) are related to having greater intercepts
-or trends. Examining the covariance between the level 1 Time variable
-and any substantive predictor answers RQ3. In addition to included level
-1 predictors, level 2 predictors can be modeled to explain variance in
-the level 1 relationships. That is, unit-level variables can be used to
-estimate whether higher values on a given predictor relate to stronger
-IV-DV relationships. For example, a level 2 predictor could be used to
-estimate whether units with higher values have greater positive or
-negative linear growth, answering RQ4. \#\# Statistical Models for Level
+given predictor are related to having greater intercepts or trends.
+Examining the covariance between the level 1 Time variable and any
+substantive predictor answers RQ3. In addition to including level 1
+predictors, level 2 predictors can be modeled to \enquote{explain}
+variance in the level 1 relationships. That is, unit-level variables can
+be used to estimate whether higher values on a given predictor relate to
+stronger IV-DV relationships. For example, a level 2 predictor could be
+used to estimate whether units with higher values have greater positive
+or negative linear growth, answering RQ4.
+
+\hypertarget{statistical-models-for-level}{%
+\subsection{Statistical Models for
+Level}\label{statistical-models-for-level}}
 
 Once the variable Time is included in the model (e.g., the ULGM), the
 intercept value represents the level of the DV at the time point coded 0
@@ -631,15 +713,9 @@ to determine any systematic within-unit relationships between IV-DV
 relationships. Therefore, the covariance between the intercept and slope
 (i.e., Time) random effects is used to determine whether units with
 higher (lower) initial values exhibit stronger (weaker) growth,
-answering RQ7.
-
-{[}I am not actually sure how to model RQ8 and RQ9 within the random
-GCM. Obviuosly, the covariance among random effects of the intercept and
-X tells whether initial values co-vary with stronger (weaker) IV-DV
-relationships between X and Y. However, that doesnt appear to be what we
-are talking about.{]} {[}We also may want to integrate the trend and
-level sections with regards to statistical models - things to
-discuss.{]}
+answering RQ7. Finally, it is also possible to estimate covariances
+among the intercept and slope among different variables, answering RQ8
+and RQ9.
 
 \begin{figure}
 \centering
@@ -729,25 +805,36 @@ Relationships}\label{statistical-models-for-relationships}}
 
 Time-varying covariates (tvc) analysis is the workhorse behind
 relationship inferences. TVC models are simply growth curve models that
-include level 1 predictors (either fixed or random). As seen in Equation
-{[}??{]}, the ULGM has been ammended to include an additional level 1
-predictor, X. The average relationship between X and Y across units is
-used to answer RQ1 whereas the variance component estimating the
-between-unit variaiblity in the X-Y relationship is used to answer RQ2.
-It is important to note that TVC analyses can either be conducted by
-building upon the ULGM, as is presented here (and seen in Bruan,
-Kozlowski, Brown, \& DeShon, in press), or can be done by building
-directly upon the UMM (e.g., Judge, Scott, \& Ilies, 2006). The
-difference is whether the predictor Time is included to control for
-growth in the DV. Typically, if it is anticipated or observed that the
-DV exhibits a consistent trajectory over time, then Time is included and
-TVC models build from the ULGM. Alternatively, if the DV is not expected
-or observed to exhibit linear (or nonlinear) growth, then level 1
-predictors are added directly to the UMM. A complete discussion of tvc
-models is in Schonfeld and Rindskopf (2007) and Finch, Bolin, and Kelley
-(2016) and two relatively straight-forward empirical examples are in
-Barnes, Schaubroeck, Huth, and Ghumman (2011) and Chi, Chang, and Huang
-(2015).
+include level 1 predictors (either fixed or random). The equation below
+shows an ULGM ammended to include an additional level one predictor,
+\(X\).
+
+\begin{align}
+\label{ULGM}
+Y_{ij} &= \pi_{0i} + \pi_{i1}Time_{ij} + \pi_{i2}X_{ij} + \varepsilon_{ij} \\
+\pi_{0i} &= \gamma_{00} + \zeta_{0i} \\
+\pi_{i1} &= \gamma_{10} + \zeta_{1i} \\
+\pi_{i2} &= \gamma_{20} + \zeta_{2i}
+\end{align}
+
+\noindent \noindent where \(X\) is the additional random predictor and
+it is related to the outcome, \(Y\), through \(\pi_{i2}\). The average
+relationship between \(X\) and \(Y\) across units is used to answer RQ1
+whereas the variance component estimating the between-unit variaiblity
+in the \(X\)-\(Y\) relationship is used to answer RQ2. It is important
+to note that TVC analyses can either be conducted by building upon the
+ULGM, as is presented here (and seen in Braun, Kozlowski, Brown, \&
+DeShon, in press), or can be done by building directly upon the UMM
+(e.g., Judge, Scott, \& Ilies, 2006). The difference is whether the
+predictor Time is included to control for growth in the DV. Typically,
+if it is anticipated or observed that the DV exhibits a consistent
+trajectory over time, then Time is included and TVC models build from
+the ULGM. Alternatively, if the DV is not expected or observed to
+exhibit linear (or curvilinear) growth, then level 1 predictors are
+added directly to the UMM. A complete discussion of tvc models is in
+Schonfeld and Rindskopf (2007) and Finch, Bolin, and Kelley (2016) and
+two relatively straight-forward empirical examples are in Barnes,
+Schaubroeck, Huth, and Ghumman (2011) and Chi, Chang, and Huang (2015).
 
 \begin{figure}
 \centering
@@ -946,33 +1033,35 @@ Dynamics}\label{statistical-models-for-dynamics}}
 Much like the models presented for relationship inferences, the dynamics
 models are straightforward extensions of the ULGM or UMM. The principle
 addition for dynamic models is the inclusion of a lagged version of the
-DV as a predictor (Yt-1; i.e., autoregressive term). The inclusion of
-Yt-1 controls for prior observations of the DV when predicting current
-values, essentially modeling the change in the DV from one time point to
-another without relying on difference scores due to their statistical
-pitfalls (e.g., Edwards \& Parry, 1993). As such, the first research
-question is answered by evaluating the average relationship between the
-DV and a prior version of itself as a level 1 predictor. Similarly, once
-the autoregressive term is modeled as random, evaluating the variance
-component answers RQ2 regarding whether the autoregressive relationship
-differs across units. To answer the subsequent research questions, the
-inclusion of an additional substantive predictor, Xt, is required. When
-Xt is modeled at only the concurrent time point with the DV, then the
-Xt-Yt relationship determines whether values of X at a given time point
-relate to the change in Y, addressing RQ3. The variance component on Xt
-when it is modeled as a random level 1 preditor determines whether the
-relationship varies across units, answering RQ4. Finally, if the
-researcher is interested in determining whether changes in the
-predictor, X, relate to changes in the DV, Y, an additional level 1
-predictor in included in the model that represnts prior realizations of
-X, Xt-1. With the inclusion of Xt-1, the paramater on the predictor Xt
-now determines whether changes in X relate to changes in Y, answering
-RQ5 whereas the variance component on Xt determines whether significant
-variability in the relationship exists (RQ6). There are many additional
-dynamic models that can be estimated within the GCM framework. Wang et
-al. (2016) reviews many of the different types of dynamic models and,
-although the paper does not provide readers will specific code, is an
-excellent resource to observe the variety of potential dynamic models.
+DV as a predictor (\(Y_{t-1}\); i.e., autoregressive term). The
+inclusion of \(Y_{t-1}\) controls for prior observations of the DV when
+predicting current values, essentially modeling the change in the DV
+from one time point to another without relying on difference scores due
+to their statistical pitfalls (e.g., Edwards \& Parry, 1993). As such,
+the first research question is answered by evaluating the average
+relationship between the DV and a prior version of itself as a level 1
+predictor. Similarly, once the autoregressive term is modeled as random,
+evaluating the variance component answers RQ2 regarding whether the
+autoregressive relationship differs across units. To answer the
+subsequent research questions, the inclusion of an additional
+substantive predictor, \(X_t\), is required. When \(X_t\) is modeled at
+only the concurrent time point with the DV, then the \(X_t\)-\(Y_t\)
+relationship determines whether values of \(X\) at a given time point
+relate to the change in \(Y\), addressing RQ3. The variance component on
+\(X_t\) when it is modeled as a random level 1 preditor determines
+whether the relationship varies across units, answering RQ4. Finally, if
+the researcher is interested in determining whether changes in the
+predictor, \(X\), relate to changes in the DV, \(Y\), an additional
+level 1 predictor in included in the model that represnts prior
+realizations of \(X\), \(X_{t-1}\). With the inclusion of \(X_{t-1}\),
+the paramater on the predictor \(X_t\) now determines whether changes in
+\(X\) relate to changes in \(Y\), answering RQ5 whereas the variance
+component on \(X_t\) determines whether significant variability in the
+relationship exists (RQ6). There are many additional dynamic models that
+can be estimated within the GCM framework. Wang et al. (2016) reviews
+many of the different types of dynamic models and, although the paper
+does not provide readers will specific code, is an excellent resource to
+observe the variety of potential dynamic models.
 
 \begin{figure}
 
@@ -1444,6 +1533,11 @@ Vancouver, J. B., Weinhardt, J. M., \& Schmidt, A. M. (2010). A formal,
 computational theory of multiple-goal pursuit: Integrating goal-choice
 and goal-striving processes. \emph{Journal of Applied Psychology},
 \emph{95}(6), 985.
+
+\leavevmode\hypertarget{ref-voelkle2015relating}{}%
+Voelkle, M. C., \& Oud, J. H. (2015). Relating latent change score and
+continuous time models. \emph{Structural Equation Modeling: A
+Multidisciplinary Journal}, \emph{22}(3), 366--381.
 
 \leavevmode\hypertarget{ref-Wang2016}{}%
 Wang, M., Zhou, L., \& Zhang, Z. (2016). Dynamic modeling. \emph{Annual
