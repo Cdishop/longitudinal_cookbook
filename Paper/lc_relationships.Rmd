@@ -31,7 +31,7 @@ The first relationships inference emphasizes the between-unit expected average. 
 
 ## Statistical Models for Relationships
 
-Time-varying covariates (tvc) analysis is the workhorse behind relationship inferences. TVC models are simply growth curve models that include level 1 predictors (either fixed or random). The equation below shows an ULGM ammended to include an additional level one predictor, $X$. 
+Time-varying covariates (TVC) analysis is the workhorse behind relationship inferences. TVC models are simply growth curve models that include level 1 predictors (either fixed or random). The equation below shows an ULGM ammended to include an additional level one predictor, $X$. 
 
 \begin{align}
 \label{ULGM}

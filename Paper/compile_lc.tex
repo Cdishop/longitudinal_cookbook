@@ -401,8 +401,8 @@ Insert Figure \ref{trend_correlation} about here
 
 \begin{quote}
 \begin{quote}
-\textbf{Research Question 3:} What is the between-unit trend
-correlation?
+\textbf{Research Question 3:} What is the between-unit correlation among
+two trends?
 \end{quote}
 \end{quote}
 
@@ -705,49 +705,48 @@ e.g., include \(Time^2\) and/or \(Time^3\) in equation 3 -- to determine
 whether trajectories are curvilinear or follow other temporal patterns.
 Researchers can enter additional level one or two substantive predictors
 to determine whether there are covariates of trend. Consider, again, the
-example in Figure 3 which plots affect trends and the exptected affect
-trend predicted by the statistical model by job type. Affect is the
-outcome that is regressed on time, forming the underlying ULGM. Entering
-job type as a random, level two predictor returns a coefficient that
-describes whether the expected affect trend differs according to this
-additional predictor. Statistically, the model estimates whether higher
-values on the level two predictor relate to stronger IV-DV
-relationships. In the case of growth models, time is the IV so
-\enquote{stronger IV-DV} relationships means different trend patterns.
-The level two predictor therefore estimates whether higher values -- or
-in the case of job type, different types of jobs -- demonstrate
-different trend (RQ4). Beyond incorporating more predictors of a single
-outcome, researchers can also model multiple outcomes with simultaneous
-ULGMs. Consider first two independent ULGMs, one with individual
-performance regressed on time and another with individual OCBs regressed
-on time. All inferences, research questions, and statitical models
-described above can be explored independently with these two outcomes.
-Typically, however, when random effects are incorporated covariances
-among all random effect variables are estimated, meaning that the two
-outcomes in the multivariate system are no longer viewed as independent.
-The covariance estimate between the slope term for performance and the
-sloper term for OCBs, in this example, are used to answer research
-question three.
+example in Figure 3 which plots affect trends that differ by job type.
+Affect is the outcome that is regressed on time, forming the underlying
+ULGM. Entering job type as a random, level two predictor returns a
+coefficient that describes whether the expected affect trend differs
+according to this additional predictor. Statistically, the model
+estimates whether higher values on the level two predictor relate to
+stronger IV-DV relationships. In the case of growth models, time is the
+IV so \enquote{stronger IV-DV} relationships means different trend
+patterns. The level two predictor therefore estimates whether higher
+values -- or in the case of job type, different types of jobs --
+demonstrate different trend (RQ4). Beyond incorporating more predictors
+of a single outcome, researchers can also model multiple outcomes with
+simultaneous ULGMs. Consider first two independent ULGMs, one with
+individual performance regressed on time and another with individual
+OCBs regressed on time. All inferences, research questions, and
+statitical models described above can be explored independently with
+these two outcomes. Typically, however, when random effects are
+incorporated covariances among all random effect variables are
+estimated, meaning that the two outcomes in the multivariate system are
+no longer viewed as independent. The covariance estimate between the
+slope term for performance and the slope term for OCBs, in this example,
+are used to answer research question three.
 
 \hypertarget{statistical-models-for-level}{%
 \subsection{Statistical Models for
 Level}\label{statistical-models-for-level}}
 
-Once time is included in the model (e.g., the ULGM), the intercept value
-represents the level of the DV at the time point coded 0 (typically the
-first or last time point). The intercept value is almost always modeled
-as random whereby the analysis will return a mean estimate which tells
-you the average level across units (answering RQ5), and it will also
-return a variance estimate that indicates variability in level between
-units. As such, the variance component on the intercept term determines
-whether there is significant between-unit variability in the level of
-the DV when time equals zero, answering RQ6. As previously stated, it is
-common to estimate covariance among random predictors, therefore the
-covariance between the intercept and slope random effects is used to
-determine whether units with higher (lower) initial values exhibit
-stronger (weaker) growth, answering RQ7. Finally, it is also possible to
-estimate covariances among the intercept and slope among different
-variables in multivariate systems, answering RQ8 and RQ9.
+Once time is included in the statistical model (e.g., the ULGM), the
+intercept value represents the level of the DV at the time point coded 0
+(typically the first or last time point). The intercept value is almost
+always modeled as random whereby the analysis will return a mean
+estimate which tells you the average level across units (answering RQ5),
+and it will also return a variance estimate that indicates variability
+in level between units. As such, the variance component on the intercept
+term determines whether there is significant between-unit variability in
+the level of the DV when time equals zero, answering RQ6. As previously
+stated, it is common to estimate covariance among random predictors,
+therefore the covariance between the intercept and slope random effects
+is used to determine whether units with higher (lower) initial values
+exhibit stronger (weaker) growth, answering RQ7. Finally, it is also
+possible to estimate covariances among the intercept and slope among
+different variables in multivariate systems, answering RQ8 and RQ9.
 
 \begin{figure}
 \centering
@@ -835,7 +834,7 @@ the between-unit relationship among \(x\) and \(y\)?
 \subsection{Statistical Models for
 Relationships}\label{statistical-models-for-relationships}}
 
-Time-varying covariates (tvc) analysis is the workhorse behind
+Time-varying covariates (TVC) analysis is the workhorse behind
 relationship inferences. TVC models are simply growth curve models that
 include level 1 predictors (either fixed or random). The equation below
 shows an ULGM ammended to include an additional level one predictor,
@@ -1062,38 +1061,38 @@ great papers on it (Maxwell \& Cole, 2007; Maxwell, Cole, \& Mitchell,
 \subsection{Statistical Models for
 Dynamics}\label{statistical-models-for-dynamics}}
 
-Much like the models presented for relationship inferences, one
-interpretation for dynamic models presented here is as extensions of the
-ULGM or UMM. The principle addition for dynamic models is the inclusion
-of a lagged version of the DV as a predictor (\(Y_{t-1}\)). The
-inclusion of \(Y_{t-1}\) controls for prior observations of the DV when
-predicting current values, essentially modeling the change in the DV
-from one time point to another without relying on difference scores due
-to their statistical pitfalls (e.g., Edwards \& Parry, 1993). As such,
-the first research question is answered by evaluating the average
-relationship between the DV and a prior version of itself as a level one
-predictor. Similarly, once the autoregressive term is modeled as random,
-evaluating the variance component answers RQ2 regarding whether the
-autoregressive relationship differs across units. To answer the
-subsequent research questions, the inclusion of an additional
-substantive predictor, \(X_t\), is required. When \(X_t\) is modeled at
-only the concurrent time point with the DV, then the \(X_t\)
-\(\rightarrow\) \(Y_t\) relationship determines whether values of \(X\)
-at a given time point relate to the change in \(Y\), addressing RQ3. The
-variance component on \(X_t\) when it is modeled as a random level one
-preditor determines whether the relationship varies across units,
-answering RQ4. Finally, if the researcher is interested in determining
-whether changes in the predictor, \(X\), relate to changes in the DV,
-\(Y\), an additional level one predictor in included in the model that
-represnts prior realizations of \(X\), \(X_{t-1}\). With the inclusion
-of \(X_{t-1}\), the paramater on the predictor \(X_t\) now determines
-whether changes in \(X\) relate to changes in \(Y\), answering RQ5
-whereas the variance component on \(X_t\) determines whether significant
-variability in the relationship exists (RQ6). There are many additional
-dynamic models that can be estimated within the GCM framework. Wang et
-al. (2016) reviews many of the different types of dynamic models and,
-although the paper does not provide readers will specific code, is an
-excellent resource to observe the variety of potential dynamic models.
+Much like the models presented for relationship inferences, one way to
+view dynamic models is as extensions of the ULGM or UMM. The principle
+addition for dynamic models is the inclusion of a lagged version of the
+DV as a predictor (\(Y_{t-1}\)). The inclusion of \(Y_{t-1}\) controls
+for prior observations of the DV when predicting current values,
+essentially modeling the change in the DV from one time point to another
+without relying on difference scores due to their statistical pitfalls
+(e.g., Edwards \& Parry, 1993). As such, the first research question is
+answered by evaluating the average relationship between the DV and a
+prior version of itself as a level one predictor. Similarly, once the
+autoregressive term is modeled as random, evaluating the variance
+component answers RQ2 regarding whether the autoregressive relationship
+differs across units. To answer the subsequent research questions, the
+inclusion of an additional substantive predictor, \(X_t\), is required.
+When \(X_t\) is modeled at only the concurrent time point with the DV,
+then the \(X_t\) \(\rightarrow\) \(Y_t\) relationship determines whether
+values of \(X\) at a given time point relate to the change in \(Y\),
+addressing RQ3. The variance component on \(X_t\) when it is modeled as
+a random level one preditor determines whether the relationship varies
+across units, answering RQ4. Finally, if the researcher is interested in
+determining whether changes in the predictor, \(X\), relate to changes
+in the DV, \(Y\), an additional level one predictor in included in the
+model that represnts prior realizations of \(X\), \(X_{t-1}\). With the
+inclusion of \(X_{t-1}\), the paramater on the predictor \(X_t\) now
+determines whether changes in \(X\) relate to changes in \(Y\),
+answering RQ5 whereas the variance component on \(X_t\) determines
+whether significant variability in the relationship exists (RQ6). There
+are many additional dynamic models that can be estimated within the GCM
+framework. Wang et al. (2016) reviews many of the different types of
+dynamic models and, although the paper does not provide readers will
+specific code, is an excellent resource to observe the variety of
+potential dynamic models.
 
 \begin{figure}
 
