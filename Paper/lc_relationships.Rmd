@@ -8,7 +8,7 @@ A relationships inference explores between-unit relationships over time. The sec
 
 Questions about static relationships over time take the following forms. What is the relationship between helping behaviors and incivility? Does burnout predict turnover intention? Is unethical behavior related to self-control?
 
-Figure \ref{relation_tvc} shows the inuition of the inference with data. Panel A plots affect and performance trajectories for three people. The red circles in Panel A highlight each individual's affect and performance values at time point six. Given that we have three people at time point six, we can calculate a correlation between affect and performance at that moment (granted, it is a small sample). The calculated coefficient is then graphed in Panel B with another red circle. At time point six, the correlation between affect and performance across people is large and positive.
+Figure \ref{relation_tvc} shows the inuition of the inference with data. Panel A plots affect and performance trajectories for three people. The red circles in Panel A highlight each individual's affect and performance values at time point six. Given that we have three people at time point six, we can calculate a correlation between affect and performance at that moment (granted, it is a small sample). The calculated coefficient is then graphed in Panel B with another red circle. At time point six, the between-unit (across people) correlation among affect and performance is large and positive.
 
 \begin{center}
 
