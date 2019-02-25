@@ -1,4 +1,13 @@
 
+# Last meeting with Goran
+
+We discussed between-person inferences. An alternative framework for inferences with longitudinal data is within person inferences. Longitudinal data gives you the opportunity to explore both, but often you cannot flip between the two due to stationarity and ergodicity. Those concepts are tough, we don't discuss them here. Recognize that resource constraints
+
+advocate for small sample large t
+
+
+
+
 1) Discussion reframing
 
 
