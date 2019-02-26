@@ -1,4 +1,18 @@
 
+# Last meeting with Rick
+
+1) Change dynamics paragraph
+2) Color fine
+3) Braun cite remove
+4) Request Mo Wang, Jose Cortina, Fred Oswald
+5) Save list paragraph on statistical models
+6) Remove SEM and regression
+7) Drop mediation paragraph
+8) Keep discussion. But need a broadening clause. 573: "We are broadening our perspective here. Additional things that we need to consider as we move forward."
+
+
+
+
 # Last meeting with Goran
 
 We discussed between-person inferences. An alternative framework for inferences with longitudinal data is within person inferences. Longitudinal data gives you the opportunity to explore both, but often you cannot flip between the two due to stationarity and ergodicity. Those concepts are tough, we don't discuss them here. Recognize that resource constraints
