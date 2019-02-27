@@ -2,7 +2,7 @@
 
 # https://crsh.github.io/papaja_man/index.html
 
-title             : "Inferences With Longitudinal Data"
+title             : "Between-Unit Inferences With Longitudinal Data"
 shorttitle        : "LONGITUDINAL INFERENCES"
 
 author: 
@@ -33,8 +33,8 @@ author_note: |
 abstract: |
   Organizational scientists recognize that psychological phenomena and processes unfold over time. To better understand psychological phenomena over time, organizational researchers increasingly work with longitudinal data and explore inferences within those data structures. Longitudinal inferences may focus on any number of fundamental patterns, including construct trajectories, relationships between constructs, or dynamics. Although the diversity of longitudinal inferences provides a wide foundation for garnering knowledge in any given area, it also makes it difficult for researchers to know the set of inferences they may explore with longitudinal data, which statistical models to use given their question, and how to locate their specific study within the broader set of longitudinal inferences. In this paper, we develop a framework to describe the variety of between-unit research questions and inferences researchers may explore with longitudinal data and link those inferences to statistical models so researchers know where to turn to given their particular interests.
   
-keywords          : "longitudinal inferences, growth trends, dynamics, relationships over time, processes"
-wordcount         : "151"
+keywords          : "longitudinal inferences, between-unit, growth, trends, dynamics, relationships over time, processes"
+#wordcount         : "149"
 
 bibliography      : ["references.bib"]
 nocite: '@deshon_multivariate_2012'

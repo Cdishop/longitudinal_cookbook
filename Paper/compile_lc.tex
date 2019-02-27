@@ -23,10 +23,10 @@
 }{}
 \usepackage{hyperref}
 \hypersetup{unicode=true,
-            pdftitle={Inferences With Longitudinal Data},
+            pdftitle={Between-Unit Inferences With Longitudinal Data},
             pdfauthor={Christopher R. Dishop, Michael T. Braun, Goran Kuljanin, \& Richard P. DeShon},
-            pdfkeywords={longitudinal inferences, growth trends, dynamics, relationships over
-time, processes},
+            pdfkeywords={longitudinal inferences, between-unit, growth, trends, dynamics,
+relationships over time, processes},
             pdfborder={0 0 0},
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
@@ -70,7 +70,7 @@ time, processes},
 \def\footnote{\protect\rmarkdownfootnote}
 
 
-  \title{Inferences With Longitudinal Data}
+  \title{Between-Unit Inferences With Longitudinal Data}
     \author{Christopher R. Dishop\textsuperscript{1}, Michael T.
 Braun\textsuperscript{2}, Goran Kuljanin\textsuperscript{3}, \& Richard
 P. DeShon\textsuperscript{1}}
@@ -80,7 +80,7 @@ P. DeShon\textsuperscript{1}}
 \affiliation{
 \vspace{0.5cm}
 \textsuperscript{1} Michigan State University\\\textsuperscript{2} University of South Florida\\\textsuperscript{3} DePaul University}
-\keywords{longitudinal inferences, growth trends, dynamics, relationships over time, processes\newline\indent Word count: 151}
+\keywords{longitudinal inferences, between-unit, growth, trends, dynamics, relationships over time, processes}
 \usepackage{csquotes}
 \usepackage{upgreek}
 \captionsetup{font=singlespacing,justification=justified}
@@ -560,19 +560,8 @@ modeling and McArdle and Epstein (1987) for an empirical discussion. Two
 straight-forward empirical examples from our own field include Dunford
 et al. (2012) and Hülsheger (2016).
 
-GCM is the longitudinal application of the more general statistical
-technique, random coefficient modeling (RCM; e.g, Hierarchical Linear
-Modeling; Latent Growth Modeling; Bollen \& Curran, 2006; Raudenbush \&
-Bryk, 2002; Singer et al., 2003). GCM (and RCM) can be applied through
-either a regression-based (e.g., Singer et al., 2003) or structural
-equation modeling-based (SEM; e.g., Bollen \& Curran, 2006) approach. A
-complete discussion of these two approaches is beyond the scope of this
-paper; rather, this paper only focuses on the regression-based approach
-of GCM. All models presented have an equivalent representation within
-the SEM framework and can achieve identical inferences.
-
-GCM models the dependent variable -- performance, for example -- as a
-result of predictors at multiple levels of analysis. Level one
+GCM is able to model the dependent variable -- performance, for example
+-- as a result of predictors at multiple levels of analysis. Level one
 predictors vary at the same level as the depenent variable, meaning that
 if individual performance is the outcome of interest then level one
 predictors might include individual goal-striving and individual
@@ -881,21 +870,21 @@ relationship is unconstrained at each time point.\label{relation_tvc}}
 \hypertarget{dynamics}{%
 \section{Dynamics}\label{dynamics}}
 
-Dynamics refers to a specific branch of mathematics, but the term is
-used in different ways throughout our literature. It is used informally
-to mean \enquote{change}, \enquote{fluctuating,} \enquote{volatile,}
-\enquote{longitudinal,} or \enquote{over time} (among others), whereas
-formal definitions are presented within certain contexts. Wang, Zhou,
-and Zhang (2016) define a dynamic \emph{model} as a
+The word \enquote{dynamics} takes on a variety of meanings throughout
+our literature. Informally, it is used to mean \enquote{change,}
+\enquote{fluctuating,} \enquote{longitudinal,} or \enquote{over time}
+(among others), but the fundemantal concept to identify with dynamics is
+that the past constrains what happens next, variables have memory as
+they move through time. For example, Monge (1990) notes that in dynamic
+analysis, \enquote{it is essential to know how variables depend upon
+their own past history} (p.~409), Vancouver, Wang, and Li (2018) state
+that dynamic variables \enquote{behave as if they have memory; that is,
+their value at any one time depends somewhat on their previous value}
+(p.~604), and Wang, Zhou, and Zhang (2016) define a dynamic model as a
 \enquote{representation of a system that evolves over time. In
 particular it describes how the system evolves from a given state at
 time \emph{t} to another state at time \emph{t + 1} as governed by the
-transition rules and potential external inputs} (p.~242). Vancouver,
-Wang, and Li (2018) state that dynamic \emph{variables} \enquote{behave
-as if they have memory; that is, their value at any one time depends
-somewhat on their previous value} (p.~604). Finally, Monge (1990)
-suggests that in dynamic \emph{analyses}, \enquote{it is essential to
-know how variables depend upon their own past history} (p.~409). In this
+transition rules and potential external inputs} (p.~242). In this
 section we discuss a number of inferences couched in the idea that the
 past constrains future behavior.
 
@@ -951,8 +940,8 @@ The next inference is about relating a predictor to our response
 variable while it still retains memory. Panel B of Figure
 \ref{dynamics_figure} shows a box-and-arrow diagram: \(y\) is predicted
 by concurrent values of \(x\) but it also retains self-similarity. This
-model is therefore said to partial prior \(y\): it examines the
-concurrent relationship between \(x\) and \(y\) while statistically
+model heuristic is therefore said to partial prior \(y\): it examines
+the concurrent relationship between \(x\) and \(y\) while statistically
 partialling values of \(y\) at \(t - 1\), or statistically accounting
 for \(y\) at the prior moment.
 
@@ -1100,52 +1089,53 @@ to become familiar with potential dynamic models.
 \section{Discussion}\label{discussion}}
 
 There are many different patterns to explore with longitudinal data
-structures. This paper, by unpacking between-unit patterns, mirrors the
-common questions and inferences currently emphasized by organizational
-scientists. What is the between-unit relationship among a set of
-constructs (averaged over time)? What is the between-unit expected
-trend? Are there between-unit differences in trend (also phrased as,
-\enquote{between-unit differences in within-unit change})? We organized
-these questions and inferences into a fundamental set, discussed what
-they mean, and linked the inferences to appropriate statistical models.
-Ultimately, researchers should now be able to understand the spectrum of
-between-unit inferences that they can explore with rich, longitudinal
-data.
+structures. This manuscript, by unpacking between-unit patterns, mirrors
+the common questions and inferences currently emphasized by
+organizational scientists. What is the between-unit relationship among a
+set of constructs (averaged over time)? What is the between-unit
+expected trend? Are there between-unit differences in trend (also
+phrased as, \enquote{between-unit differences in within-unit change})?
+We organized these questions and inferences into a fundamental set,
+discussed what they mean, and linked the inferences to appropriate
+statistical models. Ultimately, researchers should now be able to
+understand the spectrum of between-unit inferences that they can explore
+with rich, longitudinal data.
 
-Between-unit questions are common and useful, but an alternative lens to
-asking questions and making inferences with repeated measures is to
-focus on within-unit patterns. Within-unit inferences emphasize
+Between-unit questions are common and useful and they are the sibling to
+an alternative lens to asking questions and making inferences with
+repeated measures: within-units. Within-unit inferences emphasize
 fluctuations over time rather than across units. For example, Beal
 (2015) notes that many of the psychological phenomenon in which we are
 interested are \enquote{sequences of events and event reactions that
 happen within each person's stream of experience} (p.~5). This is a
 within-unit statement: it emphasizes how a construct moves through time
-within a single individual.
+within a single individual. Organizational scientists have become
+increasingly interested in within-unit perspectives over the past
+decade. Dalal, Bhave, and Fiset (2014) review theory and research on
+within-person job performance, Grandey and Gabriel (2015) review
+emotional labor and differentiate a variety of within-person
+perspectives, Park, Spitzmuller, and DeShon (2013) present a team
+motivation model describing within-individual resource allocation and
+within-team feedback, Vancouver, Weinhardt, and Schmidt (2010) present a
+within-person model of multiple-goal pursuit, Barnes (2012) describes
+recent within-person approaches to sleep and organizational behavior,
+and Methot, Lepak, Shipp, and Boswell (2017) present a within-person
+perspective of organizational citizenship behaviors. There are many
+within-person inferences accumulating in our literature, but they are
+occasionally accompanied by between-person models or are dispersed and
+unconnected among different content areas. An immediate next step for
+future research is to create a framework for the fundamental within-unit
+inferences.
 
-Organizational scientists have become increasingly interested in
-within-unit perspectives over the past decade. Dalal, Bhave, and Fiset
-(2014) review theory and research on within-person job performance,
-Grandey and Gabriel (2015) review emotional labor and differentiate a
-variety of within-person perspectives, Park, Spitzmuller, and DeShon
-(2013) present a team motivation model describing within-individual
-resource allocation and within-team feedback, Vancouver, Weinhardt, and
-Schmidt (2010) present a within-person model of multiple-goal pursuit,
-Barnes (2012) describes recent within-person approaches to sleep and
-organizational behavior, and Methot, Lepak, Shipp, and Boswell (2017)
-present a within-person perspective of organizational citizenship
-behaviors.
-
-Within-unit perspectives have their own research questions and
-inferences. For example, Ilies, Johnson, Judge, and Keeney (2011)
-hypothesize that \enquote{interpersonal conflict at work immediately
-influences employee's negative affect, such that employees will report
-heightened negative affect after periods when they experience more
-conflict, compared to periods when they experience less conflict}
-(p.~3). There are many within-person inferences accumulating in our
-literature, but they often apply a between-person model and are
-dispersed among different content areas. An immediate next step for
-research is to write the within-unit version of this paper, a paper that
-organizes and explains within-unit inferences.
+Our focus was on between-unit patterns because these inferences are the
+backbone of longitudinal modeling in organizational science. Moreover,
+there can be a tendency for researchers to believe that they are making
+within-unit inferences simply because they collect longitudinal data,
+our goal was to build consensus and clarity on the fundamental
+between-unit ideas in longitudinal data structures. We close the paper
+by broadening our view slightly, we discuss two complexities that merit
+attention when researchers apply -- irrespective of the inferential lens
+that they take -- statistical models to longitudinal data.
 
 When researchers explore patterns in longitudinal data, regardless of
 whether they emphasize between or within-unit inferences, there are
@@ -1224,32 +1214,27 @@ non-ergodic if it has trend and/or Susie's trajectory is different from
 Bob's. If either is violated, which is often the case, then standard
 analyses of between-subject differences (growth models, multi-level or
 random-coefficient models, mixture models, ANOVA, factor analysis)
-cannot be used to make within-person statements. In general,
-within-person inferences need to come from unpooled, subject-specific
-time-series data structures (Molenaar, 2009).
+cannot be used to make within-person statements. In general (but not
+always), within-person inferences need to come from unpooled,
+subject-specific time-series data structures (Molenaar, 2009).
 
-Collecting large samples across many time points allows researchers to
-assess stationarity and ergodicity. Both are complex ideas and merit
-entire papers of their own, but for now we urge researchers to start
-focusing on both so that our field can begin to understand the
-similarities and differences among between-unit and within-unit
-relationships. Again, researchers must collect data across many time
-points to do so.
-
-Often, though, researchers have finite resources and must decide whether
-to emphasize between-unit or within-unit patterns. Your data collection
-should align with the inference that you are interested in. If you care
-about between-unit patterns (as shown in this paper), focus on \(N\) --
+Stationarity and ergodicity are complex ideas that merit future
+discussion, the point here is that collecting large samples across many
+time points allows researchers to assess stationarity and ergodicity and
+explore both between and within-unit inferences. Often, though,
+researchers have finite resources that force them to decide whether to
+emphasize between or within-unit patterns. Your data collection should
+align with the inference that you are interested in. If you care about
+between-unit patterns (as shown in this paper), focus on \(N\) --
 collect data on many participants. If you care about within-unit
 patterns, focus on \(T\) -- collect data across many time points. Large
 samples across many time points of course gives researchers the ability
 to explore both frameworks, but our field will need to recognize that a
 small samples (e.g., five or fewer participants) measured across many
 time points does allow a researcher to make within-person inferences (by
-definition) and is useful. Given the resource constraints that come with
-conducting research, we cannot shy away from few participants measured
-across many time points as viable techniques to assessing within-person
-relationships.
+definition) and is useful. Know your constraints and allocate your
+resources accordingly; gather lots of \(N\) when your interest is
+between-unit and lots of \(T\) when your interest is within-unit.
 
 \newpage
 
@@ -1279,10 +1264,6 @@ Organ. Psychol. Organ. Behav.}, \emph{2}(1), 383--407.
 Bliese, P. D., \& Ployhart, R. E. (2002). Growth modeling using random
 coefficient models: Model building, testing, and illustrations.
 \emph{Organizational Research Methods}, \emph{5}(4), 362--387.
-
-\leavevmode\hypertarget{ref-bollen2006latent}{}%
-Bollen, K. A., \& Curran, P. J. (2006). \emph{Latent curve models: A
-structural equation perspective} (Vol. 467). John Wiley \& Sons.
 
 \leavevmode\hypertarget{ref-braun_spurious_2013}{}%
 Braun, M. T., Kuljanin, G., \& DeShon, R. P. (2013). Spurious Results in
@@ -1367,12 +1348,6 @@ doi:\href{https://doi.org/http://dx.doi.org.proxy2.cl.msu.edu/10.1037/apl0000104
 Ilgen, D. R., \& Hulin, C. L. (2000). \emph{Computational modeling of
 behavior in organizations: The third scientific discipline.} American
 Psychological Association.
-
-\leavevmode\hypertarget{ref-ilies2011within}{}%
-Ilies, R., Johnson, M. D., Judge, T. A., \& Keeney, J. (2011). A
-within-individual study of interpersonal conflict as a work stressor:
-Dispositional and situational moderators. \emph{Journal of
-Organizational Behavior}, \emph{32}(1), 44--64.
 
 \leavevmode\hypertarget{ref-jebb2015time}{}%
 Jebb, A. T., Tay, L., Wang, W., \& Huang, Q. (2015). Time series
@@ -1500,10 +1475,6 @@ of Management}, \emph{36}(2), 405--429.
 Ployhart, R. E., \& Vandenberg, R. J. (2010). Longitudinal research: The
 theory, design, and analysis of change. \emph{Journal of Management},
 \emph{36}(1), 94--120.
-
-\leavevmode\hypertarget{ref-raudenbush2002hierarchical}{}%
-Raudenbush, S. W., \& Bryk, A. S. (2002). \emph{Hierarchical linear
-models: Applications and data analysis methods} (Vol. 1). Sage.
 
 \leavevmode\hypertarget{ref-rosen_who_2016}{}%
 Rosen, C. C., Koopman, J., Gabriel, A. S., \& Johnson, R. E. (2016). Who
