@@ -1,0 +1,12 @@
+OK, soap box rant over. To this paper - we apparently need to lean in heavier with regard to what we are uniquely providing. The reviewers were correct that each model, in isolation, is well established in the literature and there are numerous examples (empirical and statistical) detailing them. Our point (as I understand it) was to consolidate and organize this literature to provide a "one stop shop" for all the good things someone can do with longitudinal data (pointing to relevant examples where necessary) and align those good things with the statistical models they would use to accomplish them. 
+
+
+In the next iteration, we want to highlight how often researchers only utilize one of the inferences we discuss.  We think researchers (1) simply focus on one type of inference in a manuscript and (2) across manuscripts we might see the dominance of one type of inference (e.g., growth).  I imagine two frequency tables (i.e., how many types of inferences per manuscript? how many occurrences of each inference across manuscripts) to capture these points.  To motivate our manuscript, we would make the point researchers can do a lot more with their longitudinal data.  That perhaps better justifies the need to educate readers on things they miss without considering the possibilities.  We could highlight a reason for why the frequency patterns emerge (e.g., researchers tend to just follow the one presented inference via a particular model in a manuscript/book; in other words, no one brought their attention to other possibilities in a single source).  Besides gathering this information for readers in a single manuscript, we also inform them with clarity (as pointed out by JAP reviewers) on how to think about longitudinal inferences.  I like Mike's idea of pushing models and technical details to appendix.  I view it important to remove the models and technical details from the main text.  Placing those details in the main text led to the reviewers criticizing us for lacking novelty.  Our novelty comes in explaining how to think about longitudinal inferences.  We want that to stand out in the manuscript the most.
+
+
+
+Question: researchers can do more with their longitudinal data. There are additional questions to ask...would someone say, no, go into it with a proposed hypothesis and prediction; only look at a limited set of inferences. 
+
+
+take disparate literature and put them together in one place
+framework for how to think about patterns over time
