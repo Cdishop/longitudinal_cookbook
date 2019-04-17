@@ -1,0 +1,82 @@
+An argument:
+- Xu, DeShon, Dishop: HLMs are poorly suited for dynamic inferences. People need to know what the difference is between a dynamic, relationships, and trend inference. They need to know how to think about these patterns. 
+
+
+
+
+Search terms:
+
+2018
+"longitudinal" in the document
+up through page 6 on google scholar for JAP
+3 or more measurement occasions
+- excluded studies that had 3 measurement occasions but only assessed their constructs of interests once within one of those three windows (for example, measuring professional identification at time 1, resource depletion at time 2, and interpersonal harming toward coworkers at time 3; Deng, Coyle-Shapiro, Yang))
+- another example: personality at time 1, emotional exhaustion at time 2, performance at time 3 (Wang, Owens, Li, Shi, 2018)
+- work context variables at time 1, job crafting, satisfaction, commitment at time 2, proficiency and ocbs at time 3 (Dierdorf & Jensen, 2018). 
+- Mitchell, Baer, Ambrose (2018)
+- Lynch, Rodell 2018
+
+
+journal of applied psychology
+
+Dahlke, Kostal, et al.
+- relationships
+- trend
+
+
+Gielnik, Zacher, Wang
+- relationships
+
+
+Becker & Curhan
+- dynamics
+
+Little, Hinojosa, Underdahl, 
+- dynamics
+
+Thiel, Hardy, Peterson
+- relationships
+
+Nevicka, Van Vianen, Voorn
+- relationships
+
+Schaubroeck, Lam, Lai
+- dynamics
+
+Chen, Bamberger, Song
+- dynamics
+
+Farh, Chen, 2018
+- relationships
+
+Schmidt, Phler, 2018
+- dynamics
+
+DeOrtentiis, Van Iddekinge, 2018
+- trend
+
+Parke, Weinhardt, Brodsky, 2018
+- relationships
+
+Zhang, Mayer, Hwang (2018) - good example to discuss in actual paper
+- relationships
+
+Booth, Park, Zhu, Bearuregard
+- relationships
+
+Rosen, Simon, Gajendran
+- relationships
+
+Lievens, Lang, Fruty
+- relationships
+
+Brummelhuis, Greenhaus
+- relationships
+
+journal of management
+
+organizational behavior human decision
+
+journal of business and psychology
+
+academy of management journal
