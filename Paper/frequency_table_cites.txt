@@ -1,10 +1,10 @@
-An argument:
+# An argument:
 - Xu, DeShon, Dishop: HLMs are poorly suited for dynamic inferences. People need to know what the difference is between a dynamic, relationships, and trend inference. They need to know how to think about these patterns. 
 
 
 
 
-Search terms:
+# Search terms:
 
 2018
 "longitudinal" in the document
@@ -15,9 +15,11 @@ up through page 6 on google scholar for JAP
 - work context variables at time 1, job crafting, satisfaction, commitment at time 2, proficiency and ocbs at time 3 (Dierdorf & Jensen, 2018). 
 - Mitchell, Baer, Ambrose (2018)
 - Lynch, Rodell 2018
+- Fulmer, Ostroff, 2017
+- Huang, Wellman, Ashford, 2016
 
 
-journal of applied psychology
+# journal of applied psychology
 
 Dahlke, Kostal, et al.
 - relationships
@@ -73,10 +75,51 @@ Lievens, Lang, Fruty
 Brummelhuis, Greenhaus
 - relationships
 
-journal of management
+2017
 
-organizational behavior human decision
+Kaltianen, Lipponen, Holtz
+- dynamics
 
-journal of business and psychology
+Egan, Daly, Delaney
+- trend
 
-academy of management journal
+Bamberger
+- dynamics
+- maybe relationships
+
+Liu, Song, Koopman
+- relationships
+
+Igic, Keller, Elfering
+- trend
+
+Spieler, Scheibe
+- dynamics
+
+# journal of management
+
+# organizational behavior human decision
+
+# journal of business and psychology
+
+Abdelmoteleb
+- dynamics
+
+Cheng
+- dynamics
+
+Dierdorff, Surface - good example of bad phrasing. All he did was growth curves, but using "increases" terminology
+- trend
+
+Yang, Sliter, Cheung
+- relationships
+
+Sieweke, killner
+- relationships
+
+Holtom, Goldberg
+- survival
+
+
+# academy of management journal
+
