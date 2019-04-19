@@ -1,74 +1,21 @@
-\begin{table*}[hbt]
-\ifnextchar[{\eatarg}{}
-
-
-\caption{\label{tab:unnamed-chunk-7}\label{level_table}Examples of level inferences.}
-\centering
-\begin{tabular}[t]{>{\raggedright\arraybackslash}p{5em}>{\raggedright\arraybackslash}p{30em}}
+\begin{longtable}[t]{>{\raggedright\arraybackslash}p{15em}>{\raggedright\arraybackslash}p{15em}}
+\caption{\label{tab:unnamed-chunk-7}\label{inference_frequencies}Number of times a recent article emphasized one or more inference category.}\\
 \toprule
-Inference & Examples\\
+Type & Occurence\\
 \midrule
-1 & Burnout is high at the last time point.\newline Performance is low, on average, across time.\\
-\hline
-2 & Average affect across time differs across people (units).\newline There is variability in the initial level of turnover across organizations.\\
-\hline
-3 & People with greater initial health status also have greater initial happiness.\newline People with high performance on average across time have lower anxiety on average across time.\\
-\bottomrule
-\end{tabular}
-\end{table*}
-\begin{table*}[hbt]
-\ifnextchar[{\eatarg}{}
-
-
-\caption{\label{tab:unnamed-chunk-11}\label{trend_table}Examples of trend inferences.}
-\centering
-\begin{tabular}[t]{>{\raggedright\arraybackslash}p{5em}>{\raggedright\arraybackslash}p{30em}}
+\endfirsthead
+\caption[]{\label{tab:unnamed-chunk-7}Number of times a recent article emphasized one or more inference category. \textit{(continued)}}\\
 \toprule
-Inference & Examples\\
+Type & Occurence\\
 \midrule
-1 & Burnout decreases over time.\newline Performance increases over time.\\
-\hline
-2 & Affect trends differ across people (units).\newline There is variability in turnover trends across organizations.\\
-\hline
-3 & People with a positive health status trend have a positive happiness trend.\newline People with a positive performance trend have a negative anxiety trend.\\
-\hline
-4 & Gender correlates with depletion trends.\newline Unit climate covaries with unit performance trends.\\
+\endhead
+\
+\endfoot
 \bottomrule
-\end{tabular}
-\end{table*}
-\begin{table*}[hbt]
-\ifnextchar[{\eatarg}{}
-
-
-\caption{\label{tab:unnamed-chunk-16}\label{relationships_table}Examples of Relationship inferences.}
-\centering
-\begin{tabular}[t]{>{\raggedright\arraybackslash}p{5em}>{\raggedright\arraybackslash}p{30em}}
-\toprule
-Inference & Examples\\
-\midrule
-1 & Affect relates to performance across time.\newline Helping behaviors predict depletion across time.\\
-\hline
-2 & Affect relates to performance across people (and it is consistent over time/and averaged over time it is positive).\\
-\bottomrule
-\end{tabular}
-\end{table*}
-\begin{table*}[hbt]
-\ifnextchar[{\eatarg}{}
-
-
-\caption{\label{tab:unnamed-chunk-19}\label{dynamics_table}Examples of dynamic inferences.}
-\centering
-\begin{tabular}[t]{>{\raggedright\arraybackslash}p{5em}>{\raggedright\arraybackslash}p{30em}}
-\toprule
-Inference & Examples\\
-\midrule
-1 & Burnout demonstrates self-similarity across time.\newline Performance relates to subsequent performance.\\
-\hline
-2 & Affect predicts subsequent counterproductive work behaviors.\newline Turnover relates to subsequent firm performance.\\
-\hline
-3 & Positive health status relates to change in happiness.\newline Anxiety relates to change in performance.\\
-\hline
-4 & Affect relates to subsequent change in performance.\newline Helping behaviors predict subsequent depletion changes.\\
-\bottomrule
-\end{tabular}
-\end{table*}
+\endlastfoot
+Trend & 4\\
+Relationships & 13\\
+Dynamics & 10\\
+Any 2 & 1\\
+All 3 & 0\\*
+\end{longtable}

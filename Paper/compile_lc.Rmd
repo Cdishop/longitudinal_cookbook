@@ -2,7 +2,7 @@
 
 # https://crsh.github.io/papaja_man/index.html
 
-title             : "Between-Unit Inferences With Longitudinal Data"
+title             : "Thinking About Patterns Over Time"
 shorttitle        : "LONGITUDINAL INFERENCES"
 
 author: 
@@ -31,13 +31,13 @@ author_note: |
   ....
 
 abstract: |
-  Organizational scientists recognize that psychological phenomena and processes unfold over time. To better understand psychological phenomena over time, organizational researchers increasingly work with longitudinal data and explore inferences within those data structures. Longitudinal inferences may focus on any number of fundamental patterns, including construct trajectories, relationships between constructs, or dynamics. Although the diversity of longitudinal inferences provides a wide foundation for garnering knowledge in any given area, it also makes it difficult for researchers to know the set of inferences they may explore with longitudinal data, which statistical models to use given their question, and how to locate their specific study within the broader set of longitudinal inferences. In this paper, we develop a framework to describe the variety of between-unit research questions and inferences researchers may explore with longitudinal data and link those inferences to statistical models so researchers know where to turn to given their particular interests.
+  This paper is about how to think about patterns contained in longitudinal or panel data structures. Organizational scientists recognize that psychological phenomena and processes unfold over time and, to better understand them, organizational researchers increasingly work with longitudinal data and explore inferences within those data structures. Longitudinal inferences may focus on any number of fundamental patterns, including construct trajectories, relationships between constructs, or dynamics. Although the diversity of longitudinal inferences provides a wide foundation for garnering knowledge in any given area, it also makes it difficult for researchers to know the set of inferences they may explore with longitudinal data, which statistical models to use given their question, and how to locate their specific study within the broader set of longitudinal inferences. Studies that collect longitudinal data often only focus on one inference category when they could be asking about many more fundamental patterns and learning additional insights about their process of interest. Moreover, a recent article noted that certain statistical models are inappropriate for inferences about dynamics, so it is important for researchers to know how dynamic inferences differ from other, related ways of thinking about patterns over time such as relationships and trend. In this paper, we develop a framework to describe the variety of between-unit research questions and inferences researchers may explore with longitudinal data -- we demonstrate how to think about these fundamental patterns. 
   
 keywords          : "longitudinal inferences, between-unit, growth, trends, dynamics, relationships over time, processes"
 #wordcount         : "149"
 
 bibliography      : ["references.bib"]
-nocite: '@deshon_multivariate_2012'
+nocite: '@deshon_multivariate_2012; @xu_deshon_dishop'
 
 figsintext        : no
 figurelist        : no

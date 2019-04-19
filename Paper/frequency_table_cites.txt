@@ -1,3 +1,7 @@
+
+a recent article noted that certain classes of statistical models are innapropriate for inferences about dynamics, so it is important for researchers 
+
+
 # An argument:
 - Xu, DeShon, Dishop: HLMs are poorly suited for dynamic inferences. People need to know what the difference is between a dynamic, relationships, and trend inference. They need to know how to think about these patterns. 
 
