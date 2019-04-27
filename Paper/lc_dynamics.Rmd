@@ -10,7 +10,7 @@ Does performance relate to itself over time? Do current helping behaviors depend
 
 Panel A of Figure \ref{dynamics_figure} shows the concept with a box-and-arrow model heuristic. $y$ predicts itself across every moment -- it has self-similarity and its value now is constrained by where it was a moment ago. In our diagram, we show that $y$ at time $t$ is related to $y$ at time $t + 1$. In other words, we posit that $y$ shows a lag-one relationship, where $y$ is related to its future value one time-step away. Researchers are of course free to suggest any lag amount that they believe captures the actual relationship. Note that the statistical term to capture self-similarity or memory is called autoregression.
 
->> **Research Question 1:** On average across units, what is the relationship of $y$ to itself over time? (Autoregression)
+>> **Research Question 1:** On average in the population, what is the relationship of $y$ to itself over time? (Autoregression)
 
 
 \begin{center}
@@ -31,7 +31,7 @@ The next inference is about relating a predictor to our response variable while 
 
 Our literature has converged on calling this kind of relationship "change" because it emphasizes the difference between $y$ now and where it was in the past [e.g., @lanaj_when_2016; @rosen_who_2016]. The association asks how current $x$ relates to the difference between $y$ now and its immediately prior value. How does affect relate to change in performance? Does depletion covary with change in OCBs? Note that change can be construed from any prior time point (baseline, $t-1$, $t-3$); our literature commonly emphasizes lag-one change.
 
->> **Research Question 3:** On average across units, what is the relationship betweeen concurrent $x$ and change in $y$?
+>> **Research Question 3:** On average in the population, what is the relationship betweeen concurrent $x$ and change in $y$?
 
 The analyst is also free to assess variability in the expected change relationship.
 
@@ -41,7 +41,7 @@ Change relationships do not have to be concurrent. Panel C of Figure \ref{dynami
 
 Questions about lag-one change relationships take the following forms. Does affect predict subsequent performance change? Do prior counterproductive work behaviors relate to current incivility change? Does metacognition predict subsequent exploratory behavior change? Of course, researchers can also explore longer lags by relating predictors to more distal outcomes. 
 
->> **Research Question 5:** On average across units, what is the cross-lag relationship between $x$ and change in $y$ at a different point in time?
+>> **Research Question 5:** On average in the population, what is the cross-lag relationship between $x$ and change in $y$ at a different point in time?
 
 Again, typically researchers explore variability after assessing the average estimate.
 

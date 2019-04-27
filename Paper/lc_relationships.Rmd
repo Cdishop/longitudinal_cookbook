@@ -4,11 +4,11 @@ output: pdf_document
 
 # Relationships
 
-A relationships inference explores between-unit relationships over time. The second panel of Figure \ref{framework_figure} shows a model heuristic, where a predictor is concurrently related to a response variable at each time point and the relationship is typically constrained to equality or is averaged over time. Essentially, the inference compiles single-moment between-unit correlations. For example, we assess the between-unit correlation between, say, OCBs and depletion at time one, again and times two and three, and then ultimately take the average of each individual, between-unit correlation.
+A relationships inference explores between-unit relationships over time. The second panel of Figure \ref{framework_figure} shows a model heuristic, where a predictor is concurrently related to a response variable at each time point and the relationship is typically constrained to equality or is averaged over time. Essentially, the inference compiles single-moment correlations. For example, we assess the correlation between, say, OCBs and depletion at time one, again and times two and three, and then ultimately take the average of each individual, between-unit correlation.
 
 Questions about static relationships over time take the following forms. What is the relationship between helping behaviors and incivility? Does burnout predict turnover intention? Is unethical behavior related to self-control?
 
-Figure \ref{relation_tvc} shows the inuition of the inference with data. Panel A plots affect and performance trajectories for three people. The red circles in Panel A highlight each individual's affect and performance values at time point six. Given that we have three people at time point six, we can calculate a correlation between affect and performance at that moment (granted, it is a small sample). The calculated coefficient is then graphed in Panel B with another red circle. At time point six, the between-unit (across people) correlation among affect and performance is large and positive.
+Figure \ref{relation_tvc} shows the inuition of the inference with data. Panel A plots affect and performance trajectories for three people. The red circles in Panel A highlight each individual's affect and performance values at time point six. Given that we have three people at time point six, we can calculate a correlation between affect and performance at that moment (granted, it is a small sample). The calculated coefficient is then graphed in Panel B with another red circle. At time point six, the (across person) correlation among affect and performance is large and positive.
 
 \begin{center}
 
@@ -20,14 +20,14 @@ Insert Figure \ref{relation_tvc} about here
 
 \end{center}
 
-Panel B also shows between-unit correlation coefficients for the rest of the time points. Often these (between-unit) correlations are either averaged over time or constrained to be equal. Note that when a researcher uses a time-varying covariates, hierarchical linear, random-coefficient, or multi-level model on longitudinal data to explore concurrent relationships among one or more variables (and they are not analyzing trend) they are making this inference.
+Panel B also shows across-person correlation coefficients for the rest of the time points. Often these correlations are either averaged over time or constrained to be equal. Note that when a researcher uses a time-varying covariates, hierarchical linear, random-coefficient, or multi-level model on longitudinal data to explore concurrent relationships among one or more variables (and they are not analyzing trend) they are making this inference.
 
 
->> **Research Question 1:** What is the average between-unit relationship of $x$ and $y$? (Typically constrained to be equal over time or averaged over time).
+>> **Research Question 1:** On average in the population, what is the relationship between $x$ and $y$? (Typically constrained to be equal or averaged over time).
 
-The first relationships inference emphasizes the between-unit expected average. As with the trend inferences, the next question is to examine variability in that estimated relationship across the sample. How consistent across the sample is the relationship between distractions and fatigue? Is there variability in the relationship between emotions and volunteering behaviors?
+The first relationships inference emphasizes the expected average. As with the trend inferences, the next question is to examine variability in that estimated relationship across the sample. How consistent across the sample is the relationship between distractions and fatigue? Is there variability in the relationship between emotions and volunteering behaviors?
 
->> **Research Question 2:** What is the variability across units in the between-unit relationship among $x$ and $y$?
+>> **Research Question 2:** What is the variability across units in the relationship among $x$ and $y$?
 
 ## Literature on Statistical Models for Relationships
 
