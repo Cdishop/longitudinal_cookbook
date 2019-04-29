@@ -200,7 +200,7 @@ ggplot(yup, aes(x = Time, y = Y, color = Person)) +
 ```
 
 
-```{r, echo = F, fig.cap = 'Between-unit correlation of trend in affect and performance.\\label{trend_correlation}', fig.height = 10}
+```{r, echo = F, fig.cap = 'Between-person correlation of trend in affect and performance.\\label{trend_correlation}', fig.height = 10}
 ind <- c(1:20)
 set.seed(33)
 tre_affect <- 6 + 0.6*ind + rnorm(20,0,1)

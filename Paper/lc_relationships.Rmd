@@ -130,7 +130,7 @@ grid.arrange(g1, g2, ncol = 1)
 
 
 
-```{r, echo = F, fig.cap = 'Relating affect to performance across units over time. The red circles demonstrate the between unit correlation at time point six. A typical time-varying covariates model constrains the correlation to be equivalent across time. Here, the relationship is unconstrained at each time point.\\label{relation_tvc}', fig.height = 8}
+```{r, echo = F, fig.cap = 'Relating affect to performance across people over time. The red circles demonstrate the between person correlation at time point six. A typical time-varying covariates model constrains the correlation to be equivalent across time. Here, the relationship is unconstrained at each time point.\\label{relation_tvc}', fig.height = 8}
 library(ggplot2)
 set.seed(94)
 
