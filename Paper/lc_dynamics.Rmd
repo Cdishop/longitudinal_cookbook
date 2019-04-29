@@ -57,7 +57,7 @@ The dynamic inferences shown here also generalize to systems of variables where 
 
 ## Literature on Statistical Models for Dynamics
 
-@Wang2016 review a variety of dynamic models and, although their paper does not provide readers with specific code, it is an excellent resource to become familiar with potential dynamic models. Xu, DeShon, and Dishop (in press) describe why multi-level models are innapropriate for inferences about dynamics and instead recommend a general panel model described in @bollen_general_2010. Other statistical models that are appropriate for dynamic inferences are discussed in @voelkle2015relating, @molenaar_dynamic_1985; @molenaar_merging_2012, @molenaar_testing_2010, @mcardle_latent_2009, and @eschleman_advancing_2014. 
+@Wang2016 review a variety of dynamic models and, although their paper does not provide readers with specific code, it is an excellent resource to become familiar with potential dynamic models. Xu, DeShon, and Dishop (in press) describe why multi-level models are innapropriate for inferences about dynamics and instead recommend a general panel model described in @bollen_general_2010. See @moral2019dynamic for a similar discussion. Other statistical models that are appropriate for dynamic inferences are discussed in @voelkle2015relating, @molenaar_dynamic_1985; @molenaar_merging_2012, @molenaar_testing_2010, @mcardle_latent_2009, and @eschleman_advancing_2014. Finally, Zyphur et al. (A, in press) and Zyphur et al. (B, in press) discuss a number of dynamic statistical models. 
 
 ```{r, echo = F, eval = F}
 library(xtable)
