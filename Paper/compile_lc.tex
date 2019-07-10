@@ -108,9 +108,7 @@ P. DeShon\textsuperscript{1}}
 \makeatletter
 \renewcommand{\efloat@iwrite}[1]{\immediate\expandafter\protected@write\csname efloat@post#1\endcsname{}}
 \makeatother
-\usepackage{lineno}
 
-\linenumbers
 
 \authornote{\ldots{}.
 
@@ -120,7 +118,7 @@ East Lansing, MI, 48823. E-mail:
 \href{mailto:dishopch@msu.edu}{\nolinkurl{dishopch@msu.edu}}}
 
 \abstract{
-This manuscript considers how to think about patterns contained in
+In this manuscript we explore how to think about patterns contained in
 longitudinal or panel data structures. Organizational scientists
 recognize that psychological phenomena and processes unfold over time
 and, to better understand them, organizational researchers increasingly
@@ -132,18 +130,10 @@ inferences provides a wide foundation for garnering knowledge in any
 given area, it also makes it difficult for researchers to know the set
 of inferences they may explore with longitudinal data, which statistical
 models to use given their questions, and how to situate their specific
-inquiries within the broader set of longitudinal inferences. Studies
-that collect longitudinal data often only focus on one inference
-category when they could investigate many more fundamental patterns and
-learn additional insights about their processes of interest. Moreover,
-organizational scientists commonly apply (e.g., multi-level) statistical
-models inappropriate for inferences on longitudinal dynamics. Thus,
-organizational scientists should know how inferences about dynamics
-differ from related, over time inferences such as longitudinal
-relationships and trends. In this manuscript, we develop a framework to
-describe the variety of research questions and inferences researchers
-may explore with longitudinal data -- we demonstrate how to think about
-fundamental longitudinal data patterns.
+inquiries within the broader set of longitudinal inferences. Moreover,
+the diversity of statistical models that can be applied to longitudinal
+data requires that researchers understand how one inference category
+differs from another.
 
 
 }
@@ -172,7 +162,7 @@ goals, team members collaborate so the whole eventually becomes greater
 than the sum of its parts, and managers repeatedly promote values to
 build vibrant, innovative work cultures. To better understand
 psychological phenomena, such as motivation, teamwork, and
-organizaitonal culture, researchers must attent not to static snapshots
+organizational culture, researchers must attend not to static snapshots
 of behavior (Ilgen \& Hulin, 2000; Kozlowski, Chao, Grand, Braun, \&
 Kuljanin, 2013, 2016) but to actors, events, variables and relationships
 as they move through time. Obtaining longitudinal data allows
@@ -227,7 +217,7 @@ researchers to locate and parse disparate literature to understand what
 they can ask of longitudinal data. Second, a recent article noted that,
 despite a growing emphasis on dynamics in organizational science,
 certain statistical models are inappropriate for inferences about
-dynamics (Xu, DeShon, \& Dishop, in press). The authors state that
+dynamics (Xu, DeShon, \& Dishop, 2019). The authors state that
 researchers should consider whether their interest is dynamics or other
 over time patterns and choose their statistical model accordingly.
 Researchers, therefore, need to know how dynamic inferences differ from
@@ -444,10 +434,7 @@ Figure \ref{trend_correlation} shows the inuition behind this inference
 with a set of graphs. In Panel A, we plot affect and performance across
 time for three individuals. Affect goes up while performance goes down
 for person one, this pattern is reversed for person two, and person
-three reports trendless affect and performance (i.e., zero trend). We
-use different colors to label the trends for each person. The affect and
-performance trends for person one are labeled with red lines, whereas
-person two has green lines and person three has blue lines.
+three reports trendless affect and performance (i.e., zero trend).
 
 Panel B then maps those pairings onto a scatterplot that demonstrates
 the (between-person) relationship among affect and performance trends.
@@ -492,8 +479,7 @@ trajectories tend to increase for those in sales. An individual's job
 type, then, gives us a clue to their likely affect trend -- said
 formally, job type covaries with affect trend, such that we expect
 individuals in sales to have positive affect trends and individuals in
-research and development to have negative affect trends. The expected
-trends are plotted as the thick blue lines.
+research and development to have negative affect trends.
 
 \begin{center}
 
@@ -633,6 +619,181 @@ growth curve modeling and McArdle and Epstein (1987) for an empirical
 discussion. Two straight-forward empirical examples from our own field
 include Dunford et al. (2012) and Hülsheger (2016).
 
+GCM is able to model the dependent variable -- performance, for example
+-- as a result of predictors at multiple levels of analysis. Level one
+predictors vary at the same level as the depenent variable, meaning that
+if individual performance is the outcome of interest then level one
+predictors might include individual goal-striving and individual
+cognitive ability. If, on the other hand, the outcome is organizational
+performance then level one predictors might include organizational
+climate or culture. Level two predictors occur at higher units of
+analysis -- team cohesion if the dependent variable is individual
+performance or national culture if the dependent variable is
+organizational performance. Variables at any level can enter into the
+statistical model either as fixed or random. Fixed predictors estimate
+only the average relationship across all units, whereas random
+predictors estimate not only the average IV-DV relationship across units
+but also estimate the degree of between-unit variability in the
+relationship.
+
+The most basic growth model is the unconditional means model (UMM).
+Using notation from Singer et al. (2003), this statistical model is
+specified as
+
+\begin{align}
+\label{UMM}
+Y_{ij} &= \pi_{0i} + \varepsilon_{ij} \\
+\pi_{0i} &= \gamma_{00} + \zeta_{0i}
+\end{align}
+
+\noindent where \(\varepsilon\) \textasciitilde{}
+\(N(0, \sigma_{\varepsilon}^2)\) and \(\zeta_{0i}\) \textasciitilde{}
+\(N(0, \sigma_{0}^2)\), \(Y_{ij}\) is the dependent variable measured
+for person \(i\) at time \(j\), \(\pi_{0i}\) is the mean of \(Y\) for
+individual \(i\), \(\gamma_{00}\) is the mean of \(Y\) across everyone
+in the population, \(\varepsilon_{ij}\) is the residual for individual
+\(i\) on occasion \(j\), \(\sigma_{\varepsilon}^2\) is the pooled
+within-person variance of each individual's data around his or her mean,
+\(\zeta_{0i}\) is the random effect for individual \(i\) (i.e.,
+deviation of the person-specific mean from the grand mean), and
+\(\sigma_0^2\) is the random effect variance.
+
+In words with individual performance as an example, this UMM says that
+performance for Rachel at any time is a function of her across time
+individual performance mean and error (equation one). Moreover, Rachel's
+individual performance mean is a function of the population performance
+mean (i.e., the mean of everyone's individual performance) and error
+(equation two). What this statistical model embodies is that (1) a
+reasonable prediction for Rachel's performance given no other
+information, such as other predictors like goal-striving or cognitive
+ability, is the mean of individual performance and (2) there are
+between-person differences in individual performance.
+
+The initial UMM model is typically used to calculate the intraclass
+correlation coefficient (ICC(1)) which estimates the proportion of total
+variance attributed to between-unit differences. Researchers, for
+example, would conduct an initial UMM on individual performance and then
+state, perhaps, that 57\% of the total variance resides between
+individuals. It is also possible to conduct a \(\chi^2\) test to assess
+whether the estimated between-person variance differs from zero. Both
+results are used to argue that it is reasonable to move forward with
+more complicated statistical analyses, to include additional predictors
+that may explain (in a statistical sense) the observed between-person
+variability.
+
+Assuming differences across units exist, it is then recommended to
+conduct the unconditional linear growth model (ULGM). The ULGM regresses
+the dependent variable on a fixed linear time variable while allowing
+variability across units in intercepts. The regression weight on the
+time variable (ie., slope) models the average trend across units and is
+used to answer RQ1. It is then common to allow the Time-DV relationship
+to vary across units by entering the time variable as a level one random
+predictor, as shown in the equation below.
+
+\begin{align}
+\label{ULGM}
+Y_{ij} &= \pi_{0i} + \pi_{i1}Time_{ij} + \varepsilon_{ij} \\
+\pi_{0i} &= \gamma_{00} + \zeta_{0i} \\
+\pi_{i1} &= \gamma_{10} + \zeta_{1i}
+\end{align}
+
+\noindent \noindent where \(\varepsilon\) \textasciitilde{}
+\(N(0, \sigma_{\varepsilon}^2)\) and
+\(\begin{bmatrix} \zeta_{0i} \\ \zeta_{1i} \end{bmatrix}\)
+\textasciitilde{}
+\(N\bigl(\begin{bmatrix} 0 \\ 0 \end{bmatrix}, \begin{bmatrix} \sigma_{0}^2 & \sigma_{10} \\ \sigma_{10} & \sigma_{1}^2\end{bmatrix}\bigr)\),
+\(\pi_{0i}\) is now the initial status (i.e., intercept) of \(Y\) for
+individual \(i\), \(\gamma_{00}\) is the average initial status of \(Y\)
+across everyone in the population, \(\pi_{1i}\) is the rate of change
+(i.e., slope) of \(Y\) for individual \(i\), \(\gamma_{10}\) is the
+average rate of change of \(Y\) across everyone in the population,
+\(\sigma_{\varepsilon}^2\) is the pooled variance of each individuals'
+data around his or her linear change trajectory, \(\zeta_{0i}\) is the
+intercept random effect for individual \(i\), \(\sigma_{0}^2\) is the
+variance of intercept random effects, \(\zeta_{1i}\) is the slope random
+effect for individual \(i\), \(\sigma_1^2\) is the variance of the slope
+random effects, \(\sigma_{10}\) is the population covariance between
+intercepts and slopes, and all other terms are defined above.
+
+In words with individual performance as example, this ULGM says that
+Rachel's performance is a function of her initial level of performance
+(which is a function of the population initial performance level and
+error) and time (equation 3). Time, therefore, can be thought of as a
+predictor in the case of the ULGM which makes it an inherently static,
+as opposed to dynamic, statistical model (Voelkle \& Oud, 2015) and
+emphasizes description rather than explanation because time cannot be a
+true underlying cause (Pitariu \& Ployhart, 2010). We moved beyond the
+unconditional means model to \enquote{explain} more variation in
+Rachel's performance by including additional predictors. In the case of
+the ULGM, our additional predictor is time and the estimate of the
+coefficient relating it to the outcome describes both the expected trend
+and whether there are between-unit differences in trend in the sample
+(research questions one and two). Time is a level one predictor because
+it varies on the same level as the outcome (the individual level) and it
+is incorporated in the statistical model as a random effect (equation
+5).
+
+To review, we first modeled individual performance as a function of
+across time individual performance means (which, themselves, were
+functions of the population individual performance). That basic
+statistical model was a UMM and we turned it into an ULGM by
+incorporating time as a predictor. Once time enters the equation, we
+update our view of performance and it becomes a function of initial
+performance level and time, meaning that one-unit increases in time are
+seen as relating to increases or decreases in performance. Those
+increases and decreases across time, in aggregate, form trend. In
+practice, the statistical model returns one number for the estimate of
+the coefficient relating time to the outcome and it describes the
+expected between-person performance trend.
+
+Understanding the basic ULGM with time as a random level one predictor
+allows researchers to explore, with simple extensions such as
+incorporating additional predictors or modeling two or more variables as
+outcomes (multivariate systems), any number of further inferences.
+Researchers can enter additional multiples of time as predictors --
+e.g., include \(Time^2\) and/or \(Time^3\) in equation 3 -- to determine
+whether trajectories are curvilinear or follow other temporal patterns.
+Researchers can also enter additional level one or two substantive
+predictors to determine whether there are covariates of trend. Consider,
+again, the example in Figure 3 which plots affect trends that differ by
+job type. Affect is the outcome that is regressed on time, forming the
+underlying (descriptive) ULGM. Entering job type as a random, level two
+predictor returns a coefficient that describes whether the expected
+affect trend differs according to this additional predictor.
+Statistically, the model estimates whether higher values on the level
+two predictor relate to stronger IV-DV relationships. In the case of
+growth models, time is the IV so \enquote{stronger IV-DV} relationships
+means different trend patterns. The level two predictor therefore
+estimates whether higher values -- or in the case of job type, different
+types of jobs -- demonstrate different trend (RQ4). Beyond incorporating
+more predictors of a single outcome, researchers can also model multiple
+outcomes with simultaneous ULGMs. Consider two independent ULGMs, one
+with individual performance regressed on time and another with
+individual OCBs regressed on time. All inferences, research questions,
+and statitical models described above can be explored independently with
+these two outcomes. Typically, however, when random effects are
+incorporated covariances among all random effect variables are
+estimated, meaning that the two outcomes in the multivariate system are
+no longer viewed as independent. The covariance estimate between the
+slope term for performance and the slope term for OCBs, in this example,
+are used to answer research question three.
+
+Once time is included in the statistical model (e.g., the ULGM), the
+intercept value represents the level of the DV at the time point coded 0
+(typically the first or last time point). The intercept value is almost
+always modeled as random whereby the analysis will return a mean
+estimate which tells you the average level across units (answering RQ5),
+and it will also return a variance estimate that indicates variability
+in level between units. As such, the variance component on the intercept
+term determines whether there is significant between-unit variability in
+the level of the DV when time equals zero, answering RQ6. As previously
+stated, it is common to estimate covariance among random predictors,
+therefore the covariance between the intercept and slope random effects
+is used to determine whether units with higher (lower) initial values
+exhibit stronger (weaker) growth, answering RQ7. Finally, it is also
+possible to estimate covariances among the intercept and slope among
+different variables in multivariate systems, answering RQ8 and RQ9.
+
 \begin{figure}
 \centering
 \includegraphics{figures/unnamed-chunk-11-1.pdf}
@@ -667,13 +828,13 @@ self-control?
 
 Figure \ref{relation_tvc} shows the inuition of the inference with data.
 Panel A plots affect and performance trajectories for three people. The
-red circles in Panel A highlight each individual's affect and
-performance values at time point six. Given that we have three people at
-time point six, we can calculate a correlation between affect and
-performance at that moment (granted, it is a small sample). The
-calculated coefficient is then graphed in Panel B with another red
-circle. At time point six, the (across person) correlation among affect
-and performance is large and positive.
+triangles in Panel A highlight each individual's affect and performance
+values at time point six. Given that we have three people at time point
+six, we can calculate a correlation between affect and performance at
+that moment (granted, it is a small sample). The calculated coefficient
+is then graphed in Panel B with another triangle. At time point six, the
+(across person) correlation among affect and performance is large and
+positive.
 
 \begin{center}
 
@@ -720,16 +881,42 @@ the relationship among \(x\) and \(y\)?
 Relationships}\label{literature-on-statistical-models-for-relationships}}
 
 Time-varying covariates (TVC) analysis is the workhorse behind
-relationship inferences. Complete discussions of TVC models are located
-in Schonfeld and Rindskopf (2007) and Finch, Bolin, and Kelley (2016)
-and two relatively straight-forward empirical examples are in Barnes,
+relationship inferences. TVC models are simply growth curve models that
+include level 1 predictors (either fixed or random). The equation below
+shows an ULGM ammended to include an additional level one predictor,
+\(X\).
+
+\begin{align}
+\label{ULGM}
+Y_{ij} &= \pi_{0i} + \pi_{i1}Time_{ij} + \pi_{i2}X_{ij} + \varepsilon_{ij} \\
+\pi_{0i} &= \gamma_{00} + \zeta_{0i} \\
+\pi_{i1} &= \gamma_{10} + \zeta_{1i} \\
+\pi_{i2} &= \gamma_{20} + \zeta_{2i}
+\end{align}
+
+\noindent \noindent where \(X\) is the additional random predictor and
+it is related to the outcome, \(Y\), through \(\pi_{i2}\). The average
+relationship between \(X\) and \(Y\) across units is used to answer RQ1
+whereas the variance component estimating the between-unit variaiblity
+in the \(X\)-\(Y\) relationship is used to answer RQ2. It is important
+to note that TVC analyses can either be conducted by building upon the
+ULGM, as is presented here, or can be done by building directly upon the
+UMM (e.g., Judge, Scott, \& Ilies, 2006). The difference is whether the
+predictor time is included to control for growth in the DV. Typically,
+if it is anticipated or observed that the DV exhibits a consistent
+trajectory over time, then time is included and TVC models build from
+the ULGM. Alternatively, if the DV is not expected or observed to
+exhibit linear (or curvilinear) growth, then level one predictors are
+added directly to the UMM. Complete discussions of TVC models are in
+Schonfeld and Rindskopf (2007) and Finch, Bolin, and Kelley (2016) and
+two relatively straight-forward empirical examples are in Barnes,
 Schaubroeck, Huth, and Ghumman (2011) and Chi, Chang, and Huang (2015).
 
 \begin{figure}
 \centering
 \includegraphics{figures/unnamed-chunk-15-1.pdf}
 \caption{\label{fig:unnamed-chunk-15}Relating affect to performance across
-people over time. The red circles demonstrate the between person
+people over time. The triangles demonstrate the between person
 correlation at time point six. A typical time-varying covariates model
 constrains the correlation to be equivalent across time. Here, the
 relationship is unconstrained at each time point.\label{relation_tvc}}
@@ -914,16 +1101,45 @@ Dynamics}\label{literature-on-statistical-models-for-dynamics}}
 
 Wang et al. (2016) review a variety of dynamic models and, although
 their paper does not provide readers with specific code, it is an
-excellent resource to become familiar with potential dynamic models. Xu,
-DeShon, and Dishop (in press) describe why multi-level models are
-innapropriate for inferences about dynamics and instead recommend a
-general panel model described in Bollen and Brand (2010). See
-Moral-Benito, Allison, and Williams (2019) for a similar discussion.
-Other statistical models that are appropriate for dynamic inferences are
-discussed in Voelkle and Oud (2015), Molenaar (1985); Molenaar and
-Nesselroade (2012), Molenaar (2010), McArdle (2009), and Eschleman and
-LaHuis (2014). Finally, Zyphur et al. (A, in press) and Zyphur et al.
-(B, in press) discuss a number of dynamic statistical models.
+excellent resource to become familiar with potential dynamic models. Xu
+et al. (2019) describe why multi-level models are innapropriate for
+inferences about dynamics and instead recommend a general panel model
+described in Bollen and Brand (2010). See Moral-Benito, Allison, and
+Williams (2019) for a similar discussion. Other statistical models that
+are appropriate for dynamic inferences are discussed in Voelkle and Oud
+(2015), Molenaar (1985); Molenaar and Nesselroade (2012), Molenaar
+(2010), McArdle (2009), and Eschleman and LaHuis (2014). Finally, Zyphur
+et al. (2019) discuss a number of dynamic statistical models.
+
+The principle addition for dynamic models is the inclusion of a lagged
+version of the DV as a predictor (\(Y_{t-1}\)). The inclusion of
+\(Y_{t-1}\) controls for prior observations of the DV when predicting
+current values, essentially modeling the change in the DV from one time
+point to another without relying on difference scores (e.g., Edwards \&
+Parry, 1993). As such, the first research question is answered by
+evaluating the average relationship between the DV and a prior version
+of itself as a level one predictor. Similarly, once the autoregressive
+term is modeled as random, evaluating the variance component answers RQ2
+regarding whether the autoregressive relationship differs across units.
+To answer the subsequent research questions, the inclusion of an
+additional substantive predictor, \(X_t\), is required. When \(X_t\) is
+modeled at only the concurrent time point with the DV, then the \(X_t\)
+\(\rightarrow\) \(Y_t\) relationship determines whether values of \(X\)
+at a given time point relate to the change in \(Y\), addressing RQ3. The
+variance component on \(X_t\) when it is modeled as a random level one
+preditor determines whether the relationship varies across units,
+answering RQ4. Finally, if the researcher is interested in determining
+whether changes in the predictor, \(X\), relate to changes in the DV,
+\(Y\), an additional level one predictor in included in the model that
+represnts prior realizations of \(X\), \(X_{t-1}\). With the inclusion
+of \(X_{t-1}\), the paramater on the predictor \(X_t\) now determines
+whether changes in \(X\) relate to changes in \(Y\), answering RQ5
+whereas the variance component on \(X_t\) determines whether significant
+variability in the relationship exists (RQ6). There are many additional
+dynamic models that can be estimated within the GCM framework. Wang et
+al. (2016) review a variety of dynamic models and, although their paper
+does not provide readers with specific code, it is an excellent resource
+to become familiar with potential dynamic models.
 
 \begin{figure}
 
@@ -1013,14 +1229,14 @@ data collection, and statistical model) that is consistent with those
 interests.
 
 Third, and building off point two, certain questions and inferences
-require specific statistical models. Xu, DeShon, and Dishop (in press)
-demonstrated that multi-level (or hierarchical linear) models are
-innapropriate for inferences about dynamics. Howardson, Karim, and Horn
-(2017), Kuljanin et al. (2011), Braun et al. (2013a) state that the
-assumptions (e.g., stationarity) of multi-level models may not best suit
-data following dynamic patterns. Knowing how inferences about dynamics
-differ from inferences about trends or relationships, therefore, is
-critical for choosing an appropriate statistical model.
+require specific statistical models. Xu et al. (2019) demonstrated that
+multi-level (or hierarchical linear) models are innapropriate for
+inferences about dynamics. Howardson, Karim, and Horn (2017), Kuljanin
+et al. (2011), Braun et al. (2013a) state that the assumptions (e.g.,
+stationarity) of multi-level models may not best suit data following
+dynamic patterns. Knowing how inferences about dynamics differ from
+inferences about trends or relationships, therefore, is critical for
+choosing an appropriate statistical model.
 
 Fourth, all of the ideas presented here can be used in harmony to learn
 about the temporal nature of a phenomenon. A researcher does not have to
@@ -1107,6 +1323,12 @@ of employee burnout trajectories. \emph{Journal of Applied Psychology},
 \emph{97}(3), 637--650.
 doi:\href{https://doi.org/http://dx.doi.org.proxy2.cl.msu.edu/10.1037/a0027060}{http://dx.doi.org.proxy2.cl.msu.edu/10.1037/a0027060}
 
+\leavevmode\hypertarget{ref-edwards1993use}{}%
+Edwards, J. R., \& Parry, M. E. (1993). On the use of polynomial
+regression equations as an alternative to difference scores in
+organizational research. \emph{Academy of Management Journal},
+\emph{36}(6), 1577--1613.
+
 \leavevmode\hypertarget{ref-eschleman_advancing_2014}{}%
 Eschleman, K. J., \& LaHuis, D. (2014). Advancing occupational stress
 and health research and interventions using latent difference score
@@ -1161,6 +1383,11 @@ Psychological Association.
 Jones, K. P., King, E. B., Gilrane, V. L., McCausland, T. C., Cortina,
 J. M., \& Grimm, K. J. (2016). The baby bump: Managing a dynamic stigma
 over time. \emph{Journal of Management}, \emph{42}(6), 1530--1556.
+
+\leavevmode\hypertarget{ref-judge2006hostility}{}%
+Judge, T. A., Scott, B. A., \& Ilies, R. (2006). Hostility, job
+attitudes, and workplace deviance: Test of a multilevel model.
+\emph{Journal of Applied Psychology}, \emph{91}(1), 126.
 
 \leavevmode\hypertarget{ref-judge_what_2014}{}%
 Judge, T. A., Simon, L. S., Hurst, C., \& Kelley, K. (2014). What I
@@ -1311,6 +1538,11 @@ S., Salas, E., \& Garven, S. (2012). Trust development in swift starting
 action teams: A multilevel framework. \emph{Group \& Organization
 Management}, \emph{37}(2), 137--170.
 
+\leavevmode\hypertarget{ref-xu2019challenges}{}%
+Xu, R., DeShon, R. P., \& Dishop, C. R. (2019). Challenges and
+opportunities in the estimation of dynamic models. \emph{Organizational
+Research Methods}, 1094428119842638.
+
 \leavevmode\hypertarget{ref-xu_deshon_dishop}{}%
 Xu, R., DeShon, R. P., \& Dishop, C. R. (n.d.). Challenges and
 opportunities in the estimation of dynamic models. \emph{Organizational
@@ -1323,6 +1555,12 @@ cross-lagged panel model (gclm). \emph{Organizational Research Methods}.
 \leavevmode\hypertarget{ref-zyphurb}{}%
 Zyphur, A., M. J. (n.d.-b). From data to causes ii. Comparing approaches
 to panel data analysis. \emph{Organizational Research Methods}.
+
+\leavevmode\hypertarget{ref-zyphur2019data}{}%
+Zyphur, M. J., Voelkle, M. C., Tay, L., Allison, P. D., Preacher, K. J.,
+Zhang, Z., \ldots{} others. (2019). From data to causes ii: Comparing
+approaches to panel data analysis. \emph{Organizational Research
+Methods}, 1094428119847280.
 
 
 \end{document}
