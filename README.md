@@ -1,1 +1,1 @@
-# longitudinal_cookbook
+Repository for a book chapter written by Christopher R. Dishop, Michael T. Braun, Goran Kuljanin, and Richard P. DeShon entitled, *Thinking Longitudinal: A Framework for Scientific Inferences with Temporal Data*. The final pdf is located in this top folder, whereas the Rmarkdown files used to generate it are located within the "Paper" folder. The other folders contain notes and writing that are relevant to the many different ways of writing the paper that we considered. 
