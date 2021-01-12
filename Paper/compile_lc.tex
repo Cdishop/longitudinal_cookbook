@@ -1,3 +1,6 @@
+\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
+\PassOptionsToPackage{hyphens}{url}
+%
 \documentclass[english,,man]{apa6}
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
@@ -6,35 +9,29 @@
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provides euro and other symbols
 \else % if luatex or xelatex
-  \ifxetex
-    \usepackage{mathspec}
-  \else
-    \usepackage{fontspec}
-  \fi
+  \usepackage{unicode-math}
   \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
 \fi
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 % use microtype if available
 \IfFileExists{microtype.sty}{%
-\usepackage{microtype}
+\usepackage[]{microtype}
 \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
 \usepackage{hyperref}
-\hypersetup{unicode=true,
-            pdftitle={Thinking Longitudinal: A Framework for Scientific Inferences with Temporal Data},
-            pdfauthor={Christopher R. Dishop, Michael T. Braun, Goran Kuljanin, \& Richard P. DeShon},
-            pdfkeywords={longitudinal inferences, between-unit, growth, trends, dynamics, relationships over time, processes},
+\hypersetup{
             pdfborder={0 0 0},
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
-\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
-  \usepackage[shorthands=off,main=english]{babel}
-\else
-  \usepackage{polyglossia}
-  \setmainlanguage[]{english}
-\fi
 \usepackage{graphicx,grffile}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -44,60 +41,64 @@
 % margins by default, and it is still possible to overwrite the defaults
 % using explicit options in \includegraphics[width, height, ...]{}
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
-\IfFileExists{parskip.sty}{%
-\usepackage{parskip}
-}{% else
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{6pt plus 2pt minus 1pt}
-}
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{0}
-% Redefines (sub)paragraphs to behave more like sections
-\ifx\paragraph\undefined\else
-\let\oldparagraph\paragraph
-\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
-\fi
-\ifx\subparagraph\undefined\else
-\let\oldsubparagraph\subparagraph
-\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
-\fi
 
-%%% Use protect on footnotes to avoid problems with footnotes in titles
-\let\rmarkdownfootnote\footnote%
-\def\footnote{\protect\rmarkdownfootnote}
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
 
-
-  \title{Thinking Longitudinal: A Framework for Scientific Inferences with Temporal Data}
-    \author{Christopher R. Dishop\textsuperscript{1}, Michael T. Braun\textsuperscript{2}, Goran Kuljanin\textsuperscript{3}, \& Richard P. DeShon\textsuperscript{1}}
-    \date{}
-  
-\shorttitle{LONGITUDINAL INFERENCES}
-\affiliation{
-\vspace{0.5cm}
-\textsuperscript{1} Michigan State University\\\textsuperscript{2} University of South Florida\\\textsuperscript{3} DePaul University}
-\keywords{longitudinal inferences, between-unit, growth, trends, dynamics, relationships over time, processes}
-\usepackage{csquotes}
+% Manuscript styling
 \usepackage{upgreek}
 \captionsetup{font=singlespacing,justification=justified}
 
+% Table formatting
 \usepackage{longtable}
 \usepackage{lscape}
-\usepackage{multirow}
-\usepackage{tabularx}
-\usepackage[flushleft]{threeparttable}
-\usepackage{threeparttablex}
+% \usepackage[counterclockwise]{rotating}   % Landscape page setup for large tables
+\usepackage{multirow}		% Table styling
+\usepackage{tabularx}		% Control Column width
+\usepackage[flushleft]{threeparttable}	% Allows for three part tables with a specified notes section
+\usepackage{threeparttablex}            % Lets threeparttable work with longtable
 
+% Create new environments so endfloat can handle them
+% \newenvironment{ltable}
+%   {\begin{landscape}\begin{center}\begin{threeparttable}}
+%   {\end{threeparttable}\end{center}\end{landscape}}
 \newenvironment{lltable}{\begin{landscape}\begin{center}\begin{ThreePartTable}}{\end{ThreePartTable}\end{center}\end{landscape}}
 
+% Enables adjusting longtable caption width to table width
+% Solution found at http://golatex.de/longtable-mit-caption-so-breit-wie-die-tabelle-t15767.html
 \makeatletter
 \newcommand\LastLTentrywidth{1em}
 \newlength\longtablewidth
 \setlength{\longtablewidth}{1in}
 \newcommand{\getlongtablewidth}{\begingroup \ifcsname LT@\roman{LT@tables}\endcsname \global\longtablewidth=0pt \renewcommand{\LT@entry}[2]{\global\advance\longtablewidth by ##2\relax\gdef\LastLTentrywidth{##2}}\@nameuse{LT@\roman{LT@tables}} \fi \endgroup}
 
+% \setlength{\parindent}{0.5in}
+% \setlength{\parskip}{0pt plus 0pt minus 0pt}
 
+% \usepackage{etoolbox}
+\makeatletter
+\patchcmd{\HyOrg@maketitle}
+  {\section{\normalfont\normalsize\abstractname}}
+  {\section*{\normalfont\normalsize\abstractname}}
+  {}{\typeout{Failed to patch abstract.}}
+\makeatother
+\shorttitle{LONGITUDINAL INFERENCES}
+\author{Christopher R. Dishop\textsuperscript{1}, Michael T. Braun\textsuperscript{2}, Goran Kuljanin\textsuperscript{3}, \& Richard P. DeShon\textsuperscript{1}}
+\affiliation{
+\vspace{0.5cm}
+\textsuperscript{1} Michigan State University\\\textsuperscript{2} University of South Florida\\\textsuperscript{3} DePaul University}
+\authornote{
+Dishop, C. R., Braun, M. T., Kuljanin, G., \& DeShon, R. P. (2020). Thinking Longitudinal: A Framework for Scientific Inferences with Temporal Data. In Griep, Y. Hansen, S. D., Vantilborgh, T., \& Hofmans, J. (Ed.), Handbook on the Temporal Dynamics of Organizational Behavior. Edward Elgar Publishing.
+
+
+Correspondence concerning this article should be addressed to Christopher R. Dishop, 316 Physics Road, Psychology Building, Room 348, East Lansing, MI, 48823. E-mail: dishopch@msu.edu}
+\keywords{longitudinal inferences, between-unit, growth, trends, dynamics, relationships over time, processes}
 \DeclareDelayedFloatFlavor{ThreePartTable}{table}
 \DeclareDelayedFloatFlavor{lltable}{table}
 \DeclareDelayedFloatFlavor*{longtable}{table}
@@ -107,34 +108,84 @@
 \usepackage{lineno}
 
 \linenumbers
+\usepackage{csquotes}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[shorthands=off,main=english]{babel}
+\else
+  % load polyglossia as late as possible as it *could* call bidi if RTL lang (e.g. Hebrew or Arabic)
+  \usepackage{polyglossia}
+  \setmainlanguage[]{english}
+\fi
 
-\authornote{This article is currently in press for the Handbook of Temporal Dynamic Organizational Behavior. It can be cited as:
-
-Dishop, C. R., Braun, M. T., Kuljanin, G., \& DeShon, R. P. (In press). Thinking Longitudinal: A Framework for Scientific Inferences with Temporal Data. In Griep, Y. Hansen, S. D., Vantilborgh, T., \& Hofmans, J. (Ed.), Handbook of Temporal Dynamic Organizational Behavior. Edward Elgar Publishing.
-
-Correspondence concerning this article should be addressed to Christopher R. Dishop, 316 Physics Road, Psychology Building, Room 348, East Lansing, MI, 48823. E-mail: \href{mailto:dishopch@msu.edu}{\nolinkurl{dishopch@msu.edu}}}
-
-\abstract{
-In this manuscript we explore how to think about patterns contained in longitudinal or panel data structures. Organizational scientists recognize that psychological phenomena and processes unfold over time and, to better understand them, organizational researchers increasingly work with longitudinal data and explore inferences within those data structures. Longitudinal inferences may focus on any number of fundamental patterns, including construct trajectories, relationships between constructs, or dynamics. Although the diversity of longitudinal inferences provides a wide foundation for garnering knowledge in any given area, it also makes it difficult for researchers to know the set of inferences they may explore with longitudinal data, which statistical models to use given their questions, and how to situate their specific inquiries within the broader set of longitudinal inferences. Moreover, the diversity of statistical models that can be applied to longitudinal data requires that researchers understand how one inference category differs from another.
-
-
-}
+\date{}
 
 \begin{document}
-\maketitle
 
-Organizational scientists recognize that psychological phenomena and processes unfold over time (Beal, 2015; Pitariu \& Ployhart, 2010). Individuals in the workplace, over time, strive to accomplish work goals, team members collaborate so the whole eventually becomes greater than the sum of its parts, and managers repeatedly promote values to build vibrant, innovative work cultures. To better understand psychological phenomena, such as motivation, teamwork, and organizational culture, researchers must attend not to static snapshots of behavior (Ilgen \& Hulin, 2000; Kozlowski, Chao, Grand, Braun, \& Kuljanin, 2013, 2016) but to actors, events, variables and relationships as they move through time. Obtaining longitudinal data allows researchers to capture the unfolding set of events, interactions, behaviors, cognitions, or affective reactions across a variety of psychological phenomena. If practitioners and scholars, however, are unfamiliar with the many questions that they can ask of longitudinal data -- and how those questions do or do not pair with certain statistical models -- then the inferences that they draw from it are at best restricted and, at worst, spurious.
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-Researchers have the opportunity to explore many inferences when they analyze longitudinal data. For example, researchers may examine the shape of trajectories on psychological constructs (e.g., Did job satisfaction generally increase or decrease during the past six months?), how two or more constructs relate to each other (e.g., Did team communication and cohesion positively correlate over time?), or whether changes in one variable relate to changes in another (e.g., Did changes in goal-setting relate to changes in employee performance? Dunford, Shipp, Boss, Angermeier, \& Boss, 2012; Hardy, Day, \& Steele, 2018; Jones et al., 2016; Judge, Simon, Hurst, \& Kelley, 2014; Lanaj, Johnson, \& Wang, 2016; Rosen, Koopman, Gabriel, \& Johnson, 2016; Scott \& Barnes, 2011). Given the variety of available inferences with longitudinal data, an organizing framework would elucidate their subtle differences and enhance theoretical insight.
+\hypertarget{httpscrsh.github.iopapaja_manindex.html}{%
+\section{\texorpdfstring{\url{https://crsh.github.io/papaja_man/index.html}}{https://crsh.github.io/papaja\_man/index.html}}\label{httpscrsh.github.iopapaja_manindex.html}}
 
-We developed a framework that organizes some of the fundamental patterns that researchers may explore with longitudinal data. In this paper, we use it to describe how to think about patterns contained in longitudinal or panel data structures. Our manuscript is timely for two reasons. First, it consolidates disparate literature. The ways of thinking (i.e., inference categories) that we describe are not new, they are contained in the organizational literature already, but they are often discussed in isolation which limits a common understanding of how they fit together. To demonstrate this point, we conducted a brief review of articles published in the \emph{Journal of Applied Psychology} and the \emph{Journal of Business and Psychology} in the years 2017 and 2018 that contained three or more waves of data with every variable measured at each time point. Twenty-eight studies were identified and, using the study hypotheses, introductions, and discussions, classified according to the inference categories that we discuss in this paper. Table 1 reports the frequencies of each inference across the 28 studies. The specific inference categories (trend, relationships, and dynamics) will be fully developed later, what matters here is that a majority of the reviewed studies explored a single inference category, and no study focused on all three. We are not saying that researchers and practitioners must ask all questions possible of their longitudinal data, but we are pointing out that other inferences and ways of thinking about patterns exist that researchers may not be aware of. This paper presents each inference in a single location rather than forcing researchers to locate and parse disparate literature to understand what they can ask of longitudinal data. Second, a recent article noted that, despite a growing emphasis on dynamics in organizational science, certain statistical models are inappropriate for inferences about dynamics (Xu, DeShon, \& Dishop, 2019). The authors state that researchers should consider whether their interest is dynamics or other over time patterns and choose their statistical model accordingly. Researchers, therefore, need to know how dynamic inferences differ from other, related inferences. Here, we fully describe those differences.
+title : \enquote{Thinking Longitudinal: A Framework for Scientific Inferences with Temporal Data}
+shorttitle : \enquote{LONGITUDINAL INFERENCES}
+
+author:
+- name : \enquote{Christopher R. Dishop}
+affiliation : \enquote{1}
+corresponding : yes \# Define only one corresponding author
+address : \enquote{316 Physics Road, Psychology Building, Room 348, East Lansing, MI, 48823}
+email : \enquote{\href{mailto:dishopch@msu.edu}{\nolinkurl{dishopch@msu.edu}}}
+- name : \enquote{Michael T. Braun}
+affiliation : \enquote{2}\\
+- name : \enquote{Goran Kuljanin}
+affiliation : \enquote{3}
+- name : \enquote{Richard P. DeShon}
+affiliation : \enquote{1}
+
+affiliation:
+- id : \enquote{1}
+institution : \enquote{Michigan State University}
+- id : \enquote{2}
+institution : \enquote{University of South Florida}
+- id : \enquote{3}
+institution : \enquote{DePaul University}
+
+author\_note: \textbar{}
+
+Dishop, C. R., Braun, M. T., Kuljanin, G., \& DeShon, R. P. (2020). Thinking Longitudinal: A Framework for Scientific Inferences with Temporal Data. In Griep, Y. Hansen, S. D., Vantilborgh, T., \& Hofmans, J. (Ed.), Handbook on the Temporal Dynamics of Organizational Behavior. Edward Elgar Publishing.
+
+abstract: \textbar{}
+In this manuscript we explore how to think about patterns contained in longitudinal or panel data structures. Organizational scientists recognize that psychological phenomena and processes unfold over time and, to better understand them, organizational researchers increasingly work with longitudinal data and explore inferences within those data structures. Longitudinal inferences may focus on any number of fundamental patterns, including construct trajectories, relationships between constructs, or dynamics. Although the diversity of longitudinal inferences provides a wide foundation for garnering knowledge in any given area, it also makes it difficult for researchers to know the set of inferences they may explore with longitudinal data, which statistical models to use given their questions, and how to situate their specific inquiries within the broader set of longitudinal inferences. Moreover, the diversity of statistical models that can be applied to longitudinal data requires that researchers understand how one inference category differs from another.
+
+keywords : \enquote{longitudinal inferences, between-unit, growth, trends, dynamics, relationships over time, processes}
+\#wordcount : \enquote{149}
+
+bibliography : {[}\enquote{references.bib}{]}
+nocite: \enquote{({\textbf{???}}); ({\textbf{???}}); ({\textbf{???}}); ({\textbf{???}})}
+
+figsintext : no
+figurelist : no
+tablelist : no
+footnotelist : no
+lineno : yes
+
+lang : \enquote{english}
+class : \enquote{man}
+output : papaja::apa6\_pdf
+---
+
+Organizational scientists recognize that psychological phenomena and processes unfold over time ({\textbf{???}}; {\textbf{???}}). Individuals in the workplace, over time, strive to accomplish work goals, team members collaborate so the whole eventually becomes greater than the sum of its parts, and managers repeatedly promote values to build vibrant, innovative work cultures. To better understand psychological phenomena, such as motivation, teamwork, and organizational culture, researchers must attend not to static snapshots of behavior ({\textbf{???}}; {\textbf{???}}; {\textbf{???}}) but to actors, events, variables and relationships as they move through time. Obtaining longitudinal data allows researchers to capture the unfolding set of events, interactions, behaviors, cognitions, or affective reactions across a variety of psychological phenomena. If practitioners and scholars, however, are unfamiliar with the many questions that they can ask of longitudinal data -- and how those questions do or do not pair with certain statistical models -- then the inferences that they draw from it are at best restricted and, at worst, spurious.
+
+Researchers have the opportunity to explore many inferences when they analyze longitudinal data. For example, researchers may examine the shape of trajectories on psychological constructs (e.g., Did job satisfaction generally increase or decrease during the past six months?), how two or more constructs relate to each other (e.g., Did team communication and cohesion positively correlate over time?), or whether changes in one variable relate to changes in another (e.g., Did changes in goal-setting relate to changes in employee performance? {\textbf{???}}; {\textbf{???}}; {\textbf{???}}; {\textbf{???}}; {\textbf{???}}; {\textbf{???}}; {\textbf{???}}). Given the variety of available inferences with longitudinal data, an organizing framework would elucidate their subtle differences and enhance theoretical insight.
+
+We developed a framework that organizes some of the fundamental patterns that researchers may explore with longitudinal data. In this paper, we use it to describe how to think about patterns contained in longitudinal or panel data structures. Our manuscript is timely for two reasons. First, it consolidates disparate literature. The ways of thinking (i.e., inference categories) that we describe are not new, they are contained in the organizational literature already, but they are often discussed in isolation which limits a common understanding of how they fit together. To demonstrate this point, we conducted a brief review of articles published in the \emph{Journal of Applied Psychology} and the \emph{Journal of Business and Psychology} in the years 2017 and 2018 that contained three or more waves of data with every variable measured at each time point. Twenty-eight studies were identified and, using the study hypotheses, introductions, and discussions, classified according to the inference categories that we discuss in this paper. Table 1 reports the frequencies of each inference across the 28 studies. The specific inference categories (trend, relationships, and dynamics) will be fully developed later, what matters here is that a majority of the reviewed studies explored a single inference category, and no study focused on all three. We are not saying that researchers and practitioners must ask all questions possible of their longitudinal data, but we are pointing out that other inferences and ways of thinking about patterns exist that researchers may not be aware of. This paper presents each inference in a single location rather than forcing researchers to locate and parse disparate literature to understand what they can ask of longitudinal data. Second, a recent article noted that, despite a growing emphasis on dynamics in organizational science, certain statistical models are inappropriate for inferences about dynamics ({\textbf{???}}). The authors state that researchers should consider whether their interest is dynamics or other over time patterns and choose their statistical model accordingly. Researchers, therefore, need to know how dynamic inferences differ from other, related inferences. Here, we fully describe those differences.
 
 \hypertarget{longitudinal-research-in-applied-psychology}{%
 \section{Longitudinal Research in Applied Psychology}\label{longitudinal-research-in-applied-psychology}}
 
-This paper is devoted to inferences with repeated measures, so we begin with a few labels and definitions. Authors typically identify a \enquote{longitudinal} study by contrasting either (a) research designs or (b) data structures. Longitudinal \emph{research} is different from cross-sectional research because longitudinal designs entail three or more repeated observations (Ployhart \& Vandenberg, 2010). We therefore emphasize differences on the number of observations when we distinguish longitudinal from other types of research. Longitudinal or panel \emph{data} are repeated observations on several units (i.e., \(N\) or \(i\) \textgreater{} 1), whereas time-series data are observations of one unit over time -- a distinction that focuses on the amount of people in the study (given repeated measures). Most organizational studies collect data on more than one unit, therefore our discussion below focuses on longitudinal research with panel data, or designs with \(N\) \textgreater{} 1, \(t\) \(\geq\) 3, and the same construct(s) measured on each \(i\) at each \(t\). That is, we focus on designs with repeated measures across many people (units) where every variable is measured at each time point.
+This paper is devoted to inferences with repeated measures, so we begin with a few labels and definitions. Authors typically identify a \enquote{longitudinal} study by contrasting either (a) research designs or (b) data structures. Longitudinal \emph{research} is different from cross-sectional research because longitudinal designs entail three or more repeated observations ({\textbf{???}}). We therefore emphasize differences on the number of observations when we distinguish longitudinal from other types of research. Longitudinal or panel \emph{data} are repeated observations on several units (i.e., \(N\) or \(i\) \textgreater{} 1), whereas time-series data are observations of one unit over time -- a distinction that focuses on the amount of people in the study (given repeated measures). Most organizational studies collect data on more than one unit, therefore our discussion below focuses on longitudinal research with panel data, or designs with \(N\) \textgreater{} 1, \(t\) \(\geq\) 3, and the same construct(s) measured on each \(i\) at each \(t\). That is, we focus on designs with repeated measures across many people (units) where every variable is measured at each time point.
 
-Longitudinal applies to both short and long-term research. An experiment with ten trials is longitudinal, as is a study spanning 10 years that assesses its measures once every year. Longitudinal is not reserved for \enquote{long-term} studies that last more than one year irrespective of the frequency of their observations. Rather, certain processes unfold over short time horizons (e.g., decision-making on simple tasks, swift action teams; Wildman et al., 2012) whereas other psychological phenomena unfold over long time horizons (e.g., the development of a shared organizational culture; Mitchell \& James, 2001), so the informativeness of a particular study depends on its rationale, research design, analytical work, and effective interpretation of results -- as with any study. Short and long time horizons both offer valuable insights.
+Longitudinal applies to both short and long-term research. An experiment with ten trials is longitudinal, as is a study spanning 10 years that assesses its measures once every year. Longitudinal is not reserved for \enquote{long-term} studies that last more than one year irrespective of the frequency of their observations. Rather, certain processes unfold over short time horizons (e.g., decision-making on simple tasks, swift action teams; {\textbf{???}}) whereas other psychological phenomena unfold over long time horizons (e.g., the development of a shared organizational culture; {\textbf{???}}), so the informativeness of a particular study depends on its rationale, research design, analytical work, and effective interpretation of results -- as with any study. Short and long time horizons both offer valuable insights.
 
 \begin{center}
 
@@ -166,7 +217,7 @@ Finally, despite pointing researchers to statistical models, our paper puts a ma
 \caption{Common inference categories with models applied to longitudinal data.\label{framework_figure}}\label{fig:unnamed-chunk-6}
 \end{figure}
 
-\begin{longtable}{>{\raggedright\arraybackslash}p{15em}>{\raggedright\arraybackslash}p{15em}}
+\begin{longtable}[t]{>{\raggedright\arraybackslash}p{15em}>{\raggedright\arraybackslash}p{15em}}
 \caption{\label{tab:unnamed-chunk-7}\label{inference_frequencies}Number of times a recent article emphasized one or more inference category.}\\
 \toprule
 Type & Occurence\\
@@ -191,7 +242,7 @@ All 3 & 0\\*
 \hypertarget{trend}{%
 \section{Trend}\label{trend}}
 
-Made popular in the organizational literature by Bliese and Ployhart (2002) and Chan (1998), trend inferences represent a class of thinking in which researchers create an index of time and relate it to their response variable to understand the trajectory of the dependent variable. The first panel of Figure \ref{framework_figure} shows a box-and-arrow model heuristic in which time is related to an outcome, \(y\), and ultimately the analyst is interested in a variety of questions about trend and its correlates. Trend inferences have two components: trend itself and level. For clarity, we discuss them separately.
+Made popular in the organizational literature by ({\textbf{???}}) and ({\textbf{???}}), trend inferences represent a class of thinking in which researchers create an index of time and relate it to their response variable to understand the trajectory of the dependent variable. The first panel of Figure \ref{framework_figure} shows a box-and-arrow model heuristic in which time is related to an outcome, \(y\), and ultimately the analyst is interested in a variety of questions about trend and its correlates. Trend inferences have two components: trend itself and level. For clarity, we discuss them separately.
 
 \hypertarget{component-1---trend}{%
 \subsubsection{Component 1 - Trend}\label{component-1---trend}}
@@ -308,11 +359,11 @@ A note on phrasing. The inferences we explored in this section have to do with c
 \hypertarget{literature-on-statistical-models-for-trend-and-level}{%
 \subsection{Literature on Statistical Models for Trend and Level}\label{literature-on-statistical-models-for-trend-and-level}}
 
-Currently, the dominant method for analyzing longitudinal data with respect to trend and level inferences in the organizational sciences is growth curve modeling (GCM; Braun et al., 2013b; Kuljanin, Braun, \& DeShon, 2011). Broad theoretical discussions of growth are in Pitariu and Ployhart (2010) and Ployhart and Vandenberg (2010) (keep in mind that they call growth \enquote{change}), whereas Bliese and Ployhart (2002) describe actual growth curve analysis. Growth curves are a core topic in developmental psychology, so there are many articles and textbooks to read from their field. See Grimm, Ram, and Estabrook (2016) and Singer, Willett, and Willett (2003) for two great textbooks on growth curve modeling and McArdle and Epstein (1987) for an empirical discussion. Two straight-forward empirical examples from our own field include Dunford et al. (2012) and Hülsheger (2016).
+Currently, the dominant method for analyzing longitudinal data with respect to trend and level inferences in the organizational sciences is growth curve modeling (GCM; {\textbf{???}}; {\textbf{???}}). Broad theoretical discussions of growth are in ({\textbf{???}}) and ({\textbf{???}}) (keep in mind that they call growth \enquote{change}), whereas ({\textbf{???}}) describe actual growth curve analysis. Growth curves are a core topic in developmental psychology, so there are many articles and textbooks to read from their field. See ({\textbf{???}}) and ({\textbf{???}}) for two great textbooks on growth curve modeling and ({\textbf{???}}) for an empirical discussion. Two straight-forward empirical examples from our own field include ({\textbf{???}}) and ({\textbf{???}}).
 
 GCM is able to model the dependent variable -- performance, for example -- as a result of predictors at multiple levels of analysis. Level one predictors vary at the same level as the depenent variable, meaning that if individual performance is the outcome of interest then level one predictors might include individual goal-striving and individual cognitive ability. If, on the other hand, the outcome is organizational performance then level one predictors might include organizational climate or culture. Level two predictors occur at higher units of analysis -- team cohesion if the dependent variable is individual performance or national culture if the dependent variable is organizational performance. Variables at any level can enter into the statistical model either as fixed or random. Fixed predictors estimate only the average relationship across all units, whereas random predictors estimate not only the average IV-DV relationship across units but also estimate the degree of between-unit variability in the relationship.
 
-The most basic growth model is the unconditional means model (UMM). Using notation from Singer et al. (2003), this statistical model is specified as
+The most basic growth model is the unconditional means model (UMM). Using notation from ({\textbf{???}}), this statistical model is specified as
 
 \begin{align}
 \label{UMM}
@@ -337,7 +388,7 @@ Y_{ij} &= \pi_{0i} + \pi_{i1}Time_{ij} + \varepsilon_{ij} \\
 
 \noindent \noindent where \(\varepsilon\) \textasciitilde{} \(N(0, \sigma_{\varepsilon}^2)\) and \(\begin{bmatrix} \zeta_{0i} \\ \zeta_{1i} \end{bmatrix}\) \textasciitilde{} \(N\bigl(\begin{bmatrix} 0 \\ 0 \end{bmatrix}, \begin{bmatrix} \sigma_{0}^2 & \sigma_{10} \\ \sigma_{10} & \sigma_{1}^2\end{bmatrix}\bigr)\), \(\pi_{0i}\) is now the initial status (i.e., intercept) of \(Y\) for individual \(i\), \(\gamma_{00}\) is the average initial status of \(Y\) across everyone in the population, \(\pi_{1i}\) is the rate of change (i.e., slope) of \(Y\) for individual \(i\), \(\gamma_{10}\) is the average rate of change of \(Y\) across everyone in the population, \(\sigma_{\varepsilon}^2\) is the pooled variance of each individuals' data around his or her linear change trajectory, \(\zeta_{0i}\) is the intercept random effect for individual \(i\), \(\sigma_{0}^2\) is the variance of intercept random effects, \(\zeta_{1i}\) is the slope random effect for individual \(i\), \(\sigma_1^2\) is the variance of the slope random effects, \(\sigma_{10}\) is the population covariance between intercepts and slopes, and all other terms are defined above.
 
-In words with individual performance as example, this ULGM says that Rachel's performance is a function of her initial level of performance (which is a function of the population initial performance level and error) and time (equation 3). Time, therefore, can be thought of as a predictor in the case of the ULGM which makes it an inherently static, as opposed to dynamic, statistical model (Voelkle \& Oud, 2015) and emphasizes description rather than explanation because time cannot be a true underlying cause (Pitariu \& Ployhart, 2010). We moved beyond the unconditional means model to \enquote{explain} more variation in Rachel's performance by including additional predictors. In the case of the ULGM, our additional predictor is time and the estimate of the coefficient relating it to the outcome describes both the expected trend and whether there are between-unit differences in trend in the sample (research questions one and two). Time is a level one predictor because it varies on the same level as the outcome (the individual level) and it is incorporated in the statistical model as a random effect (equation 5).
+In words with individual performance as example, this ULGM says that Rachel's performance is a function of her initial level of performance (which is a function of the population initial performance level and error) and time (equation 3). Time, therefore, can be thought of as a predictor in the case of the ULGM which makes it an inherently static, as opposed to dynamic, statistical model ({\textbf{???}}) and emphasizes description rather than explanation because time cannot be a true underlying cause ({\textbf{???}}). We moved beyond the unconditional means model to \enquote{explain} more variation in Rachel's performance by including additional predictors. In the case of the ULGM, our additional predictor is time and the estimate of the coefficient relating it to the outcome describes both the expected trend and whether there are between-unit differences in trend in the sample (research questions one and two). Time is a level one predictor because it varies on the same level as the outcome (the individual level) and it is incorporated in the statistical model as a random effect (equation 5).
 
 To review, we first modeled individual performance as a function of across time individual performance means (which, themselves, were functions of the population individual performance). That basic statistical model was a UMM and we turned it into an ULGM by incorporating time as a predictor. Once time enters the equation, we update our view of performance and it becomes a function of initial performance level and time, meaning that one-unit increases in time are seen as relating to increases or decreases in performance. Those increases and decreases across time, in aggregate, form trend. In practice, the statistical model returns one number for the estimate of the coefficient relating time to the outcome and it describes the expected between-person performance trend.
 
@@ -405,7 +456,7 @@ Y_{ij} &= \pi_{0i} + \pi_{i1}Time_{ij} + \pi_{i2}X_{ij} + \varepsilon_{ij} \\
 \pi_{i2} &= \gamma_{20} + \zeta_{2i}
 \end{align}
 
-\noindent \noindent where \(X\) is the additional random predictor and it is related to the outcome, \(Y\), through \(\pi_{i2}\). The average relationship between \(X\) and \(Y\) across units is used to answer RQ1 whereas the variance component estimating the between-unit variaiblity in the \(X\)-\(Y\) relationship is used to answer RQ2. It is important to note that TVC analyses can either be conducted by building upon the ULGM, as is presented here, or can be done by building directly upon the UMM (e.g., Judge, Scott, \& Ilies, 2006). The difference is whether the predictor time is included to control for growth in the DV. Typically, if it is anticipated or observed that the DV exhibits a consistent trajectory over time, then time is included and TVC models build from the ULGM. Alternatively, if the DV is not expected or observed to exhibit linear (or curvilinear) growth, then level one predictors are added directly to the UMM. Complete discussions of TVC models are in Schonfeld and Rindskopf (2007) and Finch, Bolin, and Kelley (2016) and two relatively straight-forward empirical examples are in Barnes, Schaubroeck, Huth, and Ghumman (2011) and Chi, Chang, and Huang (2015).
+\noindent \noindent where \(X\) is the additional random predictor and it is related to the outcome, \(Y\), through \(\pi_{i2}\). The average relationship between \(X\) and \(Y\) across units is used to answer RQ1 whereas the variance component estimating the between-unit variaiblity in the \(X\)-\(Y\) relationship is used to answer RQ2. It is important to note that TVC analyses can either be conducted by building upon the ULGM, as is presented here, or can be done by building directly upon the UMM (e.g., {\textbf{???}}). The difference is whether the predictor time is included to control for growth in the DV. Typically, if it is anticipated or observed that the DV exhibits a consistent trajectory over time, then time is included and TVC models build from the ULGM. Alternatively, if the DV is not expected or observed to exhibit linear (or curvilinear) growth, then level one predictors are added directly to the UMM. Complete discussions of TVC models are in ({\textbf{???}}) and ({\textbf{???}}) and two relatively straight-forward empirical examples are in ({\textbf{???}}) and ({\textbf{???}}).
 
 \begin{figure}
 \centering
@@ -416,7 +467,7 @@ Y_{ij} &= \pi_{0i} + \pi_{i1}Time_{ij} + \pi_{i2}X_{ij} + \varepsilon_{ij} \\
 \hypertarget{dynamics}{%
 \section{Dynamics}\label{dynamics}}
 
-The word \enquote{dynamics} takes on a variety of meanings throughout our literature. Informally, it is used to mean \enquote{change,} \enquote{fluctuating,} \enquote{longitudinal,} or \enquote{over time} (among others), but the fundemantal concept to identify with dynamics is that the past constrains what happens next, variables have memory as they move through time. For example, Monge (1990) notes that in dynamic analysis, \enquote{it is essential to know how variables depend upon their own past history} (p.~409), Vancouver, Wang, and Li (2018) state that dynamic variables \enquote{behave as if they have memory; that is, their value at any one time depends somewhat on their previous value} (p.~604), and Wang, Zhou, and Zhang (2016) define a dynamic model as a \enquote{representation of a system that evolves over time. In particular it describes how the system evolves from a given state at time \emph{t} to another state at time \emph{t + 1} as governed by the transition rules and potential external inputs} (p.~242). In this section we discuss a number of inferences couched in the idea that the past constrains future behavior.
+The word \enquote{dynamics} takes on a variety of meanings throughout our literature. Informally, it is used to mean \enquote{change,} \enquote{fluctuating,} \enquote{longitudinal,} or \enquote{over time} (among others), but the fundemantal concept to identify with dynamics is that the past constrains what happens next, variables have memory as they move through time. For example, ({\textbf{???}}) notes that in dynamic analysis, \enquote{it is essential to know how variables depend upon their own past history} (p.~409), ({\textbf{???}}) state that dynamic variables \enquote{behave as if they have memory; that is, their value at any one time depends somewhat on their previous value} (p.~604), and Wang, Zhou, and Zhang ({\textbf{???}}) define a dynamic model as a \enquote{representation of a system that evolves over time. In particular it describes how the system evolves from a given state at time \emph{t} to another state at time \emph{t + 1} as governed by the transition rules and potential external inputs} (p.~242). In this section we discuss a number of inferences couched in the idea that the past constrains future behavior.
 
 Does performance relate to itself over time? Do current helping behaviors depend on prior helping behaviors? Does unit climate demonstrate self-similarity across time? Does income now predict income in the future? These are questions about the relationship of a single variable with itself over time -- does it predict itself at each subsequent moment? Is it constrained by where it was in the past?
 
@@ -448,7 +499,7 @@ As before, after exploring the expected average we turn to variability. How cons
 
 The next inference is about relating a predictor to our response variable while it still retains memory. Panel B of Figure \ref{dynamics_figure} shows a box-and-arrow diagram: \(y\) is predicted by concurrent values of \(x\) but it also retains self-similarity. This model heuristic is therefore said to partial prior \(y\): it examines the concurrent relationship between \(x\) and \(y\) while statistically partialling values of \(y\) at \(t - 1\), or statistically accounting for \(y\) at the prior moment.
 
-Our literature has converged on calling this kind of relationship \enquote{change} because it emphasizes the difference between \(y\) now and where it was in the past (e.g., Lanaj et al., 2016; Rosen et al., 2016). The association asks how current \(x\) relates to the difference between \(y\) now and its immediately prior value. How does affect relate to change in performance? Does depletion covary with change in OCBs? Note that change can be construed from any prior time point (baseline, \(t-1\), \(t-3\)); our literature commonly emphasizes lag-one change.
+Our literature has converged on calling this kind of relationship \enquote{change} because it emphasizes the difference between \(y\) now and where it was in the past (e.g., {\textbf{???}}; {\textbf{???}}). The association asks how current \(x\) relates to the difference between \(y\) now and its immediately prior value. How does affect relate to change in performance? Does depletion covary with change in OCBs? Note that change can be construed from any prior time point (baseline, \(t-1\), \(t-3\)); our literature commonly emphasizes lag-one change.
 
 \begin{quote}
 \begin{quote}
@@ -487,16 +538,16 @@ Again, typically researchers explore variability after assessing the average est
 
 We described a simple set of inferences above, but the ideas generalize to more complex dynamics as well. Often researchers are interested in reciprocal relationships, where \(x\) influences subsequent \(y\), which then goes back to influence \(x\) at the next time point. Said formally, \(x_t\) influences \(y_{t+1}\), which then influences \(x_{t+2}\). Said informally, current performance influences subsequent self-efficacy, which then influences performance on the next trial. These inferences are no different than what we saw above -- they are cross-lag predictions -- all we did was add more of them. Panel D of Figure \ref{dynamics_figure} shows reciprocal dynamics, in which both \(x\) and \(y\) show self-similarity and cross-lag relationships with one another.
 
-Researchers typically posit a sequence of single cross-lag predictions when they are interested in reciprocal dynamics. For example, Hardy III, Day, and Steele (2018) explored reciprocal relationships among performance and motivation (self-efficacy, metacognition, and exploratory behavior). Their hypotheses include, (1) prior self-efficacy negatively relates to subsequent exploratory behavior and (2) prior exploratory behavior positively relates to subsequent self-efficacy (among others). These single inferences are used in aggregate to make conclusions about reciprocal influence.
+Researchers typically posit a sequence of single cross-lag predictions when they are interested in reciprocal dynamics. For example, ({\textbf{???}}) explored reciprocal relationships among performance and motivation (self-efficacy, metacognition, and exploratory behavior). Their hypotheses include, (1) prior self-efficacy negatively relates to subsequent exploratory behavior and (2) prior exploratory behavior positively relates to subsequent self-efficacy (among others). These single inferences are used in aggregate to make conclusions about reciprocal influence.
 
 The dynamic inferences shown here also generalize to systems of variables where a researcher posits self-similarity and cross-lag predictions across many variables. There could be reciprocal dynamics between a set of variables like performance, self-efficacy, and affect, or a sequence of influence between dyadic exchanges, performance, and team perceptions: perhaps initial dyadic exchanges influence subsequent team perceptions, which later influence performance. Following the performance change, the structure of the task updates and this initiates new dyadic exchanges. Once a researcher grasps the foundational ideas presented here he or she is free to explore any number of complex relationships.
 
 \hypertarget{literature-on-statistical-models-for-dynamics}{%
 \subsection{Literature on Statistical Models for Dynamics}\label{literature-on-statistical-models-for-dynamics}}
 
-Wang et al. (2016) review a variety of dynamic models and, although their paper does not provide readers with specific code, it is an excellent resource to become familiar with potential dynamic models. Xu et al. (2019) describe why multi-level models are innapropriate for inferences about dynamics and instead recommend a general panel model described in Bollen and Brand (2010). See Moral-Benito, Allison, and Williams (2019) for a similar discussion. Other statistical models that are appropriate for dynamic inferences are discussed in Voelkle and Oud (2015), Molenaar (1985); Molenaar and Nesselroade (2012), Molenaar (2010), McArdle (2009), and Eschleman and LaHuis (2014). Finally, Zyphur et al. (2019) discuss a number of dynamic statistical models.
+({\textbf{???}}) review a variety of dynamic models and, although their paper does not provide readers with specific code, it is an excellent resource to become familiar with potential dynamic models. ({\textbf{???}}) describe why multi-level models are innapropriate for inferences about dynamics and instead recommend a general panel model described in ({\textbf{???}}). See ({\textbf{???}}) for a similar discussion. Other statistical models that are appropriate for dynamic inferences are discussed in ({\textbf{???}}), ({\textbf{???}}); ({\textbf{???}}), ({\textbf{???}}), ({\textbf{???}}), and ({\textbf{???}}). Finally, ({\textbf{???}}) discuss a number of dynamic statistical models.
 
-The principle addition for dynamic models is the inclusion of a lagged version of the DV as a predictor (\(Y_{t-1}\)). The inclusion of \(Y_{t-1}\) controls for prior observations of the DV when predicting current values, essentially modeling the change in the DV from one time point to another without relying on difference scores (e.g., Edwards \& Parry, 1993). As such, the first research question is answered by evaluating the average relationship between the DV and a prior version of itself as a level one predictor. Similarly, once the autoregressive term is modeled as random, evaluating the variance component answers RQ2 regarding whether the autoregressive relationship differs across units. To answer the subsequent research questions, the inclusion of an additional substantive predictor, \(X_t\), is required. When \(X_t\) is modeled at only the concurrent time point with the DV, then the \(X_t\) \(\rightarrow\) \(Y_t\) relationship determines whether values of \(X\) at a given time point relate to the change in \(Y\), addressing RQ3. The variance component on \(X_t\) when it is modeled as a random level one preditor determines whether the relationship varies across units, answering RQ4. Finally, if the researcher is interested in determining whether changes in the predictor, \(X\), relate to changes in the DV, \(Y\), an additional level one predictor in included in the model that represnts prior realizations of \(X\), \(X_{t-1}\). With the inclusion of \(X_{t-1}\), the paramater on the predictor \(X_t\) now determines whether changes in \(X\) relate to changes in \(Y\), answering RQ5 whereas the variance component on \(X_t\) determines whether significant variability in the relationship exists (RQ6). There are many additional dynamic models that can be estimated within the GCM framework. Wang et al. (2016) review a variety of dynamic models and, although their paper does not provide readers with specific code, it is an excellent resource to become familiar with potential dynamic models.
+The principle addition for dynamic models is the inclusion of a lagged version of the DV as a predictor (\(Y_{t-1}\)). The inclusion of \(Y_{t-1}\) controls for prior observations of the DV when predicting current values, essentially modeling the change in the DV from one time point to another without relying on difference scores (e.g., {\textbf{???}}). As such, the first research question is answered by evaluating the average relationship between the DV and a prior version of itself as a level one predictor. Similarly, once the autoregressive term is modeled as random, evaluating the variance component answers RQ2 regarding whether the autoregressive relationship differs across units. To answer the subsequent research questions, the inclusion of an additional substantive predictor, \(X_t\), is required. When \(X_t\) is modeled at only the concurrent time point with the DV, then the \(X_t\) \(\rightarrow\) \(Y_t\) relationship determines whether values of \(X\) at a given time point relate to the change in \(Y\), addressing RQ3. The variance component on \(X_t\) when it is modeled as a random level one preditor determines whether the relationship varies across units, answering RQ4. Finally, if the researcher is interested in determining whether changes in the predictor, \(X\), relate to changes in the DV, \(Y\), an additional level one predictor in included in the model that represnts prior realizations of \(X\), \(X_{t-1}\). With the inclusion of \(X_{t-1}\), the paramater on the predictor \(X_t\) now determines whether changes in \(X\) relate to changes in \(Y\), answering RQ5 whereas the variance component on \(X_t\) determines whether significant variability in the relationship exists (RQ6). There are many additional dynamic models that can be estimated within the GCM framework. ({\textbf{???}}) review a variety of dynamic models and, although their paper does not provide readers with specific code, it is an excellent resource to become familiar with potential dynamic models.
 
 \begin{figure}
 
@@ -512,15 +563,15 @@ The principle addition for dynamic models is the inclusion of a lagged version o
 
 There are many different patterns to explore with longitudinal data structures. This manuscript, by unpacking between-unit patterns, mirrors the common questions and inferences currently emphasized by organizational scientists. What is the relationship among a set of constructs (averaged over time)? What is the expected trend? Are there differences in trend (also phrased as, \enquote{between-unit differences in within-unit change})? We organized these questions and inferences into a fundamental set, discussed what they mean, and consolidated disparate literature so that researchers have a single source to better understand how to think about over time patterns. Our discussion and figures were designed to reduce ambiguity about patterns in longitudinal data and help researchers ask questions effectively. Ultimately, researchers should now be able to understand the spectrum of inferences that they can explore with rich, longitudinal data.
 
-Between-unit questions are common and useful and they are the sibling to an alternative lens to asking questions and making inferences with repeated measures: within-units. Within-unit inferences emphasize fluctuations over time rather than across units. For example, Beal (2015) notes that many of the psychological phenomenon in which we are interested are \enquote{sequences of events and event reactions that happen within each person's stream of experience} (p.~5). This is a within-unit statement: it emphasizes how a construct moves through time within a single individual. Organizational scientists have become increasingly interested in within-unit perspectives over the past decade. Dalal, Bhave, and Fiset (2014) review theory and research on within-person job performance, Grandey and Gabriel (2015) review emotional labor and differentiate a variety of within-person perspectives, Park, Spitzmuller, and DeShon (2013) present a team motivation model describing within-individual resource allocation and within-team feedback, Vancouver, Weinhardt, and Schmidt (2010) present a within-person model of multiple-goal pursuit, Barnes (2012) describes recent within-person approaches to sleep and organizational behavior, and Methot, Lepak, Shipp, and Boswell (2017) present a within-person perspective of organizational citizenship behaviors. There are many within-person inferences accumulating in our literature, but they are occasionally accompanied by between-person models or are dispersed and unconnected among different content areas. An immediate next step for future research is to create a framework for the fundamental within-unit inferences.
+Between-unit questions are common and useful and they are the sibling to an alternative lens to asking questions and making inferences with repeated measures: within-units. Within-unit inferences emphasize fluctuations over time rather than across units. For example, Beal ({\textbf{???}}) notes that many of the psychological phenomenon in which we are interested are \enquote{sequences of events and event reactions that happen within each person's stream of experience} (p.~5). This is a within-unit statement: it emphasizes how a construct moves through time within a single individual. Organizational scientists have become increasingly interested in within-unit perspectives over the past decade. ({\textbf{???}}) review theory and research on within-person job performance, ({\textbf{???}}) review emotional labor and differentiate a variety of within-person perspectives, ({\textbf{???}}) present a team motivation model describing within-individual resource allocation and within-team feedback, ({\textbf{???}}) present a within-person model of multiple-goal pursuit, ({\textbf{???}}) describes recent within-person approaches to sleep and organizational behavior, and ({\textbf{???}}) present a within-person perspective of organizational citizenship behaviors. There are many within-person inferences accumulating in our literature, but they are occasionally accompanied by between-person models or are dispersed and unconnected among different content areas. An immediate next step for future research is to create a framework for the fundamental within-unit inferences.
 
 Our focus was on between-unit patterns because these inferences are the backbone of longitudinal modeling and inference in organizational science. Moreover, there can be a tendency for researchers to believe that they are making within-unit inferences simply because they collect longitudinal data, our goal was to build consensus and clarity on the fundamental between-unit ideas in longitudinal data structures.
 
-We close with four key takeaways. First, knowing the different patterns that you can explore with longitudinal data is crucial to operating as an organizational scholar. These data sets are becomming more and more common (Spector, 2019) so graduate students, practitioners, and academics are bound to come across such data in their career. Without knowing the fundamental patterns that are possible to explore, researchers will have a hard time asking good questions to guide their research designs, have a limited understanding of how to evaluate other longitudinal research, and miss potential insights. The manuscript has utility for both teachers and learners.
+We close with four key takeaways. First, knowing the different patterns that you can explore with longitudinal data is crucial to operating as an organizational scholar. These data sets are becomming more and more common ({\textbf{???}}) so graduate students, practitioners, and academics are bound to come across such data in their career. Without knowing the fundamental patterns that are possible to explore, researchers will have a hard time asking good questions to guide their research designs, have a limited understanding of how to evaluate other longitudinal research, and miss potential insights. The manuscript has utility for both teachers and learners.
 
 Second, questions come before statistical models. We presented ways of asking questions and thinking about longitudinal data, and only after discussing those concepts were possible citations for statistical models provided. The insight here is that questions should drive research design, data collection, and statistical modeling. A researcher first asks, \enquote{what questions do I have?} \enquote{What inferences do I want to make?} And only after thinking hard about those concepts moves to questions about reserach design, data collection, and possible statistical models that can be applied to the data that align with the initial question. A researcher should never couch him or herself within a single inference category simply because he or she is only familiar with one statistical model. What is your question? What inference do you want to make? Then choose a research approach (i.e., research design, data collection, and statistical model) that is consistent with those interests.
 
-Third, and building off point two, certain questions and inferences require specific statistical models. Xu et al. (2019) demonstrated that multi-level (or hierarchical linear) models are innapropriate for inferences about dynamics. Howardson, Karim, and Horn (2017), Kuljanin et al. (2011), Braun et al. (2013a) state that the assumptions (e.g., stationarity) of multi-level models may not best suit data following dynamic patterns. Knowing how inferences about dynamics differ from inferences about trends or relationships, therefore, is critical for choosing an appropriate statistical model.
+Third, and building off point two, certain questions and inferences require specific statistical models. ({\textbf{???}}) demonstrated that multi-level (or hierarchical linear) models are innapropriate for inferences about dynamics. ({\textbf{???}}), ({\textbf{???}}), ({\textbf{???}}) state that the assumptions (e.g., stationarity) of multi-level models may not best suit data following dynamic patterns. Knowing how inferences about dynamics differ from inferences about trends or relationships, therefore, is critical for choosing an appropriate statistical model.
 
 Fourth, all of the ideas presented here can be used in harmony to learn about the temporal nature of a phenomenon. A researcher does not have to limit him or herself to a single inference category. Each is a unique way of asking questions about patterns contained in longitudinal data structures and, after potentially asking many questions about the same assessed constructs, a researcher can learn about multiple aspects of the phenomenon.
 
@@ -531,175 +582,5 @@ Fourth, all of the ideas presented here can be used in harmony to learn about th
 
 \setlength{\parindent}{-0.5in}
 \setlength{\leftskip}{0.5in}
-
-\hypertarget{refs}{}
-\leavevmode\hypertarget{ref-barnes2012working}{}%
-Barnes, C. M. (2012). Working in our sleep: Sleep and self-regulation in organizations. \emph{Organizational Psychology Review}, \emph{2}(3), 234--257.
-
-\leavevmode\hypertarget{ref-barnes_lack_2011}{}%
-Barnes, C. M., Schaubroeck, J., Huth, M., \& Ghumman, S. (2011). Lack of sleep and unethical conduct. \emph{Organizational Behavior and Human Decision Processes}, \emph{115}(2), 169--180.
-
-\leavevmode\hypertarget{ref-beal_esm_2015}{}%
-Beal, D. J. (2015). ESM 2.0: State of the art and future potential of experience sampling methods in organizational research. \emph{Annu. Rev. Organ. Psychol. Organ. Behav.}, \emph{2}(1), 383--407.
-
-\leavevmode\hypertarget{ref-bliese_growth_2002}{}%
-Bliese, P. D., \& Ployhart, R. E. (2002). Growth modeling using random coefficient models: Model building, testing, and illustrations. \emph{Organizational Research Methods}, \emph{5}(4), 362--387.
-
-\leavevmode\hypertarget{ref-bollen_general_2010}{}%
-Bollen, K. A., \& Brand, J. E. (2010). A general panel model with random and fixed effects: A structural equations approach. \emph{Social Forces}, \emph{89}(1), 1--34.
-
-\leavevmode\hypertarget{ref-braun2013spurious}{}%
-Braun, M. T., Kuljanin, G., \& DeShon, R. P. (2013a). Spurious relationships in growth curve modeling: The effects of stochastic trends on regression-based models. In \emph{Modern research methods for the study of behavior in organizations} (pp. 187--224). Routledge.
-
-\leavevmode\hypertarget{ref-braun_spurious_2013}{}%
-Braun, M. T., Kuljanin, G., \& DeShon, R. P. (2013b). Spurious Results in the Analysis of Longitudinal Data in Organizational Research. \emph{Organizational Research Methods}, \emph{16}(2), 302--330. doi:\href{https://doi.org/10.1177/1094428112469668}{10.1177/1094428112469668}
-
-\leavevmode\hypertarget{ref-chan1998conceptualization}{}%
-Chan, D. (1998). The conceptualization and analysis of change over time: An integrative approach incorporating longitudinal mean and covariance structures analysis (lmacs) and multiple indicator latent growth modeling (mlgm). \emph{Organizational Research Methods}, \emph{1}(4), 421--483.
-
-\leavevmode\hypertarget{ref-chi_can_2015}{}%
-Chi, N.-W., Chang, H.-T., \& Huang, H.-L. (2015). Can personality traits and daily positive mood buffer the harmful effects of daily negative mood on task performance and service sabotage? A self-control perspective. \emph{Organizational Behavior and Human Decision Processes}, \emph{131}, 1--15.
-
-\leavevmode\hypertarget{ref-dalal2014within}{}%
-Dalal, R. S., Bhave, D. P., \& Fiset, J. (2014). Within-person variability in job performance: A theoretical review and research agenda. \emph{Journal of Management}, \emph{40}(5), 1396--1436.
-
-\leavevmode\hypertarget{ref-deshon_multivariate_2012}{}%
-DeShon, R. P. (2012). Multivariate dynamics in organizational science. \emph{The Oxford Handbook of Organizational Psychology}, \emph{1}, 117--142.
-
-\leavevmode\hypertarget{ref-dunford_is_2012}{}%
-Dunford, B. B., Shipp, A. J., Boss, R. W., Angermeier, I., \& Boss, A. D. (2012). Is burnout static or dynamic? A career transition perspective of employee burnout trajectories. \emph{Journal of Applied Psychology}, \emph{97}(3), 637--650. doi:\href{https://doi.org/http://dx.doi.org.proxy2.cl.msu.edu/10.1037/a0027060}{http://dx.doi.org.proxy2.cl.msu.edu/10.1037/a0027060}
-
-\leavevmode\hypertarget{ref-edwards1993use}{}%
-Edwards, J. R., \& Parry, M. E. (1993). On the use of polynomial regression equations as an alternative to difference scores in organizational research. \emph{Academy of Management Journal}, \emph{36}(6), 1577--1613.
-
-\leavevmode\hypertarget{ref-eschleman_advancing_2014}{}%
-Eschleman, K. J., \& LaHuis, D. (2014). Advancing occupational stress and health research and interventions using latent difference score modeling. \emph{International Journal of Stress Management}, \emph{21}(1), 112--136. doi:\href{https://doi.org/10.1037/a0033099}{10.1037/a0033099}
-
-\leavevmode\hypertarget{ref-finch2016multilevel}{}%
-Finch, W. H., Bolin, J. E., \& Kelley, K. (2016). \emph{Multilevel modeling using r}. Crc Press.
-
-\leavevmode\hypertarget{ref-grandey2015emotional}{}%
-Grandey, A. A., \& Gabriel, A. S. (2015). Emotional labor at a crossroads: Where do we go from here?
-
-\leavevmode\hypertarget{ref-grimm_growth_2016}{}%
-Grimm, K. J., Ram, N., \& Estabrook, R. (2016). \emph{Growth modeling: Structural equation and multilevel modeling approaches}. Guilford Publications.
-
-\leavevmode\hypertarget{ref-hardy_interrelationships_2018}{}%
-Hardy, J. H., Day, E. A., \& Steele, L. M. (2018). Interrelationships Among Self-Regulated Learning Processes: Toward a Dynamic Process-Based Model of Self-Regulated Learning. \emph{Journal of Management}, 0149206318780440. doi:\href{https://doi.org/10.1177/0149206318780440}{10.1177/0149206318780440}
-
-\leavevmode\hypertarget{ref-hardy2018}{}%
-Hardy III, J. H., Day, E. A., \& Steele, L. M. (2018). Interrelationships among self-regulated learning processes: Toward a dynamic process-based model of self-regulated learning. \emph{Journal of Management}, 0149206318780440.
-
-\leavevmode\hypertarget{ref-howardson2017latent}{}%
-Howardson, G. N., Karim, M. N., \& Horn, R. G. (2017). The latent change score model: A more flexible approach to modeling time in self-regulated learning. \emph{Journal of Business and Psychology}, \emph{32}(3), 317--334.
-
-\leavevmode\hypertarget{ref-hulsheger_dawn_2016}{}%
-Hülsheger, U. R. (2016). From dawn till dusk: Shedding light on the recovery process by investigating daily change patterns in fatigue. \emph{Journal of Applied Psychology}, \emph{101}(6), 905--914. doi:\href{https://doi.org/http://dx.doi.org.proxy2.cl.msu.edu/10.1037/apl0000104}{http://dx.doi.org.proxy2.cl.msu.edu/10.1037/apl0000104}
-
-\leavevmode\hypertarget{ref-ilgen_computational_2000}{}%
-Ilgen, D. R., \& Hulin, C. L. (2000). \emph{Computational modeling of behavior in organizations: The third scientific discipline.} American Psychological Association.
-
-\leavevmode\hypertarget{ref-jones_baby_2016}{}%
-Jones, K. P., King, E. B., Gilrane, V. L., McCausland, T. C., Cortina, J. M., \& Grimm, K. J. (2016). The baby bump: Managing a dynamic stigma over time. \emph{Journal of Management}, \emph{42}(6), 1530--1556.
-
-\leavevmode\hypertarget{ref-judge2006hostility}{}%
-Judge, T. A., Scott, B. A., \& Ilies, R. (2006). Hostility, job attitudes, and workplace deviance: Test of a multilevel model. \emph{Journal of Applied Psychology}, \emph{91}(1), 126.
-
-\leavevmode\hypertarget{ref-judge_what_2014}{}%
-Judge, T. A., Simon, L. S., Hurst, C., \& Kelley, K. (2014). What I experienced yesterday is who I am today: Relationship of work motivations and behaviors to within-individual variation in the five-factor model of personality. \emph{Journal of Applied Psychology}, \emph{99}(2), 199.
-
-\leavevmode\hypertarget{ref-kozlowski_advancing_2013}{}%
-Kozlowski, S. W., Chao, G. T., Grand, J. A., Braun, M. T., \& Kuljanin, G. (2013). Advancing multilevel research design: Capturing the dynamics of emergence. \emph{Organizational Research Methods}, \emph{16}(4), 581--615.
-
-\leavevmode\hypertarget{ref-kozlowski_capturing_2016}{}%
-Kozlowski, S. W., Chao, G. T., Grand, J. A., Braun, M. T., \& Kuljanin, G. (2016). Capturing the multilevel dynamics of emergence: Computational modeling, simulation, and virtual experimentation. \emph{Organizational Psychology Review}, \emph{6}(1), 3--33.
-
-\leavevmode\hypertarget{ref-kuljanin2011cautionary}{}%
-Kuljanin, G., Braun, M. T., \& DeShon, R. P. (2011). A cautionary note on modeling growth trends in longitudinal data. \emph{Psychological Methods}, \emph{16}(3), 249--264.
-
-\leavevmode\hypertarget{ref-lanaj_when_2016}{}%
-Lanaj, K., Johnson, R. E., \& Wang, M. (2016). When lending a hand depletes the will: The daily costs and benefits of helping. \emph{Journal of Applied Psychology; Washington}, \emph{101}(8), 1097. Retrieved from \url{http://search.proquest.com/docview/1813203845?pq-origsite=summon}
-
-\leavevmode\hypertarget{ref-mcardle_latent_2009}{}%
-McArdle, J. J. (2009). Latent Variable Modeling of Differences and Changes with Longitudinal Data. \emph{Annual Review of Psychology}, \emph{60}(1), 577--605. doi:\href{https://doi.org/10.1146/annurev.psych.60.110707.163612}{10.1146/annurev.psych.60.110707.163612}
-
-\leavevmode\hypertarget{ref-mcardle_latent_1987}{}%
-McArdle, J. J., \& Epstein, D. (1987). Latent Growth Curves within Developmental Structural Equation Models. \emph{Child Development}, \emph{58}(1), 110--133. doi:\href{https://doi.org/10.2307/1130295}{10.2307/1130295}
-
-\leavevmode\hypertarget{ref-methot2017good}{}%
-Methot, J. R., Lepak, D., Shipp, A. J., \& Boswell, W. R. (2017). Good citizen interrupted: Calibrating a temporal theory of citizenship behavior. \emph{Academy of Management Review}, \emph{42}(1), 10--31.
-
-\leavevmode\hypertarget{ref-mitchell_building_2001}{}%
-Mitchell, T. R., \& James, L. R. (2001). Building better theory: Time and the specification of when things happen. \emph{Academy of Management Review}, \emph{26}(4), 530--547.
-
-\leavevmode\hypertarget{ref-molenaar_dynamic_1985}{}%
-Molenaar, P. C. (1985). A dynamic factor model for the analysis of multivariate time series. \emph{Psychometrika}, \emph{50}(2), 181--202.
-
-\leavevmode\hypertarget{ref-molenaar_testing_2010}{}%
-Molenaar, P. C. (2010). Testing all six person-oriented principles in dynamic factor analysis. \emph{Development and Psychopathology}, \emph{22}(2), 255--259.
-
-\leavevmode\hypertarget{ref-molenaar_merging_2012}{}%
-Molenaar, P. C. M., \& Nesselroade, J. R. (2012). Merging the Idiographic Filter With Dynamic Factor Analysis to Model Process. \emph{Applied Developmental Science}, \emph{16}(4), 210--219. doi:\href{https://doi.org/10.1080/10888691.2012.722884}{10.1080/10888691.2012.722884}
-
-\leavevmode\hypertarget{ref-monge_theoretical_1990}{}%
-Monge, P. R. (1990). Theoretical and analytical issues in studying organizational processes. \emph{Organization Science}, \emph{1}(4), 406--430.
-
-\leavevmode\hypertarget{ref-moral2019dynamic}{}%
-Moral-Benito, E., Allison, P., \& Williams, R. (2019). Dynamic panel data modelling using maximum likelihood: An alternative to arellano-bond. \emph{Applied Economics}, \emph{51}(20), 2221--2232.
-
-\leavevmode\hypertarget{ref-park2013advancing}{}%
-Park, G., Spitzmuller, M., \& DeShon, R. P. (2013). Advancing our understanding of team motivation: Integrating conceptual approaches and content areas. \emph{Journal of Management}, \emph{39}(5), 1339--1379.
-
-\leavevmode\hypertarget{ref-pitariu_explaining_2010}{}%
-Pitariu, A. H., \& Ployhart, R. E. (2010). Explaining change: Theorizing and testing dynamic mediated longitudinal relationships. \emph{Journal of Management}, \emph{36}(2), 405--429.
-
-\leavevmode\hypertarget{ref-ployhart_longitudinal_2010}{}%
-Ployhart, R. E., \& Vandenberg, R. J. (2010). Longitudinal research: The theory, design, and analysis of change. \emph{Journal of Management}, \emph{36}(1), 94--120.
-
-\leavevmode\hypertarget{ref-rosen_who_2016}{}%
-Rosen, C. C., Koopman, J., Gabriel, A. S., \& Johnson, R. E. (2016). Who strikes back? A daily investigation of when and why incivility begets incivility. \emph{Journal of Applied Psychology}, \emph{101}(11), 1620.
-
-\leavevmode\hypertarget{ref-schonfeld2007hierarchical}{}%
-Schonfeld, I. S., \& Rindskopf, D. (2007). Hierarchical linear modeling in organizational research: Longitudinal data outside the context of growth modeling. \emph{Organizational Research Methods}, \emph{10}(3), 417--429.
-
-\leavevmode\hypertarget{ref-scott_multilevel_2011}{}%
-Scott, B. A., \& Barnes, C. M. (2011). A multilevel field investigation of emotional labor, affect, work withdrawal, and gender. \emph{Academy of Management Journal}, \emph{54}(1), 116--136.
-
-\leavevmode\hypertarget{ref-singer_applied_2003}{}%
-Singer, J. D., Willett, J. B., \& Willett, J. B. (2003). \emph{Applied longitudinal data analysis: Modeling change and event occurrence}. Oxford university press.
-
-\leavevmode\hypertarget{ref-spector_not_2019}{}%
-Spector, P. E. (2019). Do Not Cross Me: Optimizing the Use of Cross-Sectional Designs. \emph{Journal of Business and Psychology}. doi:\href{https://doi.org/10.1007/s10869-018-09613-8}{10.1007/s10869-018-09613-8}
-
-\leavevmode\hypertarget{ref-vancouver_translating_2018}{}%
-Vancouver, J. B., Wang, M., \& Li, X. (2018). Translating Informal Theories Into Formal Theories: The Case of the Dynamic Computational Model of the Integrated Model of Work Motivation. \emph{Organizational Research Methods}, 109442811878030. doi:\href{https://doi.org/10.1177/1094428118780308}{10.1177/1094428118780308}
-
-\leavevmode\hypertarget{ref-vancouver2010formal}{}%
-Vancouver, J. B., Weinhardt, J. M., \& Schmidt, A. M. (2010). A formal, computational theory of multiple-goal pursuit: Integrating goal-choice and goal-striving processes. \emph{Journal of Applied Psychology}, \emph{95}(6), 985.
-
-\leavevmode\hypertarget{ref-voelkle2015relating}{}%
-Voelkle, M. C., \& Oud, J. H. (2015). Relating latent change score and continuous time models. \emph{Structural Equation Modeling: A Multidisciplinary Journal}, \emph{22}(3), 366--381.
-
-\leavevmode\hypertarget{ref-Wang2016}{}%
-Wang, M., Zhou, L., \& Zhang, Z. (2016). Dynamic modeling. \emph{Annual Review of Organizational Psychology and Organizational Behavior}, \emph{3}(1), 241--266. doi:\href{https://doi.org/10.1146/annurev-orgpsych-041015-062553}{10.1146/annurev-orgpsych-041015-062553}
-
-\leavevmode\hypertarget{ref-wildman2012trust}{}%
-Wildman, J. L., Shuffler, M. L., Lazzara, E. H., Fiore, S. M., Burke, C. S., Salas, E., \& Garven, S. (2012). Trust development in swift starting action teams: A multilevel framework. \emph{Group \& Organization Management}, \emph{37}(2), 137--170.
-
-\leavevmode\hypertarget{ref-xu2019challenges}{}%
-Xu, R., DeShon, R. P., \& Dishop, C. R. (2019). Challenges and opportunities in the estimation of dynamic models. \emph{Organizational Research Methods}, 1094428119842638.
-
-\leavevmode\hypertarget{ref-xu_deshon_dishop}{}%
-Xu, R., DeShon, R. P., \& Dishop, C. R. (n.d.). Challenges and opportunities in the estimation of dynamic models. \emph{Organizational Research Methods}.
-
-\leavevmode\hypertarget{ref-zyphura}{}%
-Zyphur, A., M. J. (n.d.-a). From data to causes i. Building a general cross-lagged panel model (gclm). \emph{Organizational Research Methods}.
-
-\leavevmode\hypertarget{ref-zyphurb}{}%
-Zyphur, A., M. J. (n.d.-b). From data to causes ii. Comparing approaches to panel data analysis. \emph{Organizational Research Methods}.
-
-\leavevmode\hypertarget{ref-zyphur2019data}{}%
-Zyphur, M. J., Voelkle, M. C., Tay, L., Allison, P. D., Preacher, K. J., Zhang, Z., \ldots{} others. (2019). From data to causes ii: Comparing approaches to panel data analysis. \emph{Organizational Research Methods}, 1094428119847280.
-
 
 \end{document}

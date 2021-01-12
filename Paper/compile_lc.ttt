@@ -1,4 +1,4 @@
-\begin{longtable}{>{\raggedright\arraybackslash}p{15em}>{\raggedright\arraybackslash}p{15em}}
+\begin{longtable}[t]{>{\raggedright\arraybackslash}p{15em}>{\raggedright\arraybackslash}p{15em}}
 \caption{\label{tab:unnamed-chunk-7}\label{inference_frequencies}Number of times a recent article emphasized one or more inference category.}\\
 \toprule
 Type & Occurence\\
